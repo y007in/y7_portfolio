@@ -1,0 +1,20 @@
+.Navigation {
+  display: flex;
+  width: 100vw;
+  height: 50px;
+  background-color: var(--main);
+  font-family: var(--kor);
+}
+.Navigation .title {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.Navigation .leftChild {
+  width: 25%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}/*# sourceMappingURL=Navigation.css.map */

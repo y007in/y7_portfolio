@@ -1,0 +1,15 @@
+@import "./scss/variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $color_black;
+  font-family: $font_kor;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}

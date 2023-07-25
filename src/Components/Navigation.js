@@ -1,15 +1,12 @@
 import React from "react";
 
-import "../css/Navigation.css";
+import "../scss/Navigation.scss";
 
-const Navigation = () => {
+const Navigation = ({ title, leftChild }) => {
   return (
     <div className="Navigation">
-      <div>Jang YooJin</div>
-      <div className="top_nav">
-        <div>About</div>
-        <div>Project</div>
-      </div>
+      <div className="leftChild">{leftChild}</div>
+      <div className="title">{title}</div>
     </div>
   );
 };

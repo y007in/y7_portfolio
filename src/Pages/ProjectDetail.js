@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 import Navigation from "../Components/Navigation";
+import ProjectItem from "../Components/ProjectItem";
 
 const ProjectDetail = () => {
   return (
@@ -16,6 +17,7 @@ const ProjectDetail = () => {
           </>
         }
       />
+      <ProjectItem />
     </div>
   );
 };

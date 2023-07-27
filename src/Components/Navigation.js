@@ -1,14 +1,55 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "../scss/Navigation.scss";
 
-const Navigation = ({ title, leftChild }) => {
-  return (
-    <div className="Navigation">
-      <div className="leftChild">{leftChild}</div>
-      <div className="title">{title}</div>
-    </div>
-  );
+const Navigation = ({ leftChild, rightChild, title }) => {
+  const navigate = useNavigate();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const handleBack = () => {
+    navigate(-1);
+  };
+  let content = null;
+  if (windowWidth <= 1024) {
+    content = (
+      <div className="Navigation_mobile">
+        <div className="leftChild" onClick={handleBack}>
+          <FaChevronLeft />
+          {leftChild}
+        </div>
+        <div className="title">{title}</div>
+        <div className="rightChild">
+          {rightChild}
+          <FaChevronRight />
+        </div>
+      </div>
+    );
+  } else {
+    content = (
+      <div className="Navigation_pc">
+        <div className="name">Jang YooJin</div>
+        <div className="gnb">
+          <ul>
+            <li>About</li>
+            <li>Project</li>
+          </ul>
+        </div>
+      </div>
+    );
+  }
+
+  return content;
 };
 
 export default Navigation;

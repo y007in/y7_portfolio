@@ -1,11 +1,13 @@
 @import "../scss/variables.scss";
 
-.Navigation {
+.Navigation_mobile {
+  position: relative;
   display: flex;
   width: 100vw;
   height: 50px;
-
   background-color: $color_main;
+  z-index: 9999;
+  padding: 0 25px;
   .title {
     width: 50%;
     display: flex;
@@ -19,6 +21,58 @@
     display: flex;
     justify-content: start;
     align-items: center;
+    cursor: pointer;
     color: $color_white;
+    svg path {
+      color: $color_white;
+    }
+  }
+  .rightChild {
+    width: 25%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+    color: $color_white;
+    svg path {
+      color: $color_white;
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .Navigation_pc {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 65px;
+    background-color: $color_main;
+    z-index: 9999;
+    padding: 0 5%;
+    .name {
+      width: 20%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      color: $color_white;
+      font-size: 28px;
+    }
+    .gnb {
+      width: 80%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+
+      ul {
+        display: flex;
+        li {
+          color: $color_white;
+          font-size: 24px;
+          &:first-child {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
   }
 }

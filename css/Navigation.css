@@ -10,13 +10,16 @@
   font-weight: normal;
   font-style: normal;
 }
-.Navigation {
+.Navigation_mobile {
+  position: relative;
   display: flex;
   width: 100vw;
   height: 50px;
   background-color: #00a4c8;
+  z-index: 9999;
+  padding: 0 25px;
 }
-.Navigation .title {
+.Navigation_mobile .title {
   width: 50%;
   display: flex;
   justify-content: center;
@@ -24,10 +27,61 @@
   font-size: 20px;
   color: #fff;
 }
-.Navigation .leftChild {
+.Navigation_mobile .leftChild {
   width: 25%;
   display: flex;
   justify-content: start;
   align-items: center;
+  cursor: pointer;
   color: #fff;
+}
+.Navigation_mobile .leftChild svg path {
+  color: #fff;
+}
+.Navigation_mobile .rightChild {
+  width: 25%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+}
+.Navigation_mobile .rightChild svg path {
+  color: #fff;
+}
+
+@media all and (min-width: 1024px) {
+  .Navigation_pc {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 65px;
+    background-color: #00a4c8;
+    z-index: 9999;
+    padding: 0 5%;
+  }
+  .Navigation_pc .name {
+    width: 20%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #fff;
+    font-size: 28px;
+  }
+  .Navigation_pc .gnb {
+    width: 80%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  .Navigation_pc .gnb ul {
+    display: flex;
+  }
+  .Navigation_pc .gnb ul li {
+    color: #fff;
+    font-size: 24px;
+  }
+  .Navigation_pc .gnb ul li:first-child {
+    margin-right: 30px;
+  }
 }/*# sourceMappingURL=Navigation.css.map */

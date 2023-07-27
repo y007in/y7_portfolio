@@ -12,10 +12,9 @@
 }
 .ProjectItem {
   width: 100%;
-  height: 100vh;
+  height: calc(100% - 50px);
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .ProjectItem .project_container {
   display: flex;
@@ -58,6 +57,8 @@
   background-color: #f8f8f8;
 }
 .ProjectItem .project_container .project_left .buttons {
+  display: flex;
+  gap: 10px;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -66,18 +67,15 @@
   background-color: #fff;
   padding: 10px;
   box-shadow: 5px 5px 10px 5px #797979;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
 }
 .ProjectItem .project_container .project_left .buttons .button {
-  width: 47%;
+  width: 50%;
   border: none;
   background-color: #797979;
   padding: 10px 20px;
   border-radius: 5px;
   color: #fff;
-}
-.ProjectItem .project_container .project_left .buttons .button:first-child {
-  margin-right: 15px;
 }
 .ProjectItem .project_container .project_right {
   display: flex;
@@ -104,29 +102,41 @@
 }
 
 @media all and (min-width: 1024px) {
+  .ProjectItem {
+    align-items: center;
+    height: calc(100% - 65px);
+  }
   .ProjectItem .project_container {
-    width: 1024px;
+    width: 1280px;
     margin-bottom: 20px;
+    border: 1px solid #00a4c8;
+    padding: 50px 80px;
+    border-radius: 10px;
   }
   .ProjectItem .project_container .project_title h1 {
-    font-size: 32px;
+    font-size: 40px;
   }
   .ProjectItem .project_container .project_title .team {
-    font-size: 20px;
+    font-size: 24px;
     margin: 0 10px;
   }
   .ProjectItem .project_container .project_content {
+    width: 100%;
     display: flex;
     gap: 40px;
-    margin: 10px 0;
+    margin: 0;
+  }
+  .ProjectItem .project_container .project_content .project_left {
+    width: 50%;
   }
   .ProjectItem .project_container .project_content .project_left .project_img {
     order: 2;
   }
   .ProjectItem .project_container .project_content .project_left .project_des {
     order: 1;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 20px;
+    padding: 18px;
   }
   .ProjectItem .project_container .project_content .project_left .buttons {
     order: 3;
@@ -135,11 +145,11 @@
     box-shadow: none;
   }
   .ProjectItem .project_container .project_content .project_left .buttons .button {
-    width: 47%;
+    font-size: 18px;
     padding: 10px 20px;
   }
-  .ProjectItem .project_container .project_content .project_left .buttons .button:first-child {
-    margin-right: 15px;
+  .ProjectItem .project_container .project_content .project_right {
+    width: 50%;
   }
   .ProjectItem .project_container .project_content .project_right .project_date, .ProjectItem .project_container .project_content .project_right .project_skill, .ProjectItem .project_container .project_content .project_right .project_func {
     margin-top: 0;
@@ -149,11 +159,11 @@
     padding: 8px 15px;
     margin-top: 0;
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 20px;
   }
   .ProjectItem .project_container .project_content .project_right .des_content {
     display: inline-block;
-    padding: 8px;
-    font-size: 16px;
+    padding: 8px 15px;
+    font-size: 18px;
   }
 }/*# sourceMappingURL=ProjectItem.css.map */

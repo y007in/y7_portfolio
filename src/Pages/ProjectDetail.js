@@ -1,22 +1,19 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
+
+import "../scss/ProjectDetail.scss";
 
 import Navigation from "../Components/Navigation";
 import ProjectItem from "../Components/ProjectItem";
 
 const ProjectDetail = () => {
+  const navigate = useNavigate();
+  const handleAbout = () => {
+    navigate("/about");
+  };
   return (
     <div className="projectDetail">
-      <Navigation
-        title={"Project"}
-        leftChild={
-          <>
-            <FontAwesomeIcon icon={faChevronLeft} />
-            뒤로가기
-          </>
-        }
-      />
+      <Navigation title={"Project"} leftChild={"Back"} rightChild={"About"} />
       <ProjectItem />
     </div>
   );

@@ -1,0 +1,24 @@
+@import "../scss/variables.scss";
+
+.ProjectList {
+  width: 100%;
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  .ProjectList_Title {
+    display: flex;
+    flex-direction: column;
+  }
+  .Projects {
+    border: 1px solid $color_main;
+    padding: 10px;
+    .project_img {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

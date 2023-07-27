@@ -1,5 +1,13 @@
 @import "../scss/variables.scss";
 
+@mixin navbtn {
+  border: none;
+  background-color: transparent;
+  color: $color_white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .Navigation_mobile {
   position: relative;
   display: flex;
@@ -21,10 +29,12 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    cursor: pointer;
-    color: $color_white;
     svg path {
       color: $color_white;
+      cursor: pointer;
+    }
+    button {
+      @include navbtn();
     }
   }
   .rightChild {
@@ -32,10 +42,12 @@
     display: flex;
     justify-content: end;
     align-items: center;
-    cursor: pointer;
-    color: $color_white;
     svg path {
       color: $color_white;
+      cursor: pointer;
+    }
+    button {
+      @include navbtn();
     }
   }
 }
@@ -68,6 +80,10 @@
         li {
           color: $color_white;
           font-size: 24px;
+          cursor: pointer;
+          &:hover {
+            color: $color_sub;
+          }
           &:first-child {
             margin-right: 30px;
           }

@@ -15,7 +15,7 @@
 
 // color
 $color_main: #00a4c8;
-
+$color_sub: #153e47;
 $color_black: #333;
 $color_darkgray: #797979;
 $color_gray: #eee;
@@ -24,3 +24,24 @@ $color_white: #fff;
 
 // font
 $font_kor: "Pretendard-Regular", sans-serif;
+
+@mixin topcontainer_mobile {
+  width: 100%;
+  height: calc(100% - 50px);
+  display: flex;
+  justify-content: center;
+}
+@mixin container_mobile {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+@mixin topcontainer_pc {
+  align-items: center;
+  height: calc(100% - 65px);
+}
+@mixin container_pc {
+  width: 1280px;
+  margin-bottom: 20px;
+  padding: 50px 80px;
+}

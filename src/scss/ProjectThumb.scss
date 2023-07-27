@@ -1,0 +1,28 @@
+@import "../scss/variables.scss";
+.projectThumb {
+  width: 100%;
+  .project_img {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .project_desc {
+    ul {
+      li {
+        .skill {
+          display: flex;
+          position: relative;
+          float: right;
+          li {
+            background-color: $color_main;
+            color: $color_white;
+            margin-right: 5px;
+            padding: 2px 5px;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}

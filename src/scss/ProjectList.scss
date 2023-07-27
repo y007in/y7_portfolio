@@ -1,24 +1,27 @@
 @import "../scss/variables.scss";
 
 .ProjectList {
-  width: 100%;
-  height: calc(100% - 50px);
-  display: flex;
+  @include topcontainer_mobile();
   flex-direction: column;
-  justify-content: center;
   padding: 20px;
-  .ProjectList_Title {
-    display: flex;
-    flex-direction: column;
-  }
-  .Projects {
-    border: 1px solid $color_main;
-    padding: 10px;
-    .project_img {
-      width: 100%;
-      img {
-        width: 100%;
+  .ProjectList_container {
+    @include container_mobile();
+    .ProjectList_Title {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-size: 32px;
+        margin-bottom: 8px;
       }
+      p {
+        font-size: 16px;
+        color: $color_darkgray;
+        margin-bottom: 10px;
+      }
+    }
+    .Projects {
+      border: 1px solid $color_main;
+      padding: 10px;
     }
   }
 }

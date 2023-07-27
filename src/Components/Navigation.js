@@ -41,8 +41,8 @@ const Navigation = ({ leftChild, rightChild, title }) => {
         <div className="name">Jang YooJin</div>
         <div className="gnb">
           <ul>
-            <li>About</li>
-            <li>Project</li>
+            <li onClick={() => navigate("/about")}>About</li>
+            <li onClick={() => navigate("/project")}>Project</li>
           </ul>
         </div>
       </div>

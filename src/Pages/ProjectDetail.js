@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
 import "../scss/ProjectDetail.scss";
 
 import Navigation from "../Components/Navigation";
@@ -13,7 +12,11 @@ const ProjectDetail = () => {
   };
   return (
     <div className="projectDetail">
-      <Navigation title={"Project"} leftChild={"Back"} rightChild={"About"} />
+      <Navigation
+        title={"Project"}
+        leftChild={<button>Back</button>}
+        rightChild={<button onClick={handleAbout}>About</button>}
+      />
       <ProjectItem />
     </div>
   );

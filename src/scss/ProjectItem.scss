@@ -47,10 +47,14 @@
           .button {
             width: 100%;
             border: none;
-            background-color: $color_darkgray;
+            background-color: $color_main;
             padding: 10px 20px;
             border-radius: 5px;
             color: $color_white;
+            transition: 0.2s;
+            &:hover {
+              background-color: $color_sub;
+            }
           }
         }
       }
@@ -83,6 +87,18 @@
           }
         }
       }
+    }
+  }
+  .back_project {
+    border: none;
+    transition: 0.2s;
+    padding: 10px;
+    margin: 0 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    &:hover {
+      background-color: $color_sub;
+      color: $color_white;
     }
   }
 }

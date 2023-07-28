@@ -29,7 +29,7 @@ $font_kor: "Pretendard-Regular", sans-serif;
   width: 100%;
   height: calc(100% - 50px);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 @mixin container_mobile {
   display: flex;
@@ -38,6 +38,7 @@ $font_kor: "Pretendard-Regular", sans-serif;
 }
 @mixin topcontainer_pc {
   align-items: center;
+  justify-content: center;
   height: calc(100% - 65px);
 }
 @mixin container_pc {

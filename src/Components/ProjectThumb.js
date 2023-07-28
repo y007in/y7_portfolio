@@ -1,23 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../scss/ProjectThumb.scss";
-import projectImg from "../img/project_img_hugmom.JPG";
+import { ProjectData } from "../assets/projectdata";
 
-const projectThumb = () => {
+const ProjectThumb = ({ id, image, name, skill }) => {
+  const navigate = useNavigate();
+  const goDetail = () => {
+    navigate(`/project/${id}`);
+  };
   return (
-    <div className="projectThumb">
+    <div className="projectThumb" onClick={goDetail}>
       <div className="project_img">
-        <img src={projectImg} />
+        <img src={image} />
       </div>
       <div className="project_desc">
         <ul>
-          <li>#Hugmom</li>
-          <li>#Shoppingmall</li>
+          <li>{name}</li>
           <li>
-            <ul className="skill">
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JavaScript</li>
-            </ul>
+            <ul className="skill">{skill}</ul>
           </li>
         </ul>
       </div>
@@ -25,4 +25,4 @@ const projectThumb = () => {
   );
 };
 
-export default projectThumb;
+export default ProjectThumb;

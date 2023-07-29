@@ -38,7 +38,14 @@ const Navigation = ({ leftChild, rightChild, title }) => {
   } else {
     content = (
       <div className="Navigation_pc">
-        <div className="name">Jang YooJin</div>
+        <div
+          className="name"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Jang YooJin
+        </div>
         <div className="gnb">
           <ul>
             <li onClick={() => navigate("/about")}>About</li>

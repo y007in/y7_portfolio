@@ -3,7 +3,7 @@ import hugmom2 from "./img/humgmom2.JPG";
 
 export const ProjectData = [
   {
-    id: 1,
+    id: 0,
     name: "허그맘(Hugmom)",
     team: "팀 프로젝트",
     image: `${hugmom}`,
@@ -13,7 +13,7 @@ export const ProjectData = [
     func: "-산후조리원코드로 임산부들만 회원가입 가능합니다.",
   },
   {
-    id: 2,
+    id: 1,
     name: "프로젝트2",
     team: "개인 프로젝트",
     image: `${hugmom2}`,

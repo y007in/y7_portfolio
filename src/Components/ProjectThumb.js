@@ -9,19 +9,19 @@ const ProjectThumb = ({ id, image, name, skill }) => {
     navigate(`/project/${id}`);
   };
   return (
-    <div className="projectThumb" onClick={goDetail}>
-      <div className="project_img">
+    <section className="projectThumb" onClick={goDetail}>
+      <article className="project_img">
         <img src={image} />
-      </div>
-      <div className="project_desc">
+      </article>
+      <article className="project_desc">
         <ul>
           <li>{name}</li>
           <li>
             <ul className="skill">{skill}</ul>
           </li>
         </ul>
-      </div>
-    </div>
+      </article>
+    </section>
   );
 };
 

@@ -20,8 +20,11 @@
       }
     }
     .Projects {
-      border: 1px solid $color_main;
+      display: flex;
+      flex-direction: column;
+      // border: 1px solid $color_main;
       padding: 10px;
+      gap: 20px;
     }
   }
 }

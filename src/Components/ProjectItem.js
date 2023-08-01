@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../scss/ProjectItem.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ProjectData } from "../assets/projectdata";
 
 const ProjectItem = ({ projectId }) => {
@@ -20,8 +20,12 @@ const ProjectItem = ({ projectId }) => {
             </div>
             <div className="project_des">{ProjectData[projectId].des}</div>
             <div className="buttons">
-              <button className="button github">GitHub</button>
-              <button className="button url">URL</button>
+              <Link to={ProjectData[projectId].github} target="_blank">
+                <button className="button github">GitHub </button>
+              </Link>
+              <Link to={ProjectData[projectId].url} target="_blank">
+                <button className="button url">URL</button>
+              </Link>
             </div>
           </section>
           <section className="project_right">
@@ -30,8 +34,10 @@ const ProjectItem = ({ projectId }) => {
               <div className="des_content">{ProjectData[projectId].date}</div>
             </div>
             <div className="project_skill">
-              <div className="des_title">사용기술</div>
-              <div className="des_content">{ProjectData[projectId].skill}</div>
+              <div className="des_title">사용 기술</div>
+              <div className="des_content">
+                <ul>{ProjectData[projectId].skill}</ul>
+              </div>
             </div>
             <div className="project_func">
               <div className="des_title">주요 기능</div>
@@ -39,7 +45,7 @@ const ProjectItem = ({ projectId }) => {
             </div>
           </section>
         </main>
-      </div>{" "}
+      </div>
       <button className="back_project" onClick={() => navigate("/project")}>
         목록으로 돌아가기
       </button>

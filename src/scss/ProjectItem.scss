@@ -44,16 +44,22 @@
           text-align: center;
           background-color: $color_white;
           margin: 10px 0;
-          .button {
+          a {
             width: 100%;
-            border: none;
-            background-color: $color_main;
-            padding: 10px 20px;
-            border-radius: 5px;
-            color: $color_white;
-            transition: 0.2s;
-            &:hover {
-              background-color: $color_sub;
+            .button {
+              width: 100%;
+              border: none;
+              background-color: $color_main;
+              padding: 10px 20px;
+              border-radius: 5px;
+              color: $color_white;
+              transition: 0.2s;
+              font-family: $font_eng;
+              font-weight: 500;
+              cursor: pointer;
+              &:hover {
+                background-color: $color_sub;
+              }
             }
           }
         }
@@ -84,6 +90,12 @@
             padding: 8px;
             border-radius: 5px;
             line-height: 140%;
+            ul {
+              display: flex;
+              li {
+                margin: 0 5px;
+              }
+            }
           }
         }
       }
@@ -96,6 +108,7 @@
     margin: 0 20px;
     border-radius: 5px;
     font-size: 14px;
+    cursor: pointer;
     &:hover {
       background-color: $color_sub;
       color: $color_white;
@@ -106,9 +119,11 @@
 @media all and (min-width: 1024px) {
   .ProjectItem {
     @include topcontainer_pc();
+
     .project_container {
       @include container_pc();
-      border: 1px solid $color_main;
+      margin: 35px 0;
+      border: 1px dashed $color_main;
       border-radius: 10px;
       .project_title {
         h1 {
@@ -173,6 +188,10 @@
           }
         }
       }
+    }
+    .back_project {
+      font-size: 16px;
+      padding: 10px 20px;
     }
   }
 }

@@ -24,8 +24,8 @@ const Footer = () => {
           <li className="name">Jang YooJin</li>
           <li>
             <ul className="info">
-              <li>📞010-9962-0590</li>
-              <li>📧ujin4719@naver.com</li>
+              <li>📞 010-9962-0590</li>
+              <li>📧 ujin4719@naver.com</li>
               <li>
                 <FaGithub />
                 GitHub
@@ -37,7 +37,20 @@ const Footer = () => {
       </div>
     );
   } else {
-    content = <div className="footer_pc"></div>;
+    content = (
+      <div className="footer_pc">
+        <ul>
+          <li className="name">Jang YooJin</li>
+          <li>
+            <ul className="info">
+              <li>📞 010-9962-0590</li>
+              <li>📧 ujin4719@naver.com</li>
+            </ul>
+          </li>
+          <li>Copyright © YooJin All Rights Reserved.</li>
+        </ul>
+      </div>
+    );
   }
 
   return content;

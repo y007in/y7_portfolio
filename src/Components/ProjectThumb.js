@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../scss/ProjectThumb.scss";
-import { ProjectData } from "../assets/projectdata";
 
 const ProjectThumb = ({ id, image, name, skill }) => {
   const navigate = useNavigate();
@@ -12,14 +11,16 @@ const ProjectThumb = ({ id, image, name, skill }) => {
     <section className="projectThumb" onClick={goDetail}>
       <article className="project_img">
         <img src={image} />
-      </article>
-      <article className="project_desc">
-        <ul>
-          <li className="title">{name}</li>
-          <li>
-            <ul className="skill">{skill}</ul>
-          </li>
-        </ul>
+        <article className="project_desc">
+          <ul>
+            <li className="title">
+              <span>{name}</span>
+            </li>
+            <li>
+              <ul className="skill">{skill}</ul>
+            </li>
+          </ul>
+        </article>
       </article>
     </section>
   );

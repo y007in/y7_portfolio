@@ -4,6 +4,7 @@ import "../scss/ProjectDetail.scss";
 
 import Navigation from "../Components/Navigation";
 import ProjectItem from "../Components/ProjectItem";
+import Footer from "../Components/Footer";
 
 const ProjectDetail = () => {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ const ProjectDetail = () => {
         rightChild={<button onClick={() => navigate("/about")}>About</button>}
       />
       <ProjectItem projectId={id} />
+      <Footer />
     </div>
   );
 };

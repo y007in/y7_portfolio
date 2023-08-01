@@ -50,7 +50,9 @@ const Navigation = ({ leftChild, rightChild, title }) => {
           <ul>
             <li onClick={() => navigate("/about")}>About</li>
             <li onClick={() => navigate("/project")}>Project</li>
-            <li>
+            <li
+              onClick={() => window.open("https://github.com/y007in", "_blank")}
+            >
               <FaGithub />
             </li>
           </ul>

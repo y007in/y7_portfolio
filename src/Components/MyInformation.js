@@ -14,13 +14,15 @@ const myinformation = () => {
             <div className="me_detail">
               <p>📆1998.07.13</p>
               <p>📧 ujin4719@naver.com</p>
-              <p>📞 +82 1012341234</p>
+              <p>📞 +82 1012341234 </p>
               <p>📆1998.07.13</p>
             </div>
           </article>
         </section>
         <section>
-          <article></article>
+          <article>
+            <div className="edu">교육</div>
+          </article>
           <article></article>
         </section>
       </main>

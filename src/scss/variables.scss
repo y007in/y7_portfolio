@@ -5,13 +5,9 @@
   font-weight: 400;
   font-style: normal;
 }
-@font-face {
-  font-family: "SBAggroB";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;300;400;500;600;700;800;900&display=swap");
 
 // color
 $color_main: #00a4c8;
@@ -24,24 +20,26 @@ $color_white: #fff;
 
 // font
 $font_kor: "Pretendard-Regular", sans-serif;
+$font_eng: "Encode Sans", sans-serif;
 
-@mixin topcontainer_mobile {
+@mixin topcontainer_mobile() {
   width: 100%;
-  height: calc(100% - 50px);
+  // height: calc(100% - 50px);
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
 }
-@mixin container_mobile {
+@mixin container_mobile() {
   display: flex;
   flex-direction: column;
   margin: 20px;
 }
-@mixin topcontainer_pc {
+@mixin topcontainer_pc() {
   align-items: center;
   justify-content: center;
-  height: calc(100% - 65px);
+  // height: calc(100% - 65px);
 }
-@mixin container_pc {
+@mixin container_pc() {
   width: 1280px;
   margin-bottom: 20px;
   padding: 50px 80px;

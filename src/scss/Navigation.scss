@@ -4,8 +4,9 @@
   border: none;
   background-color: transparent;
   color: $color_white;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
+  font-family: $font_eng;
 }
 
 .Navigation_mobile {
@@ -16,13 +17,16 @@
   background-color: $color_main;
   z-index: 9999;
   padding: 0 25px;
+
   .title {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    font-weight: 500;
     color: $color_white;
+    font-family: $font_eng;
   }
   .leftChild {
     width: 25%;
@@ -75,18 +79,32 @@
       display: flex;
       justify-content: end;
       align-items: center;
-
+      font-family: $font_eng;
       ul {
         display: flex;
         li {
+          font-family: $font_eng;
           color: $color_white;
-          font-size: 24px;
+          font-size: 20px;
           cursor: pointer;
+          display: flex;
+          font-weight: 500;
+          align-items: center;
           &:hover {
             color: $color_sub;
+            font-weight: 500;
           }
-          &:first-child {
+          &:not(:last-child) {
             margin-right: 30px;
+          }
+          svg {
+            font-size: 24px;
+            path {
+              color: $color_white;
+              &:hover {
+                color: $color_sub;
+              }
+            }
           }
         }
       }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "../Components/Navigation";
 import ProjectList from "../Components/ProjectList";
+import Footer from "../Components/Footer";
 import { ProjectData } from "../assets/projectdata";
 
 const Project = ({ title, leftChild, rightChild }) => {
@@ -18,6 +19,7 @@ const Project = ({ title, leftChild, rightChild }) => {
         rightChild={<button onClick={handleAbout}>About</button>}
       />
       <ProjectList data={ProjectData} />
+      <Footer />
     </div>
   );
 };

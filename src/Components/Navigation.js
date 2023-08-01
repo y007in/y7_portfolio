@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaGithub } from "react-icons/fa";
 import "../scss/Navigation.scss";
 
 const Navigation = ({ leftChild, rightChild, title }) => {
@@ -50,6 +50,9 @@ const Navigation = ({ leftChild, rightChild, title }) => {
           <ul>
             <li onClick={() => navigate("/about")}>About</li>
             <li onClick={() => navigate("/project")}>Project</li>
+            <li>
+              <FaGithub />
+            </li>
           </ul>
         </div>
       </div>

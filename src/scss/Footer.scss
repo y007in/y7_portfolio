@@ -1,0 +1,30 @@
+@import "../scss/variables.scss";
+
+.footer_mobile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid $color_main;
+  padding: 20px;
+  li {
+    line-height: 150%;
+    font-size: 14px;
+    &.name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        &:not(:nth-child(3))::after {
+          content: "|";
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}

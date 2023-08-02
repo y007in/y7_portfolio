@@ -31,9 +31,9 @@
 @media all and (min-width: 1024px) {
   .ProjectList {
     @include topcontainer_pc();
+    height: calc(100% - 500px);
     .ProjectList_container {
       @include container_pc();
-
       .ProjectList_Title {
         justify-content: center;
         align-items: center;

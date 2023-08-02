@@ -1,6 +1,7 @@
 @import "../scss/variables.scss";
 .ProjectItem {
   @include topcontainer_mobile();
+
   .project_container {
     @include container_mobile();
     .project_title {
@@ -119,12 +120,12 @@
 @media all and (min-width: 1024px) {
   .ProjectItem {
     @include topcontainer_pc();
-
     .project_container {
       @include container_pc();
       margin: 35px 0;
       border: 1px dashed $color_main;
       border-radius: 10px;
+      padding: 50px 80px;
       .project_title {
         h1 {
           font-size: 40px;

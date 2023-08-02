@@ -37,10 +37,10 @@ $font_eng: "Encode Sans", sans-serif;
 @mixin topcontainer_pc() {
   align-items: center;
   justify-content: center;
-  // height: calc(100% - 65px);
+  min-height: calc(100vh - 220px);
 }
 @mixin container_pc() {
   width: 1280px;
   margin-bottom: 20px;
-  padding: 50px 80px;
+  // padding: 50px 80px;
 }

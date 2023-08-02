@@ -6,6 +6,7 @@ import About from "./Pages/About";
 import Project from "./Pages/Project";
 import ProjectDetail from "./Pages/ProjectDetail";
 import End from "./Pages/End";
+import Footer from "./Components/Footer";
 
 function App() {
   return (

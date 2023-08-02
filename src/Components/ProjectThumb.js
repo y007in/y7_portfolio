@@ -16,7 +16,7 @@ const ProjectThumb = ({ id, image, name, skill }) => {
             <li className="title">
               <span>{name}</span>
             </li>
-            <li>
+            <li className="thumb_des">
               <ul className="skill">{skill}</ul>
             </li>
           </ul>

@@ -45,6 +45,7 @@
         white-space: nowrap;
         overflow: hidden;
         animation: slide-in 1s;
+        margin-bottom: 5px;
         span {
           padding: 3px 8px;
           font-size: 20px;
@@ -53,17 +54,15 @@
           background-color: $color_main;
         }
       }
-      li {
+      .thumb_des {
+        border-left: 3px solid $color_main;
         .skill {
-          border-left: 3px solid $color_main;
           display: flex;
           margin: 8px 0;
-
           li {
             font-family: $font_eng;
             font-weight: 500;
             color: $color_white;
-
             &::before {
               content: "# ";
               margin-left: 5px;
@@ -87,11 +86,11 @@
           font-size: 24px;
         }
       }
-      li {
-        .skill li {
-          font-size: 16px;
-        }
-      }
+      // li {
+      //   .skill li {
+      //     font-size: 16px;
+      //   }
+      // }
     }
   }
 }

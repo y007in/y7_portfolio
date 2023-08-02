@@ -9,7 +9,7 @@ const Project = ({ title, leftChild, rightChild }) => {
   const navigate = useNavigate();
 
   const handleAbout = () => {
-    navigate("/about");
+    navigate("/");
   };
   return (
     <div className="Project">

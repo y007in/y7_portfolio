@@ -48,7 +48,7 @@ const Navigation = ({ leftChild, rightChild, title }) => {
         </div>
         <div className="gnb">
           <ul>
-            <li onClick={() => navigate("/about")}>About</li>
+            <li onClick={() => navigate("/")}>About</li>
             <li onClick={() => navigate("/project")}>Project</li>
             <li
               onClick={() => window.open("https://github.com/y007in", "_blank")}

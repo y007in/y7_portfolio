@@ -26,7 +26,11 @@ const Footer = () => {
             <ul className="info">
               <li>📞 010-9962-0590</li>
               <li>📧 ujin4719@naver.com</li>
-              <li>
+              <li
+                onClick={() =>
+                  window.open("https://github.com/y007in", "_blank")
+                }
+              >
                 <FaGithub />
                 GitHub
               </li>

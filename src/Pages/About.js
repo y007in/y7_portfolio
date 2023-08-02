@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "../Components/Navigation";
 import MyInformation from "../Components/MyInformation";
+import Footer from "../Components/Footer";
 
 const About = ({ title, rightChild, leftChild }) => {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ const About = ({ title, rightChild, leftChild }) => {
         }
       />
       <MyInformation />
+      <Footer />
     </div>
   );
 };

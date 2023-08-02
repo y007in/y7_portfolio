@@ -15,7 +15,7 @@ const ProjectDetail = () => {
       <Navigation
         title={"Project"}
         leftChild={<button>Back</button>}
-        rightChild={<button onClick={() => navigate("/about")}>About</button>}
+        rightChild={<button onClick={() => navigate("/")}>About</button>}
       />
       <ProjectItem projectId={id} />
       <Footer />

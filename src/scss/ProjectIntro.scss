@@ -1,0 +1,8 @@
+@import "../scss/variables.scss";
+
+.ProjectIntro {
+  @include topcontainer_mobile();
+  .ProjectIntro_container {
+    @include container_mobile();
+  }
+}

@@ -1,5 +1,7 @@
 import React from "react";
+import { FaGithub } from "react-icons/fa";
 import "../scss/MyInformation.scss";
+import velogicon from "../assets/img/velogicon.png";
 
 const myinformation = () => {
   return (
@@ -11,22 +13,41 @@ const myinformation = () => {
         <section className="about_Me">
           <article className="resolution">
             <span>
-              loFKSLKDJF;ALKDJS;ALKDSF;ALKSJFL;ASKJDsfsdfsfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfLAKJSdfsdfsdfF
+              loFKSLKDJF;ALKDJS;ALKDSF;ALKSJFL;ASKJDsfsdfsfsdfsdfsdfsdfsdfssfkjsdlfjalskdjfslkdfslkdjfskldjfslkjfslkdjfslkfslkj
             </span>
           </article>
           <article className="me">
             <h3>장유진</h3>
             <ul className="me_detail">
               <li>📆1998.07.13</li>
-              <li>📧 ujin4719@naver.com</li>
-              <li>📞 +82 1012341234 </li>
-              <li>📆1998.07.13</li>
+              <li>
+                <a href="mailto:ujin4719@naver.com">📧 ujin4719@naver.com</a>
+              </li>
+              <li>
+                <a href="tel:01099620590"> 📞 +82 10-9962-0590 </a>
+              </li>
+              <li className="link">
+                <FaGithub
+                  onClick={() =>
+                    window.open("https://github.com/y007in", "_blank")
+                  }
+                />
+                <img
+                  src={velogicon}
+                  width={24}
+                  onClick={() => window.open("https://velog.io/@yoojin4719")}
+                />{" "}
+              </li>
             </ul>
           </article>
         </section>
         <section className="about_content">
           <article className="edu">
             <div className="info_title">교육</div>
+            <ul className="info_list">
+              <li className="date">2014.03 - 2017.02</li>
+              <li className="content">신목고등학교 졸업</li>
+            </ul>
             <ul className="info_list">
               <li className="date">2019.03 - 현재</li>
               <li className="content">국립안동대학교 멀티미디어공학과 재학</li>

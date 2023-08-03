@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Navigation from "../Components/Navigation";
 import MyInformation from "../Components/MyInformation";
 import Footer from "../Components/Footer";
+import ProjectIntro from "../Components/ProjectIntro";
 
 const About = ({ title, rightChild, leftChild }) => {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ const About = ({ title, rightChild, leftChild }) => {
           </button>
         }
       />
+      <ProjectIntro />
       <MyInformation />
       <Footer />
     </div>

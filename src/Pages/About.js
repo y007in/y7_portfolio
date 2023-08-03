@@ -4,6 +4,7 @@ import Navigation from "../Components/Navigation";
 import MyInformation from "../Components/MyInformation";
 import Footer from "../Components/Footer";
 import ProjectIntro from "../Components/ProjectIntro";
+import Skill from "../Components/Skill";
 
 const About = ({ title, rightChild, leftChild }) => {
   const navigate = useNavigate();
@@ -30,8 +31,10 @@ const About = ({ title, rightChild, leftChild }) => {
           </button>
         }
       />
-      <ProjectIntro />
       <MyInformation />
+      <Skill />
+      <ProjectIntro />
+
       <Footer />
     </div>
   );

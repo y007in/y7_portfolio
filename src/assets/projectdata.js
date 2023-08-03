@@ -1,6 +1,8 @@
 import hugmom from "./img/project_img_hugmom.JPG";
 import hugmom2 from "./img/humgmom2.JPG";
 
+import html5 from "./img/html5.png";
+
 export const ProjectData = [
   {
     id: 0,
@@ -201,5 +203,14 @@ export const ProjectData = [
         <li>-산후조리원코드로 임산부들만 회원가입 가능합니다.,</li>
       </>
     ),
+  },
+];
+
+export const SkillIcon = [
+  {
+    html5: `${html5}`,
+  },
+  {
+    html5: `${html5}`,
   },
 ];

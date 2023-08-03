@@ -1,0 +1,78 @@
+@import "../scss/variables.scss";
+
+.skills {
+  @include topcontainer_mobile();
+  .skill_container {
+    @include container_mobile();
+    h1 {
+      font-family: $font_eng;
+    }
+    .skill_list {
+      width: 100%;
+      .skillbox {
+        width: 100%;
+        .skill_items_title {
+          display: inline-block;
+          background-color: $color_gray;
+        }
+        .skill_items {
+          border: 1px solid red;
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          .skill_item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 10px;
+            &:last-child {
+              margin-right: 0;
+            }
+            .skill_icon {
+              width: 100%;
+              height: 100%;
+
+              background: $color_gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .skills {
+    @include topcontainer_pc();
+    .skill_container {
+      @include container_pc();
+      h1 {
+        font-family: $font_eng;
+      }
+      .skill_list {
+        width: 100%;
+        .skillbox {
+          width: 100%;
+          .skill_items_title {
+            display: inline-block;
+            background-color: $color_gray;
+          }
+          .skill_items {
+            border: 1px solid red;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            .skill_item {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              .skill_icon {
+                background: $color_gray;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,3 +6,12 @@
     @include container_mobile();
   }
 }
+
+@media all and (min-width: 1024px) {
+  .ProjectIntro {
+    @include topcontainer_pc();
+    .ProjectIntro_container {
+      @include container_pc();
+    }
+  }
+}

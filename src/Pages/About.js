@@ -1,5 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
+import { SkillIcon } from "../assets/projectdata";
 import Navigation from "../Components/Navigation";
 import MyInformation from "../Components/MyInformation";
 import Footer from "../Components/Footer";
@@ -32,9 +34,7 @@ const About = ({ title, rightChild, leftChild }) => {
         }
       />
       <MyInformation />
-      <Skill />
-      <ProjectIntro />
-
+      <Skill skillIcon={SkillIcon} />
       <Footer />
     </div>
   );

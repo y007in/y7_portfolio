@@ -1,8 +1,7 @@
 import React from "react";
 import "../scss/Skill.scss";
-import { SkillIcon } from "../assets/projectdata";
 
-const Skill = () => {
+const Skill = ({ skillIcon }) => {
   return (
     <div className="skills">
       <div className="skill_container">
@@ -11,47 +10,29 @@ const Skill = () => {
           <article className="skillbox">
             <p className="skill_items_title">Front-end</p>
             <div className="skill_items">
-              <div className="skill_item">
-                <div className="skill_icon"></div>
-                <p>HTML5</p>
-              </div>
-              <div className="skill_item">
-                <div className="skill_icon">d</div>
-                <p>HTML5</p>
-              </div>
-              <div className="skill_item">
-                <div className="skill_icon"></div>
-                <p>HTML5</p>
-              </div>
-              <div className="skill_item">
-                <div className="skill_icon"></div>
-                <p>HTML5</p>
-              </div>
-              <div className="skill_item">
-                <div className="skill_icon"></div>
-                <p>HTML5</p>
-              </div>
-              <div className="skill_item">
-                <div className="skill_icon"></div>
-                <p>HTML5</p>
-              </div>
+              {skillIcon.slice(0, 5).map((item) => (
+                <div className="skill_item">
+                  <div className="skill_icon">
+                    <img src={item.icon} />
+                  </div>
+                  <p className="skill_name">{item.skill}</p>
+                  <ul className="skill_des">{item.des}</ul>
+                </div>
+              ))}
             </div>
           </article>
           <article className="skillbox">
             <p className="skill_items_title">Etc</p>
             <div className="skill_items">
-              <div className="skill_item">
-                <div className="skill_icon"></div>
-                <p>HTML5</p>
-              </div>
-              <div className="skill_item">
-                <div className="skill_icon">d</div>
-                <p>HTML5</p>
-              </div>
-              <div className="skill_item">
-                <div className="skill_icon"></div>
-                <p>HTML5</p>
-              </div>
+              {skillIcon.slice(5, 8).map((item) => (
+                <div className="skill_item">
+                  <div className="skill_icon">
+                    <img src={item.icon} />
+                  </div>
+                  <p className="skill_name">{item.skill}</p>
+                  <ul className="skill_des">{item.des}</ul>
+                </div>
+              ))}
             </div>
           </article>
         </div>

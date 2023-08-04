@@ -2,6 +2,13 @@ import hugmom from "./img/project_img_hugmom.JPG";
 import hugmom2 from "./img/humgmom2.JPG";
 
 import html5 from "./img/html5.png";
+import CSS3 from "./img/css-3.png";
+import js from "./img/js.png";
+import react from "./img/react.png";
+import redux from "./img/redux.png";
+import photoshop from "./img/photoshop.png";
+import illustrator from "./img/illustrator.png";
+import figma from "./img/figma.png";
 
 export const ProjectData = [
   {
@@ -22,9 +29,9 @@ export const ProjectData = [
     ),
     func: (
       <>
-        <li>-산후조리원코드로 임산부들만 회원가입 가능합니다.</li>
-        <li>-산후조리원코드로 임산부들만 회원가입 가능합니다.</li>
-        <li>-산후조리원코드로 임산부들만 회원가입 가능합니다.,</li>
+        <li>- 산후조리원코드로 임산부들만 회원가입 가능합니다.</li>
+        <li>- 산후조리원코드로 임산부들만 회원가입 가능합니다.</li>
+        <li>- 산후조리원코드로 임산부들만 회원가입 가능합니다.</li>
       </>
     ),
   },
@@ -208,9 +215,92 @@ export const ProjectData = [
 
 export const SkillIcon = [
   {
-    html5: `${html5}`,
+    id: 0,
+    skill: "HTML5",
+    icon: `${html5}`,
+    des: (
+      <>
+        <li>반응형 웹을 제작할 수 있습니다.</li>
+        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+      </>
+    ),
   },
   {
-    html5: `${html5}`,
+    id: 1,
+    skill: "CSS3 (SCSS)",
+    icon: `${CSS3}`,
+    des: (
+      <>
+        <li>반응형 웹을 제작할 수 있습니다.</li>
+        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+      </>
+    ),
+  },
+  {
+    id: 2,
+    skill: "JavaScript",
+    icon: `${js}`,
+    des: (
+      <>
+        <li>반응형 웹을 제작할 수 있습니다.</li>
+        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+      </>
+    ),
+  },
+  {
+    id: 3,
+    skill: "React",
+    icon: `${react}`,
+    des: (
+      <>
+        <li>반응형 웹을 제작할 수 있습니다.</li>
+        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+      </>
+    ),
+  },
+  {
+    id: 4,
+    skill: "Redux",
+    icon: `${redux}`,
+    des: (
+      <>
+        <li>반응형 웹을 제작할 수 있습니다.</li>
+        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+      </>
+    ),
+  },
+
+  {
+    id: 5,
+    skill: "Adobe Illustrator",
+    icon: `${illustrator}`,
+    des: (
+      <>
+        <li>반응형 웹을 제작할 수 있습니다.</li>
+        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+      </>
+    ),
+  },
+  {
+    id: 6,
+    skill: "Adobe Photoshop",
+    icon: `${photoshop}`,
+    des: (
+      <>
+        <li>반응형 웹을 제작할 수 있습니다.</li>
+        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+      </>
+    ),
+  },
+  {
+    id: 7,
+    skill: "Figma",
+    icon: `${figma}`,
+    des: (
+      <>
+        <li>반응형 웹을 제작할 수 있습니다.</li>
+        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+      </>
+    ),
   },
 ];

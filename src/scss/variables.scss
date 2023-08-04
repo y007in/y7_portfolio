@@ -22,6 +22,7 @@ $color_white: #fff;
 $font_kor: "Pretendard-Regular", sans-serif;
 $font_eng: "Encode Sans", sans-serif;
 
+//mobile
 @mixin topcontainer_mobile() {
   width: 100%;
   // height: calc(100% - 50px);
@@ -34,13 +35,42 @@ $font_eng: "Encode Sans", sans-serif;
   flex-direction: column;
   margin: 20px;
 }
+
+@mixin title_mobile() {
+  font-size: 30px;
+  margin-bottom: 8px;
+  font-family: $font_eng;
+}
+
+@mixin boxtitle_mobile() {
+  clear: both;
+  background-color: $color_gray;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+//pc
 @mixin topcontainer_pc() {
   align-items: center;
   justify-content: center;
-  // min-height: calc(100vh - 220px);
+  min-height: calc(100vh - 220px);
 }
 @mixin container_pc() {
   width: 1280px;
   margin-bottom: 20px;
   // padding: 50px 80px;
+}
+
+@mixin title_pc() {
+  font-size: 48px;
+}
+
+@mixin boxtitle_pc() {
+  padding: 8px 15px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
 }

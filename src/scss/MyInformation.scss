@@ -5,8 +5,7 @@
   .MyInformation_container {
     @include container_mobile();
     .About_Title h1 {
-      font-size: 28px;
-      font-family: $font_eng;
+      @include title_mobile();
     }
     .about_Me {
       width: 100%;
@@ -22,6 +21,7 @@
         .me_detail {
           border-left: 3px solid $color_main;
           margin: 10px 0;
+          font-size: 16px;
           li {
             margin: 5px 0 5px 5px;
             &.link {
@@ -40,6 +40,7 @@
         padding: 8px;
         margin: 5px 0;
         border-radius: 5px;
+        font-size: 16px;
         span {
           display: block;
           width: 100%;
@@ -48,21 +49,22 @@
       }
     }
     .about_content {
-      margin: 10px 0;
+      margin: 20px 0;
       .edu {
-        margin: 30px 0;
+        margin-bottom: 30px;
       }
       .info_title {
+        @include boxtitle_mobile();
         display: inline-block;
-        padding: 7px 20px;
-        border-radius: 5px;
-        background-color: $color_gray;
       }
       .info_list {
         border-left: 3px solid $color_main;
         margin: 10px 0;
+        padding: 0.1px 0;
         li {
-          margin: 5px 0 5px 5px;
+          margin: 5px 0 5px 10px;
+          font-size: 16px;
+
           &.date {
             color: $color_darkgray;
           }
@@ -78,8 +80,7 @@
     .MyInformation_container {
       @include container_pc();
       .About_Title h1 {
-        font-size: 42px;
-        font-family: $font_eng;
+        @include title_pc();
       }
       .about_Me {
         flex-direction: row;
@@ -101,7 +102,7 @@
             li {
               text-align: right;
               margin: 5px 5px 5px 0;
-              font-size: 18px;
+              font-size: 20px;
               &.link {
                 justify-content: right;
               }
@@ -111,15 +112,18 @@
         .resolution {
           order: 1;
           width: 60%;
+          padding: 20px;
+          font-size: 18px;
         }
       }
       .about_content {
         .info_title {
-          font-size: 18px;
+          @include boxtitle_pc();
+          font-size: 20px;
         }
         .info_list {
           li {
-            margin: 8px 0 8px 5px;
+            margin: 8px 0 8px 10px;
             font-size: 18px;
             &.date {
               color: $color_darkgray;

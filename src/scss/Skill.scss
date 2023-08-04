@@ -5,22 +5,24 @@
   .skill_container {
     @include container_mobile();
     h1 {
-      font-family: $font_eng;
+      @include title_mobile();
     }
     .skill_list {
       width: 100%;
       .skillbox {
         width: 100%;
         .skill_items_title {
-          display: inline-block;
-          background-color: $color_gray;
+          @include boxtitle_mobile();
+          float: left;
+          margin-bottom: 20px;
         }
         .skill_items {
-          border: 1px solid red;
           width: 100%;
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
+          margin: 10px 0;
           .skill_item {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -28,11 +30,51 @@
             &:last-child {
               margin-right: 0;
             }
+            &:hover {
+              .skill_icon {
+                filter: brightness(50%);
+              }
+              .skill_des,
+              .skill_des li {
+                display: block;
+              }
+            }
+
             .skill_icon {
+              display: flex;
+              justify-content: center;
+              align-items: center;
               width: 100%;
               height: 100%;
-
+              padding: 20px;
+              border-radius: 5px;
               background: $color_gray;
+              transition: 0.8s;
+              img {
+                width: 100%;
+              }
+            }
+            .skill_name {
+              margin: 5px 0;
+              text-align: center;
+              font-family: $font_eng;
+              font-weight: 500;
+            }
+            .skill_des {
+              width: 100%;
+              border-radius: 5px;
+              position: absolute;
+              display: none;
+              padding: 20px;
+              li {
+                color: $color_white;
+                margin-bottom: 10px;
+                font-size: 14px;
+                &::before {
+                  content: "✔";
+                  margin-right: 5px;
+                }
+              }
             }
           }
         }
@@ -47,27 +89,33 @@
     .skill_container {
       @include container_pc();
       h1 {
-        font-family: $font_eng;
+        @include title_pc();
       }
       .skill_list {
         width: 100%;
         .skillbox {
-          width: 100%;
           .skill_items_title {
-            display: inline-block;
-            background-color: $color_gray;
+            font-size: 24px;
           }
           .skill_items {
-            border: 1px solid red;
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             .skill_item {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
               .skill_icon {
-                background: $color_gray;
+                padding: 40px;
+              }
+              .skill_name {
+                margin: 10px 0;
+                font-size: 20px;
+              }
+              .skill_des {
+                padding: 25px;
+                li {
+                  font-size: 16px;
+                  &::before {
+                    content: "✔";
+                    margin-right: 5px;
+                  }
+                }
               }
             }
           }

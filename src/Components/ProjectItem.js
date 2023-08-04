@@ -41,7 +41,9 @@ const ProjectItem = ({ projectId }) => {
             </div>
             <div className="project_func">
               <div className="des_title">주요 기능</div>
-              <div className="des_content">{ProjectData[projectId].func}</div>
+              <div className="des_content">
+                <ul>{ProjectData[projectId].func}</ul>
+              </div>
             </div>
           </section>
         </main>

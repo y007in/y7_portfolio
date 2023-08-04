@@ -13,7 +13,8 @@ const myinformation = () => {
         <section className="about_Me">
           <article className="resolution">
             <span>
-              loFKSLKDJF;ALKDJS;ALKDSF;ALKSJFL;ASKJDsfsdfsfsdfsdfsdfsdfsdfssfkjsdlfjalskdjfslkdfslkdjfskldjfslkjfslkdjfslkfslkj
+              멋진 프론트엔드 개발자가 되고 싶습니다. 프론트엔드 개발자가 되기
+              위해서 이런저런걸 해왔습니다.
             </span>
           </article>
           <article className="me">
@@ -35,8 +36,10 @@ const myinformation = () => {
                 <img
                   src={velogicon}
                   width={24}
-                  onClick={() => window.open("https://velog.io/@yoojin4719")}
-                />{" "}
+                  onClick={() =>
+                    window.open("https://velog.io/@yoojin4719", "_blank")
+                  }
+                />
               </li>
             </ul>
           </article>

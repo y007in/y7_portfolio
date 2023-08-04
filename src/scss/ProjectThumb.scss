@@ -65,7 +65,7 @@
             color: $color_white;
             &::before {
               content: "# ";
-              margin-left: 5px;
+              margin-left: 10px;
             }
             &:last-child {
               margin-right: 8px;

@@ -6,6 +6,12 @@
     @include container_mobile();
     h1 {
       @include title_mobile();
+      &::after {
+        content: "*클릭 시 해당 스킬을 볼 수 있습니다";
+        font-size: 14px;
+        margin-left: 8px;
+        color: $color_darkgray;
+      }
     }
     .skill_list {
       width: 100%;
@@ -66,6 +72,7 @@
               position: absolute;
               display: none;
               padding: 20px;
+
               li {
                 color: $color_white;
                 margin-bottom: 10px;
@@ -90,6 +97,9 @@
       @include container_pc();
       h1 {
         @include title_pc();
+        &::after {
+          content: "";
+        }
       }
       .skill_list {
         width: 100%;
@@ -99,6 +109,7 @@
           }
           .skill_items {
             grid-template-columns: repeat(5, 1fr);
+
             .skill_item {
               .skill_icon {
                 padding: 40px;
@@ -109,12 +120,9 @@
               }
               .skill_des {
                 padding: 25px;
+
                 li {
                   font-size: 16px;
-                  &::before {
-                    content: "✔";
-                    margin-right: 5px;
-                  }
                 }
               }
             }

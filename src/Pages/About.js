@@ -33,6 +33,7 @@ const About = ({ title, rightChild, leftChild }) => {
           </button>
         }
       />
+      <ProjectIntro />
       <MyInformation />
       <Skill skillIcon={SkillIcon} />
       <Footer />

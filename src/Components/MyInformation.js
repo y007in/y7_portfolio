@@ -48,18 +48,18 @@ const myinformation = () => {
           <article className="edu">
             <div className="info_title">교육</div>
             <ul className="info_list">
-              <li className="date">2014.03 - 2017.02</li>
-              <li className="content">신목고등학교 졸업</li>
+              <li className="date">2023.03 - 2023.08</li>
+              <li className="content">
+                웹퍼블리셔&리액트 활용 프론트엔드 웹 SW 개발자 과정
+              </li>
             </ul>
             <ul className="info_list">
               <li className="date">2019.03 - 현재</li>
               <li className="content">국립안동대학교 멀티미디어공학과 재학</li>
             </ul>
             <ul className="info_list">
-              <li className="date">2023.03 - 2023.08</li>
-              <li className="content">
-                웹퍼블리셔&리액트 활용 프론트엔드 웹 SW 개발자 과정
-              </li>
+              <li className="date">2014.03 - 2017.02</li>
+              <li className="content">신목고등학교 졸업</li>
             </ul>
           </article>
           <article className="active">

@@ -231,8 +231,8 @@ export const SkillIcon = [
     icon: `${CSS3}`,
     des: (
       <>
-        <li>반응형 웹을 제작할 수 있습니다.</li>
-        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+        <li>CSS3를 활용하여 원하는 화면을 구성할 수 있습니다.</li>
+        <li>Sass 같은 CSS Preprocessor를 사용할 수 있습니다. </li>
       </>
     ),
   },
@@ -253,9 +253,8 @@ export const SkillIcon = [
     icon: `${react}`,
     des: (
       <>
-        <li>반응형 웹을 제작할 수 있습니다.</li>
-        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
-        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+        <li>react-stylecomponent를 활용한 css개발이 가능합니다.</li>
+        <li>hooks의 대한 기초지식을 활용하여 화면을 제작합니다.</li>
       </>
     ),
   },

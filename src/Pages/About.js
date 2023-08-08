@@ -5,8 +5,8 @@ import { SkillIcon } from "../assets/projectdata";
 import Navigation from "../Components/Navigation";
 import MyInformation from "../Components/MyInformation";
 import Footer from "../Components/Footer";
-import ProjectIntro from "../Components/ProjectIntro";
 import Skill from "../Components/Skill";
+import Intro from "../Components/Intro";
 
 const About = ({ title, rightChild, leftChild }) => {
   const navigate = useNavigate();
@@ -33,9 +33,9 @@ const About = ({ title, rightChild, leftChild }) => {
           </button>
         }
       />
-      <ProjectIntro />
-      <MyInformation />
+      <Intro />
       <Skill skillIcon={SkillIcon} />
+      <MyInformation />
       <Footer />
     </div>
   );

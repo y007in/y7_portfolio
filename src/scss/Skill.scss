@@ -36,16 +36,6 @@
             &:last-child {
               margin-right: 0;
             }
-            &:hover {
-              .skill_icon {
-                filter: brightness(50%);
-              }
-              .skill_des,
-              .skill_des li {
-                display: block;
-              }
-            }
-
             .skill_icon {
               display: flex;
               justify-content: center;
@@ -83,48 +73,12 @@
                 }
               }
             }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media all and (min-width: 1024px) {
-  .skills {
-    @include topcontainer_pc();
-    .skill_container {
-      @include container_pc();
-      h1 {
-        @include title_pc();
-        &::after {
-          content: "";
-        }
-      }
-      .skill_list {
-        width: 100%;
-        .skillbox {
-          .skill_items_title {
-            font-size: 24px;
-          }
-          .skill_items {
-            grid-template-columns: repeat(5, 1fr);
-
-            .skill_item {
-              .skill_icon {
-                padding: 40px;
-              }
-              .skill_name {
-                margin: 10px 0;
-                font-size: 20px;
-              }
-              .skill_des {
-                padding: 25px;
-
-                li {
-                  font-size: 16px;
-                }
-              }
+            .mobile-style {
+              position: absolute;
+              top: 50%;
+              left: 50px;
+              background-color: $color_gray;
+              display: block;
             }
           }
         }
@@ -132,3 +86,56 @@
     }
   }
 }
+
+// @media all and (min-width: 1024px) {
+//   .skills {
+//     @include topcontainer_pc();
+//     .skill_container {
+//       @include container_pc();
+//       h1 {
+//         @include title_pc();
+//         &::after {
+//           content: "";
+//         }
+//       }
+//       .skill_list {
+//         width: 100%;
+//         .skillbox {
+//           .skill_items_title {
+//             font-size: 24px;
+//           }
+//           .skill_items {
+//             grid-template-columns: repeat(5, 1fr);
+
+//             .skill_item {
+//               &:hover {
+//                 .skill_icon {
+//                   filter: brightness(50%);
+//                 }
+//                 .skill_des,
+//                 .skill_des li {
+//                   display: block;
+//                 }
+//               }
+//               .skill_icon {
+//                 padding: 40px;
+//               }
+//               .skill_name {
+//                 margin: 10px 0;
+//                 font-size: 20px;
+//               }
+//               .skill_des {
+//                 padding: 25px;
+//                 display: none;
+
+//                 li {
+//                   font-size: 16px;
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

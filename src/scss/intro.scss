@@ -1,0 +1,46 @@
+@import "../scss/variables.scss";
+
+.intro {
+  @include topcontainer_mobile();
+  .intro_container {
+    @include container_mobile();
+    h1 {
+      font-size: 36px;
+      line-height: 130%;
+      margin-bottom: 30px;
+      .intro_name {
+        color: $color_white;
+        background-color: $color_main;
+        padding: 0 6px;
+      }
+      .front-end {
+        color: $color_main;
+      }
+    }
+    .introduce {
+      background-color: $color_gray;
+      width: 100%;
+      padding: 30px;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .intro {
+    @include topcontainer_pc();
+    .intro_container {
+      @include container_pc();
+      h1 {
+        font-size: 48px;
+      }
+      .introduce {
+        background-color: $color_gray;
+        width: 100%;
+        padding: 30px;
+        border-radius: 5px;
+        font-size: 18px;
+      }
+    }
+  }
+}

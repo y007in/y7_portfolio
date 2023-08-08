@@ -108,9 +108,11 @@
                 font-size: 20px;
               }
               .skill_des {
-                padding: 25px;
+                padding: 33px;
+
                 li {
-                  font-size: 16px;
+                  font-size: 18px;
+                  line-height: 150%;
                   &::before {
                     content: "✔";
                     margin-right: 5px;

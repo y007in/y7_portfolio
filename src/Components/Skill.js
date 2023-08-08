@@ -2,19 +2,6 @@ import React from "react";
 import "../scss/Skill.scss";
 
 const Skill = ({ skillIcon }) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
-  const [showMobileContent, setShowMobileContent] = useState(false);
-
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 1024);
-  };
-
-  window.addEventListener("resize", handleResize);
-
-  const toggleMobileContent = () => {
-    setShowMobileContent(!showMobileContent);
-  };
-
   return (
     <div className="skills">
       <div className="skill_container">
@@ -29,16 +16,7 @@ const Skill = ({ skillIcon }) => {
                     <img src={item.icon} />
                   </div>
                   <p className="skill_name">{item.skill}</p>
-                  {isMobile && (
-                    <ul
-                      className={`${styles.skill_des} ${
-                        showMobileContent ? styles["show-mobile"] : ""
-                      }`}
-                      onClick={toggleMobileContent}
-                    >
-                      {item.des}
-                    </ul>
-                  )}
+                  <ul className="skill_des">{item.des}</ul>
                 </div>
               ))}
             </div>
@@ -52,16 +30,7 @@ const Skill = ({ skillIcon }) => {
                     <img src={item.icon} />
                   </div>
                   <p className="skill_name">{item.skill}</p>
-                  {isMobile && (
-                    <ul
-                      className={`${styles.skill_des} ${
-                        showMobileContent ? styles["show-mobile"] : ""
-                      }`}
-                      onClick={toggleMobileContent}
-                    >
-                      {item.des}
-                    </ul>
-                  )}
+                  <ul className="skill_des">{item.des}</ul>
                 </div>
               ))}
             </div>

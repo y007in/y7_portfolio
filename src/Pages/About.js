@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { SkillIcon } from "../assets/projectdata";
@@ -10,6 +10,7 @@ import Intro from "../Components/Intro";
 
 const About = ({ title, rightChild, leftChild }) => {
   const navigate = useNavigate();
+
   return (
     <div className="About">
       <Navigation
@@ -34,6 +35,7 @@ const About = ({ title, rightChild, leftChild }) => {
         }
       />
       <Intro />
+
       <Skill skillIcon={SkillIcon} />
       <MyInformation />
       <Footer />

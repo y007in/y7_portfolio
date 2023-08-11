@@ -32,8 +32,13 @@ export const ProjectData = [
     func: (
       <>
         <li>- 반응형 웹으로 제작</li>
-        <li>- 각 상품 상세 페이지 별 주문 문품과 수량에 따른 가격 변화</li>
-        <li>- 공동구매 페이지 공동구매 기능</li>
+        <li>
+          - 자바스크립트를 활용한 기능 구현
+          <ul>
+            <li>· 구매 수량에 다른 가격 변화 </li>
+            <li>· 구매 수량에 다른 가격 변화 </li>
+          </ul>
+        </li>
       </>
     ),
   },
@@ -42,7 +47,7 @@ export const ProjectData = [
     name: "Todo List",
     team: "개인 프로젝트",
     image: `${todo}`,
-    des: "ㅇ러니어리나ㅓㅇ리마ㅓ이ㅏㅓㅁ ;ㅣ너ㅏ이마ㅓㄴ;ㅣ러;나이ㅓㅁㄴㄹ",
+    des: "React를 활용하여 Todo List 제작하였고 데이터들을 LocalStorage에 저장될 수 있도록 함",
     github: "https://github.com/y007in/my_todo",
     url: "https://y7mytodolist.netlify.app/",
     date: "2023.07.11 - 2023.07.15",
@@ -59,7 +64,7 @@ export const ProjectData = [
     name: "MyDiary",
     team: "개인 프로젝트",
     image: `${diary}`,
-    des: "ㅇ러니어리나ㅓㅇ리마ㅓ이ㅏㅓㅁ ;ㅣ너ㅏ이마ㅓㄴ;ㅣ러;나이ㅓㅁㄴㄹ",
+    des: "React를 활용한 Diary 제작",
     github: "https://github.com/y007in/my_diary",
     url: "https://y7mydiary.netlify.app/",
     date: "2023.07.12 - 2023.07.14",

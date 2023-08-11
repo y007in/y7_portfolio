@@ -10,7 +10,7 @@
 }
 
 .Navigation_mobile {
-  position: relative;
+  position: fixed;
   display: flex;
   width: 100vw;
   height: 50px;
@@ -58,7 +58,7 @@
 
 @media all and (min-width: 1024px) {
   .Navigation_pc {
-    position: relative;
+    position: fixed;
     display: flex;
     width: 100vw;
     height: 65px;

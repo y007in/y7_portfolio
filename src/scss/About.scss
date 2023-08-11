@@ -1,0 +1,29 @@
+@import "../scss/variables.scss";
+
+.About {
+  @include moveToTop();
+  .btns {
+    display: flex;
+    gap: 20px;
+    .moveBtn {
+      padding: 10px 30px;
+      border-radius: 50px;
+      border: 1px solid $color_main;
+      background-color: $color_white;
+      cursor: pointer;
+      font-size: 16px;
+      &:hover {
+        background-color: $color_main;
+        color: $color_white;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .About .top {
+    right: 50px;
+    bottom: 45px;
+    font-size: 50px;
+  }
+}

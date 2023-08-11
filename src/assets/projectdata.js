@@ -129,8 +129,7 @@ export const SkillIcon = [
     icon: `${js}`,
     des: (
       <>
-        <li>반응형 웹을 제작할 수 있습니다.</li>
-        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+        <li>JavaScript 문법을 이해하며 다양한 상황에 적용 가능합니다.</li>
       </>
     ),
   },
@@ -151,8 +150,7 @@ export const SkillIcon = [
     icon: `${redux}`,
     des: (
       <>
-        <li>반응형 웹을 제작할 수 있습니다.</li>
-        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+        <li>리덕스를 이용한 상태관리를 이용한 경험이 있습니다.</li>
       </>
     ),
   },
@@ -163,8 +161,10 @@ export const SkillIcon = [
     icon: `${illustrator}`,
     des: (
       <>
-        <li>반응형 웹을 제작할 수 있습니다.</li>
-        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+        <li>
+          펜툴 및 다양한 기타도구들을 이용해 디자인 요소를 제작할 수 있습니다.
+        </li>
+        <li>다양한 아이콘들과 포스터, 팜플렛 등을 제작한 경험이 있습니다.</li>
       </>
     ),
   },
@@ -174,8 +174,8 @@ export const SkillIcon = [
     icon: `${photoshop}`,
     des: (
       <>
-        <li>반응형 웹을 제작할 수 있습니다.</li>
-        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+        <li>기초적인 이미지 편집이 가능합니다.</li>
+        <li>타임라인을 활용하여 애니메이션 GIF를 제작할 수 있습니다.</li>
       </>
     ),
   },
@@ -185,8 +185,7 @@ export const SkillIcon = [
     icon: `${figma}`,
     des: (
       <>
-        <li>반응형 웹을 제작할 수 있습니다.</li>
-        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+        <li>데스크탑, 모바일 UI/UX 시안을 작업할 수 있습니다.</li>
       </>
     ),
   },

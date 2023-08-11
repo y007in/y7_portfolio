@@ -58,6 +58,7 @@ $font_eng: "Encode Sans", sans-serif;
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 220px);
+  padding-top: 100px;
 }
 @mixin container_pc() {
   width: 1280px;
@@ -74,4 +75,28 @@ $font_eng: "Encode Sans", sans-serif;
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 18px;
+}
+
+@mixin moveToTop() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    svg path {
+      color: $color_main;
+      background-color: $color_white;
+    }
+  }
 }

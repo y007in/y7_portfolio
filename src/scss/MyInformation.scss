@@ -79,6 +79,7 @@
     @include topcontainer_pc();
     .MyInformation_container {
       @include container_pc();
+
       .About_Title h1 {
         @include title_pc();
       }

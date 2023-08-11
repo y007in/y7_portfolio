@@ -22,6 +22,20 @@
       width: 100%;
       padding: 30px;
       border-radius: 5px;
+      font-size: 18px;
+      line-height: 140%;
+      h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+
+        span {
+          background-color: $color_main;
+          // border: 1px solid $color_main;
+          color: $color_white;
+          padding: 1px 5px;
+          margin: 0 2px;
+        }
+      }
     }
   }
 }

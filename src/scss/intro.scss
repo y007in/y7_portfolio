@@ -17,6 +17,12 @@
         color: $color_main;
       }
     }
+    div span {
+      border: 1px solid $color_main;
+      border-radius: 50px;
+      padding: 5px 20px;
+      margin: 5px;
+    }
     .introduce {
       background-color: $color_gray;
       width: 100%;
@@ -28,13 +34,13 @@
         font-size: 20px;
         margin-bottom: 5px;
 
-        span {
-          background-color: $color_main;
-          // border: 1px solid $color_main;
-          color: $color_white;
-          padding: 1px 5px;
-          margin: 0 2px;
-        }
+        // span {
+        //   background-color: $color_main;
+        //   // border: 1px solid $color_main;
+        //   color: $color_white;
+        //   padding: 1px 5px;
+        //   margin: 0 2px;
+        // }
       }
     }
   }
@@ -46,7 +52,7 @@
     .intro_container {
       @include container_pc();
       h1 {
-        font-size: 48px;
+        font-size: 72px;
       }
       .introduce {
         background-color: $color_gray;

@@ -5,6 +5,7 @@ import "../scss/Navigation.scss";
 
 const Navigation = ({ leftChild, rightChild, title }) => {
   const navigate = useNavigate();
+  const [selected, setSelected] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {

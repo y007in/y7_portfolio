@@ -12,6 +12,21 @@ import photoshop from "./img/photoshop.png";
 import illustrator from "./img/illustrator.png";
 import figma from "./img/figma.png";
 
+export const intros = [
+  {
+    hashtag: "# 사용자를 위한",
+    hashtagDetail: "dd",
+  },
+  {
+    hashtag: "# 경청하는",
+    hashtagDetail: "ff",
+  },
+  {
+    hashtag: "# 도전적인",
+    hashtagDetail: "cc",
+  },
+];
+
 export const ProjectData = [
   {
     id: 0,

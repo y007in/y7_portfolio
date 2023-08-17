@@ -1,29 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import "../scss/intro.scss";
+import { intros } from "../assets/projectdata";
 
 const Intro = () => {
+  const [selectedIntroIndex, setSelectedIntroIndex] = useState(null);
+
+  const handleHashtagClick = (index) => {
+    setSelectedIntroIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
   return (
     <div className="intro">
       <div className="intro_container">
-        <h1>
-          안녕하세요. <br />
-          <span className="front-end">프론트엔드 개발자</span>
-          <br /> <span className="intro_name">장유진</span>입니다.
-        </h1>
-        <div>
-          <span>#ddd</span>
-          <span>#ddd</span>
-          <span>#ddd</span>
+        <div className="hi">
+          <h1>
+            안녕하세요. <br />
+            <span className="front-end">프론트엔드 개발자</span>
+            <br /> <span className="intro_name">장유진</span>입니다.
+          </h1>
+          <div className="hashtag">
+            {intros.map((intro, index) => (
+              <span
+                key={index}
+                onClick={() => handleHashtagClick(index)}
+                className={selectedIntroIndex === index ? "active" : ""}
+              >
+                {intros[index].hashtag}
+              </span>
+            ))}
+          </div>
         </div>
-
-        <div className="introduce">
-          <h3>
-            {/* <span># 계획적</span>으로 <span># 끊임없이</span>
-            <span># 도전하며</span> 성장하는 개발자 */}
-            Who Am I
-          </h3>
-          ㅣ아ㅓ로미ㅏㅓㅗ라ㅓ노미ㅏ허ㅗㄴ마ㅣㅓㅗㄹ마ㅓㄴ오리마ㅓ회ㅏㅁ어ㅜㅍ마ㅓㅏㅓㅁ눙파머뉘하ㅓㅠㅗㅁ니ㅏ어푸미ㅏ너ㅜㅏ.ㄴ머우하.머늏피ㅏㅓ오류ㅣ파ㅓ귀햐며도걓;ㅕㅓㄷㄱ우펴럳우ㅑㅏㅍㄱㄹ허ㅗㅠㅜㄷㄱ헏ㄱㅎㄷㄱㅎㅎㅣ아ㅓ로미ㅏㅓㅗ라ㅓ노미ㅏ허ㅗㄴ마ㅣㅓㅗㄹ마ㅓㄴ오리마ㅓ회ㅏㅁ어ㅜㅍ마ㅓㅏㅓㅁ눙파머뉘하ㅓㅠㅗㅁ니ㅏ어푸미ㅏ너ㅜㅏ.ㄴ머우하.머늏피ㅏㅓ오류ㅣ파ㅓ귀햐며도걓;ㅕㅓㄷㄱ우펴럳우ㅑㅏㅍㄱㄹ허ㅗㅠㅜㄷㄱ헏ㄱㅎㄷㄱㅎㅎㅣ아ㅓ로미ㅏㅓㅗ라ㅓ노미ㅏ허ㅗㄴ마ㅣㅓㅗㄹ마ㅓㄴ오리마ㅓ회ㅏㅁ어ㅜㅍ마ㅓㅏㅓㅁ눙파머뉘하ㅓㅠㅗㅁ니ㅏ어푸미ㅏ너ㅜㅏ.ㄴ머우하.머늏피ㅏㅓ오류ㅣ파ㅓ귀햐며도걓;ㅕㅓㄷㄱ우펴럳우ㅑㅏㅍㄱㄹ허ㅗㅠㅜㄷㄱ헏ㄱㅎㄷㄱㅎㅎㅣ아ㅓ로미ㅏㅓㅗ라ㅓ노미ㅏ허ㅗㄴ마ㅣㅓㅗㄹ마ㅓㄴ오리마ㅓ회ㅏㅁ어ㅜㅍ마ㅓㅏㅓㅁ눙파머뉘하ㅓㅠㅗㅁ니ㅏ어푸미ㅏ너ㅜㅏ.ㄴ머우하.머늏피ㅏㅓ오류ㅣ파ㅓ귀햐며도걓;ㅕㅓㄷㄱ우펴럳우ㅑㅏㅍㄱㄹ허ㅗㅠㅜㄷㄱ헏ㄱㅎㄷㄱㅎㅎㅣ아ㅓ로미ㅏㅓㅗ라ㅓ노미ㅏ허ㅗㄴ마ㅣㅓㅗㄹ마ㅓㄴ오리마ㅓ회ㅏㅁ어ㅜㅍ마ㅓㅏㅓㅁ눙파머뉘하ㅓㅠㅗㅁ니ㅏ어푸미ㅏ너ㅜㅏ.ㄴ머우하.머늏피ㅏㅓ오류ㅣ파ㅓ귀햐며도걓;ㅕㅓㄷㄱ우펴럳우ㅑㅏㅍㄱㄹ허ㅗㅠㅜㄷㄱ헏ㄱㅎㄷㄱㅎㅎ
-        </div>
+        {selectedIntroIndex !== null && (
+          <div className="introduce">
+            <article class="container project">
+              <header>
+                <div class="circle_wrap">
+                  <div class="circle red"></div>
+                  <div class="circle yellow"></div>
+                  <div class="circle green"></div>
+                </div>
+                <div class="title">{intros[selectedIntroIndex].hashtag}</div>
+              </header>
+              <div class="content_project">
+                {intros[selectedIntroIndex].hashtagDetail}
+              </div>
+            </article>
+          </div>
+        )}
       </div>
     </div>
   );

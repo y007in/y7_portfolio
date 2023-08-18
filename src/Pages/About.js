@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
@@ -11,9 +11,10 @@ import Skill from "../Components/Skill";
 import Intro from "../Components/Intro";
 
 const About = ({ title, rightChild, leftChild }) => {
+  const [showButton, setShowButton] = useState(false);
   const navigate = useNavigate();
   const moveToTop = useRef();
-  const onMoveToForm = () => {
+  const onMoveToTop = () => {
     moveToTop.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   const moveToSkill = useRef();
@@ -23,6 +24,20 @@ const About = ({ title, rightChild, leftChild }) => {
       block: "nearest",
     });
   };
+  useEffect(() => {
+    const handleShowButton = () => {
+      if (window.scrollY > 500) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleShowButton);
+    return () => {
+      window.removeEventListener("scroll", handleShowButton);
+    };
+  }, []);
 
   return (
     <div className="About" ref={moveToTop}>
@@ -61,15 +76,16 @@ const About = ({ title, rightChild, leftChild }) => {
           프로젝트 보러가기
         </button>
       </div>
-
       <div ref={moveToSkill}>
         <Skill skillIcon={SkillIcon} />
       </div>
       <MyInformation />
       <Footer />
-      <button className="top" onClick={onMoveToForm}>
-        <FaArrowAltCircleUp />
-      </button>
+      {showButton && (
+        <button className="top" onClick={onMoveToTop}>
+          <FaArrowAltCircleUp />
+        </button>
+      )}
     </div>
   );
 };

@@ -22,7 +22,7 @@ const Intro = () => {
               <span
                 key={index}
                 onClick={() => handleHashtagClick(index)}
-                className={selectedIntroIndex === index ? "active" : ""}
+                className={selectedIntroIndex === index ? "active" : null}
               >
                 {intros[index].hashtag}
               </span>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { FaRegTimesCircle } from "react-icons/fa";
 import "../scss/Skill.scss";
 
 const Skill = ({ skillIcon }) => {
@@ -40,10 +41,15 @@ const Skill = ({ skillIcon }) => {
                     </div>
                     <p className="skill_name">{item.skill}</p>
                     {expandedItemIndex === index && (
-                      <ul className="skill_des">
-                        {item.skill}
-                        {item.des}
-                      </ul>
+                      <div className="overlay">
+                        <ul className="skill_des">
+                          <FaRegTimesCircle />
+                          <span className="modal_skill_title">
+                            {item.skill}
+                          </span>
+                          {item.des}
+                        </ul>
+                      </div>
                     )}
                   </div>
                 ))}
@@ -51,17 +57,35 @@ const Skill = ({ skillIcon }) => {
             </article>
             <article className="skillbox">
               <p className="skill_items_title">Etc</p>
-              {/* <div className="skill_items">
-                {skillIcon.slice(5, 8).map((item) => (
-                  <div className="skill_item">
+              <div className="skill_items">
+                {skillIcon.slice(5, 8).map((item, index) => (
+                  <div
+                    className="skill_item"
+                    key={index}
+                    onClick={() =>
+                      setExpandedItemIndex(
+                        index === expandedItemIndex ? null : index
+                      )
+                    }
+                  >
                     <div className="skill_icon">
-                      <img src={item.icon} />
+                      <img src={item.icon} alt={`${item.skill} icon`} />
                     </div>
                     <p className="skill_name">{item.skill}</p>
-                    <ul className="skill_des">{item.des}</ul>
+                    {expandedItemIndex === index && (
+                      <div className="overlay">
+                        <ul className="skill_des">
+                          <FaRegTimesCircle />
+                          <span className="modal_skill_title">
+                            {item.skill}
+                          </span>
+                          {item.des}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 ))}
-              </div> */}
+              </div>
             </article>
           </div>
         </div>

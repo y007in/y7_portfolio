@@ -1,19 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight, FaGithub } from "react-icons/fa";
 import "../scss/Navigation.scss";
 
 const Navigation = ({ leftChild, rightChild, title }) => {
   const navigate = useNavigate();
-  const [activeMenuItem, setActiveMenuItem] = useState(null);
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  const handleMenuItemClick = (menuName) => {
-    if (activeMenuItem !== menuName) {
-      setActiveMenuItem(menuName);
-    }
-  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -57,17 +49,11 @@ const Navigation = ({ leftChild, rightChild, title }) => {
         </div>
         <div className="gnb">
           <ul>
-            <li
-              className={activeMenuItem === "about" ? "active" : ""}
-              onClick={() => handleMenuItemClick("about")}
-            >
-              <Link to={"/"}>About</Link>
+            <li>
+              <NavLink to={"/"}>About</NavLink>
             </li>
-            <li
-              className={activeMenuItem === "project" ? "active" : ""}
-              onClick={() => handleMenuItemClick("project")}
-            >
-              <Link to={"/"}>Project</Link>
+            <li>
+              <NavLink to={"/project"}>Project</NavLink>
             </li>
             <li
               onClick={() => window.open("https://github.com/y007in", "_blank")}

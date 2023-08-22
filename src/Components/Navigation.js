@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight, FaGithub } from "react-icons/fa";
 import "../scss/Navigation.scss";
 
 const Navigation = ({ leftChild, rightChild, title }) => {
   const navigate = useNavigate();
-  const [selected, setSelected] = useState(null);
+  const [activeMenuItem, setActiveMenuItem] = useState(null);
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleMenuItemClick = (menuName) => {
+    if (activeMenuItem !== menuName) {
+      setActiveMenuItem(menuName);
+    }
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -21,6 +28,7 @@ const Navigation = ({ leftChild, rightChild, title }) => {
   const handleBack = () => {
     navigate(-1);
   };
+
   let content = null;
   if (windowWidth <= 1024) {
     content = (
@@ -49,8 +57,18 @@ const Navigation = ({ leftChild, rightChild, title }) => {
         </div>
         <div className="gnb">
           <ul>
-            <li onClick={() => navigate("/")}>About</li>
-            <li onClick={() => navigate("/project")}>Project</li>
+            <li
+              className={activeMenuItem === "about" ? "active" : ""}
+              onClick={() => handleMenuItemClick("about")}
+            >
+              <Link to={"/"}>About</Link>
+            </li>
+            <li
+              className={activeMenuItem === "project" ? "active" : ""}
+              onClick={() => handleMenuItemClick("project")}
+            >
+              <Link to={"/"}>Project</Link>
+            </li>
             <li
               onClick={() => window.open("https://github.com/y007in", "_blank")}
             >

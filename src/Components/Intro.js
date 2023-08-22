@@ -31,16 +31,18 @@ const Intro = () => {
         </div>
         {selectedIntroIndex !== null && (
           <div className="introduce">
-            <article class="container project">
+            <article className="container project">
               <header>
-                <div class="circle_wrap">
-                  <div class="circle red"></div>
-                  <div class="circle yellow"></div>
-                  <div class="circle green"></div>
+                <div className="circle_wrap">
+                  <div className="circle red"></div>
+                  <div className="circle yellow"></div>
+                  <div className="circle green"></div>
                 </div>
-                <div class="title">{intros[selectedIntroIndex].hashtag}</div>
+                <div className="title">
+                  {intros[selectedIntroIndex].hashtag}
+                </div>
               </header>
-              <div class="content_project">
+              <div className="content_project">
                 {intros[selectedIntroIndex].hashtagDetail}
               </div>
             </article>

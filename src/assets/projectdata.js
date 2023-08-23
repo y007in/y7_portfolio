@@ -154,7 +154,7 @@ export const SkillIcon = [
     icon: `${react}`,
     des: (
       <>
-        <li>react-stylecomponent를 활용한 css개발이 가능합니다.</li>
+        <li>react-styled component를 활용한 css개발이 가능합니다.</li>
         <li>hooks의 대한 기초지식을 활용하여 화면을 제작합니다.</li>
       </>
     ),

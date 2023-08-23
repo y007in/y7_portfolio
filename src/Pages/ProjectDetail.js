@@ -18,7 +18,15 @@ const ProjectDetail = () => {
   return (
     <div className="projectDetail" ref={moveToTop}>
       <Navigation
-        title={"Project"}
+        title={
+          <button
+            onClick={() => {
+              navigate("/project");
+            }}
+          >
+            Project
+          </button>
+        }
         leftChild={<button>Back</button>}
         rightChild={<button onClick={() => navigate("/")}>About</button>}
       />

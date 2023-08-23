@@ -22,6 +22,9 @@ const Skill = ({ skillIcon }) => {
       <div className="skills">
         <div className="skill_container">
           <h1>Skills</h1>
+          <p className="skillitem_desc">
+            * 해당 아이콘 클릭 시 자세한 내용을 볼 수 있습니다.
+          </p>
           <div className="skill_list">
             <article className="skillbox">
               <p className="skill_items_title">Front-end</p>
@@ -96,6 +99,9 @@ const Skill = ({ skillIcon }) => {
       <div className="skills">
         <div className="skill_container">
           <h1>Skills</h1>
+          <p className="skillitem_desc">
+            * 해당 아이콘에 마우스를 올리면 자세한 내용을 볼 수 있습니다.
+          </p>
           <div className="skill_list">
             <article className="skillbox">
               <p className="skill_items_title">Front-end</p>

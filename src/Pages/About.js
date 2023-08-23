@@ -42,7 +42,15 @@ const About = ({ title, rightChild, leftChild }) => {
   return (
     <div className="About" ref={moveToTop}>
       <Navigation
-        title={"About"}
+        title={
+          <button
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            About
+          </button>
+        }
         rightChild={
           <button
             onClick={() => {

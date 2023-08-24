@@ -26,7 +26,7 @@ const About = ({ title, rightChild, leftChild }) => {
   };
   useEffect(() => {
     const handleShowButton = () => {
-      if (window.scrollY > 500) {
+      if (window.scrollY > 200) {
         setShowButton(true);
       } else {
         setShowButton(false);

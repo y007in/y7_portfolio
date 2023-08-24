@@ -14,16 +14,16 @@ import figma from "./img/figma.png";
 
 export const intros = [
   {
-    hashtag: "# 사용자를 위한",
-    hashtagDetail: "dd",
-  },
-  {
-    hashtag: "# 경청하는",
+    hashtag: "# OO하는",
     hashtagDetail: "ff",
   },
   {
-    hashtag: "# 도전적인",
+    hashtag: "# OO적인",
     hashtagDetail: "cc",
+  },
+  {
+    hashtag: "# 사용자를 위한",
+    hashtagDetail: "dd",
   },
 ];
 

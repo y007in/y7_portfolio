@@ -13,8 +13,8 @@ const myinformation = () => {
         <section className="about_Me">
           <article className="resolution">
             <span>
-              멋진 프론트엔드 개발자가 되고 싶습니다. 프론트엔드 개발자가 되기
-              위해서 이런저런걸 해왔습니다.
+              프론트엔드 개발자가 되기 위해서 이런저런걸 해왔습니다.
+              어쩌구저ㅓㅈ구아ㅣ러나ㅣ얼ㄴ러나어니러
             </span>
           </article>
           <article className="me">

@@ -126,7 +126,7 @@
       flex-direction: row;
       justify-content: space-around;
       &::before {
-        content: "💻";
+        content: "";
         position: absolute;
         font-size: 650px;
         opacity: 30%;

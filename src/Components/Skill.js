@@ -16,6 +16,10 @@ const Skill = ({ skillIcon }) => {
     };
   }, []);
 
+  const handleClick = (index) => {
+    setExpandedItemIndex(index === expandedItemIndex ? null : index);
+  };
+
   let content = null;
   if (windowWidth <= 1024) {
     content = (
@@ -33,11 +37,7 @@ const Skill = ({ skillIcon }) => {
                   <div
                     className="skill_item"
                     key={index}
-                    onClick={() =>
-                      setExpandedItemIndex(
-                        index === expandedItemIndex ? null : index
-                      )
-                    }
+                    onClick={() => handleClick(index)}
                   >
                     <div className="skill_icon">
                       <img src={item.icon} alt={`${item.skill} icon`} />
@@ -46,7 +46,9 @@ const Skill = ({ skillIcon }) => {
                     {expandedItemIndex === index && (
                       <div className="overlay">
                         <ul className="skill_des">
-                          <FaRegTimesCircle />
+                          <FaRegTimesCircle
+                            onClick={() => setExpandedItemIndex(null)}
+                          />
                           <span className="modal_skill_title">
                             {item.skill}
                           </span>
@@ -65,20 +67,18 @@ const Skill = ({ skillIcon }) => {
                   <div
                     className="skill_item"
                     key={index}
-                    onClick={() =>
-                      setExpandedItemIndex(
-                        index === expandedItemIndex ? null : index
-                      )
-                    }
+                    onClick={() => handleClick(index + 5)}
                   >
                     <div className="skill_icon">
                       <img src={item.icon} alt={`${item.skill} icon`} />
                     </div>
                     <p className="skill_name">{item.skill}</p>
-                    {expandedItemIndex === index && (
+                    {expandedItemIndex === index + 5 && (
                       <div className="overlay">
                         <ul className="skill_des">
-                          <FaRegTimesCircle />
+                          <FaRegTimesCircle
+                            onClick={() => setExpandedItemIndex(null)}
+                          />
                           <span className="modal_skill_title">
                             {item.skill}
                           </span>

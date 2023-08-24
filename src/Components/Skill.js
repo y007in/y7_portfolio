@@ -16,12 +16,19 @@ const Skill = ({ skillIcon }) => {
     };
   }, []);
 
+  const handleClick = (index) => {
+    setExpandedItemIndex(index === expandedItemIndex ? null : index);
+  };
+
   let content = null;
   if (windowWidth <= 1024) {
     content = (
       <div className="skills">
         <div className="skill_container">
           <h1>Skills</h1>
+          <p className="skillitem_desc">
+            * 해당 아이콘 클릭 시 자세한 내용을 볼 수 있습니다.
+          </p>
           <div className="skill_list">
             <article className="skillbox">
               <p className="skill_items_title">Front-end</p>
@@ -30,11 +37,7 @@ const Skill = ({ skillIcon }) => {
                   <div
                     className="skill_item"
                     key={index}
-                    onClick={() =>
-                      setExpandedItemIndex(
-                        index === expandedItemIndex ? null : index
-                      )
-                    }
+                    onClick={() => handleClick(index)}
                   >
                     <div className="skill_icon">
                       <img src={item.icon} alt={`${item.skill} icon`} />
@@ -43,7 +46,9 @@ const Skill = ({ skillIcon }) => {
                     {expandedItemIndex === index && (
                       <div className="overlay">
                         <ul className="skill_des">
-                          <FaRegTimesCircle />
+                          <FaRegTimesCircle
+                            onClick={() => setExpandedItemIndex(null)}
+                          />
                           <span className="modal_skill_title">
                             {item.skill}
                           </span>
@@ -62,20 +67,18 @@ const Skill = ({ skillIcon }) => {
                   <div
                     className="skill_item"
                     key={index}
-                    onClick={() =>
-                      setExpandedItemIndex(
-                        index === expandedItemIndex ? null : index
-                      )
-                    }
+                    onClick={() => handleClick(index + 5)}
                   >
                     <div className="skill_icon">
                       <img src={item.icon} alt={`${item.skill} icon`} />
                     </div>
                     <p className="skill_name">{item.skill}</p>
-                    {expandedItemIndex === index && (
+                    {expandedItemIndex === index + 5 && (
                       <div className="overlay">
                         <ul className="skill_des">
-                          <FaRegTimesCircle />
+                          <FaRegTimesCircle
+                            onClick={() => setExpandedItemIndex(null)}
+                          />
                           <span className="modal_skill_title">
                             {item.skill}
                           </span>
@@ -96,6 +99,9 @@ const Skill = ({ skillIcon }) => {
       <div className="skills">
         <div className="skill_container">
           <h1>Skills</h1>
+          <p className="skillitem_desc">
+            * 해당 아이콘에 마우스를 올리면 자세한 내용을 볼 수 있습니다.
+          </p>
           <div className="skill_list">
             <article className="skillbox">
               <p className="skill_items_title">Front-end</p>

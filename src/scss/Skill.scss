@@ -5,9 +5,13 @@
   // background-color: rgba(0, 164, 200, 0.2);
   .skill_container {
     @include container_mobile();
-
     h1 {
       @include title_mobile();
+    }
+    .skillitem_desc {
+      font-size: 14px;
+      color: $color_darkgray;
+      margin-bottom: 10px;
     }
     .skill_list {
       width: 100%;
@@ -20,11 +24,8 @@
         }
         .skill_items {
           width: 100%;
-          // display: grid;
-          // grid-template-columns: repeat(5, 1fr);
           display: flex;
           flex-wrap: wrap;
-          // margin: 10px 0;
           .skill_item {
             width: 30%;
             max-width: 180px;
@@ -73,7 +74,7 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                background-color: black;
+                background-color: $color_main;
                 padding: 20px;
                 .modal_skill_title {
                   color: $color_white;
@@ -130,7 +131,7 @@
               max-width: none;
               &:hover {
                 .skill_icon {
-                  filter: brightness(50%);
+                  filter: brightness(25%);
                 }
                 .skill_des,
                 .skill_des li {
@@ -149,13 +150,13 @@
                 border-radius: 5px;
                 position: absolute;
                 display: none;
-                padding: 20px;
+                padding: 30px;
                 background-color: transparent;
-
                 li {
                   color: $color_white;
-                  margin-bottom: 10px;
-                  font-size: 14px;
+                  margin-bottom: 12px;
+                  font-size: 18px;
+                  line-height: 150%;
                   &::before {
                     content: "✔";
                     margin-right: 5px;

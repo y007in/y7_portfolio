@@ -26,7 +26,7 @@ const About = ({ title, rightChild, leftChild }) => {
   };
   useEffect(() => {
     const handleShowButton = () => {
-      if (window.scrollY > 500) {
+      if (window.scrollY > 200) {
         setShowButton(true);
       } else {
         setShowButton(false);
@@ -42,7 +42,15 @@ const About = ({ title, rightChild, leftChild }) => {
   return (
     <div className="About" ref={moveToTop}>
       <Navigation
-        title={"About"}
+        title={
+          <button
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            About
+          </button>
+        }
         rightChild={
           <button
             onClick={() => {

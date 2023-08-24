@@ -14,16 +14,16 @@ import figma from "./img/figma.png";
 
 export const intros = [
   {
-    hashtag: "# 사용자를 위한",
-    hashtagDetail: "dd",
-  },
-  {
-    hashtag: "# 경청하는",
+    hashtag: "# OO하는",
     hashtagDetail: "ff",
   },
   {
-    hashtag: "# 도전적인",
+    hashtag: "# OO적인",
     hashtagDetail: "cc",
+  },
+  {
+    hashtag: "# 사용자를 위한",
+    hashtagDetail: "dd",
   },
 ];
 
@@ -154,7 +154,7 @@ export const SkillIcon = [
     icon: `${react}`,
     des: (
       <>
-        <li>react-stylecomponent를 활용한 css개발이 가능합니다.</li>
+        <li>react-styled component를 활용한 css개발이 가능합니다.</li>
         <li>hooks의 대한 기초지식을 활용하여 화면을 제작합니다.</li>
       </>
     ),

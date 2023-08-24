@@ -20,7 +20,15 @@ const Project = ({ title, leftChild, rightChild }) => {
   return (
     <div className="Project" ref={moveToTop}>
       <Navigation
-        title={"Project"}
+        title={
+          <button
+            onClick={() => {
+              navigate("/project");
+            }}
+          >
+            Project
+          </button>
+        }
         leftChild={<button>Back</button>}
         rightChild={<button onClick={handleAbout}>About</button>}
       />

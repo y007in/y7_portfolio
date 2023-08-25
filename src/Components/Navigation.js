@@ -26,13 +26,13 @@ const Navigation = ({ leftChild, rightChild, title }) => {
     content = (
       <div className="Navigation_mobile">
         <div className="leftChild" onClick={handleBack}>
-          <FaChevronLeft />
+          <FaChevronLeft fill="white" />
           {leftChild}
         </div>
         <div className="title">{title}</div>
         <div className="rightChild">
           {rightChild}
-          <FaChevronRight />
+          <FaChevronRight fill="white" />
         </div>
       </div>
     );

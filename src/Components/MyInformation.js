@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 import "../scss/MyInformation.scss";
 import velogicon from "../assets/img/velogicon.png";
 
@@ -7,16 +8,26 @@ const myinformation = () => {
   return (
     <div className="MyInformation">
       <main className="MyInformation_container">
+        <motion.div
+          className="motion"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.3,
+            ease: [0, 0.71, 0.2, 1.01],
+            scale: {
+              type: "spring",
+              damping: 5,
+              stiffness: 100,
+              restDelta: 0.001,
+            },
+          }}
+        />
+
         <div className="About_Title">
           <h1>About</h1>
         </div>
         <section className="about_Me">
-          <article className="resolution">
-            <span>
-              프론트엔드 개발자가 되기 위해서 이런저런걸 해왔습니다.
-              어쩌구저ㅓㅈ구아ㅣ러나ㅣ얼ㄴ러나어니러
-            </span>
-          </article>
           <article className="me">
             <h3>장유진</h3>
             <ul className="me_detail">
@@ -43,34 +54,36 @@ const myinformation = () => {
               </li>
             </ul>
           </article>
-        </section>
-        <section className="about_content">
-          <article className="edu">
-            <div className="info_title">교육</div>
-            <ul className="info_list">
-              <li className="date">2023.03 - 2023.08</li>
-              <li className="content">
-                웹퍼블리셔&리액트 활용 프론트엔드 웹 SW 개발자 과정
-              </li>
-            </ul>
-            <ul className="info_list">
-              <li className="date">2019.03 - 현재</li>
-              <li className="content">국립안동대학교 멀티미디어공학과 재학</li>
-            </ul>
-            <ul className="info_list">
-              <li className="date">2014.03 - 2017.02</li>
-              <li className="content">신목고등학교 졸업</li>
-            </ul>
-          </article>
-          <article className="active">
-            <div className="info_title">활동</div>
-            <ul className="info_list">
-              <li className="date">2022.09 - 2022.11</li>
-              <li className="content">
-                네이버 웨일 대학생 서포터즈 "웨일대학" 개발 직군
-              </li>
-            </ul>
-          </article>
+          <section className="about_content">
+            <article className="edu">
+              <div className="info_title">교육</div>
+              <ul className="info_list">
+                <li className="date">2023.03 - 2023.08</li>
+                <li className="content">
+                  웹퍼블리셔&리액트 활용 프론트엔드 웹 SW 개발자 과정
+                </li>
+              </ul>
+              <ul className="info_list">
+                <li className="date">2019.03 - 현재</li>
+                <li className="content">
+                  국립안동대학교 멀티미디어공학과 재학
+                </li>
+              </ul>
+              <ul className="info_list">
+                <li className="date">2014.03 - 2017.02</li>
+                <li className="content">신목고등학교 졸업</li>
+              </ul>
+            </article>
+            <article className="active">
+              <div className="info_title">활동</div>
+              <ul className="info_list">
+                <li className="date">2022.09 - 2022.11</li>
+                <li className="content">
+                  네이버 웨일 대학생 서포터즈 "웨일대학" 개발 직군
+                </li>
+              </ul>
+            </article>
+          </section>
         </section>
       </main>
     </div>

@@ -28,7 +28,7 @@ $font_eng: "Encode Sans", sans-serif;
   // height: calc(100% - 50px);
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
   padding-top: 50px;
 }
 @mixin container_mobile() {
@@ -61,7 +61,7 @@ $font_eng: "Encode Sans", sans-serif;
   padding-top: 100px;
 }
 @mixin container_pc() {
-  width: 1280px;
+  width: 1040px;
   margin-bottom: 20px;
   // padding: 50px 80px;
 }
@@ -98,5 +98,14 @@ $font_eng: "Encode Sans", sans-serif;
       color: $color_main;
       background-color: $color_white;
     }
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }

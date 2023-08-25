@@ -20,14 +20,26 @@
 
 .intro {
   @include topcontainer_mobile();
+  background-color: $color_main;
   .intro_container {
     @include container_mobile();
+    position: relative;
+    .motion {
+      position: absolute;
+      left: 500px;
+      top: 150px;
+      border: 1px solid $color_main;
+      width: 350px;
+      height: 350px;
+      // border-radius: 50%;
+      z-index: -999;
+    }
     .hi {
       flex: 2;
       h1 {
-        font-size: 36px;
+        font-size: 60px;
         line-height: 130%;
-        margin-bottom: 30px;
+        // margin-bottom: 10px;
         .intro_name {
           color: $color_white;
           background-color: $color_main;

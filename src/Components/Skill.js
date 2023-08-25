@@ -47,6 +47,7 @@ const Skill = ({ skillIcon }) => {
                       <div className="overlay">
                         <ul className="skill_des">
                           <FaRegTimesCircle
+                            fill="white"
                             onClick={() => setExpandedItemIndex(null)}
                           />
                           <span className="modal_skill_title">
@@ -77,6 +78,7 @@ const Skill = ({ skillIcon }) => {
                       <div className="overlay">
                         <ul className="skill_des">
                           <FaRegTimesCircle
+                            fill="white"
                             onClick={() => setExpandedItemIndex(null)}
                           />
                           <span className="modal_skill_title">

@@ -4,26 +4,41 @@
   @include moveToTop();
   .btns {
     display: flex;
-    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 40px 0;
+    gap: 10px;
+    background-color: $color_main;
     .moveBtn {
-      padding: 10px 30px;
+      padding: 8px 20px;
       border-radius: 50px;
       border: none;
-      color: $color_white;
-      background-color: $color_main;
+      background-color: $color_white;
+      color: $color_main;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 14px;
       &:hover {
         background-color: $color_sub;
+        color: $color_white;
       }
     }
   }
 }
 
 @media all and (min-width: 1024px) {
-  .About .top {
-    right: 50px;
-    bottom: 45px;
-    font-size: 50px;
+  .About {
+    .btns {
+      gap: 20px;
+      .moveBtn {
+        padding: 10px 30px;
+        font-size: 16px;
+      }
+    }
+    .top {
+      right: 50px;
+      bottom: 45px;
+      font-size: 50px;
+    }
   }
 }

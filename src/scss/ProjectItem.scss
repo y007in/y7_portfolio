@@ -49,6 +49,9 @@
           a {
             width: 100%;
             .button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
               width: 100%;
               border: none;
               background-color: $color_main;
@@ -62,6 +65,9 @@
               cursor: pointer;
               &:hover {
                 background-color: $color_sub;
+              }
+              svg {
+                margin-right: 5px;
               }
             }
           }
@@ -85,11 +91,11 @@
           &_content {
             clear: both;
             float: left;
-            background-color: $color_lightgray;
+            // background-color: $color_lightgray;
             padding: 8px;
             border-radius: 5px;
-            line-height: 140%;
-            font-size: 14px;
+            line-height: 150%;
+            font-size: 16px;
             ul {
               li {
                 margin: 0 5px;
@@ -180,8 +186,8 @@
               }
               &_content {
                 display: inline-block;
-                padding: 8px 15px;
-                font-size: 16px;
+                padding: 5px 8px;
+                font-size: 18px;
               }
             }
           }

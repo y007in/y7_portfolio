@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
@@ -9,11 +9,26 @@ import Footer from "../Components/Footer";
 import { ProjectData } from "../assets/projectdata";
 
 const Project = ({ title, leftChild, rightChild }) => {
+  const [showButton, setShowButton] = useState(false);
   const navigate = useNavigate();
   const moveToTop = useRef();
-  const onMoveToForm = () => {
+  const onMoveToTop = () => {
     moveToTop.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+  useEffect(() => {
+    const handleShowButton = () => {
+      if (window.scrollY > 200) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleShowButton);
+    return () => {
+      window.removeEventListener("scroll", handleShowButton);
+    };
+  }, []);
   const handleAbout = () => {
     navigate("/");
   };
@@ -34,9 +49,11 @@ const Project = ({ title, leftChild, rightChild }) => {
       />
       <ProjectList data={ProjectData} />
       <Footer />
-      <button className="top" onClick={onMoveToForm}>
-        <FaArrowAltCircleUp />
-      </button>
+      {showButton && (
+        <button className="top" onClick={onMoveToTop}>
+          <FaArrowAltCircleUp />
+        </button>
+      )}
     </div>
   );
 };

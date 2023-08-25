@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../scss/ProjectItem.scss";
 import { useNavigate, Link } from "react-router-dom";
 import { ProjectData } from "../assets/projectdata";
-
+import { FaGithub, FaLink } from "react-icons/fa";
 const ProjectItem = ({ projectId }) => {
   const navigate = useNavigate();
 
@@ -21,10 +21,16 @@ const ProjectItem = ({ projectId }) => {
             <div className="project_des">{ProjectData[projectId].des}</div>
             <div className="buttons">
               <Link to={ProjectData[projectId].github} target="_blank">
-                <button className="button github">GitHub </button>
+                <button className="button github">
+                  <FaGithub fill="white" />
+                  GitHub{" "}
+                </button>
               </Link>
               <Link to={ProjectData[projectId].url} target="_blank">
-                <button className="button url">URL</button>
+                <button className="button url">
+                  <FaLink fill="white" />
+                  URL
+                </button>
               </Link>
             </div>
           </section>

@@ -1,7 +1,7 @@
 @import "../scss/variables.scss";
 .ProjectItem {
   @include topcontainer_mobile();
-
+  margin-bottom: 40px;
   .project_container {
     @include container_mobile();
     .project_title {

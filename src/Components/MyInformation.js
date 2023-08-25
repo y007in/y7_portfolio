@@ -1,6 +1,5 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
-import { motion } from "framer-motion";
 import "../scss/MyInformation.scss";
 import velogicon from "../assets/img/velogicon.png";
 
@@ -8,22 +7,6 @@ const myinformation = () => {
   return (
     <div className="MyInformation">
       <main className="MyInformation_container">
-        <motion.div
-          className="motion"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.3,
-            ease: [0, 0.71, 0.2, 1.01],
-            scale: {
-              type: "spring",
-              damping: 5,
-              stiffness: 100,
-              restDelta: 0.001,
-            },
-          }}
-        />
-
         <div className="About_Title">
           <h1>About</h1>
         </div>

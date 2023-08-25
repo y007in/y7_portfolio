@@ -15,9 +15,10 @@
       border-radius: 50px;
       border: none;
       background-color: $color_white;
-      color: $color_main;
+      color: $color_sub;
       cursor: pointer;
       font-size: 14px;
+      font-weight: bold;
       &:hover {
         background-color: $color_sub;
         color: $color_white;

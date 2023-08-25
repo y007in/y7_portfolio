@@ -12,6 +12,7 @@ import Intro from "../Components/Intro";
 
 const About = ({ title, rightChild, leftChild }) => {
   const [showButton, setShowButton] = useState(false);
+  const [showNav, setShowNav] = useState(false);
   const navigate = useNavigate();
   const moveToTop = useRef();
   const onMoveToTop = () => {
@@ -38,40 +39,56 @@ const About = ({ title, rightChild, leftChild }) => {
       window.removeEventListener("scroll", handleShowButton);
     };
   }, []);
+  useEffect(() => {
+    const handleShowNav = () => {
+      if (window.scrollY > window.innerHeight) {
+        setShowNav(true);
+      } else {
+        setShowNav(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleShowNav);
+    return () => {
+      window.removeEventListener("scroll", handleShowNav);
+    };
+  }, []);
 
   return (
     <div className="About" ref={moveToTop}>
-      <Navigation
-        title={
-          <button
-            onClick={() => {
-              navigate("/");
-            }}
-          >
-            About
-          </button>
-        }
-        rightChild={
-          <button
-            onClick={() => {
-              navigate("/project");
-            }}
-          >
-            Project
-          </button>
-        }
-        leftChild={
-          <button
-            onClick={() => {
-              navigate(-1);
-            }}
-          >
-            Back
-          </button>
-        }
-      />
+      {showNav && (
+        <Navigation
+          title={
+            <button
+              onClick={() => {
+                navigate("/");
+              }}
+            >
+              About
+            </button>
+          }
+          rightChild={
+            <button
+              onClick={() => {
+                navigate("/project");
+              }}
+            >
+              Project
+            </button>
+          }
+          leftChild={
+            <button
+              onClick={() => {
+                navigate(-1);
+              }}
+            >
+              Back
+            </button>
+          }
+        />
+      )}
       <Intro />
-      <div className="btns">
+      {/*<div className="btns">
         <button className="moveBtn" onClick={onMoveToSkill}>
           더 알아보기
         </button>
@@ -83,7 +100,7 @@ const About = ({ title, rightChild, leftChild }) => {
         >
           프로젝트 보러가기
         </button>
-      </div>
+        </div>*/}
       <div ref={moveToSkill}>
         <Skill skillIcon={SkillIcon} />
       </div>

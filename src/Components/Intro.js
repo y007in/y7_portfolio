@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../scss/intro.scss";
 import { intros } from "../assets/projectdata";
 import { motion } from "framer-motion";
@@ -6,7 +7,14 @@ import { motion } from "framer-motion";
 const Intro = () => {
   const [selectedIntroIndex, setSelectedIntroIndex] = useState(null);
   const [scrollOffset, setScrollOffset] = useState(0);
-
+  const navigate = useNavigate();
+  const moveToSkill = useRef();
+  const onMoveToSkill = () => {
+    moveToSkill.current.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+    });
+  };
   const handleHashtagClick = (index) => {
     setSelectedIntroIndex((prevIndex) => (prevIndex === index ? null : index));
   };
@@ -26,31 +34,27 @@ const Intro = () => {
   return (
     <div className="intro">
       <div className="intro_container">
-        {/* <motion.div
-          className="motion"
-          animate={{ rotate: 140 }}
-          transition={{ type: "spring", stiffness: 50 }}
-        /> */}
-        <div
-          className="hi"
-          style={{ transform: `translateX(-${scrollOffset}px)` }}
-        >
-          <h1>
-            안녕하세요. <br />
-            <span className="front-end">프론트엔드 개발자</span>
-            <br /> <span className="intro_name">장유진</span>입니다.
-          </h1>
-          {/* <div className="hashtag">
+        <div className="hi">
+          <div className="hashtag">
             {intros.map((intro, index) => (
               <span
                 key={index}
                 onClick={() => handleHashtagClick(index)}
-                className={selectedIntroIndex === index ? "active" : null}
+                /*className={selectedIntroIndex === index ? "active" : null}*/
               >
                 {intros[index].hashtag}
               </span>
             ))}
-          </div> */}
+          </div>
+          <h1>
+            안녕하세요. <br />
+            <div style={{ transform: `translateX(-${scrollOffset}px)` }}>
+              <span className="front-end">프론트엔드 개발자</span>
+            </div>
+            <div style={{ transform: `translateX(${scrollOffset}px)` }}>
+              <span className="intro_name">장유진</span>입니다.
+            </div>
+          </h1>
         </div>
         {/* {selectedIntroIndex !== null && (
           <div className="introduce">
@@ -71,6 +75,19 @@ const Intro = () => {
             </article>
           </div>
         )} */}
+      </div>
+      <div className="btns">
+        <button className="moveBtn" onClick={onMoveToSkill}>
+          더 알아보기
+        </button>
+        <button
+          className="moveBtn"
+          onClick={() => {
+            navigate("/project");
+          }}
+        >
+          프로젝트 보러가기
+        </button>
       </div>
     </div>
   );

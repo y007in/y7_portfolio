@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { FaRegTimesCircle } from "react-icons/fa";
 import "../scss/Skill.scss";
+import { motion } from "framer-motion";
+
+const skill_icon = {
+  hidden: { y: 0, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 
 const Skill = ({ skillIcon }) => {
   const [expandedItemIndex, setExpandedItemIndex] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -16,10 +26,24 @@ const Skill = ({ skillIcon }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // 원하는 스크롤 위치를 기준으로 작동 여부 결정
+      const scrollThreshold = window.innerHeight - 350;
+      if (window.scrollY > scrollThreshold) {
+        setShouldAnimate(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const handleClick = (index) => {
     setExpandedItemIndex(index === expandedItemIndex ? null : index);
   };
-
   let content = null;
   if (windowWidth <= 1024) {
     content = (
@@ -34,10 +58,16 @@ const Skill = ({ skillIcon }) => {
               <p className="skill_items_title">Front-end</p>
               <div className="skill_items">
                 {skillIcon.slice(0, 5).map((item, index) => (
-                  <div
+                  <motion.div
                     className="skill_item"
                     key={index}
                     onClick={() => handleClick(index)}
+                    variants={skill_icon}
+                    initial="hidden"
+                    animate={shouldAnimate ? "visible" : "hidden"}
+                    transition={{
+                      delay: index * 0.4,
+                    }}
                   >
                     <div className="skill_icon">
                       <img src={item.icon} alt={`${item.skill} icon`} />
@@ -57,7 +87,7 @@ const Skill = ({ skillIcon }) => {
                         </ul>
                       </div>
                     )}
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </article>
@@ -65,10 +95,16 @@ const Skill = ({ skillIcon }) => {
               <p className="skill_items_title">Etc</p>
               <div className="skill_items">
                 {skillIcon.slice(5, 8).map((item, index) => (
-                  <div
+                  <motion.div
                     className="skill_item"
                     key={index}
                     onClick={() => handleClick(index + 5)}
+                    variants={skill_icon}
+                    initial="hidden"
+                    animate={shouldAnimate ? "visible" : "hidden"}
+                    transition={{
+                      delay: (index + 5) * 0.4,
+                    }}
                   >
                     <div className="skill_icon">
                       <img src={item.icon} alt={`${item.skill} icon`} />
@@ -88,7 +124,7 @@ const Skill = ({ skillIcon }) => {
                         </ul>
                       </div>
                     )}
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </article>
@@ -109,27 +145,43 @@ const Skill = ({ skillIcon }) => {
               <p className="skill_items_title">Front-end</p>
               <div className="skill_items">
                 {skillIcon.slice(0, 5).map((item, index) => (
-                  <div className="skill_item">
+                  <motion.div
+                    className="skill_item"
+                    variants={skill_icon}
+                    initial="hidden"
+                    animate={shouldAnimate ? "visible" : "hidden"}
+                    transition={{
+                      delay: index * 0.4,
+                    }}
+                  >
                     <div className="skill_icon">
                       <img src={item.icon} alt={`${item.skill} icon`} />
                     </div>
                     <p className="skill_name">{item.skill}</p>
                     <ul className="skill_des">{item.des}</ul>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </article>
             <article className="skillbox">
               <p className="skill_items_title">Etc</p>
               <div className="skill_items">
-                {skillIcon.slice(5, 8).map((item) => (
-                  <div className="skill_item">
+                {skillIcon.slice(5, 8).map((item, index) => (
+                  <motion.div
+                    className="skill_item"
+                    variants={skill_icon}
+                    initial="hidden"
+                    animate={shouldAnimate ? "visible" : "hidden"}
+                    transition={{
+                      delay: (index + 5) * 0.4,
+                    }}
+                  >
                     <div className="skill_icon">
                       <img src={item.icon} />
                     </div>
                     <p className="skill_name">{item.skill}</p>
                     <ul className="skill_des">{item.des}</ul>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </article>

@@ -5,7 +5,7 @@
   font-weight: 400;
   font-style: normal;
 }
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
@@ -19,7 +19,7 @@ $color_lightgray: #f8f8f8;
 $color_white: #fff;
 
 // font
-$font_kor: "Pretendard-Regular", sans-serif;
+$font_kor: "Pretendard-Regular", "Noto Sans KR", sans-serif;
 $font_eng: "Encode Sans", sans-serif;
 
 //mobile

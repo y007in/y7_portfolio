@@ -23,6 +23,7 @@
   background-color: $color_main;
   height: 100vh;
   justify-content: center;
+
   .intro_container {
     @include container_mobile();
     position: relative;
@@ -30,18 +31,18 @@
       flex: 2;
       h1 {
         font-size: 42px;
-        line-height: 130%;
+        line-height: 140%;
         // margin-bottom: 10px;
         //border: 1px solid red;
         .intro_name {
           color: $color_white;
-          background-color: $color_main;
-          padding: 0 6px;
+          // background-color: $color_main;
+          // padding: 0 6px;
         }
         .front-end {
           color: $color_main;
           background-color: $color_white;
-          padding-right: 10px;
+          padding: 0 10px;
         }
       }
       .hashtag {

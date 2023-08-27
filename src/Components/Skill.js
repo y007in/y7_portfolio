@@ -34,7 +34,6 @@ const Skill = ({ skillIcon }) => {
         setShouldAnimate(true);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -44,6 +43,7 @@ const Skill = ({ skillIcon }) => {
   const handleClick = (index) => {
     setExpandedItemIndex(index === expandedItemIndex ? null : index);
   };
+
   let content = null;
   if (windowWidth <= 1024) {
     content = (

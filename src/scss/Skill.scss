@@ -87,6 +87,7 @@
                   &::before {
                     content: "✔";
                     margin-right: 5px;
+                    color: $color_white;
                   }
                 }
                 svg {

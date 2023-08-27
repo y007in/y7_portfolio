@@ -2,40 +2,10 @@
 
 .About {
   @include moveToTop();
-  .btns {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0 40px 0;
-    gap: 10px;
-    background-color: $color_main;
-    .moveBtn {
-      padding: 8px 20px;
-      border-radius: 50px;
-      border: none;
-      background-color: $color_white;
-      color: $color_sub;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: bold;
-      &:hover {
-        background-color: $color_sub;
-        color: $color_white;
-      }
-    }
-  }
 }
 
 @media all and (min-width: 1024px) {
   .About {
-    .btns {
-      gap: 20px;
-      .moveBtn {
-        padding: 10px 30px;
-        font-size: 16px;
-      }
-    }
     .top {
       right: 50px;
       bottom: 45px;

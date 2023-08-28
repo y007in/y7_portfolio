@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../scss/intro.scss";
 import { intros } from "../assets/projectdata";
-import { FaAnglesDown } from "react-icons/fa6";
 
 const Intro = () => {
   const [scrollOffset, setScrollOffset] = useState(0);
@@ -63,7 +62,10 @@ const Intro = () => {
             프로젝트 보러가기
           </button>
         </div> */}
-        <FaAnglesDown />
+        <div className="scroll_icon">
+          <span>Scroll Down</span>
+          <div className="arrow"></div>
+        </div>
       </div>
     </div>
   );

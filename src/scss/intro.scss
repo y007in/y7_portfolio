@@ -1,12 +1,11 @@
 @import "../scss/variables.scss";
 
 @keyframes bounce {
-  0% {
-    transform: translateY(5px);
-  }
-
-  100% {
+  from {
     transform: translateY(0px);
+  }
+  to {
+    transform: translateY(5px);
   }
 }
 
@@ -52,11 +51,26 @@
       .intro_name {
         color: $color_white;
       }
-      svg {
-        margin-top: 100px;
-        animation: bounce 0.5s infinite;
-        width: 100px;
-        justify-content: end;
+    }
+    .scroll_icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 200px;
+
+      .arrow {
+        animation: bounce 0.8s infinite;
+        &:after {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin-left: 0.5rem;
+          border-right: 0.1rem solid #333;
+          border-bottom: 0.1rem solid #333;
+          transform: rotate(45deg);
+        }
       }
     }
   }

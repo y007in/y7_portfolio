@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaRegTimesCircle } from "react-icons/fa";
 import "../scss/Skill.scss";
 import { motion } from "framer-motion";
@@ -43,13 +44,25 @@ const Skill = ({ skillIcon }) => {
   const handleClick = (index) => {
     setExpandedItemIndex(index === expandedItemIndex ? null : index);
   };
+  const navigate = useNavigate();
 
   let content = null;
   if (windowWidth <= 1024) {
     content = (
       <div className="skills">
         <div className="skill_container">
-          <h1>Skills</h1>
+          <div className="skill_title">
+            <h1>Skills</h1>
+            <button
+              className="moveBtn"
+              onClick={() => {
+                navigate("/project");
+              }}
+            >
+              프로젝트 보러가기 ▶
+            </button>
+          </div>
+
           <p className="skillitem_desc">
             * 해당 아이콘 클릭 시 자세한 내용을 볼 수 있습니다.
           </p>
@@ -136,7 +149,17 @@ const Skill = ({ skillIcon }) => {
     content = (
       <div className="skills">
         <div className="skill_container">
-          <h1>Skills</h1>
+          <div className="skill_title">
+            <h1>Skills</h1>
+            <button
+              className="moveBtn"
+              onClick={() => {
+                navigate("/project");
+              }}
+            >
+              프로젝트 보러가기 ▶
+            </button>
+          </div>
           <p className="skillitem_desc">
             * 해당 아이콘에 마우스를 올리면 자세한 내용을 볼 수 있습니다.
           </p>

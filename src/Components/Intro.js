@@ -49,19 +49,6 @@ const Intro = () => {
             <span className="intro_name">장유진</span>입니다.
           </div>
         </div>
-        {/* <div className="btns">
-          <button className="moveBtn" onClick={onMoveToSkill}>
-            더 알아보기
-          </button>
-          <button
-            className="moveBtn"
-            onClick={() => {
-              navigate("/project");
-            }}
-          >
-            프로젝트 보러가기
-          </button>
-        </div> */}
         <div className="scroll_icon">
           <span>Scroll Down</span>
           <div className="arrow"></div>

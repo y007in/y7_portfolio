@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../scss/ProjectThumb.scss";
+// import "../scss/ProjectThumb.scss";
 
 const ProjectThumb = ({ id, image, name, skill }) => {
   const navigate = useNavigate();

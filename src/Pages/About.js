@@ -9,6 +9,7 @@ import MyInformation from "../Components/MyInformation";
 import Footer from "../Components/Footer";
 import Skill from "../Components/Skill";
 import Intro from "../Components/Intro";
+import ProjectList from "../Components/ProjectList";
 
 const About = ({ title, rightChild, leftChild }) => {
   const [showButton, setShowButton] = useState(false);
@@ -19,12 +20,6 @@ const About = ({ title, rightChild, leftChild }) => {
     moveToTop.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   const moveToSkill = useRef();
-  const onMoveToSkill = () => {
-    moveToSkill.current.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-    });
-  };
   useEffect(() => {
     const handleShowButton = () => {
       if (window.scrollY > 200) {
@@ -88,22 +83,10 @@ const About = ({ title, rightChild, leftChild }) => {
         />
       )}
       <Intro />
-      {/*<div className="btns">
-        <button className="moveBtn" onClick={onMoveToSkill}>
-          더 알아보기
-        </button>
-        <button
-          className="moveBtn"
-          onClick={() => {
-            navigate("/project");
-          }}
-        >
-          프로젝트 보러가기
-        </button>
-        </div>*/}
       <div ref={moveToSkill}>
         <Skill skillIcon={SkillIcon} />
       </div>
+      <ProjectList />
       <MyInformation />
       <Footer />
       {showButton && (

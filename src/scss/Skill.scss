@@ -9,20 +9,6 @@
       display: flex;
       align-items: center;
 
-      .moveBtn {
-        background-color: $color_main;
-        color: $color_white;
-        border-radius: 5px;
-        border: none;
-        padding: 5px 8px;
-        margin-left: 10px;
-        margin-bottom: 10px;
-        transition: 0.5s;
-        cursor: pointer;
-        &:hover {
-          background-color: $color_sub;
-        }
-      }
       h1 {
         @include title_mobile();
       }

@@ -34,26 +34,7 @@ const Project = ({ title, leftChild, rightChild }) => {
   };
   return (
     <div className="Project" ref={moveToTop}>
-      <Navigation
-        title={
-          <button
-            onClick={() => {
-              navigate("/project");
-            }}
-          >
-            Project
-          </button>
-        }
-        leftChild={<button>Back</button>}
-        rightChild={<button onClick={handleAbout}>About</button>}
-      />
       <ProjectList data={ProjectData} />
-      <Footer />
-      {showButton && (
-        <button className="top" onClick={onMoveToTop}>
-          <FaArrowAltCircleUp />
-        </button>
-      )}
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
+
 import "../scss/MyInformation.scss";
 import velogicon from "../assets/img/velogicon.png";
 

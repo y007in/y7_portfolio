@@ -9,7 +9,7 @@ import MyInformation from "../Components/MyInformation";
 import Footer from "../Components/Footer";
 import Skill from "../Components/Skill";
 import Intro from "../Components/Intro";
-import ProjectList from "../Components/ProjectList";
+import ProjectList2 from "../Components/ProjectList";
 
 const About = ({ title, rightChild, leftChild }) => {
   const [showButton, setShowButton] = useState(false);
@@ -86,7 +86,7 @@ const About = ({ title, rightChild, leftChild }) => {
       <div ref={moveToSkill}>
         <Skill skillIcon={SkillIcon} />
       </div>
-      <ProjectList />
+      {/* <ProjectList2 /> */}
       <MyInformation />
       <Footer />
       {showButton && (

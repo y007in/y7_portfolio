@@ -43,11 +43,15 @@
         }
       }
       .thumb_des {
-        border-left: 3px solid $color_main;
         .skill {
           display: flex;
+          flex-direction: column;
           margin: 8px 0;
+
+          // flex-wrap: wrap;
           li {
+            margin-bottom: 5px;
+            border-left: 3px solid $color_main;
             font-family: $font_eng;
             font-weight: 500;
             color: $color_white;

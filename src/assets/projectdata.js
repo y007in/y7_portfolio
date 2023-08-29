@@ -2,6 +2,7 @@ import hugmom from "./img/hugmom.JPG";
 import todo from "./img/todo.JPG";
 import diary from "./img/diary.JPG";
 import mbti from "./img/mbti.JPG";
+import portfolo from "./img/portfolio.JPG";
 
 import html5 from "./img/html5.png";
 import CSS3 from "./img/css-3.png";
@@ -97,6 +98,56 @@ export const ProjectData = [
     skill: (
       <>
         <li>React</li>
+        <li>styled-components</li>
+      </>
+    ),
+    func: (
+      <>
+        <li>산후조리원코드로 임산부들만 회원가입 가능합니다.</li>
+        <li>산후조리원코드로 임산부들만 회원가입 가능합니다.</li>
+        <li>산후조리원코드로 임산부들만 회원가입 가능합니다.,</li>
+      </>
+    ),
+  },
+  {
+    id: 4,
+    name: "포트폴리오",
+    team: "개인 프로젝트",
+    image: `${portfolo}`,
+    des: "많은 산모들이 산후조리원을 이용하는 추세이며 산모들이 신선한 식품과 좋은 제품들을 찾는다고 하여 산후조리원에 있는 산모들 전용 쇼핑몰인 허그맘을 제작",
+    github: "https://github.com/y007in/y7_portfolio",
+    url: "https://y7portfolio.netlify.app/",
+    date: "2023.05.30 - 2023.06.30",
+    skill: (
+      <>
+        <li>React</li>
+        <li>SCSS</li>
+        <li>framer-motion</li>
+      </>
+    ),
+    func: (
+      <>
+        <li>산후조리원코드로 임산부들만 회원가입 가능합니다.</li>
+        <li>산후조리원코드로 임산부들만 회원가입 가능합니다.</li>
+        <li>산후조리원코드로 임산부들만 회원가입 가능합니다.,</li>
+      </>
+    ),
+  },
+  {
+    id: 5,
+    name: "Netflix",
+    team: "개인 프로젝트",
+    image: `${portfolo}`,
+    des: "많은 산모들이 산후조리원을 이용하는 추세이며 산모들이 신선한 식품과 좋은 제품들을 찾는다고 하여 산후조리원에 있는 산모들 전용 쇼핑몰인 허그맘을 제작",
+    github: "https://github.com/y007in/y7_portfolio",
+    url: "https://y7portfolio.netlify.app/",
+    date: "2023.05.30 - 2023.06.30",
+    skill: (
+      <>
+        <li>React</li>
+        <li>Typescript</li>
+        <li>styled-components</li>
+        <li>framer-motion</li>
       </>
     ),
     func: (

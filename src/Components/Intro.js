@@ -49,7 +49,7 @@ const Intro = () => {
             <span className="intro_name">장유진</span>입니다.
           </div>
         </div>
-       
+
         <div className="scroll_icon">
           <span>Scroll Down</span>
           <div className="arrow"></div>

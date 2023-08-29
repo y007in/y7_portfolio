@@ -9,6 +9,7 @@ import CSS3 from "./img/css-3.png";
 import js from "./img/js.png";
 import react from "./img/react.png";
 import redux from "./img/redux.png";
+import typescript from "./img/typescript.png";
 import photoshop from "./img/photoshop.png";
 import illustrator from "./img/illustrator.png";
 import figma from "./img/figma.png";
@@ -214,22 +215,30 @@ export const SkillIcon = [
       </>
     ),
   },
-
   {
     id: 5,
+    skill: "TypeScript",
+    icon: `${typescript}`,
+    des: (
+      <>
+        <li>타입스크립트를 이용해서 프로젝트를 만들어본 경험이 있습니다.</li>
+      </>
+    ),
+  },
+
+  {
+    id: 6,
     skill: "Adobe Illustrator",
     icon: `${illustrator}`,
     des: (
       <>
-        <li>
-          펜툴 및 다양한 기타도구들을 이용해 디자인 요소를 제작할 수 있습니다.
-        </li>
+        <li>다양한 도구들을 이용해 디자인 요소를 제작할 수 있습니다.</li>
         <li>다양한 아이콘들과 포스터, 팜플렛 등을 제작한 경험이 있습니다.</li>
       </>
     ),
   },
   {
-    id: 6,
+    id: 7,
     skill: "Adobe Photoshop",
     icon: `${photoshop}`,
     des: (
@@ -240,7 +249,7 @@ export const SkillIcon = [
     ),
   },
   {
-    id: 7,
+    id: 8,
     skill: "Figma",
     icon: `${figma}`,
     des: (

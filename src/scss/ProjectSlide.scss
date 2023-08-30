@@ -1,0 +1,30 @@
+@import "../scss/variables.scss";
+
+.ProjectSlide {
+  @include topcontainer_mobile();
+  .ProjectSlide_container {
+    @include container_mobile();
+    .ProjectSlide_Title {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      h1 {
+        @include title_mobile();
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .ProjectSlide {
+    @include topcontainer_pc();
+    .ProjectSlide_container {
+      @include container_pc();
+      .ProjectSlide_Title {
+        h1 {
+          @include title_pc();
+        }
+      }
+    }
+  }
+}

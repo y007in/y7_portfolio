@@ -68,7 +68,7 @@ const Skill = ({ skillIcon }) => {
                     initial="hidden"
                     animate={shouldAnimate ? "visible" : "hidden"}
                     transition={{
-                      delay: index * 0.4,
+                      delay: 0.4,
                     }}
                   >
                     <div className="skill_icon">
@@ -105,7 +105,7 @@ const Skill = ({ skillIcon }) => {
                     initial="hidden"
                     animate={shouldAnimate ? "visible" : "hidden"}
                     transition={{
-                      delay: (index + 6) * 0.4,
+                      delay: 2 * 0.4,
                     }}
                   >
                     <div className="skill_icon">
@@ -154,7 +154,7 @@ const Skill = ({ skillIcon }) => {
                     initial="hidden"
                     animate={shouldAnimate ? "visible" : "hidden"}
                     transition={{
-                      delay: index * 0.4,
+                      delay: 0.4,
                     }}
                   >
                     <div className="skill_icon">
@@ -176,7 +176,7 @@ const Skill = ({ skillIcon }) => {
                     initial="hidden"
                     animate={shouldAnimate ? "visible" : "hidden"}
                     transition={{
-                      delay: (index + 6) * 0.4,
+                      delay: 2 * 0.4,
                     }}
                   >
                     <div className="skill_icon">

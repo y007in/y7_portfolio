@@ -28,8 +28,7 @@ $font_eng: "Encode Sans", sans-serif;
   // height: calc(100% - 50px);
   display: flex;
   flex-direction: column;
-  // margin-bottom: 40px;
-  // padding-top: 50px;
+  padding: 30px 0;
 }
 @mixin container_mobile() {
   display: flex;
@@ -58,7 +57,7 @@ $font_eng: "Encode Sans", sans-serif;
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 220px);
-  padding-top: 100px;
+  padding: 100px 0;
 }
 @mixin container_pc() {
   width: 1280px;

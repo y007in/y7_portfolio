@@ -47,6 +47,7 @@ const ProjectSlide = () => {
                   >
                     <div className="item">
                       <img src={p.image} />
+                      <div className="item_name">{p.name}</div>
                     </div>
                   </li>
                 ))}
@@ -61,6 +62,7 @@ const ProjectSlide = () => {
                   >
                     <div className="item">
                       <img src={p.image} />
+                      <div className="item_name">{p.name}</div>
                     </div>
                   </li>
                 ))}

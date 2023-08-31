@@ -79,7 +79,6 @@
 @media all and (min-width: 1024px) {
   .intro {
     @include topcontainer_pc();
-    padding-top: 0;
     .intro_container {
       @include container_pc();
       .hi {

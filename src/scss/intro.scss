@@ -14,7 +14,7 @@
   background-color: $color_main;
   height: 100vh;
   justify-content: center;
-  padding-top: 0;
+  padding-top: 50px;
   .intro_container {
     @include container_mobile();
     justify-content: center;

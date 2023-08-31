@@ -24,8 +24,8 @@ const ProjectSlide = () => {
               프로젝트 보러가기 ▶
             </button>
           </div>
-          <p className="skillitem_desc">
-            * 해당 아이콘 클릭 시 자세한 내용을 볼 수 있습니다.
+          <p className="project_desc">
+            * 해당 썸네일 클릭 시 자세한 내용을 볼 수 있습니다.
           </p>
         </div>
         <section className="Projects">

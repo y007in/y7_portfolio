@@ -21,7 +21,7 @@ const ProjectSlide = () => {
                 navigate("/project");
               }}
             >
-              프로젝트 보러가기 ▶
+              프로젝트 전체보기 ▶
             </button>
           </div>
           <p className="project_desc">

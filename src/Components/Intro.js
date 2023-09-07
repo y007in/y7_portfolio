@@ -1,18 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+
 import "../scss/intro.scss";
 import { intros } from "../assets/projectdata";
 
 const Intro = () => {
   const [scrollOffset, setScrollOffset] = useState(0);
-  const navigate = useNavigate();
-  const moveToSkill = useRef();
-  const onMoveToSkill = () => {
-    moveToSkill.current.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-    });
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,10 +42,10 @@ const Intro = () => {
           </div>
         </div>
 
-        <div className="scroll_icon">
+        {/* <div className="scroll_icon">
           <span>Scroll Down</span>
           <div className="arrow"></div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

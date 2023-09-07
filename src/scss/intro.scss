@@ -14,11 +14,12 @@
   background-color: $color_main;
   height: 100vh;
   justify-content: center;
-  padding-top: 50px;
+
   .intro_container {
     @include container_mobile();
     justify-content: center;
     align-items: center;
+
     .hi {
       font-size: 42px;
       font-weight: bold;
@@ -41,7 +42,6 @@
           padding: 3px 10px;
           margin: 5px 5px 5px 0;
           font-size: 14px;
-          cursor: pointer;
           color: $color_sub;
           &:last-child {
             margin-right: 0;

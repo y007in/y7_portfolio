@@ -16,15 +16,15 @@ import figma from "./img/figma.png";
 
 export const intros = [
   {
-    hashtag: "# OO하는",
+    hashtag: "#계획없이는 못사는",
     hashtagDetail: "ff",
   },
   {
-    hashtag: "# OO적인",
+    hashtag: "#한번 시작하면 끝을 보는",
     hashtagDetail: "cc",
   },
   {
-    hashtag: "# 사용자를 위한",
+    hashtag: "#사용자를 위한",
     hashtagDetail: "dd",
   },
 ];

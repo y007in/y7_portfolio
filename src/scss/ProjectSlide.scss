@@ -97,18 +97,19 @@
       .ProjectSlide_Title {
         h1 {
           @include title_pc();
-          .moveBtn {
-            padding: 5px 10px;
-            font-size: 18px;
-            cursor: pointer;
-            &:hover {
-              background-color: $color_sub;
-            }
+        }
+        .moveBtn {
+          padding: 5px 10px;
+          margin-left: 15px;
+          font-size: 18px;
+          cursor: pointer;
+          &:hover {
+            background-color: $color_sub;
           }
-          .project_desc {
-            color: $color_darkgray;
-            font-size: 16px;
-          }
+        }
+        .project_desc {
+          color: $color_darkgray;
+          font-size: 16px;
         }
       }
       .slide_container {

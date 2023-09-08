@@ -4,9 +4,9 @@ import { FaRegTimesCircle } from "react-icons/fa";
 import "../scss/Skill.scss";
 
 const Skill = ({ skillIcon }) => {
-  const [expandedItemIndex, setExpandedItemIndex] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [shouldAnimate, setShouldAnimate] = useState(false);
+  const [expandedItemIndex, setExpandedItemIndex] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,8 +20,8 @@ const Skill = ({ skillIcon }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // 원하는 스크롤 위치를 기준으로 작동 여부 결정
-      const scrollThreshold = window.innerHeight - 350;
+      const scrollThreshold = window.innerHeight / 3;
+      console.log(scrollThreshold);
       if (window.scrollY > scrollThreshold) {
         setShouldAnimate(true);
       }
@@ -123,50 +123,47 @@ const Skill = ({ skillIcon }) => {
       <div className="skills">
         <div className="skill_container">
           <h1>Skills</h1>
-
           <p className="skillitem_desc">
             * 해당 아이콘에 마우스를 올리면 자세한 내용을 볼 수 있습니다.
           </p>
           <div className="skill_list">
             <article className="skillbox">
               <p className="skill_items_title">Front-end</p>
-              {shouldAnimate && (
-                <div className="skill_items">
-                  {skillIcon.slice(0, 6).map((item, index) => (
-                    <div
-                      className="skill_item"
-                      key={index}
-                      style={{ opacity: 1 }}
-                    >
-                      <div className="skill_icon">
-                        <img src={item.icon} alt={`${item.skill} icon`} />
-                      </div>
-                      <p className="skill_name">{item.skill}</p>
-                      <ul className="skill_des">{item.des}</ul>
+
+              <div className="skill_items">
+                {skillIcon.slice(0, 6).map((item, index) => (
+                  <div
+                    className="skill_item"
+                    key={index}
+                    style={{ opacity: shouldAnimate ? 1 : 0 }}
+                  >
+                    <div className="skill_icon">
+                      <img src={item.icon} alt={`${item.skill} icon`} />
                     </div>
-                  ))}
-                </div>
-              )}
+                    <p className="skill_name">{item.skill}</p>
+                    <ul className="skill_des">{item.des}</ul>
+                  </div>
+                ))}
+              </div>
             </article>
             <article className="skillbox">
               <p className="skill_items_title">Etc</p>
-              {shouldAnimate && (
-                <div className="skill_items">
-                  {skillIcon.slice(6, 9).map((item, index) => (
-                    <div
-                      className="skill_item"
-                      key={index}
-                      style={{ opacity: 1 }}
-                    >
-                      <div className="skill_icon">
-                        <img src={item.icon} />
-                      </div>
-                      <p className="skill_name">{item.skill}</p>
-                      <ul className="skill_des">{item.des}</ul>
+
+              <div className="skill_items">
+                {skillIcon.slice(6, 9).map((item, index) => (
+                  <div
+                    className="skill_item"
+                    key={index}
+                    style={{ opacity: shouldAnimate ? 1 : 0 }}
+                  >
+                    <div className="skill_icon">
+                      <img src={item.icon} />
                     </div>
-                  ))}
-                </div>
-              )}
+                    <p className="skill_name">{item.skill}</p>
+                    <ul className="skill_des">{item.des}</ul>
+                  </div>
+                ))}
+              </div>
             </article>
           </div>
         </div>

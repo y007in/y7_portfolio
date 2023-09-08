@@ -42,10 +42,10 @@ const Intro = () => {
           </div>
         </div>
 
-        {/* <div className="scroll_icon">
+        <div className="scroll_icon">
           <span>Scroll Down</span>
           <div className="arrow"></div>
-        </div> */}
+        </div>
       </div>
     </div>
   );

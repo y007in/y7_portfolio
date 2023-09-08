@@ -96,15 +96,24 @@
             border-radius: 5px;
             line-height: 150%;
             font-size: 16px;
-            ul {
-              li {
-                margin: 0 5px;
-              }
+            ul li {
+              margin: 0 5px;
             }
           }
         }
         .project_skill .des_content ul {
           display: flex;
+          li {
+            white-space: nowrap;
+            &::after {
+              content: " ,";
+            }
+            &:last-child {
+              &::after {
+                content: "";
+              }
+            }
+          }
         }
       }
     }

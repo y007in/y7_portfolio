@@ -3,6 +3,7 @@ import todo from "./img/todo.JPG";
 import diary from "./img/diary.JPG";
 import mbti from "./img/mbti.JPG";
 import portfolo from "./img/portfolio.JPG";
+import netflix from "./img/netflix.jpeg";
 
 import html5 from "./img/html5.png";
 import CSS3 from "./img/css-3.png";
@@ -158,11 +159,11 @@ export const ProjectData = [
     id: 5,
     name: "Netflix",
     team: "개인 프로젝트",
-    image: `${portfolo}`,
-    des: " React와 TypeScript를 활용하여 프로젝트를 진행하여 연습해보고 싶어 제작하게 되었습니다.",
-    github: "https://github.com/y007in/y7_portfolio",
-    url: "https://y7portfolio.netlify.app/",
-    date: "2023.05.30 - 2023.06.30",
+    image: `${netflix}`,
+    des: "React와 TypeScript를 활용하여 프로젝트를 진행하여 연습해보고 싶어 제작하게 되었습니다.",
+    github: "https://y7netflix.netlify.app/",
+    url: "https://github.com/y007in/netflix_typescript",
+    date: "2023.08.23 - 진행중",
     skill: (
       <>
         <li>React</li>

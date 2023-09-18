@@ -1,3 +1,4 @@
+import postme from "./img/postme.png";
 import hugmom from "./img/hugmom.JPG";
 import todo from "./img/todo.JPG";
 import diary from "./img/diary.JPG";
@@ -16,23 +17,59 @@ import illustrator from "./img/illustrator.png";
 import figma from "./img/figma.png";
 
 export const intros = [
-  {
-    hashtag: "#계획없이는 못사는",
-    hashtagDetail: "ff",
-  },
-  {
-    hashtag: "#한번 시작하면 끝을 보는",
-    hashtagDetail: "cc",
-  },
-  {
-    hashtag: "#사용자를 위한",
-    hashtagDetail: "dd",
-  },
+  "#계획없이는 못사는",
+  "#한번 시작하면 끝까지 달리는",
+  "#사용자를 위한",
 ];
 
 export const ProjectData = [
   {
     id: 0,
+    name: "PostMe",
+    team: "팀 프로젝트 + 개인 프로젝트",
+    image: `${postme}`,
+    des: "많은 산모들이 산후조리원을 이용하는 추세이며 산모들이 신선한 식품과 좋은 제품들을 찾는다고 하여 산후조리원에 있는 산모들 전용 쇼핑몰을 제작하게되었습니다. 산후조리원에 있는 산모들 전용몰과 산후조리원에서 나온 후에도 계속해서 사용하고자 하는 산모들 전용몰을 따로 만들어 산후조리원을 졸업하더라도 좋은 물건을 사용할 수 있고 공동구매를 통해서 좀 더 저렴한 값에 사용할 수 있도록 구성하였습니다.  ",
+    github: "https://github.com/That-s-great/Hugmom",
+    url: "https://hugmom-b6187.web.app/html/01-intro_logout.html",
+    date: "2023.05.08 - 2023.06.30",
+    skill: (
+      <>
+        <li>React</li>
+        <li>CSS3</li>
+      </>
+    ),
+    func: (
+      <>
+        <li>
+          반응형 웹으로 제작
+          <ul>
+            <li>네비게이션바와 상품 배열, 상품선택 형식 다르게 설정</li>
+          </ul>
+        </li>
+        <li>
+          자바스크립트를 활용한 기능 구현
+          <ul>
+            <li>
+              저장되어 있는 로그인 정보로만 로그인 가능(아이디 : hugmom123 /
+              비밀번호 : hugmom123)
+            </li>
+            <li>
+              각 상품 상세 페이지 상품선택옵션 value값에 가격을 지정해두어
+              수량에 따라 가격 계산되어 출력
+            </li>
+            <li>
+              산후조리원 졸업 회원몰 - 공동구매 상세페이지 원하는 상품
+              공동구매시작하기 버튼으로 공동 구매자들을 모집해 완료가 되면
+              완료되었다는 알림창 띄우기
+            </li>
+            <li> LIVE에서 채팅남길 수 있는 공간 제작</li>
+          </ul>
+        </li>
+      </>
+    ),
+  },
+  {
+    id: 1,
     name: "허그맘(Hugmom)",
     team: "팀 프로젝트",
     image: `${hugmom}`,
@@ -77,8 +114,9 @@ export const ProjectData = [
       </>
     ),
   },
+
   {
-    id: 1,
+    id: 2,
     name: "Todo List",
     team: "개인 프로젝트",
     image: `${todo}`,
@@ -95,7 +133,7 @@ export const ProjectData = [
     func: "산후조리원코드로 임산부들만 회원가입 가능",
   },
   {
-    id: 2,
+    id: 3,
     name: "MyDiary",
     team: "개인 프로젝트",
     image: `${diary}`,

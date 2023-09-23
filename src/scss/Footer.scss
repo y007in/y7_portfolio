@@ -21,24 +21,18 @@
       color: $color_sub;
       // font-family: "Caveat", cursive;
     }
-    .info {
+    li {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: $font_eng;
-        cursor: pointer;
-        &:not(:nth-child(3))::after {
-          content: "|";
-          margin: 0 5px;
-        }
-        svg {
-          margin-right: 3px;
-        }
+      font-family: $font_eng;
+      cursor: pointer;
+      &:not(:nth-child(3))::after {
+        content: "|";
+        margin: 0 5px;
+      }
+      svg {
+        margin-right: 3px;
       }
     }
   }
@@ -63,19 +57,14 @@
         color: $color_sub;
         // font-family: "Caveat", cursive;
       }
-      .info {
+
+      li {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        li {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          &:not(:nth-child(2))::after {
-            content: "|";
-            margin: 0 5px;
-          }
+        &:not(:nth-child(2))::after {
+          content: "|";
+          margin: 0 5px;
         }
       }
     }

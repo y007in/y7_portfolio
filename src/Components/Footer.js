@@ -22,19 +22,11 @@ const Footer = () => {
       <div className="footer_mobile">
         <ul>
           <li className="name">Jang YooJin</li>
-          <li>
-            <ul className="info">
-              <li>📞 010-9962-0590</li>
-              <li>📧 ujin4719@naver.com</li>
-              <li
-                onClick={() =>
-                  window.open("https://github.com/y007in", "_blank")
-                }
-              >
-                <FaGithub />
-                GitHub
-              </li>
-            </ul>
+
+          <li
+            onClick={() => window.open("https://github.com/y007in", "_blank")}
+          >
+            <FaGithub />
           </li>
           <li>Copyright © YooJin All Rights Reserved.</li>
         </ul>
@@ -45,12 +37,7 @@ const Footer = () => {
       <div className="footer_pc">
         <ul>
           <li className="name">Jang YooJin</li>
-          <li>
-            <ul className="info">
-              <li>📞 010-9962-0590</li>
-              <li>📧 ujin4719@naver.com</li>
-            </ul>
-          </li>
+
           <li>Copyright © YooJin All Rights Reserved.</li>
         </ul>
       </div>

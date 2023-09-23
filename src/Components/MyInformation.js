@@ -48,9 +48,9 @@ const myinformation = () => {
                 </li>
               </ul>
               <ul className="info_list">
-                <li className="date">2019.03 - 현재</li>
+                <li className="date">2019.03 - (졸업 예정)</li>
                 <li className="content">
-                  국립안동대학교 멀티미디어공학과 재학
+                  국립안동대학교 멀티미디어공학과 졸업 예정
                 </li>
               </ul>
               <ul className="info_list">

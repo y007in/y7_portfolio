@@ -1,10 +1,11 @@
 import postme from "./img/postme.png";
 import hugmom from "./img/hugmom.JPG";
 import todo from "./img/todo.JPG";
-import diary from "./img/diary.JPG";
-import mbti from "./img/mbti.JPG";
-import portfolo from "./img/portfolio.JPG";
+import mbti from "./img/mbti.png";
+import portfolio from "./img/portfolio.JPG";
 import netflix from "./img/netflix.jpeg";
+
+// import design from "./img/design.png";
 
 import html5 from "./img/html5.png";
 import CSS3 from "./img/css-3.png";
@@ -28,10 +29,10 @@ export const ProjectData = [
     name: "PostMe",
     team: "팀 프로젝트 + 개인 프로젝트",
     image: `${postme}`,
-    des: "많은 산모들이 산후조리원을 이용하는 추세이며 산모들이 신선한 식품과 좋은 제품들을 찾는다고 하여 산후조리원에 있는 산모들 전용 쇼핑몰을 제작하게되었습니다. 산후조리원에 있는 산모들 전용몰과 산후조리원에서 나온 후에도 계속해서 사용하고자 하는 산모들 전용몰을 따로 만들어 산후조리원을 졸업하더라도 좋은 물건을 사용할 수 있고 공동구매를 통해서 좀 더 저렴한 값에 사용할 수 있도록 구성하였습니다.  ",
-    github: "https://github.com/That-s-great/Hugmom",
-    url: "https://hugmom-b6187.web.app/html/01-intro_logout.html",
-    date: "2023.05.08 - 2023.06.30",
+    des: "'네이버 웨일' 확장앱 프로젝트로 ",
+    github: "https://github.com/y007in/POSTME",
+    url: "https://whale4upostme.netlify.app/",
+    date: "2022.8.19 - 2022.09.16",
     skill: (
       <>
         <li>React</li>
@@ -46,25 +47,6 @@ export const ProjectData = [
             <li>네비게이션바와 상품 배열, 상품선택 형식 다르게 설정</li>
           </ul>
         </li>
-        <li>
-          자바스크립트를 활용한 기능 구현
-          <ul>
-            <li>
-              저장되어 있는 로그인 정보로만 로그인 가능(아이디 : hugmom123 /
-              비밀번호 : hugmom123)
-            </li>
-            <li>
-              각 상품 상세 페이지 상품선택옵션 value값에 가격을 지정해두어
-              수량에 따라 가격 계산되어 출력
-            </li>
-            <li>
-              산후조리원 졸업 회원몰 - 공동구매 상세페이지 원하는 상품
-              공동구매시작하기 버튼으로 공동 구매자들을 모집해 완료가 되면
-              완료되었다는 알림창 띄우기
-            </li>
-            <li> LIVE에서 채팅남길 수 있는 공간 제작</li>
-          </ul>
-        </li>
       </>
     ),
   },
@@ -73,7 +55,7 @@ export const ProjectData = [
     name: "허그맘(Hugmom)",
     team: "팀 프로젝트",
     image: `${hugmom}`,
-    des: "많은 산모들이 산후조리원을 이용하는 추세이며 산모들이 신선한 식품과 좋은 제품들을 찾는다고 하여 산후조리원에 있는 산모들 전용 쇼핑몰을 제작하게되었습니다. 산후조리원에 있는 산모들 전용몰과 산후조리원에서 나온 후에도 계속해서 사용하고자 하는 산모들 전용몰을 따로 만들어 산후조리원을 졸업하더라도 좋은 물건을 사용할 수 있고 공동구매를 통해서 좀 더 저렴한 값에 사용할 수 있도록 구성하였습니다.  ",
+    des: "많은 산모들이 산후조리원을 이용하는 추세이며 산모들이 신선한 식품과 좋은 제품들을 찾는다고 하여 산후조리원에 있는 산모들 전용 쇼핑몰을 제작 ",
     github: "https://github.com/That-s-great/Hugmom",
     url: "https://hugmom-b6187.web.app/html/01-intro_logout.html",
     date: "2023.05.08 - 2023.06.30",
@@ -86,12 +68,7 @@ export const ProjectData = [
     ),
     func: (
       <>
-        <li>
-          반응형 웹으로 제작
-          <ul>
-            <li>네비게이션바와 상품 배열, 상품선택 형식 다르게 설정</li>
-          </ul>
-        </li>
+        <li>반응형 웹으로 제작</li>
         <li>
           자바스크립트를 활용한 기능 구현
           <ul>
@@ -120,7 +97,7 @@ export const ProjectData = [
     name: "Todo List",
     team: "개인 프로젝트",
     image: `${todo}`,
-    des: "React를 활용하여 Todo List 제작하였고 데이터들을 LocalStorage에 저장될 수 있도록 함",
+    des: "React를 활용하여 CRUD(Create, Read, Update, Delete) 기능을 갖춘 Todo List를 개발하고, 데이터를 브라우저의 LocalStorage에 저장할 수 있도록 구현",
     github: "https://github.com/y007in/my_todo",
     url: "https://y7mytodolist.netlify.app/",
     date: "2023.07.11 - 2023.07.15",
@@ -130,31 +107,24 @@ export const ProjectData = [
         <li>Local Storage</li>
       </>
     ),
-    func: "산후조리원코드로 임산부들만 회원가입 가능",
-  },
-  {
-    id: 3,
-    name: "MyDiary",
-    team: "개인 프로젝트",
-    image: `${diary}`,
-    des: "React를 활용한 Diary 제작",
-    github: "https://github.com/y007in/my_diary",
-    url: "https://y7mydiary.netlify.app/",
-    date: "2023.07.12 - 2023.07.14",
-    skill: (
+    func: (
       <>
-        <li>React</li>
-        <li>Local Storage</li>
+        <li>생성된 todo 항목은 LocalStorage에 저장, 삭제, 수정이 가능</li>
+        <li>검색 기능을 통해 저장된 todo 항목을 검색 가능</li>
+        <li>
+          useMemo Hook을 활용하여 todo 배열이 변경될 때마다 완료된 todo 항목과
+          완료되지 않은 todo 항목의 개수를 실시간으로 계산하고 출력
+        </li>
       </>
     ),
-    func: "산후조리원코드로 임산부들만 회원가입 가능",
   },
+
   {
     id: 3,
     name: "MBTI TEST",
     team: "개인 프로젝트",
     image: `${mbti}`,
-    des: "많은 산모들이 산후조리원을 이용하는 추세이며 산모들이 신선한 식품과 좋은 제품들을 찾는다고 하여 산후조리원에 있는 산모들 전용 쇼핑몰인 허그맘을 제작",
+    des: "선택한 답변에 따라 MBTI 결과를 생성하는 알고리즘을 활용한 웹페이지 제작",
     github: "https://github.com/y007in/mbti",
     url: "https://y7mbti.netlify.app/",
     date: "2023.05.30 - 2023.06.30",
@@ -166,9 +136,15 @@ export const ProjectData = [
     ),
     func: (
       <>
-        <li>산후조리원코드로 임산부들만 회원가입 가능합니다.</li>
-        <li>산후조리원코드로 임산부들만 회원가입 가능합니다.</li>
-        <li>산후조리원코드로 임산부들만 회원가입 가능합니다.,</li>
+        <li>함수를 활용한 상태변화로 선택한 답변에 따라 답변 결과를 계산</li>
+        <li>
+          createSearchParams() 함수를 활용하여 해당 MBTI 결과에 기반한 URL을
+          생성"
+        </li>
+        <li>
+          useSearchParams() Hook을 활용해 URL에 생성된 MBTI 결과값과
+          ResultData에 저장된 MBTI가 일치하는 내용을 불러와 출력
+        </li>
       </>
     ),
   },
@@ -176,8 +152,8 @@ export const ProjectData = [
     id: 4,
     name: "포트폴리오",
     team: "개인 프로젝트",
-    image: `${portfolo}`,
-    des: "프론트엔드 개발자로써의 장유진을 소개하고 그동안 진행했던 프로젝트들을 모아볼 수 있도록 정리하기 위해서 제작하였습니다. ",
+    image: `${portfolio}`,
+    des: "프론트엔드 개발자로서 프로필을 소개하고 이전 프로젝트들을 모아놓은 포트폴리오 페이지 제작",
     github: "https://github.com/y007in/y7_portfolio",
     url: "https://y7portfolio.netlify.app/",
     date: "2023.05.30 - 2023.06.30",
@@ -189,6 +165,7 @@ export const ProjectData = [
     ),
     func: (
       <>
+        <li>반응형 웹 페이지</li>
         <li>간단한 자기소개, 기술, 인적사항 및 프로젝트 모음</li>
       </>
     ),
@@ -198,7 +175,7 @@ export const ProjectData = [
     name: "Netflix",
     team: "개인 프로젝트",
     image: `${netflix}`,
-    des: "React와 TypeScript를 활용하여 프로젝트를 진행하여 연습해보고 싶어 제작하게 되었습니다.",
+    des: "React와 TypeScript를 활용하여 프로젝트를 진행하여 연습하고자 제작.",
     github: "https://y7netflix.netlify.app/",
     url: "https://github.com/y007in/netflix_typescript",
     date: "2023.08.23 - 진행중",
@@ -218,6 +195,21 @@ export const ProjectData = [
     ),
   },
 ];
+
+export const DesignData = {
+  name: "졸업작품전시회 홍보물 제작",
+  team: "팀 프로젝트",
+  // image: `${design} `,
+  des: "졸업작품전시회를 홍보하기 위한 포스터, 현수막, 책자를 제작하였습니다.",
+  url: "",
+  date: "2021.10.18 - 2021.11.12",
+  skill: (
+    <>
+      <li>Adobe Illustrator</li>
+      <li>Adobe Photoshop</li>
+    </>
+  ),
+};
 
 export const SkillIcon = [
   {

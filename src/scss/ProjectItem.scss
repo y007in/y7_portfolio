@@ -117,6 +117,13 @@
             }
           }
         }
+        .project_func .des_content li {
+          list-style-type: circle;
+          margin-left: 30px;
+          ul li {
+            list-style-type: disc;
+          }
+        }
       }
     }
   }
@@ -152,6 +159,7 @@
         .team {
           font-size: 20px;
           margin: 0 10px;
+          margin-bottom: 5px;
         }
       }
       .project_content {

@@ -26,10 +26,10 @@ export const intros = [
 export const ProjectData = [
   {
     id: 0,
-    name: "PostMe",
+    name: "Post Me",
     team: "팀 프로젝트 + 개인 프로젝트",
     image: `${postme}`,
-    des: "'네이버 웨일' 확장앱 프로젝트로 ",
+    des: "'네이버 웨일'대외활동 확장앱 프로젝트로 Post Me 제작",
     github: "https://github.com/y007in/POSTME",
     url: "https://whale4upostme.netlify.app/",
     date: "2022.8.19 - 2022.09.16",
@@ -41,12 +41,7 @@ export const ProjectData = [
     ),
     func: (
       <>
-        <li>
-          반응형 웹으로 제작
-          <ul>
-            <li>네비게이션바와 상품 배열, 상품선택 형식 다르게 설정</li>
-          </ul>
-        </li>
+        <li>x</li>
       </>
     ),
   },

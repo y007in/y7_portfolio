@@ -1,6 +1,6 @@
 @import "../scss/variables.scss";
 
-.footer_mobile {
+.footer {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   align-items: center;
   text-align: center;
   border-top: 1px solid $color_main;
-  padding: 15px;
+  padding: 20px;
   background-color: $color_white;
 
   li {
@@ -21,32 +21,18 @@
       color: $color_sub;
       // font-family: "Caveat", cursive;
     }
-    li {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: $font_eng;
-      cursor: pointer;
-      &:not(:nth-child(3))::after {
-        content: "|";
-        margin: 0 5px;
-      }
-      svg {
-        margin-right: 3px;
-      }
-    }
   }
 }
 
 @media all and (min-width: 1024px) {
-  .footer_pc {
+  .footer {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     border-top: 1px solid $color_main;
-    padding: 10px;
+    padding: 25px;
     li {
       line-height: 180%;
       font-size: 16px;
@@ -55,17 +41,6 @@
         font-size: 18px;
         font-weight: bold;
         color: $color_sub;
-        // font-family: "Caveat", cursive;
-      }
-
-      li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &:not(:nth-child(2))::after {
-          content: "|";
-          margin: 0 5px;
-        }
       }
     }
   }

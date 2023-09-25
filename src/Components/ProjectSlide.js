@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../scss/ProjectSlide.scss";
 import { ProjectData } from "../assets/projectdata";
-import { useAnimate } from "framer-motion";
 
 const ProjectSlide = () => {
   const [animate, setAnimate] = useState(true);
@@ -48,6 +47,7 @@ const ProjectSlide = () => {
                     <div className="item">
                       <img src={p.image} />
                       <div className="item_name">{p.name}</div>
+                      <div className="item_skill">{p.skill}</div>
                     </div>
                   </li>
                 ))}
@@ -63,6 +63,7 @@ const ProjectSlide = () => {
                     <div className="item">
                       <img src={p.image} />
                       <div className="item_name">{p.name}</div>
+                      <div className="item_skill">{p.skill}</div>
                     </div>
                   </li>
                 ))}

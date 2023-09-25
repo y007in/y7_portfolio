@@ -2,7 +2,7 @@ import postme from "./img/postme.png";
 import hugmom from "./img/hugmom.JPG";
 import todo from "./img/todo.JPG";
 import mbti from "./img/mbti.png";
-import portfolio from "./img/portfolio.JPG";
+import portfolio from "./img/portfolio.png";
 import netflix from "./img/netflix.jpeg";
 
 // import design from "./img/design.png";
@@ -73,19 +73,10 @@ export const ProjectData = [
           자바스크립트를 활용한 기능 구현
           <ul>
             <li>
-              저장되어 있는 로그인 정보로만 로그인 가능(아이디 : hugmom123 /
-              비밀번호 : hugmom123)
+              저장되어 있는 로그인 정보로만 로그인 가능
+              <br />
+              (아이디 : hugmom123 / 비밀번호 : hugmom123)
             </li>
-            <li>
-              각 상품 상세 페이지 상품선택옵션 value값에 가격을 지정해두어
-              수량에 따라 가격 계산되어 출력
-            </li>
-            <li>
-              산후조리원 졸업 회원몰 - 공동구매 상세페이지 원하는 상품
-              공동구매시작하기 버튼으로 공동 구매자들을 모집해 완료가 되면
-              완료되었다는 알림창 띄우기
-            </li>
-            <li> LIVE에서 채팅남길 수 있는 공간 제작</li>
           </ul>
         </li>
       </>

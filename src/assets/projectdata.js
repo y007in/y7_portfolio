@@ -26,27 +26,6 @@ export const intros = [
 export const ProjectData = [
   {
     id: 0,
-    name: "Post Me",
-    team: "팀 프로젝트 + 개인 프로젝트",
-    image: `${postme}`,
-    des: "'네이버 웨일'대외활동 확장앱 프로젝트로 Post Me 제작",
-    github: "https://github.com/y007in/POSTME",
-    url: "https://whale4upostme.netlify.app/",
-    date: "2022.8.19 - 2022.09.16",
-    skill: (
-      <>
-        <li>React</li>
-        <li>CSS3</li>
-      </>
-    ),
-    func: (
-      <>
-        <li>x</li>
-      </>
-    ),
-  },
-  {
-    id: 1,
     name: "허그맘(Hugmom)",
     team: "팀 프로젝트",
     image: `${hugmom}`,
@@ -64,22 +43,13 @@ export const ProjectData = [
     func: (
       <>
         <li>반응형 웹으로 제작</li>
-        <li>
-          자바스크립트를 활용한 기능 구현
-          <ul>
-            <li>
-              저장되어 있는 로그인 정보로만 로그인 가능
-              <br />
-              (아이디 : hugmom123 / 비밀번호 : hugmom123)
-            </li>
-          </ul>
-        </li>
+        <li>자바스크립트를 활용한 기능 구현</li>
       </>
     ),
   },
 
   {
-    id: 2,
+    id: 1,
     name: "Todo List",
     team: "개인 프로젝트",
     image: `${todo}`,
@@ -106,7 +76,7 @@ export const ProjectData = [
   },
 
   {
-    id: 3,
+    id: 2,
     name: "MBTI TEST",
     team: "개인 프로젝트",
     image: `${mbti}`,
@@ -135,7 +105,7 @@ export const ProjectData = [
     ),
   },
   {
-    id: 4,
+    id: 3,
     name: "포트폴리오",
     team: "개인 프로젝트",
     image: `${portfolio}`,
@@ -157,7 +127,7 @@ export const ProjectData = [
     ),
   },
   {
-    id: 5,
+    id: 4,
     name: "Netflix",
     team: "개인 프로젝트",
     image: `${netflix}`,
@@ -180,6 +150,27 @@ export const ProjectData = [
       </>
     ),
   },
+  // {
+  //   id: 0,
+  //   name: "Post Me",
+  //   team: "팀 프로젝트 + 개인 프로젝트",
+  //   image: `${postme}`,
+  //   des: "'네이버 웨일'대외활동 확장앱 프로젝트로 Post Me 제작",
+  //   github: "https://github.com/y007in/POSTME",
+  //   url: "https://whale4upostme.netlify.app/",
+  //   date: "2022.8.19 - 2022.09.16",
+  //   skill: (
+  //     <>
+  //       <li>React</li>
+  //       <li>CSS3</li>
+  //     </>
+  //   ),
+  //   func: (
+  //     <>
+  //       <li>x</li>
+  //     </>
+  //   ),
+  // },
 ];
 
 export const DesignData = {

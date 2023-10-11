@@ -17,11 +17,11 @@ import photoshop from "./img/photoshop.png";
 import illustrator from "./img/illustrator.png";
 import figma from "./img/figma.png";
 
-export const intros = [
-  "#계획없이는 못사는",
-  "#한번 시작하면 끝까지 달리는",
-  "#사용자를 위한",
-];
+// export const intros = [
+//   "#계획없이는 못사는",
+//   "#한번 시작하면 끝까지 달리는",
+//   "#사용자를 위한",
+// ];
 
 export const ProjectData = [
   {

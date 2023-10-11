@@ -30,11 +30,11 @@ const Intro = () => {
               lineHeight: "110%",
             }}
           >
-            <div className="hashtag">
+            {/* <div className="hashtag">
               {intros.map((intro, index) => (
                 <span key={index}>{intros[index]}</span>
               ))}
-            </div>
+            </div> */}
             <div className="front-end">프론트엔드 개발자</div>
           </div>
           <div style={{ transform: `translateX(${scrollOffset}px)` }}>

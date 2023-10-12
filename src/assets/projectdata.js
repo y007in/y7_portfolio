@@ -5,8 +5,6 @@ import mbti from "./img/mbti.png";
 import portfolio from "./img/portfolio.png";
 import netflix from "./img/netflix.jpeg";
 
-// import design from "./img/design.png";
-
 import html5 from "./img/html5.png";
 import CSS3 from "./img/css-3.png";
 import js from "./img/js.png";
@@ -132,8 +130,8 @@ export const ProjectData = [
     team: "개인 프로젝트",
     image: `${netflix}`,
     des: "React와 TypeScript를 활용하여 프로젝트를 진행하여 연습하고자 제작.",
-    github: "https://y7netflix.netlify.app/",
-    url: "https://github.com/y007in/netflix_typescript",
+    github: "https://github.com/y007in/netflix_typescript",
+    url: "https://y7netflix.netlify.app/",
     date: "2023.08.23 - 진행중",
     skill: (
       <>

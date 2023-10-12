@@ -5,7 +5,7 @@ import "../scss/Skill.scss";
 
 const Skill = ({ skillIcon }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [shouldAnimate, setShouldAnimate] = useState(false);
+
   const [expandedItemIndex, setExpandedItemIndex] = useState(null);
 
   useEffect(() => {
@@ -15,20 +15,6 @@ const Skill = ({ skillIcon }) => {
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollThreshold = window.innerHeight / 3;
-      console.log(scrollThreshold);
-      if (window.scrollY > scrollThreshold) {
-        setShouldAnimate(true);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -48,71 +34,69 @@ const Skill = ({ skillIcon }) => {
           <div className="skill_list">
             <article className="skillbox">
               <p className="skill_items_title">Front-end</p>
-              {shouldAnimate && (
-                <div className="skill_items">
-                  {skillIcon.slice(0, 6).map((item, index) => (
-                    <div
-                      className="skill_item"
-                      key={index}
-                      onClick={() => handleClick(index)}
-                      style={{ opacity: 1 }}
-                    >
-                      <div className="skill_icon">
-                        <img src={item.icon} alt={`${item.skill} icon`} />
-                      </div>
-                      <p className="skill_name">{item.skill}</p>
-                      {expandedItemIndex === index && (
-                        <div className="overlay">
-                          <ul className="skill_des">
-                            <FaRegTimesCircle
-                              fill="white"
-                              onClick={() => setExpandedItemIndex(null)}
-                            />
-                            <span className="modal_skill_title">
-                              {item.skill}
-                            </span>
-                            {item.des}
-                          </ul>
-                        </div>
-                      )}
+
+              <div className="skill_items">
+                {skillIcon.slice(0, 6).map((item, index) => (
+                  <div
+                    className="skill_item"
+                    key={index}
+                    onClick={() => handleClick(index)}
+                    style={{ opacity: 1 }}
+                  >
+                    <div className="skill_icon">
+                      <img src={item.icon} alt={`${item.skill} icon`} />
                     </div>
-                  ))}
-                </div>
-              )}
+                    <p className="skill_name">{item.skill}</p>
+                    {expandedItemIndex === index && (
+                      <div className="overlay">
+                        <ul className="skill_des">
+                          <FaRegTimesCircle
+                            fill="white"
+                            onClick={() => setExpandedItemIndex(null)}
+                          />
+                          <span className="modal_skill_title">
+                            {item.skill}
+                          </span>
+                          {item.des}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
             </article>
             <article className="skillbox">
               <p className="skill_items_title">Etc</p>
-              {shouldAnimate && (
-                <div className="skill_items">
-                  {skillIcon.slice(6, 9).map((item, index) => (
-                    <div
-                      className="skill_item"
-                      key={index}
-                      onClick={() => handleClick(index + 6)}
-                    >
-                      <div className="skill_icon">
-                        <img src={item.icon} alt={`${item.skill} icon`} />
-                      </div>
-                      <p className="skill_name">{item.skill}</p>
-                      {expandedItemIndex === index + 6 && (
-                        <div className="overlay">
-                          <ul className="skill_des">
-                            <FaRegTimesCircle
-                              fill="white"
-                              onClick={() => setExpandedItemIndex(null)}
-                              style={{ opacity: 1 }}
-                            />
-                            <span className="modal_skill_title">
-                              {item.skill}
-                            </span>
-                            {item.des}
-                          </ul>
-                        </div>
-                      )}
+
+              <div className="skill_items">
+                {skillIcon.slice(6, 9).map((item, index) => (
+                  <div
+                    className="skill_item"
+                    key={index}
+                    onClick={() => handleClick(index + 6)}
+                  >
+                    <div className="skill_icon">
+                      <img src={item.icon} alt={`${item.skill} icon`} />
                     </div>
-                  ))}
-                </div>
-              )}
+                    <p className="skill_name">{item.skill}</p>
+                    {expandedItemIndex === index + 6 && (
+                      <div className="overlay">
+                        <ul className="skill_des">
+                          <FaRegTimesCircle
+                            fill="white"
+                            onClick={() => setExpandedItemIndex(null)}
+                            style={{ opacity: 1 }}
+                          />
+                          <span className="modal_skill_title">
+                            {item.skill}
+                          </span>
+                          {item.des}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
             </article>
           </div>
         </div>
@@ -132,11 +116,7 @@ const Skill = ({ skillIcon }) => {
 
               <div className="skill_items">
                 {skillIcon.slice(0, 6).map((item, index) => (
-                  <div
-                    className="skill_item"
-                    key={index}
-                    style={{ opacity: shouldAnimate ? 1 : 0 }}
-                  >
+                  <div className="skill_item" key={index}>
                     <div className="skill_icon">
                       <img src={item.icon} alt={`${item.skill} icon`} />
                     </div>
@@ -151,11 +131,7 @@ const Skill = ({ skillIcon }) => {
 
               <div className="skill_items">
                 {skillIcon.slice(6, 9).map((item, index) => (
-                  <div
-                    className="skill_item"
-                    key={index}
-                    style={{ opacity: shouldAnimate ? 1 : 0 }}
-                  >
+                  <div className="skill_item" key={index}>
                     <div className="skill_icon">
                       <img src={item.icon} />
                     </div>

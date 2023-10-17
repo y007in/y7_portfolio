@@ -50,7 +50,7 @@ const Navigation = ({ leftChild, rightChild, title }) => {
         <div className="gnb">
           <ul>
             <li>
-              <NavLink to={"/"}>About</NavLink>
+              <NavLink to={"/"}>About Me</NavLink>
             </li>
             <li>
               <NavLink to={"/project"}>Project</NavLink>

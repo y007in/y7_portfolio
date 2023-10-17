@@ -45,7 +45,7 @@ const Project = ({ title, leftChild, rightChild }) => {
           </button>
         }
         leftChild={<button>Back</button>}
-        rightChild={<button onClick={handleAbout}>About</button>}
+        rightChild={<button onClick={handleAbout}>About Me</button>}
       />
       <ProjectList data={ProjectData} />
       <Footer />

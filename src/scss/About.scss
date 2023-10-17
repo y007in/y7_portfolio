@@ -7,9 +7,19 @@
 @media all and (min-width: 1024px) {
   .About {
     .top {
+      background-color: $color_white;
       right: 50px;
       bottom: 45px;
-      font-size: 50px;
+      font-size: 40px;
+      border-radius: 50%;
+
+      svg path {
+        color: $color_main;
+        opacity: 0.8;
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
   }
 }

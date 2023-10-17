@@ -60,7 +60,7 @@ const About = ({ title, rightChild, leftChild }) => {
                 navigate("/");
               }}
             >
-              About
+              About Me
             </button>
           }
           rightChild={

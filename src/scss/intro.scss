@@ -11,7 +11,7 @@
 
 .intro {
   @include topcontainer_mobile();
-  background-color: $color_main;
+  // background-color: $color_white;
   height: 100vh;
   justify-content: center;
 
@@ -21,45 +21,47 @@
     align-items: center;
 
     .hi {
-      font-size: 42px;
+      font-size: 40px;
       font-weight: bold;
       line-height: 130%;
+      span {
+        color: $color_darkgray;
+      }
       .front-end {
         display: inline-block;
-        color: $color_main;
-        background-color: $color_white;
-        padding: 6px 10px 10px 10px;
+        position: relative;
+        padding: 6px 5px 10px 5px;
         line-height: 100%;
+        color: $color_main;
+        &::after {
+          content: "";
+          width: 0%;
+          height: 20px;
+          display: inline-block;
+          background: rgba(0, 164, 200, 0.5);
+          position: absolute;
+          bottom: 5px;
+          left: 0;
+          z-index: -1;
+          transition: 1s all;
+        }
       }
-      // .hashtag {
-      //   display: flex;
-      //   flex-wrap: wrap;
-      //   line-height: 100%;
-      //   font-size: 20px;
-      //   span {
-      //     background-color: $color_white;
-      //     border-radius: 150px;
-      //     padding: 3px 10px;
-      //     margin: 5px 5px 5px 0;
-      //     font-size: 14px;
-      //     color: $color_sub;
-      //     &:last-child {
-      //       margin-right: 0;
-      //     }
-      //   }
-      // }
       .intro_name {
-        color: $color_white;
+        color: $color_main;
+      }
+      .isActive.front-end::after {
+        content: "";
+        width: 100%;
       }
     }
     .scroll_icon {
-      position: absolute;
-      bottom: 70px;
+      // position: absolute;
+      // bottom: 70px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 120px;
+      // margin-top: 120px;
       font-size: 14px;
       .arrow {
         animation: bounce 0.8s infinite;
@@ -84,22 +86,13 @@
     .intro_container {
       @include container_pc();
       .hi {
-        font-size: 130px;
+        font-size: 85px;
         .front-end {
           padding: 3px 10px 15px 10px;
           line-height: 100%;
-        }
-        .hashtag {
-          font-size: 28px;
-          span {
-            padding: 7px 17px;
-            margin: 5px 10px 5px 0;
-            font-size: 20px;
-            cursor: pointer;
-            color: $color_sub;
-            &:last-child {
-              margin-right: 0;
-            }
+          &::after {
+            content: "";
+            height: 50px;
           }
         }
       }

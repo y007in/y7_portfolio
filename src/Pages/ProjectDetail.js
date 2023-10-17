@@ -43,7 +43,7 @@ const ProjectDetail = () => {
           </button>
         }
         leftChild={<button>Back</button>}
-        rightChild={<button onClick={() => navigate("/")}>About</button>}
+        rightChild={<button onClick={() => navigate("/")}>About Me</button>}
       />
       <ProjectItem projectId={id} />
       <Footer />

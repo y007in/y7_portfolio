@@ -15,7 +15,7 @@ const myinformation = () => {
           <article className="me">
             <h3>장유진</h3>
             <ul className="me_detail">
-              <li>📆1998.07.13</li>
+              <li>📆 1998.07.13</li>
               <li>
                 <a href="mailto:ujin4719@naver.com">📧 ujin4719@naver.com</a>
               </li>
@@ -48,7 +48,7 @@ const myinformation = () => {
                 </li>
               </ul>
               <ul className="info_list">
-                <li className="date">2019.03 - (졸업 예정)</li>
+                <li className="date">2019.03 - 2024.02</li>
                 <li className="content">
                   국립안동대학교 멀티미디어공학과 졸업 예정
                 </li>

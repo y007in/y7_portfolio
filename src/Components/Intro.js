@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from "react";
 
 import "../scss/intro.scss";
-import { intros } from "../assets/projectdata";
 
 const Intro = () => {
   const [scrollOffset, setScrollOffset] = useState(0);
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
+    setIsActive(true);
     const handleScroll = () => {
-      setScrollOffset(window.scrollY);
+      if (window.scrollY > window.innerHeight) {
+        setIsActive(false);
+      } else {
+        setIsActive(true);
+      }
     };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -24,27 +28,25 @@ const Intro = () => {
         <div className="hi">
           <span>안녕하세요.</span>
           <div
-            style={{
-              transform: `translateX(-${scrollOffset}px)`,
-              marginTop: "10px",
-              lineHeight: "110%",
-            }}
+          // style={{
+          //   transform: `translateX(-${scrollOffset}px)`,
+          //   marginTop: "10px",
+          //   lineHeight: "110%",
+          // }}
           >
-            {/* <div className="hashtag">
-              {intros.map((intro, index) => (
-                <span key={index}>{intros[index]}</span>
-              ))}
-            </div> */}
-            <div className="front-end">프론트엔드 개발자</div>
+            <div className={isActive ? "isActive front-end" : "front-end"}>
+              소통하며 협력하는 개발자
+            </div>
           </div>
-          <div style={{ transform: `translateX(${scrollOffset}px)` }}>
-            <span className="intro_name">장유진</span>입니다.
+          <div
+          // style={{ transform: `translateX(${scrollOffset}px)` }}
+          >
+            <span className="intro_name">장유진</span>
+            <span>입니다.</span>
           </div>
-        </div>
-
-        <div className="scroll_icon">
-          <span>Scroll Down</span>
-          <div className="arrow"></div>
+          {/* <div className="scroll_icon">
+            <div className="arrow"></div>
+          </div> */}
         </div>
       </div>
     </div>

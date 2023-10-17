@@ -10,13 +10,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 // color
-$color_main: #00a4c8;
-$color_sub: #153e47;
+$color_main: #323232;
+$color_sub: #545454;
 $color_black: #333;
 $color_darkgray: #797979;
 $color_gray: #eee;
 $color_lightgray: #f8f8f8;
 $color_white: #fff;
+$color_point: #00a4c8;
 
 // font
 $font_kor: "Noto Sans KR", sans-serif;
@@ -45,8 +46,8 @@ $font_eng: "Encode Sans", sans-serif;
 @mixin boxtitle_mobile() {
   clear: both;
   background-color: $color_gray;
-  padding: 8px 12px;
-  margin: 5px 0;
+  padding: 6px 12px;
+  margin-top: 10px;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 500;
@@ -70,9 +71,8 @@ $font_eng: "Encode Sans", sans-serif;
 }
 
 @mixin boxtitle_pc() {
-  padding: 8px 15px;
+  padding: 6px 15px;
   margin-top: 0;
-  margin-bottom: 10px;
   font-size: 18px;
 }
 

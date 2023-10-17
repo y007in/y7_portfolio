@@ -15,19 +15,13 @@ import photoshop from "./img/photoshop.png";
 import illustrator from "./img/illustrator.png";
 import figma from "./img/figma.png";
 
-// export const intros = [
-//   "#계획없이는 못사는",
-//   "#한번 시작하면 끝까지 달리는",
-//   "#사용자를 위한",
-// ];
-
 export const ProjectData = [
   {
     id: 0,
     name: "허그맘(Hugmom)",
     team: "팀 프로젝트",
     image: `${hugmom}`,
-    des: "많은 산모들이 산후조리원을 이용하는 추세이며 산모들이 신선한 식품과 좋은 제품들을 찾는다고 하여 산후조리원에 있는 산모들 전용 쇼핑몰을 제작 ",
+    des: "산후조리원을 이용하는 산모들이 점차 늘어나는 추세(산후조리원 이용률 : 3년간 75.1% → 81.2% 증가 (2018년 기준) 출처:보건복지부 보고서)이며 산모들이 신선한 식품과 좋은 제품들을 찾는다고 하여 산후조리원에 있는 산모들 전용 쇼핑몰 제작",
     github: "https://github.com/That-s-great/Hugmom",
     url: "https://hugmom-b6187.web.app/html/01-intro_logout.html",
     date: "2023.05.08 - 2023.06.30",
@@ -40,8 +34,19 @@ export const ProjectData = [
     ),
     func: (
       <>
-        <li>반응형 웹으로 제작</li>
-        <li>자바스크립트를 활용한 기능 구현</li>
+        <li>CSS Media Queries를 활용한 반응형 웹으로 제작</li>
+        <li>
+          입력한 내용이 조건에 부합하지 않을 경우와 부합할 경우에 따른 메시지
+          출력
+        </li>
+        <li>
+          select, option태그의 value값을 활용해 선택된 상품에 따라 다른 가격
+          출력
+        </li>
+        <li>
+          input태그의 값과 FAQ의 값을 비교해 test()메서드를 통해 일치할 경우
+          true, 일치하지 않을 경우 false값을 반환해 값에 따라 다른 CSS를 적용
+        </li>
       </>
     ),
   },
@@ -78,7 +83,7 @@ export const ProjectData = [
     name: "MBTI TEST",
     team: "개인 프로젝트",
     image: `${mbti}`,
-    des: "선택한 답변에 따라 MBTI 결과를 생성하는 알고리즘을 활용한 웹페이지 제작",
+    des: "MZ 세대에게 빼놓을 수 없는 소통 방식으로써 자기 자신을 표현할 수 있는 MBTI의 유행에 따라 MBTI 결과를 생성하는 알고리즘을 활용한 MBTI 검사 웹페이지 제작",
     github: "https://github.com/y007in/mbti",
     url: "https://y7mbti.netlify.app/",
     date: "2023.05.30 - 2023.06.30",
@@ -107,10 +112,10 @@ export const ProjectData = [
     name: "포트폴리오",
     team: "개인 프로젝트",
     image: `${portfolio}`,
-    des: "프론트엔드 개발자로서 프로필을 소개하고 이전 프로젝트들을 모아놓은 포트폴리오 페이지 제작",
+    des: "프론트엔드 개발자로서 프로필 및 프로젝트들을 소개하기 위한 포트폴리오 페이지",
     github: "https://github.com/y007in/y7_portfolio",
     url: "https://y7portfolio.netlify.app/",
-    date: "2023.05.30 - 2023.06.30",
+    date: "2023.07.03 - 2023.09.30",
     skill: (
       <>
         <li>React</li>
@@ -119,8 +124,16 @@ export const ProjectData = [
     ),
     func: (
       <>
-        <li>반응형 웹 페이지</li>
-        <li>간단한 자기소개, 기술, 인적사항 및 프로젝트 모음</li>
+        <li>
+          CSS Media Queries와 useEffect로 window객체에 발생되는 resize 이벤트를
+          활용한 반응형 웹 페이지
+        </li>
+        <li>
+          React-router-dom의 BrowserRouter를 활용해 각 페이지들이 서로 다른
+          URL에서 렌더링되도록 설정{" "}
+        </li>
+        <li>useState와 @keyframe을 활용한 무한루프 슬라이드 구현</li>
+        <li>CSS의 가독성과 재활용성을 높이기 위해 SCSS 활용</li>
       </>
     ),
   },
@@ -129,7 +142,7 @@ export const ProjectData = [
     name: "Netflix",
     team: "개인 프로젝트",
     image: `${netflix}`,
-    des: "React와 TypeScript를 활용하여 프로젝트를 진행하여 연습하고자 제작.",
+    des: "코로나시대를 거치며 OTT의 점유율이 늘어남에 따라 사용자들이 많이 접하는 사이트인 넷플릭스를 클론코딩하여 Typescript 기술과 실질적으로 사용되는 서비스를 파악할 수 있던 프로젝트",
     github: "https://github.com/y007in/netflix_typescript",
     url: "https://y7netflix.netlify.app/",
     date: "2023.08.23 - 진행중",
@@ -143,13 +156,31 @@ export const ProjectData = [
     ),
     func: (
       <>
-        <li>영화 API를 활용해 영화 데이터를 불러옴</li>
-        <li>각 영화 클릭시 해당 영화 상세페이지로 이동</li>
+        <li>
+          Fetch(), .then()을 함수로 외부 영화 API를 비동기방식으로 불러와
+          useQuery를 활용해서 서버로부터 데이터를 조회해 영화 API데이터를 출력
+        </li>
+        <li>
+          React-router-dom의 BrowserRouter를 활용해 서로 다른 URL에서 영화들이
+          렌더링되도록 설정
+        </li>
+        <li>
+          useMatch함수를 통해 url의 정보와 클릭된 영화의 url이 일치할 경우 해당
+          영화의 모달창이 열리도록 설정
+        </li>
+        <li>
+          Props형태로 속성(색상 변수 지정 및 이미지) 전달 가능하도록
+          styled-component 활용
+        </li>
+        <li>
+          상태변화에 따른 Framer-motion을 활용한 애니메이션 효과 적용(슬라이드,
+          네비게이션바)
+        </li>
       </>
     ),
   },
   // {
-  //   id: 0,
+  //   id: 5,
   //   name: "Post Me",
   //   team: "팀 프로젝트 + 개인 프로젝트",
   //   image: `${postme}`,
@@ -171,20 +202,20 @@ export const ProjectData = [
   // },
 ];
 
-export const DesignData = {
-  name: "졸업작품전시회 홍보물 제작",
-  team: "팀 프로젝트",
-  // image: `${design} `,
-  des: "졸업작품전시회를 홍보하기 위한 포스터, 현수막, 책자를 제작하였습니다.",
-  url: "",
-  date: "2021.10.18 - 2021.11.12",
-  skill: (
-    <>
-      <li>Adobe Illustrator</li>
-      <li>Adobe Photoshop</li>
-    </>
-  ),
-};
+// export const DesignData = {
+//   name: "졸업작품전시회 홍보물 제작",
+//   team: "팀 프로젝트",
+//   // image: `${design} `,
+//   des: "졸업작품전시회를 홍보하기 위한 포스터, 현수막, 책자를 제작하였습니다.",
+//   url: "",
+//   date: "2021.10.18 - 2021.11.12",
+//   skill: (
+//     <>
+//       <li>Adobe Illustrator</li>
+//       <li>Adobe Photoshop</li>
+//     </>
+//   ),
+// };
 
 export const SkillIcon = [
   {

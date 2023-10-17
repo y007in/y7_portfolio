@@ -29,7 +29,7 @@
       font-weight: 500;
       color: $color_white;
       font-family: $font_eng;
-      background-color: transparent;
+      background-color: red;
       border: none;
       cursor: pointer;
     }
@@ -71,6 +71,14 @@
     background-color: $color_main;
     z-index: 9999;
     padding: 0 5%;
+    &.show {
+      background-color: transparent;
+      .name,
+      .gnb ul li a,
+      .gnb ul li svg path {
+        color: $color_main;
+      }
+    }
     .name {
       width: 20%;
       display: flex;

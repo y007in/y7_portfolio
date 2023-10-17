@@ -21,7 +21,7 @@
           position: relative;
           padding: 6px 5px 10px 5px;
           line-height: 100%;
-          color: $color_main;
+          color: $color_black;
           font-size: 28px;
           &::after {
             content: "";
@@ -125,7 +125,7 @@
 
             li {
               text-align: right;
-              margin: 5px 5px 5px 0;
+              margin: 5px 10px 5px 0;
               font-size: 20px;
               line-height: 125%;
               letter-spacing: 1px;

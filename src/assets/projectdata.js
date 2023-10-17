@@ -1,7 +1,7 @@
 import postme from "./img/postme.png";
 import hugmom from "./img/hugmom.JPG";
 import todo from "./img/todo.JPG";
-import mbti from "./img/mbti.png";
+import mbti from "./img/mbti.JPG";
 import portfolio from "./img/portfolio.png";
 import netflix from "./img/netflix.jpeg";
 

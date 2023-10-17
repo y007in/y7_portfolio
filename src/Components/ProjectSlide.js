@@ -39,6 +39,7 @@ const ProjectSlide = () => {
               >
                 {ProjectData.map((p, i) => (
                   <li
+                    className="item_list"
                     key={i}
                     onClick={() => {
                       navigate(`/project/${p.id}`);
@@ -46,15 +47,15 @@ const ProjectSlide = () => {
                   >
                     <div className="item">
                       <img src={p.image} />
-                      <div className="item_name">{p.name}</div>
-                      <div className="item_skill">{p.skill}</div>
                     </div>
+                    <div className="item_name">{p.name}</div>
                   </li>
                 ))}
               </div>
               <div className={["slide clone", animate ? "" : "stop"].join(" ")}>
                 {ProjectData.map((p, i) => (
                   <li
+                    className="item_list"
                     key={i}
                     onClick={() => {
                       navigate(`/project/${p.id}`);
@@ -62,9 +63,8 @@ const ProjectSlide = () => {
                   >
                     <div className="item">
                       <img src={p.image} />
-                      <div className="item_name">{p.name}</div>
-                      <div className="item_skill">{p.skill}</div>
                     </div>
+                    <div className="item_name">{p.name}</div>
                   </li>
                 ))}
               </div>

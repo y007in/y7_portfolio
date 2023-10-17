@@ -128,7 +128,7 @@
           .skill_items {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            gap: 10px;
+            gap: 20px;
             .skill_item {
               width: 100%;
               position: relative;
@@ -147,7 +147,7 @@
               }
               .skill_name {
                 margin: 10px 0;
-                font-size: 20px;
+                font-size: 18px;
               }
               .skill_des {
                 width: 100%;

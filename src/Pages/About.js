@@ -52,37 +52,37 @@ const About = ({ title, rightChild, leftChild }) => {
 
   return (
     <div className="About" ref={moveToTop}>
-      {showNav && (
-        <Navigation
-          title={
-            <button
-              onClick={() => {
-                navigate("/");
-              }}
-            >
-              About Me
-            </button>
-          }
-          rightChild={
-            <button
-              onClick={() => {
-                navigate("/project");
-              }}
-            >
-              Project
-            </button>
-          }
-          leftChild={
-            <button
-              onClick={() => {
-                navigate(-1);
-              }}
-            >
-              Back
-            </button>
-          }
-        />
-      )}
+      <Navigation
+        showNav={showNav}
+        title={
+          <button
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            About Me
+          </button>
+        }
+        rightChild={
+          <button
+            onClick={() => {
+              navigate("/project");
+            }}
+          >
+            Project
+          </button>
+        }
+        leftChild={
+          <button
+            onClick={() => {
+              navigate(-1);
+            }}
+          >
+            Back
+          </button>
+        }
+      />
+
       <Intro />
       <div ref={moveToSkill}>
         <Skill skillIcon={SkillIcon} />

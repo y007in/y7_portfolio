@@ -3,7 +3,7 @@ import { useNavigate, NavLink } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight, FaGithub } from "react-icons/fa";
 import "../scss/Navigation.scss";
 
-const Navigation = ({ leftChild, rightChild, title }) => {
+const Navigation = ({ leftChild, rightChild, title, showNav }) => {
   const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -38,7 +38,7 @@ const Navigation = ({ leftChild, rightChild, title }) => {
     );
   } else {
     content = (
-      <div className="Navigation_pc">
+      <div className={showNav ? "Navigation_pc " : "Navigation_pc show"}>
         <div
           className="name"
           onClick={() => {

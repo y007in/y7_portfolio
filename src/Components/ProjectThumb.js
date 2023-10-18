@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../scss/ProjectThumb.scss";
 
-const ProjectThumb = ({ id, image, name, skill }) => {
+const ProjectThumb = ({ id, image, name, team, skill }) => {
   const navigate = useNavigate();
   const goDetail = () => {
     navigate(`/project/${id}`);
@@ -11,16 +11,17 @@ const ProjectThumb = ({ id, image, name, skill }) => {
     <section className="projectThumb" onClick={goDetail}>
       <article className="project_img">
         <img src={image} />
-        <article className="project_desc">
-          <ul>
-            <li className="title">
-              <span>{name}</span>
-            </li>
-            <li className="thumb_des">
-              <ul className="skill">{skill}</ul>
-            </li>
-          </ul>
-        </article>
+      </article>{" "}
+      <article className="project_desc">
+        <ul>
+          <li className="title">
+            <span className="name">{name}</span>
+            <span>{team}</span>
+          </li>
+          <li className="thumb_des">
+            <ul className="skill">{skill}</ul>
+          </li>
+        </ul>
       </article>
     </section>
   );

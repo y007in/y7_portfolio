@@ -20,7 +20,11 @@ const About = ({ title, rightChild, leftChild }) => {
   const onMoveToTop = () => {
     moveToTop.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
-  const moveToSkill = useRef();
+  // const moveToSkill = useRef();
+  // const onMoveToSkill = () => {
+  //   moveToTop.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  // };
+
   useEffect(() => {
     const handleShowButton = () => {
       if (window.scrollY > 200) {
@@ -29,7 +33,6 @@ const About = ({ title, rightChild, leftChild }) => {
         setShowButton(false);
       }
     };
-
     window.addEventListener("scroll", handleShowButton);
     return () => {
       window.removeEventListener("scroll", handleShowButton);
@@ -57,7 +60,7 @@ const About = ({ title, rightChild, leftChild }) => {
         title={
           <button
             onClick={() => {
-              navigate("/");
+              "/";
             }}
           >
             About Me
@@ -84,7 +87,7 @@ const About = ({ title, rightChild, leftChild }) => {
       />
 
       <Intro />
-      <div ref={moveToSkill}>
+      <div>
         <Skill skillIcon={SkillIcon} />
       </div>
       <ProjectSlide />

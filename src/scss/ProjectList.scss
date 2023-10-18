@@ -3,6 +3,7 @@
 .ProjectList {
   @include topcontainer_mobile();
   .ProjectList_container {
+    // padding-top: 20px;
     @include container_mobile();
     .ProjectList_Title {
       display: flex;
@@ -29,9 +30,10 @@
   .ProjectList {
     @include topcontainer_pc();
     height: calc(100% - 500px);
+    padding: 0;
     .ProjectList_container {
       @include container_pc();
-
+      padding-top: 50px;
       .ProjectList_Title {
         justify-content: center;
         align-items: center;

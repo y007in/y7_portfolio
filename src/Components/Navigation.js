@@ -50,10 +50,13 @@ const Navigation = ({ leftChild, rightChild, title, showNav }) => {
         <div className="gnb">
           <ul>
             <li>
-              <NavLink to={"/"}>About Me</NavLink>
+              <NavLink to={"/"}>Skills</NavLink>
             </li>
             <li>
               <NavLink to={"/project"}>Project</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/project"}>About</NavLink>
             </li>
             <li
               onClick={() => window.open("https://github.com/y007in", "_blank")}

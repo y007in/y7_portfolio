@@ -17,7 +17,7 @@ const myinformation = () => {
             <ul className="me_detail">
               <li>📆 1998.07.13</li>
               <li>
-                <a href="mailto:ujin4719@naver.com">📧 ujin4719@naver.com</a>
+                <a href="mailto:ujin4719@kakao.com">📧 ujin4719@kakao.com</a>
               </li>
               <li>
                 <a href="tel:01099620590"> 📞 +82 10-9962-0590 </a>

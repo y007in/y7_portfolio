@@ -29,7 +29,6 @@
       font-weight: 500;
       color: $color_white;
       font-family: $font_eng;
-      background-color: red;
       border: none;
       cursor: pointer;
     }
@@ -67,12 +66,15 @@
     position: fixed;
     display: flex;
     width: 100vw;
-    height: 65px;
-    background-color: $color_main;
+    height: 50px;
+    box-shadow: 5px 1px 10px 5px $color_gray;
+    backdrop-filter: blur(80px);
     z-index: 9999;
-    padding: 0 5%;
+    padding: 10px 5%;
+    transition: background-color 0.5s ease;
     &.show {
       background-color: transparent;
+      box-shadow: none;
       .name,
       .gnb ul li a,
       .gnb ul li svg path {
@@ -84,8 +86,8 @@
       display: flex;
       justify-content: start;
       align-items: center;
-      color: $color_white;
-      font-size: 28px;
+      color: $color_main;
+      font-size: 24px;
       cursor: pointer;
       font-family: "Pacifico", cursive;
     }
@@ -99,15 +101,12 @@
         display: flex;
         li {
           font-family: $font_eng;
-
-          font-size: 20px;
+          font-size: 16px;
           cursor: pointer;
           display: flex;
           font-weight: 500;
           align-items: center;
-          a {
-            color: $color_white;
-          }
+
           &:hover {
             text-underline-offset: 5px;
             font-weight: 500;
@@ -117,16 +116,25 @@
           }
           svg {
             font-size: 24px;
-            path {
-              color: $color_white;
-            }
           }
         }
 
         .active {
-          text-decoration: $color_white wavy underline;
-          text-underline-offset: 5px;
-          color: $color_white;
+          display: inline-block;
+          position: relative;
+          padding: 6px 5px 10px 5px;
+          line-height: 100%;
+          &::after {
+            content: "";
+            width: 100%;
+            height: 10px;
+            display: inline-block;
+            background: rgba(0, 164, 200, 0.5);
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            z-index: -1;
+          }
         }
       }
     }

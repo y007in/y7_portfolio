@@ -34,7 +34,7 @@ const Project = ({ title, leftChild, rightChild }) => {
   };
   return (
     <div className="Project" ref={moveToTop}>
-      {/* <Navigation
+      <Navigation
         title={
           <button
             onClick={() => {
@@ -46,7 +46,7 @@ const Project = ({ title, leftChild, rightChild }) => {
         }
         leftChild={<button>Back</button>}
         rightChild={<button onClick={handleAbout}>About Me</button>}
-      /> */}
+      />
       <ProjectList data={ProjectData} />
       <Footer />
       {showButton && (

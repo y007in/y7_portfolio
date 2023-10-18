@@ -2,8 +2,8 @@ import postme from "./img/postme.png";
 import hugmom from "./img/hugmom.JPG";
 import todo from "./img/todo.JPG";
 import mbti from "./img/mbti.JPG";
-import portfolio from "./img/portfolio.png";
-import netflix from "./img/netflix.jpeg";
+import portfolio from "./img/portfolio.JPG";
+import netflix from "./img/netflix.JPG";
 
 import html5 from "./img/html5.png";
 import CSS3 from "./img/css-3.png";
@@ -35,18 +35,12 @@ export const ProjectData = [
     func: (
       <>
         <li>CSS Media Queries를 활용한 반응형 웹으로 제작</li>
-        <li>
-          입력한 내용이 조건에 부합하지 않을 경우와 부합할 경우에 따른 메시지
-          출력
-        </li>
+        <li>회원가입 및 로그인 조건에 맞는 유효성 검사</li>
         <li>
           select, option태그의 value값을 활용해 선택된 상품에 따라 다른 가격
           출력
         </li>
-        <li>
-          input태그의 값과 FAQ의 값을 비교해 test()메서드를 통해 일치할 경우
-          true, 일치하지 않을 경우 false값을 반환해 값에 따라 다른 CSS를 적용
-        </li>
+        <li>FAQ 값과 비교해 일치하는 검색결과 출력</li>
       </>
     ),
   },
@@ -98,11 +92,11 @@ export const ProjectData = [
         <li>함수를 활용한 상태변화로 선택한 답변에 따라 답변 결과를 계산</li>
         <li>
           createSearchParams() 함수를 활용하여 해당 MBTI 결과에 기반한 URL을
-          생성"
+          생성
         </li>
         <li>
-          useSearchParams() Hook을 활용해 URL에 생성된 MBTI 결과값과
-          ResultData에 저장된 MBTI가 일치하는 내용을 불러와 출력
+          생성된 MBTI 결과값과 ResultData에 저장된 MBTI가 일치하는 내용을 불러와
+          출력
         </li>
       </>
     ),
@@ -124,16 +118,11 @@ export const ProjectData = [
     ),
     func: (
       <>
+        <li>• CSS Media Queries와 resize 이벤트를 활용한 반응형 웹 페이지</li>
         <li>
-          CSS Media Queries와 useEffect로 window객체에 발생되는 resize 이벤트를
-          활용한 반응형 웹 페이지
+          • BrowerRouter를 활용해 각 페이지들이 서로 다른 URL에서 렌더링되도록
+          설정
         </li>
-        <li>
-          React-router-dom의 BrowserRouter를 활용해 각 페이지들이 서로 다른
-          URL에서 렌더링되도록 설정{" "}
-        </li>
-        <li>useState와 @keyframe을 활용한 무한루프 슬라이드 구현</li>
-        <li>CSS의 가독성과 재활용성을 높이기 위해 SCSS 활용</li>
       </>
     ),
   },
@@ -157,24 +146,16 @@ export const ProjectData = [
     func: (
       <>
         <li>
-          Fetch(), .then()을 함수로 외부 영화 API를 비동기방식으로 불러와
-          useQuery를 활용해서 서버로부터 데이터를 조회해 영화 API데이터를 출력
+          외부 영화 API를 비동기방식으로 불러와 useQuery를 활용해서 서버로부터
+          데이터를 조회해 영화 API데이터를 출력
         </li>
         <li>
-          React-router-dom의 BrowserRouter를 활용해 서로 다른 URL에서 영화들이
-          렌더링되도록 설정
-        </li>
-        <li>
-          useMatch함수를 통해 url의 정보와 클릭된 영화의 url이 일치할 경우 해당
-          영화의 모달창이 열리도록 설정
+          url의 정보와 클릭된 영화의 url이 일치할 경우 해당 영화의 모달창이
+          열리도록 설정
         </li>
         <li>
           Props형태로 속성(색상 변수 지정 및 이미지) 전달 가능하도록
           styled-component 활용
-        </li>
-        <li>
-          상태변화에 따른 Framer-motion을 활용한 애니메이션 효과 적용(슬라이드,
-          네비게이션바)
         </li>
       </>
     ),

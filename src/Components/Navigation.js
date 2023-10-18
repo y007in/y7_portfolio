@@ -3,7 +3,7 @@ import { useNavigate, NavLink } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight, FaGithub } from "react-icons/fa";
 import "../scss/Navigation.scss";
 
-const Navigation = ({ leftChild, rightChild, title, showNav }) => {
+const Navigation = ({ showNav, onMoveToSkill }) => {
   const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -24,15 +24,34 @@ const Navigation = ({ leftChild, rightChild, title, showNav }) => {
   let content = null;
   if (windowWidth <= 1024) {
     content = (
-      <div className="Navigation_mobile">
-        <div className="leftChild" onClick={handleBack}>
-          <FaChevronLeft fill="white" />
-          {leftChild}
+      <div
+        className={showNav ? "Navigation_mobile " : "Navigation_mobile show"}
+      >
+        <div
+          className="name"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Jang YooJin
         </div>
-        <div className="title">{title}</div>
-        <div className="rightChild">
-          {rightChild}
-          <FaChevronRight fill="white" />
+        <div className="gnb">
+          <ul>
+            <li>
+              <NavLink to={"/"}>Skills</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/project"}>Project</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/project"}>About</NavLink>
+            </li>
+            <li
+              onClick={() => window.open("https://github.com/y007in", "_blank")}
+            >
+              <FaGithub />
+            </li>
+          </ul>
         </div>
       </div>
     );
@@ -50,7 +69,7 @@ const Navigation = ({ leftChild, rightChild, title, showNav }) => {
         <div className="gnb">
           <ul>
             <li>
-              <NavLink to={"/"}>Skills</NavLink>
+              <NavLink onClick={onMoveToSkill}>Skills</NavLink>
             </li>
             <li>
               <NavLink to={"/project"}>Project</NavLink>

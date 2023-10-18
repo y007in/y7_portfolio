@@ -12,7 +12,7 @@ import Intro from "../Components/Intro";
 
 import ProjectSlide from "../Components/ProjectSlide";
 
-const About = ({ title, rightChild, leftChild }) => {
+const About = () => {
   const [showButton, setShowButton] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const navigate = useNavigate();
@@ -20,10 +20,10 @@ const About = ({ title, rightChild, leftChild }) => {
   const onMoveToTop = () => {
     moveToTop.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
-  // const moveToSkill = useRef();
-  // const onMoveToSkill = () => {
-  //   moveToTop.current.scrollIntoView({ behavior: "smooth", block: "start" });
-  // };
+  const moveToSkill = useRef();
+  const onMoveToSkill = () => {
+    moveToTop.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   useEffect(() => {
     const handleShowButton = () => {
@@ -55,39 +55,9 @@ const About = ({ title, rightChild, leftChild }) => {
 
   return (
     <div className="About" ref={moveToTop}>
-      <Navigation
-        showNav={showNav}
-        title={
-          <button
-            onClick={() => {
-              "/";
-            }}
-          >
-            About Me
-          </button>
-        }
-        rightChild={
-          <button
-            onClick={() => {
-              navigate("/project");
-            }}
-          >
-            Project
-          </button>
-        }
-        leftChild={
-          <button
-            onClick={() => {
-              navigate(-1);
-            }}
-          >
-            Back
-          </button>
-        }
-      />
-
+      <Navigation showNav={showNav} onMoveToSkill={onMoveToSkill} />
       <Intro />
-      <div>
+      <div ref={moveToSkill}>
         <Skill skillIcon={SkillIcon} />
       </div>
       <ProjectSlide />

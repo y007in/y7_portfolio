@@ -20,69 +20,32 @@ const Navigation = ({ showNav, handleScrollView, isMenuAct }) => {
   const handleBack = () => {
     navigate(-1);
   };
-
-  let content = null;
-  if (windowWidth <= 1024) {
-    content = (
-      <div
-        className={showNav ? "Navigation_mobile " : "Navigation_mobile show"}
-      >
-        <div
-          className="name"
-          onClick={() => {
-            navigate("/");
-          }}
-        >
-          Jang YooJin
-        </div>
-        <div className="gnb">
-          <ul>
-            <li>
-              <NavLink to={"/"}>Skills</NavLink>
-            </li>
-            <li>
-              <NavLink to={"/project"}>Project</NavLink>
-            </li>
-            <li>
-              <NavLink to={"/project"}>About</NavLink>
-            </li>
-            <li
-              onClick={() => window.open("https://github.com/y007in", "_blank")}
-            >
-              <FaGithub />
-            </li>
-          </ul>
-        </div>
+  return (
+    <div className={showNav ? "Navigation " : "Navigation show"}>
+      <div className="name" onClick={() => navigate("/")}>
+        Jang YooJin
       </div>
-    );
-  } else {
-    content = (
-      <div className={showNav ? "Navigation_pc " : "Navigation_pc show"}>
-        <div className="name">Jang YooJin</div>
-        <div className="gnb">
-          <ul onClick={handleScrollView}>
-            <li className={isMenuAct === "Skills" ? "menu active" : "menu"}>
-              Skills
-            </li>
-            <li className={isMenuAct === "Project" ? "menu active" : "menu"}>
-              Project
-            </li>
-            <li className={isMenuAct === "About" ? "menu active" : "menu"}>
-              About
-            </li>
-            <li
-              className="menu"
-              onClick={() => window.open("https://github.com/y007in", "_blank")}
-            >
-              <FaGithub />
-            </li>
-          </ul>
-        </div>
+      <div className="gnb">
+        <ul onClick={handleScrollView}>
+          <li className={isMenuAct === "Skills" ? "menu active" : "menu"}>
+            Skills
+          </li>
+          <li className={isMenuAct === "Project" ? "menu active" : "menu"}>
+            Project
+          </li>
+          <li className={isMenuAct === "About" ? "menu active" : "menu"}>
+            About
+          </li>
+          <li
+            className="menu"
+            onClick={() => window.open("https://github.com/y007in", "_blank")}
+          >
+            <FaGithub />
+          </li>
+        </ul>
       </div>
-    );
-  }
-
-  return content;
+    </div>
+  );
 };
 
 export default Navigation;

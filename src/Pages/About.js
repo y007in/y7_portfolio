@@ -16,7 +16,7 @@ const About = () => {
   const [showButton, setShowButton] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [isMenuAct, setIsMenuAct] = useState("");
-  const navigate = useNavigate();
+
   const moveToTop = useRef();
   const onMoveToTop = () => {
     moveToTop.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -35,29 +35,17 @@ const About = () => {
 
   useEffect(() => {
     const handleShowButton = () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > window.innerHeight) {
         setShowButton(true);
+        setShowNav(true);
       } else {
         setShowButton(false);
+        setShowNav(false);
       }
     };
     window.addEventListener("scroll", handleShowButton);
     return () => {
       window.removeEventListener("scroll", handleShowButton);
-    };
-  }, []);
-  useEffect(() => {
-    const handleShowNav = () => {
-      if (window.scrollY > window.innerHeight) {
-        setShowNav(true);
-      } else {
-        setShowNav(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleShowNav);
-    return () => {
-      window.removeEventListener("scroll", handleShowNav);
     };
   }, []);
 

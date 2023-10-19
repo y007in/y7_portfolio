@@ -2,7 +2,7 @@
 
 .MyInformation {
   @include topcontainer_mobile();
-
+  width: 100vw;
   .MyInformation_container {
     @include container_mobile();
 

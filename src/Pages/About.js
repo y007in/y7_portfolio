@@ -12,49 +12,20 @@ import Intro from "../Components/Intro";
 
 import ProjectSlide from "../Components/ProjectSlide";
 
-const About = () => {
-  const [showButton, setShowButton] = useState(false);
-  const [showNav, setShowNav] = useState(false);
-  const [isMenuAct, setIsMenuAct] = useState("");
-
-  const moveToTop = useRef();
-  const onMoveToTop = () => {
-    moveToTop.current.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-  const scrollRef = useRef([]);
-  const handleScrollView = (e) => {
-    const name = e.target.innerText;
-    const category = {
-      Skills: 0,
-      Project: 1,
-      About: 2,
-    };
-    scrollRef.current[category[name]].scrollIntoView({ behavior: "smooth" });
-    setIsMenuAct(e.target.innerText);
-  };
-
-  useEffect(() => {
-    const handleShowButton = () => {
-      if (window.scrollY > window.innerHeight) {
-        setShowButton(true);
-        setShowNav(true);
-      } else {
-        setShowButton(false);
-        setShowNav(false);
-      }
-    };
-    window.addEventListener("scroll", handleShowButton);
-    return () => {
-      window.removeEventListener("scroll", handleShowButton);
-    };
-  }, []);
-
+const About = ({
+  showNav,
+  isMenuAct,
+  scrollRef,
+  handleScrollView,
+  MoveToTop,
+}) => {
   return (
     <div className="About">
       <Navigation
         showNav={showNav}
         handleScrollView={handleScrollView}
         isMenuAct={isMenuAct}
+        MoveToTop={MoveToTop}
       />
       <Intro />
       <div ref={(el) => (scrollRef.current[0] = el)}>
@@ -67,11 +38,6 @@ const About = () => {
         <MyInformation />
       </div>
       <Footer />
-      {showButton && (
-        <button className="top" onClick={onMoveToTop}>
-          <FaArrowAltCircleUp />
-        </button>
-      )}
     </div>
   );
 };

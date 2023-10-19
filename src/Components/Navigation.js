@@ -3,26 +3,31 @@ import { useNavigate, NavLink } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight, FaGithub } from "react-icons/fa";
 import "../scss/Navigation.scss";
 
-const Navigation = ({ showNav, handleScrollView, isMenuAct }) => {
+const Navigation = ({ showNav, handleScrollView, isMenuAct, MoveToTop }) => {
   const navigate = useNavigate();
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setWindowWidth(window.innerWidth);
+  //   };
+  //   window.addEventListener("resize", handleResize);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
-  const handleBack = () => {
-    navigate(-1);
+  // const handleBack = () => {
+  //   navigate(-1);
+  // };
+  const handlerName = () => {
+    navigate("/");
+    MoveToTop();
   };
+
   return (
     <div className={showNav ? "Navigation " : "Navigation show"}>
-      <div className="name" onClick={() => navigate("/")}>
+      <div className="name" onClick={handlerName}>
         Jang YooJin
       </div>
       <div className="gnb">

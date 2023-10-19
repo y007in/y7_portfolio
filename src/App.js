@@ -35,17 +35,29 @@ function App() {
     }
     setIsMenuAct(e.target.innerText);
   };
-
   useEffect(() => {
     const handleShowButton = () => {
-      if (window.scrollY > window.innerHeight) {
-        setShowButton(true);
-        setShowNav(true);
-      } else {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      if (scrollY < windowHeight) {
         setShowButton(false);
         setShowNav(false);
+        setIsMenuAct("");
+      } else if (scrollY < windowHeight * 2) {
+        setShowButton(true);
+        setShowNav(true);
+        setIsMenuAct("Skills");
+      } else if (scrollY < windowHeight * 3) {
+        setIsMenuAct("Project");
+      } else {
+        setIsMenuAct("About");
       }
     };
+
+    // 초기 로딩 시 실행하여 초기 isMenuAct 설정
+    handleShowButton();
+
     window.addEventListener("scroll", handleShowButton);
     return () => {
       window.removeEventListener("scroll", handleShowButton);

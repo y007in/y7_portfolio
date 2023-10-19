@@ -3,7 +3,7 @@ import { useNavigate, NavLink } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight, FaGithub } from "react-icons/fa";
 import "../scss/Navigation.scss";
 
-const Navigation = ({ showNav, onMoveToSkill }) => {
+const Navigation = ({ showNav, handleScrollView, isMenuAct }) => {
   const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -58,26 +58,20 @@ const Navigation = ({ showNav, onMoveToSkill }) => {
   } else {
     content = (
       <div className={showNav ? "Navigation_pc " : "Navigation_pc show"}>
-        <div
-          className="name"
-          onClick={() => {
-            navigate("/");
-          }}
-        >
-          Jang YooJin
-        </div>
+        <div className="name">Jang YooJin</div>
         <div className="gnb">
-          <ul>
-            <li>
-              <NavLink onClick={onMoveToSkill}>Skills</NavLink>
+          <ul onClick={handleScrollView}>
+            <li className={isMenuAct === "Skills" ? "menu active" : "menu"}>
+              Skills
             </li>
-            <li>
-              <NavLink to={"/project"}>Project</NavLink>
+            <li className={isMenuAct === "Project" ? "menu active" : "menu"}>
+              Project
             </li>
-            <li>
-              <NavLink to={"/project"}>About</NavLink>
+            <li className={isMenuAct === "About" ? "menu active" : "menu"}>
+              About
             </li>
             <li
+              className="menu"
               onClick={() => window.open("https://github.com/y007in", "_blank")}
             >
               <FaGithub />

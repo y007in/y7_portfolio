@@ -15,14 +15,22 @@ import ProjectSlide from "../Components/ProjectSlide";
 const About = () => {
   const [showButton, setShowButton] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  const [isMenuAct, setIsMenuAct] = useState("");
   const navigate = useNavigate();
   const moveToTop = useRef();
   const onMoveToTop = () => {
     moveToTop.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
-  const moveToSkill = useRef();
-  const onMoveToSkill = () => {
-    moveToTop.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  const scrollRef = useRef([]);
+  const handleScrollView = (e) => {
+    const name = e.target.innerText;
+    const category = {
+      Skills: 0,
+      Project: 1,
+      About: 2,
+    };
+    scrollRef.current[category[name]].scrollIntoView({ behavior: "smooth" });
+    setIsMenuAct(e.target.innerText);
   };
 
   useEffect(() => {
@@ -54,14 +62,22 @@ const About = () => {
   }, []);
 
   return (
-    <div className="About" ref={moveToTop}>
-      <Navigation showNav={showNav} onMoveToSkill={onMoveToSkill} />
+    <div className="About">
+      <Navigation
+        showNav={showNav}
+        handleScrollView={handleScrollView}
+        isMenuAct={isMenuAct}
+      />
       <Intro />
-      <div ref={moveToSkill}>
+      <div ref={(el) => (scrollRef.current[0] = el)}>
         <Skill skillIcon={SkillIcon} />
       </div>
-      <ProjectSlide />
-      <MyInformation />
+      <div ref={(el) => (scrollRef.current[1] = el)}>
+        <ProjectSlide />
+      </div>
+      <div ref={(el) => (scrollRef.current[2] = el)}>
+        <MyInformation />
+      </div>
       <Footer />
       {showButton && (
         <button className="top" onClick={onMoveToTop}>

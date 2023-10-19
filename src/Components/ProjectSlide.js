@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../scss/ProjectSlide.scss";
+import ProjectThumb from "./ProjectThumb";
 import { ProjectData } from "../assets/projectdata";
 
 const ProjectSlide = () => {
@@ -48,7 +49,10 @@ const ProjectSlide = () => {
                     <div className="item">
                       <img src={p.image} />
                     </div>
-                    <div className="item_name">{p.name}</div>
+                    <div className="item_des">
+                      <div className="item_name">{p.name}</div>
+                      {/* <div className="item_skill">{p.skill}</div> */}
+                    </div>
                   </li>
                 ))}
               </div>
@@ -64,7 +68,10 @@ const ProjectSlide = () => {
                     <div className="item">
                       <img src={p.image} />
                     </div>
-                    <div className="item_name">{p.name}</div>
+                    <div className="item_des">
+                      <div className="item_name">{p.name}</div>
+                      {/* <div className="item_skill">{p.skill}</div> */}
+                    </div>
                   </li>
                 ))}
               </div>

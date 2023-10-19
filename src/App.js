@@ -1,6 +1,6 @@
 import "./App.scss";
-import { Routes, Route } from "react-router-dom";
-import react, { useState, useRef, useEffect, useLocation } from "react";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import react, { useState, useRef, useEffect } from "react";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
 import About from "./Pages/About";
@@ -11,7 +11,9 @@ function App() {
   const [showButton, setShowButton] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [isMenuAct, setIsMenuAct] = useState("");
-
+  const navigate = useNavigate();
+  const location = useLocation();
+  const currentPath = location.pathname;
   const MoveToTop = () => {
     window.scrollTo({
       top: 0,
@@ -28,7 +30,11 @@ function App() {
       Project: 1,
       About: 2,
     };
-    scrollRef.current[category[name]].scrollIntoView({ behavior: "smooth" });
+    if (scrollRef.current[category[name]]) {
+      scrollRef.current[category[name]].scrollIntoView({
+        behavior: "smooth",
+      });
+    }
     setIsMenuAct(e.target.innerText);
   };
 

@@ -77,11 +77,34 @@
             left: 0;
           }
         }
-        .item_name {
-          font-size: 14px;
-          color: $color_black;
-          z-index: 10;
-          margin: 5px 15px;
+        .item_des {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          padding: 5px 15px 0 15px;
+          .item_name {
+            font-size: 14px;
+            color: $color_black;
+            z-index: 10;
+            // margin: 5px 15px 0 15px;
+          }
+          .item_skill {
+            display: flex;
+            // width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            margin: 5px 0 5px 0px;
+            li {
+              font-family: $font_eng;
+              font-size: 12px;
+              color: $color_black;
+              border: 1px solid rgba(0, 164, 200, 0.5);
+              padding: 2px 7px;
+              border-radius: 10px;
+              margin-top: 3px;
+            }
+          }
         }
       }
     }
@@ -119,28 +142,41 @@
               height: 270px;
               margin: 0 10px;
             }
-            .item_name {
-              display: inline-block;
-              position: relative;
-              padding: 6px 5px 10px 5px;
-              line-height: 100%;
-              color: $color_main;
-              font-size: 16px;
-              &::after {
-                content: "";
-                width: 0%;
-                height: 10px;
+            .item_des {
+              width: 100%;
+              flex-direction: row;
+              justify-content: space-between;
+              padding: 5px 15px 0 15px;
+              .item_name {
                 display: inline-block;
-                background: rgba(0, 164, 200, 0.5);
-                position: absolute;
-                bottom: 7px;
-                left: 0;
-                z-index: -1;
-                transition: 0.3s all;
+                position: relative;
+                padding: 6px 5px 10px 5px;
+                line-height: 100%;
+                color: $color_main;
+                font-size: 16px;
+                margin-top: 5px;
+                &::after {
+                  content: "";
+                  width: 0%;
+                  height: 10px;
+                  display: inline-block;
+                  background: rgba(0, 164, 200, 0.5);
+                  position: absolute;
+                  bottom: 10px;
+                  left: 0;
+                  z-index: -1;
+                  transition: 0.3s all;
+                }
+              }
+            }
+            .item_skill {
+              // padding-right: 5px;
+              li {
+                font-size: 14px;
               }
             }
           }
-          .item_list:hover .item_name::after {
+          .item_list:hover .item_des .item_name::after {
             width: 100%;
           }
         }

@@ -109,8 +109,8 @@
         }
         .project_skill .des_content ul {
           display: flex;
+          flex-wrap: wrap;
           li {
-            white-space: nowrap;
             &::after {
               content: " ,";
             }

@@ -40,11 +40,13 @@ const Navigation = ({ showNav, handleScrollView, isMenuAct, MoveToTop }) => {
           <div className="name" onClick={handlerName}>
             Jang YooJin
           </div>
-          <div className="menuList" onClick={subNav}>
-            {showSubNav ? <FaTimes /> : <FaBars />}
-          </div>
+          {currentPath === "/" && (
+            <div className="menuList" onClick={subNav}>
+              {showSubNav ? <FaTimes /> : <FaBars />}
+            </div>
+          )}
         </div>
-        {showSubNav && (
+        {currentPath === "/" && showSubNav && (
           <div className="gnb" onClick={subNav}>
             <ul onClick={handleScrollView}>
               <li className={isMenuAct === "Skills" ? "menu active" : "menu"}>
@@ -75,25 +77,29 @@ const Navigation = ({ showNav, handleScrollView, isMenuAct, MoveToTop }) => {
         <div className="name" onClick={handlerName}>
           Jang YooJin
         </div>
-        <div className="gnb">
-          <ul onClick={handleScrollView}>
-            <li className={isMenuAct === "Skills" ? "menu active" : "menu"}>
-              Skills
-            </li>
-            <li className={isMenuAct === "Project" ? "menu active" : "menu"}>
-              Project
-            </li>
-            <li className={isMenuAct === "About" ? "menu active" : "menu"}>
-              About
-            </li>
-            <li
-              className="menu"
-              onClick={() => window.open("https://github.com/y007in", "_blank")}
-            >
-              <FaGithub />
-            </li>
-          </ul>
-        </div>
+        {currentPath === "/" && (
+          <div className="gnb">
+            <ul onClick={handleScrollView}>
+              <li className={isMenuAct === "Skills" ? "menu active" : "menu"}>
+                Skills
+              </li>
+              <li className={isMenuAct === "Project" ? "menu active" : "menu"}>
+                Project
+              </li>
+              <li className={isMenuAct === "About" ? "menu active" : "menu"}>
+                About
+              </li>
+              <li
+                className="menu"
+                onClick={() =>
+                  window.open("https://github.com/y007in", "_blank")
+                }
+              >
+                <FaGithub />
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     );
   }

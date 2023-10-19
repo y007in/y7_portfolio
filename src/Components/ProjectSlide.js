@@ -50,8 +50,9 @@ const ProjectSlide = () => {
                       <img src={p.image} />
                     </div>
                     <div className="item_des">
-                      <div className="item_name">{p.name}</div>
-                      {/* <div className="item_skill">{p.skill}</div> */}
+                      <div className="item_name">
+                        <div>{p.name}</div>
+                      </div>
                     </div>
                   </li>
                 ))}
@@ -68,10 +69,8 @@ const ProjectSlide = () => {
                     <div className="item">
                       <img src={p.image} />
                     </div>
-                    <div className="item_des">
-                      <div className="item_name">{p.name}</div>
-                      {/* <div className="item_skill">{p.skill}</div> */}
-                    </div>
+
+                    <div className="item_name">{p.name}</div>
                   </li>
                 ))}
               </div>

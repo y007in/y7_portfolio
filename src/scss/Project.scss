@@ -1,13 +1,17 @@
 @import "../scss/variables.scss";
 
 .Project {
-  @include moveToTop();
+  .close {
+    display: flex;
+    justify-content: end;
+    font-size: 25px;
+    margin: 10px;
+    cursor: pointer;
+    svg path {
+      color: $color_black;
+    }
+  }
 }
 
 @media all and (min-width: 1024px) {
-  .Project .top {
-    right: 50px;
-    bottom: 45px;
-    font-size: 50px;
-  }
 }

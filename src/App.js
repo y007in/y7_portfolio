@@ -11,9 +11,7 @@ function App() {
   const [showButton, setShowButton] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [isMenuAct, setIsMenuAct] = useState("");
-  const navigate = useNavigate();
-  const location = useLocation();
-  const currentPath = location.pathname;
+
   const MoveToTop = () => {
     window.scrollTo({
       top: 0,
@@ -53,6 +51,7 @@ function App() {
       window.removeEventListener("scroll", handleShowButton);
     };
   }, []);
+
   return (
     <div className="App">
       <Routes>

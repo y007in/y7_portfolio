@@ -43,11 +43,24 @@
           line-height: 140%;
           li {
             margin: 5px 0 5px 10px;
-            &.link {
+            &:first-child,
+            &:nth-child(4),
+            &:last-child {
               display: flex;
-              gap: 10px;
-              font-size: 24px;
-              cursor: pointer;
+              align-items: center;
+              justify-content: start;
+              svg {
+                margin-right: 3px;
+              }
+            }
+
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: start;
+              svg {
+                margin-right: 3px;
+              }
             }
           }
         }
@@ -122,15 +135,19 @@
           .me_detail {
             border-right: 3px solid $color_point;
             border-left: none;
-
             li {
               text-align: right;
               margin: 5px 10px 5px 0;
               font-size: 20px;
               line-height: 125%;
               letter-spacing: 1px;
-              &.link {
-                justify-content: right;
+              &:first-child,
+              &:nth-child(4),
+              &:last-child {
+                justify-content: end;
+              }
+              a {
+                justify-content: end;
               }
             }
           }

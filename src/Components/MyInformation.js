@@ -1,5 +1,8 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaCalendarAlt, FaPhoneAlt } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
+import { BiPhone, BiCalendarAlt } from "react-icons/bi";
+import { SiVelog } from "react-icons/si";
 
 import "../scss/MyInformation.scss";
 import velogicon from "../assets/img/velogicon.png";
@@ -15,26 +18,38 @@ const myinformation = () => {
           <article className="me">
             <h3>장유진</h3>
             <ul className="me_detail">
-              <li>📆 1998.07.13</li>
               <li>
-                <a href="mailto:ujin4719@kakao.com">📧 ujin4719@kakao.com</a>
+                <BiCalendarAlt />
+                1998.07.13
               </li>
               <li>
-                <a href="tel:01099620590"> 📞 +82 10-9962-0590 </a>
+                <a href="mailto:ujin4719@kakao.com">
+                  <HiOutlineMail />
+                  ujin4719@kakao.com
+                </a>
               </li>
-              <li className="link">
+              <li>
+                <a href="tel:01099620590">
+                  <BiPhone /> +82 10-9962-0590
+                </a>
+              </li>
+            </ul>
+            <ul className="me_detail">
+              <li>
                 <FaGithub
                   onClick={() =>
                     window.open("https://github.com/y007in", "_blank")
                   }
                 />
-                <img
-                  src={velogicon}
-                  width={24}
+                Github
+              </li>
+              <li>
+                <SiVelog
                   onClick={() =>
                     window.open("https://velog.io/@yoojin4719", "_blank")
                   }
                 />
+                Blog
               </li>
             </ul>
           </article>

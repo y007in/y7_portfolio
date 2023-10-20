@@ -38,7 +38,7 @@ const Navigation = ({ showNav, handleScrollView, isMenuAct, MoveToTop }) => {
       >
         <div className="main_nav">
           <div className="name" onClick={handlerName}>
-            Jang YooJin
+            JangYooJin
           </div>
           {currentPath === "/" && (
             <div className="menuList" onClick={subNav}>
@@ -75,7 +75,7 @@ const Navigation = ({ showNav, handleScrollView, isMenuAct, MoveToTop }) => {
     content = (
       <div className={showNav ? "Navigation_pc " : "Navigation_pc show"}>
         <div className="name" onClick={handlerName}>
-          Jang YooJin
+          JangYooJin
         </div>
         {currentPath === "/" && (
           <div className="gnb">

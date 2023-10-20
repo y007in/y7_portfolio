@@ -109,7 +109,7 @@ export const ProjectData = [
     des: "프론트엔드 개발자로서 프로필 및 프로젝트들을 소개하기 위한 포트폴리오 페이지",
     github: "https://github.com/y007in/y7_portfolio",
     url: "https://y7portfolio.netlify.app/",
-    date: "2023.07.03 - 2023.09.30",
+    date: "Last Updated. 2023.10.20",
     skill: (
       <>
         <li>React</li>

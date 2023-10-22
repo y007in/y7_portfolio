@@ -1,16 +1,11 @@
-import React, { useRef, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { FaArrowAltCircleUp } from "react-icons/fa";
-
-import "../scss/About.scss";
 import { SkillIcon } from "../assets/projectdata";
-import Navigation from "../Components/Navigation";
-import MyInformation from "../Components/MyInformation";
-import Footer from "../Components/Footer";
-import Skill from "../Components/Skill";
-import Intro from "../Components/Intro";
 
-import ProjectSlide from "../Components/ProjectSlide";
+import Navigation from "../components/Navigation";
+import MyInformation from "../components/MyInformation";
+import Footer from "../components/Footer";
+import Skill from "../components/Skill";
+import Intro from "../components/Intro";
+import ProjectSlide from "../components/ProjectSlide";
 
 const About = ({
   showNav,

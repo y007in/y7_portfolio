@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import "../scss/ProjectItem.scss";
 import { useNavigate, Link } from "react-router-dom";
-import { ProjectData } from "../assets/projectdata";
 import { FaGithub, FaLink } from "react-icons/fa";
+
+import "../assets/scss/ProjectItem.scss";
+import { ProjectData } from "../assets/projectdata";
+
 const ProjectItem = ({ projectId }) => {
   const navigate = useNavigate();
-
   return (
-    <div className="ProjectItem">
+    <div className="projectItem">
       <div className="project_container">
         <div className="project_title">
           <h1>{ProjectData[projectId].name}</h1>

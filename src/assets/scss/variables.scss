@@ -17,7 +17,7 @@ $font_kor: "Noto Sans KR", sans-serif;
 $font_eng: "Encode Sans", sans-serif;
 
 //mobile
-@mixin topcontainer_mobile() {
+@mixin topContainer_mobile() {
   width: 100%;
   // height: calc(100% - 50px);
   display: flex;
@@ -36,7 +36,7 @@ $font_eng: "Encode Sans", sans-serif;
   font-family: $font_eng;
 }
 
-@mixin boxtitle_mobile() {
+@mixin boxTitle_mobile() {
   clear: both;
   background-color: $color_gray;
   padding: 6px 12px;
@@ -47,7 +47,7 @@ $font_eng: "Encode Sans", sans-serif;
 }
 
 //pc
-@mixin topcontainer_pc() {
+@mixin topContainer_pc() {
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 220px);
@@ -63,7 +63,7 @@ $font_eng: "Encode Sans", sans-serif;
   font-size: 48px;
 }
 
-@mixin boxtitle_pc() {
+@mixin boxTitle_pc() {
   padding: 6px 15px;
   margin-top: 0;
   font-size: 18px;

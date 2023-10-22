@@ -1,39 +1,37 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-import "../scss/intro.scss";
+import "../assets/scss/Intro.scss";
 
 const Intro = () => {
-  const [isActive, setIsActive] = useState(false);
+  const [isOpenPage, setIsOpenPage] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > window.innerHeight) {
+      setIsOpenPage(false);
+    } else {
+      setIsOpenPage(true);
+    }
+  };
 
   useEffect(() => {
-    setIsActive(true);
-    const handleScroll = () => {
-      if (window.scrollY > window.innerHeight) {
-        setIsActive(false);
-      } else {
-        setIsActive(true);
-      }
-    };
+    setIsOpenPage(true);
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div className="intro">
       <div className="intro_container">
-        <div className="hi">
+        <div className="intro_txt">
           <span>안녕하세요.</span>
           <div>
-            <div className={isActive ? "isActive front-end" : "front-end"}>
+            <div className={`front_end ${isOpenPage ? "isActive" : ""}`}>
               소통하며 협력하는 개발자
             </div>
           </div>
           <div>
             <div style={{ display: "flex" }}>
-              <div className={isActive ? "isActive intro_name" : "intro_name"}>
+              <div className={`intro_name ${isOpenPage ? "isActive" : ""}`}>
                 <span>장</span>
                 <span>유</span>
                 <span>진</span>

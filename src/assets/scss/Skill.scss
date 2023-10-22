@@ -1,7 +1,7 @@
 @import "../scss/variables.scss";
 
 .skills {
-  @include topcontainer_mobile();
+  @include topContainer_mobile();
 
   .skill_container {
     @include container_mobile();
@@ -13,17 +13,17 @@
         @include title_mobile();
       }
     }
-    .skillitem_desc {
+    .skillItem_desc {
       font-size: 14px;
       color: $color_darkgray;
       margin-left: 10px;
     }
     .skill_list {
       width: 100%;
-      .skillbox {
+      .skillBox {
         width: 100%;
         .skill_items_title {
-          @include boxtitle_mobile();
+          @include boxTitle_mobile();
           float: left;
           margin-bottom: 10px;
         }
@@ -31,7 +31,6 @@
           width: 100%;
           display: flex;
           flex-wrap: wrap;
-
           .skill_item {
             width: 30%;
             max-width: 180px;
@@ -43,7 +42,6 @@
             &:last-child {
               margin-right: 0;
             }
-
             .skill_icon {
               display: flex;
               justify-content: center;
@@ -114,7 +112,7 @@
 
 @media all and (min-width: 1024px) {
   .skills {
-    @include topcontainer_pc();
+    @include topContainer_pc();
     .skill_container {
       @include container_pc();
       .skill_title h1 {
@@ -122,8 +120,9 @@
       }
       .skill_list {
         width: 100%;
-        .skillbox {
+        .skillBox {
           .skill_items_title {
+            @include boxTitle_pc();
             font-size: 24px;
           }
           .skill_items {

@@ -1,12 +1,8 @@
-import React, { useRef, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { FaArrowAltCircleUp } from "react-icons/fa";
-
-import "../scss/Project.scss";
-import Navigation from "../Components/Navigation";
-import ProjectList from "../Components/ProjectList";
-import Footer from "../Components/Footer";
 import { ProjectData } from "../assets/projectdata";
+
+import Navigation from "../components/Navigation";
+import ProjectList from "../components/ProjectList";
+import Footer from "../components/Footer";
 
 const Project = () => {
   return (

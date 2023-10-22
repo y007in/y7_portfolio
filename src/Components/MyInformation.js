@@ -1,23 +1,21 @@
-import React from "react";
-import { FaGithub, FaCalendarAlt, FaPhoneAlt } from "react-icons/fa";
+import "../assets/scss/MyInformation.scss";
+
+import { FaGithub } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiPhone, BiCalendarAlt } from "react-icons/bi";
 import { SiVelog } from "react-icons/si";
 
-import "../scss/MyInformation.scss";
-import velogicon from "../assets/img/velogicon.png";
-
-const myinformation = () => {
+const MyInformation = () => {
   return (
-    <div className="MyInformation">
-      <main className="MyInformation_container">
-        <div className="About_Title">
+    <div className="myInfo">
+      <main className="myInfo_container">
+        <div className="about_title">
           <h1>About</h1>
         </div>
-        <section className="about_Me">
-          <article className="me">
+        <section className="about_content">
+          <article className="about_personal">
             <h3>장유진</h3>
-            <ul className="me_detail">
+            <ul className="about_personalBox">
               <li>
                 <BiCalendarAlt />
                 1998.07.13
@@ -34,7 +32,7 @@ const myinformation = () => {
                 </a>
               </li>
             </ul>
-            <ul className="me_detail">
+            <ul className="about_personalBox">
               <li>
                 <FaGithub
                   onClick={() =>
@@ -53,7 +51,7 @@ const myinformation = () => {
               </li>
             </ul>
           </article>
-          <section className="about_content">
+          <section className="about_info">
             <article className="edu">
               <div className="info_title">교육</div>
               <ul className="info_list">
@@ -89,4 +87,4 @@ const myinformation = () => {
   );
 };
 
-export default myinformation;
+export default MyInformation;

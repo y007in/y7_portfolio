@@ -1,19 +1,18 @@
 @import "../scss/variables.scss";
 
-.MyInformation {
-  @include topcontainer_mobile();
+.myInfo {
+  @include topContainer_mobile();
   width: 100vw;
-  .MyInformation_container {
+  .myInfo_container {
     @include container_mobile();
-
-    .About_Title h1 {
+    .about_title h1 {
       @include title_mobile();
     }
-    .about_Me {
+    .about_content {
       width: 100%;
       display: flex;
       flex-direction: column;
-      .me {
+      .about_personal {
         display: block;
         text-align: left;
         h3 {
@@ -36,7 +35,7 @@
             transition: 1s all;
           }
         }
-        .me_detail {
+        .about_personalBox {
           border-left: 3px solid $color_point;
           margin: 10px 0;
           font-size: 16px;
@@ -65,28 +64,15 @@
           }
         }
       }
-      .resolution {
-        width: 100%;
-        background-color: $color_gray;
-        padding: 8px;
-        margin: 5px 0;
-        border-radius: 5px;
-        font-size: 16px;
-        span {
-          display: block;
-          width: 100%;
-          word-break: break-all;
-        }
-      }
     }
-    .about_content {
+    .about_info {
       margin: 20px 0;
       text-align: right;
       .edu {
         margin-bottom: 30px;
       }
       .info_title {
-        @include boxtitle_mobile();
+        @include boxTitle_mobile();
         display: inline-block;
       }
       .info_list {
@@ -107,18 +93,18 @@
 }
 
 @media all and (min-width: 1024px) {
-  .MyInformation {
-    @include topcontainer_pc();
-    .MyInformation_container {
+  .myInfo {
+    @include topContainer_pc();
+    .myInfo_container {
       @include container_pc();
-      .About_Title h1 {
+      .about_title h1 {
         @include title_pc();
       }
-      .about_Me {
+      .about_content {
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 80px;
-        .me {
+        .about_personal {
           display: block;
           order: 2;
           text-align: right;
@@ -132,7 +118,7 @@
               right: 0;
             }
           }
-          .me_detail {
+          .about_personalBox {
             border-right: 3px solid $color_point;
             border-left: none;
             li {
@@ -152,17 +138,11 @@
             }
           }
         }
-        .resolution {
-          order: 1;
-          width: 60%;
-          padding: 20px;
-          font-size: 18px;
-        }
       }
-      .about_content {
+      .about_info {
         text-align: left;
         .info_title {
-          @include boxtitle_pc();
+          @include boxTitle_pc();
           font-size: 20px;
         }
         .info_list {

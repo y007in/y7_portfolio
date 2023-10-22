@@ -1,15 +1,6 @@
 @import "../scss/variables.scss";
 
-@mixin navbtn {
-  border: none;
-  background-color: transparent;
-  color: $color_white;
-  font-size: 14px;
-  cursor: pointer;
-  font-family: $font_eng;
-}
-
-.Navigation_mobile {
+.navigation_mobile {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -18,7 +9,7 @@
   height: 50px;
   border-bottom: 1px solid $color_gray;
   z-index: 9999;
-  padding: 10px 5%;
+  padding: 10px 20px;
   transition: background-color 0.5s ease;
   background-color: $color_white;
   &.show {
@@ -34,9 +25,9 @@
     width: 100%;
     justify-content: space-between;
     .name {
-      // width: 100%;
       display: flex;
       color: $color_main;
+      padding: 2px 5px;
       font-size: 24px;
       cursor: pointer;
       font-family: "Roboto", sans-serif;
@@ -91,7 +82,7 @@
 }
 
 @media all and (min-width: 1024px) {
-  .Navigation_pc {
+  .navigation_pc {
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -119,7 +110,7 @@
       color: $color_main;
       font-size: 28px;
       cursor: pointer;
-      font-family: "Pretendard-Regular";
+      font-family: "Roboto", sans-serif;
       font-weight: bold;
     }
     .gnb {
@@ -156,7 +147,6 @@
           &.active {
             display: inline-block;
             position: relative;
-            // line-height: 100%;
             &::after {
               content: "";
               width: 75%;

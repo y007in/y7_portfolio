@@ -9,17 +9,27 @@
   }
 }
 
+@keyframes waviy {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
 .intro {
-  @include topcontainer_mobile();
+  @include topContainer_mobile();
   height: 100vh;
   justify-content: center;
-
   .intro_container {
     @include container_mobile();
     justify-content: center;
     align-items: center;
-
-    .hi {
+    .intro_txt {
       font-size: 40px;
       font-weight: bold;
       line-height: 130%;
@@ -27,7 +37,7 @@
         color: $color_darkgray;
         padding: 0 5px;
       }
-      .front-end {
+      .front_end {
         font-size: 41px;
         display: inline-block;
         position: relative;
@@ -47,15 +57,13 @@
           transition: 1s all;
         }
       }
-      .intro_name {
-        span {
-          font-size: 41px;
-          padding: 0;
-          color: $color_main;
-          position: relative;
-        }
+      .intro_name span {
+        font-size: 41px;
+        padding: 0;
+        color: $color_main;
+        position: relative;
       }
-      .isActive.front-end::after {
+      .isActive.front_end::after {
         content: "";
         width: 100%;
       }
@@ -76,12 +84,12 @@
 
 @media all and (min-width: 1024px) {
   .intro {
-    @include topcontainer_pc();
+    @include topContainer_pc();
     .intro_container {
       @include container_pc();
-      .hi {
+      .intro_txt {
         font-size: 85px;
-        .front-end {
+        .front_end {
           padding: 3px 10px 15px 10px;
           line-height: 100%;
           font-size: 90px;
@@ -95,17 +103,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes waviy {
-  0% {
-    top: 0px;
-  }
-  50% {
-    top: -10px;
-  }
-  100% {
-    top: 0;
   }
 }

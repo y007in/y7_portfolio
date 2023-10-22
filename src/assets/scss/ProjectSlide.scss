@@ -1,12 +1,35 @@
 @import "../scss/variables.scss";
 
-.ProjectSlide {
-  @include topcontainer_mobile();
+@keyframes infiniteSlide {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  50.1% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes infiniteSlide_clone {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.projectSlide {
+  @include topContainer_mobile();
   background-color: $color_lightgray;
   width: 100vw;
-  .ProjectSlide_container {
+  .projectSlide_container {
     @include container_mobile();
-    .ProjectSlide_Title {
+    .projectSlide_Title {
       display: flex;
       flex-direction: column;
       // justify-content: center;
@@ -49,10 +72,10 @@
         flex-wrap: nowrap;
         position: relative;
         &.origin {
-          animation: 40s linear infinite normal none running infiniteAnimation1;
+          animation: 40s linear infinite normal none running infiniteSlide;
         }
         &.clone {
-          animation: 40s linear infinite infiniteAnimation2;
+          animation: 40s linear infinite infiniteSlide_clone;
         }
         &.stop {
           animation-play-state: paused;
@@ -93,9 +116,9 @@
 }
 
 @media all and (min-width: 1024px) {
-  .ProjectSlide {
-    @include topcontainer_pc();
-    .ProjectSlide_container {
+  .projectSlide {
+    @include topContainer_pc();
+    .projectSlide_container {
       @include container_pc();
       .ProjectSlide_Title div h1 {
         @include title_pc();
@@ -153,28 +176,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes infiniteAnimation1 {
-  0% {
-    transform: translateX(0%);
-  }
-  50% {
-    transform: translateX(-100%);
-  }
-  50.1% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-@keyframes infiniteAnimation2 {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-200%);
   }
 }

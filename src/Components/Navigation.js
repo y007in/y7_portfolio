@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
-import "../scss/Navigation.scss";
+
+import "../assets/scss/Navigation.scss";
 
 const Navigation = ({ showNav, handleScrollView, isMenuAct, MoveToTop }) => {
   const navigate = useNavigate();
@@ -33,9 +34,7 @@ const Navigation = ({ showNav, handleScrollView, isMenuAct, MoveToTop }) => {
   let content = null;
   if (windowWidth <= 1024) {
     content = (
-      <div
-        className={showNav ? "Navigation_mobile " : "Navigation_mobile show"}
-      >
+      <div className={`navigation_mobile ${showNav ? "" : "show"}`}>
         <div className="main_nav">
           <div className="name" onClick={handlerName}>
             JangYooJin
@@ -49,13 +48,15 @@ const Navigation = ({ showNav, handleScrollView, isMenuAct, MoveToTop }) => {
         {currentPath === "/" && showSubNav && (
           <div className="gnb" onClick={subNav}>
             <ul onClick={handleScrollView}>
-              <li className={isMenuAct === "Skills" ? "menu active" : "menu"}>
+              <li className={`menu ${isMenuAct === "Skills" ? " active" : ""}`}>
                 Skills
               </li>
-              <li className={isMenuAct === "Project" ? "menu active" : "menu"}>
+              <li
+                className={`menu ${isMenuAct === "Project" ? " active" : ""}`}
+              >
                 Project
               </li>
-              <li className={isMenuAct === "About" ? "menu active" : "menu"}>
+              <li className={`menu ${isMenuAct === "About" ? " active" : ""}`}>
                 About
               </li>
               <li
@@ -73,20 +74,22 @@ const Navigation = ({ showNav, handleScrollView, isMenuAct, MoveToTop }) => {
     );
   } else {
     content = (
-      <div className={showNav ? "Navigation_pc " : "Navigation_pc show"}>
+      <div className={`navigation_pc ${showNav ? "" : "show"}`}>
         <div className="name" onClick={handlerName}>
           JangYooJin
         </div>
         {currentPath === "/" && (
           <div className="gnb">
             <ul onClick={handleScrollView}>
-              <li className={isMenuAct === "Skills" ? "menu active" : "menu"}>
+              <li className={`menu ${isMenuAct === "Skills" ? " active" : ""}`}>
                 Skills
               </li>
-              <li className={isMenuAct === "Project" ? "menu active" : "menu"}>
+              <li
+                className={`menu ${isMenuAct === "Project" ? " active" : ""}`}
+              >
                 Project
               </li>
-              <li className={isMenuAct === "About" ? "menu active" : "menu"}>
+              <li className={`menu ${isMenuAct === "About" ? " active" : ""}`}>
                 About
               </li>
               <li

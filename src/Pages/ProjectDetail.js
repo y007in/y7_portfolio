@@ -1,15 +1,11 @@
-import React, { useRef, useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { FaArrowAltCircleUp } from "react-icons/fa";
-import "../scss/ProjectDetail.scss";
+import { useParams } from "react-router-dom";
 
-import Navigation from "../Components/Navigation";
-import ProjectItem from "../Components/ProjectItem";
-import Footer from "../Components/Footer";
+import Navigation from "../components/Navigation";
+import ProjectItem from "../components/ProjectItem";
+import Footer from "../components/Footer";
 
 const ProjectDetail = () => {
   const { id } = useParams();
-
   return (
     <div className="projectDetail">
       <Navigation />

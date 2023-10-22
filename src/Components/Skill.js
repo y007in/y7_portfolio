@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { FaRegTimesCircle } from "react-icons/fa";
-import "../scss/Skill.scss";
+import "../assets/scss/Skill.scss";
 
 const Skill = ({ skillIcon }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
   const [expandedItemIndex, setExpandedItemIndex] = useState(null);
 
   useEffect(() => {
@@ -29,13 +27,13 @@ const Skill = ({ skillIcon }) => {
         <div className="skill_container">
           <div className="skill_title">
             <h1>Skills</h1>
-            <p className="skillitem_desc">
+            <p className="skillItem_desc">
               * 해당 아이콘 클릭 시 자세한 내용을 볼 수 있습니다.
             </p>
           </div>
 
           <div className="skill_list">
-            <article className="skillbox">
+            <article className="skillBox">
               <p className="skill_items_title">Front-end</p>
 
               <div className="skill_items">
@@ -68,7 +66,7 @@ const Skill = ({ skillIcon }) => {
                 ))}
               </div>
             </article>
-            <article className="skillbox">
+            <article className="skillBox">
               <p className="skill_items_title">Etc</p>
 
               <div className="skill_items">
@@ -111,12 +109,12 @@ const Skill = ({ skillIcon }) => {
         <div className="skill_container">
           <div className="skill_title">
             <h1>Skills</h1>
-            <p className="skillitem_desc">
+            <p className="skillItem_desc">
               * 해당 아이콘에 마우스를 올리면 자세한 내용을 볼 수 있습니다.
             </p>
           </div>
           <div className="skill_list">
-            <article className="skillbox">
+            <article className="skillBox">
               <p className="skill_items_title">Front-end</p>
 
               <div className="skill_items">
@@ -131,7 +129,7 @@ const Skill = ({ skillIcon }) => {
                 ))}
               </div>
             </article>
-            <article className="skillbox">
+            <article className="skillBox">
               <p className="skill_items_title">Etc</p>
 
               <div className="skill_items">

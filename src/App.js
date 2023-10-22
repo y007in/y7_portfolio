@@ -1,11 +1,11 @@
 import "./App.scss";
-import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
-import react, { useState, useRef, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
-import About from "./Pages/About";
-import Project from "./Pages/Project";
-import ProjectDetail from "./Pages/ProjectDetail";
+import About from "./pages/About";
+import Project from "./pages/Project";
+import ProjectDetail from "./pages/ProjectDetail";
 
 function App() {
   const [showButton, setShowButton] = useState(false);

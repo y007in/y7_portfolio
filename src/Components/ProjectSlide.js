@@ -1,18 +1,20 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../scss/ProjectSlide.scss";
-import ProjectThumb from "./ProjectThumb";
+
+import "../assets/scss/ProjectSlide.scss";
 import { ProjectData } from "../assets/projectdata";
 
 const ProjectSlide = () => {
+  const navigate = useNavigate();
   const [animate, setAnimate] = useState(true);
+
   const onStop = () => setAnimate(false);
   const onRun = () => setAnimate(true);
-  const navigate = useNavigate();
+
   return (
-    <div className="ProjectSlide">
-      <div className="ProjectSlide_container">
-        <div className="ProjectSlide_Title">
+    <div className="projectSlide">
+      <div className="projectSlide_container">
+        <div className="projectSlide_Title">
           <div style={{ display: "flex", alignItems: "center" }}>
             <h1>Project</h1>
             <button
@@ -28,7 +30,7 @@ const ProjectSlide = () => {
             * 해당 썸네일 클릭 시 자세한 내용을 볼 수 있습니다.
           </p>
         </div>
-        <section className="Projects">
+        <section className="projects">
           <div className="slide_container">
             <ul
               className="slide_wrapper"

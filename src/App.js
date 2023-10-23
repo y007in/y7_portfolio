@@ -3,9 +3,9 @@ import { Routes, Route } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
-import About from "./pagess/About";
-import Project from "./pagess/Project";
-import ProjectDetail from "./pagess/ProjectDetail";
+import About from "./pages_/About";
+import Project from "./pages_/Project";
+import ProjectDetail from "./pages_/ProjectDetail";
 
 function App() {
   const [showButton, setShowButton] = useState(false);

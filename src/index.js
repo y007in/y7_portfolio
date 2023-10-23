@@ -4,7 +4,7 @@ import "./index.scss";
 import App from "./App";
 
 import { BrowserRouter } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./components_/ScrollToTop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

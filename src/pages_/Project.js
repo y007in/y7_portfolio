@@ -1,8 +1,8 @@
 import { ProjectData } from "../assets/projectdata";
 
-import Navigation from "../components/Navigation";
-import ProjectList from "../components/ProjectList";
-import Footer from "../components/Footer";
+import Navigation from "../components_/Navigation";
+import ProjectList from "../components_/ProjectList";
+import Footer from "../components_/Footer";
 
 const Project = () => {
   return (

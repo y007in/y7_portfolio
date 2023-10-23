@@ -23,14 +23,20 @@
         display: flex;
         flex-direction: column;
         .project_img {
+          position: relative;
           width: 100%;
-          height: 280px;
+          height: 0;
+          padding-bottom: 56.26%;
           margin-bottom: 10px;
           overflow: hidden;
           border: 1px solid $color_gray;
           border-radius: 5px;
           img {
-            width: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
           }
         }
         .project_des {

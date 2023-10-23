@@ -1,6 +1,6 @@
 import hugmom from "./img/hugmom.JPG";
 import todo from "./img/todo.JPG";
-import mbti from "./img/mbti.JPG";
+import mbti from "./img/mbti.jpeg";
 import portfolio from "./img/portfolio.JPG";
 import netflix from "./img/netflix.JPG";
 
@@ -108,7 +108,7 @@ export const ProjectData = [
     des: "프론트엔드 개발자로서 프로필 및 프로젝트들을 소개하기 위한 포트폴리오 페이지",
     github: "https://github.com/y007in/y7_portfolio",
     url: "https://y7portfolio.netlify.app/",
-    date: "Last Updated. 2023.10.20",
+    date: "Last Updated. 2023.10.23",
     skill: (
       <>
         <li>React</li>

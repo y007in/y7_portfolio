@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 
-import Navigation from "../components/Navigation";
-import ProjectItem from "../components/ProjectItem";
-import Footer from "../components/Footer";
+import Navigation from "../componentss/Navigation";
+import ProjectItem from "../componentss/ProjectItem";
+import Footer from "../componentss/Footer";
 
 const ProjectDetail = () => {
   const { id } = useParams();

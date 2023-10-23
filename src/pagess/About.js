@@ -1,11 +1,11 @@
 import { SkillIcon } from "../assets/projectdata";
 
-import Navigation from "../components/Navigation";
-import MyInformation from "../components/MyInformation";
-import Footer from "../components/Footer";
-import Skill from "../components/Skill";
-import Intro from "../components/Intro";
-import ProjectSlide from "../components/ProjectSlide";
+import Navigation from "../componentss/Navigation";
+import MyInformation from "../componentss/MyInformation";
+import Footer from "../componentss/Footer";
+import Skill from "../componentss/Skill";
+import Intro from "../componentss/Intro";
+import ProjectSlide from "../componentss/ProjectSlide";
 
 const About = ({
   showNav,

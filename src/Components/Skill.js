@@ -37,7 +37,7 @@ const Skill = ({ skillIcon }) => {
               <p className="skill_items_title">Front-end</p>
 
               <div className="skill_items">
-                {skillIcon.slice(0, 6).map((item, index) => (
+                {skillIcon.slice(0, 5).map((item, index) => (
                   <div
                     className="skill_item"
                     key={index}
@@ -70,7 +70,7 @@ const Skill = ({ skillIcon }) => {
               <p className="skill_items_title">Etc</p>
 
               <div className="skill_items">
-                {skillIcon.slice(6, 9).map((item, index) => (
+                {skillIcon.slice(5, 8).map((item, index) => (
                   <div
                     className="skill_item"
                     key={index}
@@ -118,7 +118,7 @@ const Skill = ({ skillIcon }) => {
               <p className="skill_items_title">Front-end</p>
 
               <div className="skill_items">
-                {skillIcon.slice(0, 6).map((item, index) => (
+                {skillIcon.slice(0, 5).map((item, index) => (
                   <div className="skill_item" key={index}>
                     <div className="skill_icon">
                       <img src={item.icon} alt={`${item.skill} icon`} />
@@ -133,10 +133,10 @@ const Skill = ({ skillIcon }) => {
               <p className="skill_items_title">Etc</p>
 
               <div className="skill_items">
-                {skillIcon.slice(6, 9).map((item, index) => (
+                {skillIcon.slice(5, 8).map((item, index) => (
                   <div className="skill_item" key={index}>
                     <div className="skill_icon">
-                      <img src={item.icon} />
+                      <img src={item.icon} alt={`${item.skill} icon`} />
                     </div>
                     <p className="skill_name">{item.skill}</p>
                     <ul className="skill_des">{item.des}</ul>

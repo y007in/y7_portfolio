@@ -1,4 +1,3 @@
-import postme from "./img/postme.png";
 import hugmom from "./img/hugmom.JPG";
 import todo from "./img/todo.JPG";
 import mbti from "./img/mbti.JPG";
@@ -9,7 +8,7 @@ import html5 from "./img/html5.png";
 import CSS3 from "./img/css-3.png";
 import js from "./img/js.png";
 import react from "./img/react.png";
-import redux from "./img/redux.png";
+// import redux from "./img/redux.png";
 import typescript from "./img/typescript.png";
 import photoshop from "./img/photoshop.png";
 import illustrator from "./img/illustrator.png";
@@ -160,43 +159,7 @@ export const ProjectData = [
       </>
     ),
   },
-  // {
-  //   id: 5,
-  //   name: "Post Me",
-  //   team: "팀 프로젝트 + 개인 프로젝트",
-  //   image: `${postme}`,
-  //   des: "'네이버 웨일'대외활동 확장앱 프로젝트로 Post Me 제작",
-  //   github: "https://github.com/y007in/POSTME",
-  //   url: "https://whale4upostme.netlify.app/",
-  //   date: "2022.8.19 - 2022.09.16",
-  //   skill: (
-  //     <>
-  //       <li>React</li>
-  //       <li>CSS3</li>
-  //     </>
-  //   ),
-  //   func: (
-  //     <>
-  //       <li>x</li>
-  //     </>
-  //   ),
-  // },
 ];
-
-// export const DesignData = {
-//   name: "졸업작품전시회 홍보물 제작",
-//   team: "팀 프로젝트",
-//   // image: `${design} `,
-//   des: "졸업작품전시회를 홍보하기 위한 포스터, 현수막, 책자를 제작하였습니다.",
-//   url: "",
-//   date: "2021.10.18 - 2021.11.12",
-//   skill: (
-//     <>
-//       <li>Adobe Illustrator</li>
-//       <li>Adobe Photoshop</li>
-//     </>
-//   ),
-// };
 
 export const SkillIcon = [
   {
@@ -242,18 +205,18 @@ export const SkillIcon = [
       </>
     ),
   },
+  // {
+  //   id: 4,
+  //   skill: "Redux",
+  //   icon: `${redux}`,
+  //   des: (
+  //     <>
+  //       <li>리덕스를 이용한 상태관리를 이용한 경험이 있습니다.</li>
+  //     </>
+  //   ),
+  // },
   {
     id: 4,
-    skill: "Redux",
-    icon: `${redux}`,
-    des: (
-      <>
-        <li>리덕스를 이용한 상태관리를 이용한 경험이 있습니다.</li>
-      </>
-    ),
-  },
-  {
-    id: 5,
     skill: "TypeScript",
     icon: `${typescript}`,
     des: (
@@ -264,7 +227,7 @@ export const SkillIcon = [
   },
 
   {
-    id: 6,
+    id: 5,
     skill: "Adobe Illustrator",
     icon: `${illustrator}`,
     des: (
@@ -275,7 +238,7 @@ export const SkillIcon = [
     ),
   },
   {
-    id: 7,
+    id: 6,
     skill: "Adobe Photoshop",
     icon: `${photoshop}`,
     des: (
@@ -286,7 +249,7 @@ export const SkillIcon = [
     ),
   },
   {
-    id: 8,
+    id: 7,
     skill: "Figma",
     icon: `${figma}`,
     des: (

@@ -55,7 +55,6 @@ function App() {
       }
     };
 
-    // 초기 로딩 시 실행하여 초기 isMenuAct 설정
     handleShowButton();
 
     window.addEventListener("scroll", handleShowButton);
@@ -71,7 +70,6 @@ function App() {
           path="/"
           element={
             <About
-              showButton={showButton}
               showNav={showNav}
               isMenuAct={isMenuAct}
               scrollRef={scrollRef}

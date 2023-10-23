@@ -43,8 +43,8 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: end;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: flex-end;
     font-family: $font_eng;
     background-color: rgba(50, 50, 50, 0.5);
     margin-top: 10px;
@@ -55,7 +55,7 @@
       background-color: $color_lightgray;
       display: flex;
       flex-direction: column;
-      align-items: end;
+      align-items: flex-end;
       .menu {
         width: 100%;
         font-family: $font_eng;
@@ -105,8 +105,8 @@
     .name {
       width: 20%;
       display: flex;
-      justify-content: start;
-      align-items: start;
+      justify-content: flex-start;
+      align-items: flex-start;
       color: $color_main;
       font-size: 28px;
       cursor: pointer;
@@ -116,8 +116,8 @@
     .gnb {
       width: 80%;
       display: flex;
-      justify-content: end;
-      align-items: end;
+      justify-content: flex-end;
+      align-items: flex-end;
       font-family: $font_eng;
       font-weight: bold;
 

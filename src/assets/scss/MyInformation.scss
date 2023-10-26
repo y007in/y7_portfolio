@@ -2,7 +2,6 @@
 
 .myInfo {
   @include topContainer_mobile();
-  width: 100vw;
   .myInfo_container {
     @include container_mobile();
     .about_title h1 {

@@ -54,9 +54,9 @@ $font_eng: "Encode Sans", sans-serif;
   padding: 100px 0;
 }
 @mixin container_pc() {
-  width: 1280px;
+  width: 100%;
   margin-bottom: 20px;
-  // padding: 50px 80px;
+  padding: 0 5%;
 }
 
 @mixin title_pc() {

@@ -8,7 +8,7 @@ import html5 from "./img/html5.png";
 import CSS3 from "./img/css-3.png";
 import js from "./img/js.png";
 import react from "./img/react.png";
-// import redux from "./img/redux.png";
+import redux from "./img/redux.png";
 import typescript from "./img/typescript.png";
 import photoshop from "./img/photoshop.png";
 import illustrator from "./img/illustrator.png";
@@ -108,7 +108,7 @@ export const ProjectData = [
     des: "프론트엔드 개발자로서 프로필 및 프로젝트들을 소개하기 위한 포트폴리오 페이지",
     github: "https://github.com/y007in/y7_portfolio",
     url: "https://y7portfolio.netlify.app/",
-    date: "Last Updated. 2023.10.23",
+    date: "Last Updated. 2023.10.26",
     skill: (
       <>
         <li>React</li>
@@ -118,11 +118,13 @@ export const ProjectData = [
     ),
     func: (
       <>
-        <li>• CSS Media Queries와 resize 이벤트를 활용한 반응형 웹 페이지</li>
+        <li>CSS Media Queries와 resize 이벤트를 활용한 반응형 웹 페이지</li>
         <li>
-          • BrowerRouter를 활용해 각 페이지들이 서로 다른 URL에서 렌더링되도록
+          BrowerRouter를 활용해 각 페이지들이 서로 다른 URL에서 렌더링되도록
           설정
         </li>
+        <li>useRef로 원하는 이동하거나 선택했을 시 해당 페이지로 이동</li>
+        <li>Redux를 활용한 컴포넌트간의 상태관리</li>
       </>
     ),
   },
@@ -206,18 +208,18 @@ export const SkillIcon = [
       </>
     ),
   },
-  // {
-  //   id: 4,
-  //   skill: "Redux",
-  //   icon: `${redux}`,
-  //   des: (
-  //     <>
-  //       <li>리덕스를 이용한 상태관리를 이용한 경험이 있습니다.</li>
-  //     </>
-  //   ),
-  // },
   {
     id: 4,
+    skill: "Redux",
+    icon: `${redux}`,
+    des: (
+      <>
+        <li>리덕스를 이용한 상태관리를 이용한 경험이 있습니다.</li>
+      </>
+    ),
+  },
+  {
+    id: 5,
     skill: "TypeScript",
     icon: `${typescript}`,
     des: (
@@ -228,7 +230,7 @@ export const SkillIcon = [
   },
 
   {
-    id: 5,
+    id: 6,
     skill: "Adobe Illustrator",
     icon: `${illustrator}`,
     des: (
@@ -239,7 +241,7 @@ export const SkillIcon = [
     ),
   },
   {
-    id: 6,
+    id: 7,
     skill: "Adobe Photoshop",
     icon: `${photoshop}`,
     des: (
@@ -250,7 +252,7 @@ export const SkillIcon = [
     ),
   },
   {
-    id: 7,
+    id: 8,
     skill: "Figma",
     icon: `${figma}`,
     des: (

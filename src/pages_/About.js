@@ -12,13 +12,13 @@ const About = ({ scrollRef, handleScrollView }) => {
     <div className="About">
       <Navigation handleScrollView={handleScrollView} />
       <Intro />
-      <div ref={(el) => (scrollRef.current[0] = el)}>
+      <div className="about_box" ref={(el) => (scrollRef.current[0] = el)}>
         <Skill skillIcon={SkillIcon} />
       </div>
-      <div ref={(el) => (scrollRef.current[1] = el)}>
+      <div className="about_box" ref={(el) => (scrollRef.current[1] = el)}>
         <ProjectSlide />
       </div>
-      <div ref={(el) => (scrollRef.current[2] = el)}>
+      <div className="about_box" ref={(el) => (scrollRef.current[2] = el)}>
         <MyInformation />
       </div>
       <Footer />

@@ -121,18 +121,19 @@
       .skill_list {
         width: 100%;
         .skillBox {
+          width: 100%;
           .skill_items_title {
             @include boxTitle_pc();
             font-size: 24px;
           }
           .skill_items {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 20px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
             .skill_item {
-              width: 100%;
+              max-width: 207px;
               position: relative;
-              max-width: none;
+
               &:hover {
                 .skill_icon {
                   filter: brightness(25%);

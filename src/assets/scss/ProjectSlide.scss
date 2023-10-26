@@ -26,7 +26,6 @@
 .projectSlide {
   @include topContainer_mobile();
   background-color: $color_lightgray;
-  width: 100vw;
   .projectSlide_container {
     @include container_mobile();
     .projectSlide_Title {
@@ -118,7 +117,7 @@
     @include topContainer_pc();
     .projectSlide_container {
       @include container_pc();
-      .ProjectSlide_Title div h1 {
+      .projectSlide_Title div h1 {
         @include title_pc();
       }
       .moveBtn {

@@ -1,9 +1,8 @@
-import "../assets/scss/MyInformation.scss";
-
 import { FaGithub } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiPhone, BiCalendarAlt } from "react-icons/bi";
 import { SiVelog } from "react-icons/si";
+import "../assets/scss/MyInformation.scss";
 
 const MyInformation = () => {
   return (
@@ -14,7 +13,7 @@ const MyInformation = () => {
         </div>
         <section className="about_content">
           <article className="about_personal">
-            <h3>장유진</h3>
+            <h2>장유진</h2>
             <ul className="about_personalBox">
               <li>
                 <BiCalendarAlt />

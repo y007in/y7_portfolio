@@ -37,9 +37,7 @@ const ProjectSlide = () => {
               onMouseEnter={onStop}
               onMouseLeave={onRun}
             >
-              <div
-                className={["slide origin", animate ? "" : "stop"].join(" ")}
-              >
+              <div className={`slide origin ${animate ? "" : "stop"}`}>
                 {ProjectData.map((p, i) => (
                   <li
                     className="item_list"
@@ -59,7 +57,7 @@ const ProjectSlide = () => {
                   </li>
                 ))}
               </div>
-              <div className={["slide clone", animate ? "" : "stop"].join(" ")}>
+              <div className={`slide clone ${animate ? "" : "stop"}`}>
                 {ProjectData.map((p, i) => (
                   <li
                     className="item_list"

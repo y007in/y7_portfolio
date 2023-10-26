@@ -6,11 +6,7 @@ const Intro = () => {
   const [isOpenPage, setIsOpenPage] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > window.innerHeight) {
-      setIsOpenPage(false);
-    } else {
-      setIsOpenPage(true);
-    }
+    setIsOpenPage(window.scrollY < window.innerHeight);
   };
 
   useEffect(() => {

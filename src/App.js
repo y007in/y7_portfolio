@@ -1,12 +1,12 @@
-import "./App.scss";
-import { Routes, Route } from "react-router-dom";
 import { useState, useRef, useEffect, useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Routes, Route } from "react-router-dom";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
 import About from "./pages/About";
 import Project from "./pages/Project";
 import ProjectDetail from "./pages/ProjectDetail";
-import { useDispatch, useSelector } from "react-redux";
+import "./App.scss";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -51,29 +51,30 @@ function App() {
     setIsMenuAct(name);
   };
 
-  useEffect(() => {
-    const handleShowButton = () => {
-      const scrollY = window.scrollY;
-      const windowHeight = window.innerHeight;
+  const handleShowButton = () => {
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
 
-      if (scrollY < windowHeight) {
-        setShowButton(false);
-        if (showNav) {
-          setShowNav();
-        }
-        setIsMenuAct("");
-      } else if (scrollY < windowHeight * 2) {
-        setShowButton(true);
-        if (!showNav) {
-          setShowNav();
-        }
-        setIsMenuAct("Skills");
-      } else if (scrollY < windowHeight * 3) {
-        setIsMenuAct("Project");
-      } else {
-        setIsMenuAct("About");
+    if (scrollY < windowHeight) {
+      setShowButton(false);
+      if (showNav) {
+        setShowNav();
       }
-    };
+      setIsMenuAct("");
+    } else if (scrollY < windowHeight * 2) {
+      setShowButton(true);
+      if (!showNav) {
+        setShowNav();
+      }
+      setIsMenuAct("Skills");
+    } else if (scrollY < windowHeight * 3) {
+      setIsMenuAct("Project");
+    } else {
+      setIsMenuAct("About");
+    }
+  };
+
+  useEffect(() => {
     handleShowButton();
 
     window.addEventListener("scroll", handleShowButton);

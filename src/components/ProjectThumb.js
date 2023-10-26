@@ -10,7 +10,7 @@ const ProjectThumb = ({ id, image, name, team, skill }) => {
     <section className="projectThumb" onClick={goDetail}>
       <article className="project_img">
         <img src={image} />
-      </article>{" "}
+      </article>
       <article className="project_desc">
         <ul>
           <li className="title">

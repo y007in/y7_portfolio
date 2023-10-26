@@ -3,9 +3,9 @@ import { Routes, Route } from "react-router-dom";
 import { useState, useRef, useEffect, useCallback } from "react";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
-import About from "./pages_/About";
-import Project from "./pages_/Project";
-import ProjectDetail from "./pages_/ProjectDetail";
+import About from "./pages/About";
+import Project from "./pages/Project";
+import ProjectDetail from "./pages/ProjectDetail";
 import { useDispatch, useSelector } from "react-redux";
 
 function App() {

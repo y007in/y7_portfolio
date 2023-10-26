@@ -1,16 +1,30 @@
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
 import About from "./pages_/About";
 import Project from "./pages_/Project";
 import ProjectDetail from "./pages_/ProjectDetail";
+import { useDispatch, useSelector } from "react-redux";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
-  const [showNav, setShowNav] = useState(false);
-  const [isMenuAct, setIsMenuAct] = useState("");
+
+  const dispatch = useDispatch();
+  const showNav = useSelector((state) => state.showNav);
+  const setShowNav = useCallback(() => {
+    dispatch({
+      type: "SET_SHOW_NAV",
+    });
+  }, [dispatch]);
+
+  const setIsMenuAct = useCallback(
+    (menuAct) => {
+      dispatch({ type: "SET_MENU_ACT", payload: menuAct });
+    },
+    [dispatch]
+  );
 
   const MoveToTop = () => {
     window.scrollTo({
@@ -21,6 +35,7 @@ function App() {
   };
 
   const scrollRef = useRef([]);
+
   const handleScrollView = (e) => {
     const name = e.target.innerText;
     const category = {
@@ -33,8 +48,9 @@ function App() {
         behavior: "smooth",
       });
     }
-    setIsMenuAct(e.target.innerText);
+    setIsMenuAct(name);
   };
+
   useEffect(() => {
     const handleShowButton = () => {
       const scrollY = window.scrollY;
@@ -42,11 +58,15 @@ function App() {
 
       if (scrollY < windowHeight) {
         setShowButton(false);
-        setShowNav(false);
+        if (showNav) {
+          setShowNav();
+        }
         setIsMenuAct("");
       } else if (scrollY < windowHeight * 2) {
         setShowButton(true);
-        setShowNav(true);
+        if (!showNav) {
+          setShowNav();
+        }
         setIsMenuAct("Skills");
       } else if (scrollY < windowHeight * 3) {
         setIsMenuAct("Project");
@@ -54,14 +74,13 @@ function App() {
         setIsMenuAct("About");
       }
     };
-
     handleShowButton();
 
     window.addEventListener("scroll", handleShowButton);
     return () => {
       window.removeEventListener("scroll", handleShowButton);
     };
-  }, []);
+  }, [showNav, setIsMenuAct, setShowNav]);
 
   return (
     <div className="App">
@@ -69,13 +88,7 @@ function App() {
         <Route
           path="/"
           element={
-            <About
-              showNav={showNav}
-              isMenuAct={isMenuAct}
-              scrollRef={scrollRef}
-              handleScrollView={handleScrollView}
-              MoveToTop={MoveToTop}
-            />
+            <About scrollRef={scrollRef} handleScrollView={handleScrollView} />
           }
         ></Route>
         <Route path="/project" element={<Project />}></Route>

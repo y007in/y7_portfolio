@@ -7,21 +7,10 @@ import Skill from "../components_/Skill";
 import Intro from "../components_/Intro";
 import ProjectSlide from "../components_/ProjectSlide";
 
-const About = ({
-  showNav,
-  isMenuAct,
-  scrollRef,
-  handleScrollView,
-  MoveToTop,
-}) => {
+const About = ({ scrollRef, handleScrollView }) => {
   return (
     <div className="About">
-      <Navigation
-        showNav={showNav}
-        handleScrollView={handleScrollView}
-        isMenuAct={isMenuAct}
-        MoveToTop={MoveToTop}
-      />
+      <Navigation handleScrollView={handleScrollView} />
       <Intro />
       <div ref={(el) => (scrollRef.current[0] = el)}>
         <Skill skillIcon={SkillIcon} />

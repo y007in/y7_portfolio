@@ -1,16 +1,31 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
 
 import "../assets/scss/Navigation.scss";
 
-const Navigation = ({ showNav, handleScrollView, isMenuAct, MoveToTop }) => {
+const Navigation = ({ handleScrollView }) => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
   const currentPath = location.pathname;
-
   const [showSubNav, setShowSubNav] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const showNav = useSelector((state) => state.showNav);
+  const isMenuAct = useSelector((state) => state.isMenuAct);
+
+  const setIsMenuAct = (menuAct) => {
+    dispatch({ type: "SET_MENU_ACT", payload: menuAct });
+  };
+
+  const MoveToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    setIsMenuAct("");
+  };
 
   useEffect(() => {
     const handleResize = () => {

@@ -113,6 +113,7 @@ export const ProjectData = [
       <>
         <li>React</li>
         <li>SCSS</li>
+        <li>Redux</li>
       </>
     ),
     func: (

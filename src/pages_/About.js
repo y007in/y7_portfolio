@@ -1,11 +1,11 @@
 import { SkillIcon } from "../assets/projectdata";
 
-import Navigation from "../components_/Navigation";
-import MyInformation from "../components_/MyInformation";
-import Footer from "../components_/Footer";
-import Skill from "../components_/Skill";
-import Intro from "../components_/Intro";
-import ProjectSlide from "../components_/ProjectSlide";
+import Navigation from "../components/Navigation";
+import MyInformation from "../components/MyInformation";
+import Footer from "../components/Footer";
+import Skill from "../components/Skill";
+import Intro from "../components/Intro";
+import ProjectSlide from "../components/ProjectSlide";
 
 const About = ({ scrollRef, handleScrollView }) => {
   return (

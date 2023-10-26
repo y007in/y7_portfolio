@@ -123,7 +123,9 @@ export const ProjectData = [
           BrowerRouter를 활용해 각 페이지들이 서로 다른 URL에서 렌더링되도록
           설정
         </li>
-        <li>useRef로 원하는 이동하거나 선택했을 시 해당 페이지로 이동</li>
+        <li>
+          useRef로 원하는 페이지 이동하거나 선택했을 시 해당 페이지로 이동
+        </li>
         <li>Redux를 활용한 컴포넌트간의 상태관리</li>
       </>
     ),
@@ -214,7 +216,7 @@ export const SkillIcon = [
     icon: `${redux}`,
     des: (
       <>
-        <li>리덕스를 이용한 상태관리를 이용한 경험이 있습니다.</li>
+        <li>리덕스를 이용한 상태관리를 한 경험이 있습니다.</li>
       </>
     ),
   },

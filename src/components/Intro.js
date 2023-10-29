@@ -17,26 +17,22 @@ const Intro = () => {
 
   return (
     <div className="intro">
-      <div className="intro_container">
-        <div className="intro_txt">
+      <section className="intro_container">
+        <article className="intro_txt">
           <span>안녕하세요.</span>
-          <div>
-            <div className={`front_end ${isOpenPage ? "isActive" : ""}`}>
-              소통하며 협력하는 개발자
+          <span className={`developer ${isOpenPage ? "isActive" : ""}`}>
+            소통하며 협력하는 개발자
+          </span>
+          <div className="box_introName">
+            <div className={`intro_name ${isOpenPage ? "isActive" : ""}`}>
+              <span>장</span>
+              <span>유</span>
+              <span>진</span>
             </div>
+            <span>입니다.</span>
           </div>
-          <div>
-            <div style={{ display: "flex" }}>
-              <div className={`intro_name ${isOpenPage ? "isActive" : ""}`}>
-                <span>장</span>
-                <span>유</span>
-                <span>진</span>
-              </div>
-              <span>입니다.</span>
-            </div>
-          </div>
-        </div>
-      </div>
+        </article>
+      </section>
     </div>
   );
 };

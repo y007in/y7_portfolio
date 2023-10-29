@@ -8,15 +8,18 @@ const ProjectItem = ({ projectId }) => {
   const navigate = useNavigate();
   return (
     <div className="projectItem">
-      <div className="project_container">
-        <div className="project_title">
+      <section className="project_container">
+        <header className="title">
           <h1>{ProjectData[projectId].name}</h1>
           <span className="team">{ProjectData[projectId].team}</span>
-        </div>
-        <main className="project_content">
+        </header>
+        <div className="item_box">
           <section className="project_left">
             <div className="project_img">
-              <img src={ProjectData[projectId].image} />
+              <img
+                src={ProjectData[projectId].image}
+                alt={ProjectData[projectId].id}
+              />
             </div>
             <div className="project_des">{ProjectData[projectId].des}</div>
             <div className="buttons">
@@ -52,8 +55,8 @@ const ProjectItem = ({ projectId }) => {
               </div>
             </div>
           </section>
-        </main>
-      </div>
+        </div>
+      </section>
       <button className="back_project" onClick={() => navigate("/project")}>
         목록으로 돌아가기
       </button>

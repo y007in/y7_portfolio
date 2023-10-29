@@ -166,101 +166,131 @@ export const ProjectData = [
   },
 ];
 
-export const SkillIcon = [
-  {
-    id: 0,
-    skill: "HTML5",
-    icon: `${html5}`,
-    des: (
-      <>
-        <li>반응형 웹을 제작할 수 있습니다.</li>
-        <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
-      </>
-    ),
-  },
-  {
-    id: 1,
-    skill: "CSS3 (SCSS)",
-    icon: `${CSS3}`,
-    des: (
-      <>
-        <li>CSS3를 활용하여 원하는 화면을 구성할 수 있습니다.</li>
-        <li>Sass 같은 CSS Preprocessor를 사용할 수 있습니다. </li>
-      </>
-    ),
-  },
-  {
-    id: 2,
-    skill: "JavaScript",
-    icon: `${js}`,
-    des: (
-      <>
-        <li>JavaScript 문법을 이해하며 다양한 상황에 적용 가능합니다.</li>
-      </>
-    ),
-  },
-  {
-    id: 3,
-    skill: "React",
-    icon: `${react}`,
-    des: (
-      <>
-        <li>react-styled component를 활용한 css개발이 가능합니다.</li>
-        <li>hooks의 대한 기초지식을 활용하여 화면을 제작합니다.</li>
-      </>
-    ),
-  },
-  {
-    id: 4,
-    skill: "Redux",
-    icon: `${redux}`,
-    des: (
-      <>
-        <li>리덕스를 이용한 상태관리를 한 경험이 있습니다.</li>
-      </>
-    ),
-  },
-  {
-    id: 5,
-    skill: "TypeScript",
-    icon: `${typescript}`,
-    des: (
-      <>
-        <li>타입스크립트를 이용해서 프로젝트를 만들어본 경험이 있습니다.</li>
-      </>
-    ),
-  },
+export const SkillData = [
+  [
+    {
+      id: 0,
+      skill: "HTML5",
+      icon: `${html5}`,
+      des: (
+        <>
+          <li>반응형 웹을 제작할 수 있습니다.</li>
+          <li>시멘틱 구조를 활용한 HTML코드를 작성할 수 있습니다.</li>
+        </>
+      ),
+    },
+    {
+      id: 1,
+      skill: "CSS3 (SCSS)",
+      icon: `${CSS3}`,
+      des: (
+        <>
+          <li>CSS3를 활용하여 원하는 화면을 구성할 수 있습니다.</li>
+          <li>Sass 같은 CSS Preprocessor를 사용할 수 있습니다. </li>
+        </>
+      ),
+    },
+    {
+      id: 2,
+      skill: "JavaScript",
+      icon: `${js}`,
+      des: (
+        <>
+          <li>JavaScript 문법을 이해하며 다양한 상황에 적용 가능합니다.</li>
+        </>
+      ),
+    },
+    {
+      id: 3,
+      skill: "React",
+      icon: `${react}`,
+      des: (
+        <>
+          <li>react-styled component를 활용한 css개발이 가능합니다.</li>
+          <li>hooks의 대한 기초지식을 활용하여 화면을 제작합니다.</li>
+        </>
+      ),
+    },
+    {
+      id: 4,
+      skill: "Redux",
+      icon: `${redux}`,
+      des: (
+        <>
+          <li>리덕스를 이용한 상태관리를 한 경험이 있습니다.</li>
+        </>
+      ),
+    },
+    {
+      id: 5,
+      skill: "TypeScript",
+      icon: `${typescript}`,
+      des: (
+        <>
+          <li>타입스크립트를 이용해서 프로젝트를 만들어본 경험이 있습니다.</li>
+        </>
+      ),
+    },
+  ],
+  [
+    {
+      id: 0,
+      skill: "Adobe Illustrator",
+      icon: `${illustrator}`,
+      des: (
+        <>
+          <li>다양한 도구들을 이용해 디자인 요소를 제작할 수 있습니다.</li>
+          <li>다양한 아이콘들과 포스터, 팜플렛 등을 제작한 경험이 있습니다.</li>
+        </>
+      ),
+    },
+    {
+      id: 1,
+      skill: "Adobe Photoshop",
+      icon: `${photoshop}`,
+      des: (
+        <>
+          <li>기초적인 이미지 편집이 가능합니다.</li>
+          <li>타임라인을 활용하여 애니메이션 GIF를 제작할 수 있습니다.</li>
+        </>
+      ),
+    },
+    {
+      id: 2,
+      skill: "Figma",
+      icon: `${figma}`,
+      des: (
+        <>
+          <li>데스크탑, 모바일 UI/UX 시안을 작업할 수 있습니다.</li>
+        </>
+      ),
+    },
+  ],
+];
 
-  {
-    id: 6,
-    skill: "Adobe Illustrator",
-    icon: `${illustrator}`,
-    des: (
-      <>
-        <li>다양한 도구들을 이용해 디자인 요소를 제작할 수 있습니다.</li>
-        <li>다양한 아이콘들과 포스터, 팜플렛 등을 제작한 경험이 있습니다.</li>
-      </>
-    ),
-  },
-  {
-    id: 7,
-    skill: "Adobe Photoshop",
-    icon: `${photoshop}`,
-    des: (
-      <>
-        <li>기초적인 이미지 편집이 가능합니다.</li>
-        <li>타임라인을 활용하여 애니메이션 GIF를 제작할 수 있습니다.</li>
-      </>
-    ),
-  },
-  {
-    id: 8,
-    skill: "Figma",
-    icon: `${figma}`,
-    des: (
-      <>
-        <li>데스크탑, 모바일 UI/UX 시안을 작업할 수 있습니다.</li>
-      </>
-    ),
-  },
+export const EduAct = [
+  [
+    {
+      id: 0,
+      date: "2023.03 - 2023.08",
+      content: "웹퍼블리셔&리액트 활용 프론트엔드 웹 SW 개발자 과정",
+    },
+    {
+      id: 1,
+      date: "2019.03 - 2024.02",
+      content: "국립안동대학교 멀티미디어공학과 졸업 예정",
+    },
+    {
+      id: 2,
+      date: "2014.03 - 2017.02",
+      content: "신목고등학교 졸업",
+    },
+  ],
+  [
+    {
+      id: 0,
+      date: "2022.09 - 2022.11",
+      content: " 네이버 웨일 대학생 서포터즈 '웨일대학' 개발 직군",
+    },
+  ],
 ];

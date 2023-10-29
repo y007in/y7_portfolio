@@ -1,140 +1,143 @@
 @import "../scss/variables.scss";
 .projectItem {
-  @include topContainer_mobile();
+  @include main();
+  height: 100vh;
   margin-bottom: 40px;
   .project_container {
     @include container_mobile();
     padding-top: 20px;
-    .project_title {
+    .title {
       display: flex;
-      align-items: flex-end;
-      margin: 10px 0;
+      align-items: center;
       h1 {
-        font-size: 26px;
+        @include title_mobile();
       }
       .team {
         font-size: 16px;
         margin: 0 5px;
-        margin-bottom: 4px;
+        margin-bottom: 5px;
       }
     }
-    .project {
-      &_left {
-        display: flex;
-        flex-direction: column;
-        .project_img {
-          position: relative;
-          width: 100%;
-          height: 0;
-          padding-bottom: 56.26%;
-          margin-bottom: 10px;
-          overflow: hidden;
-          border: 1px solid $color_gray;
-          border-radius: 5px;
-          img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-          }
-        }
-        .project_des {
-          width: 100%;
-          height: auto;
-          padding: 10px;
-          border-radius: 5px;
-          line-height: 23px;
-          background-color: $color_lightgray;
-          font-size: 14px;
-        }
-        .buttons {
+    .item_box {
+      display: flex;
+      flex-direction: column;
+      .project {
+        &_left {
           display: flex;
-          gap: 10px;
-          width: 100%;
-          text-align: center;
-          background-color: $color_white;
-          margin: 10px 0;
-          a {
+          flex-direction: column;
+          .project_img {
+            position: relative;
             width: 100%;
-            .button {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 100%;
-              border: none;
-              background-color: $color_main;
-              padding: 10px 20px;
-              border-radius: 5px;
-              color: $color_white;
-              transition: 0.2s;
-              font-family: $font_eng;
-              font-size: 14px;
-              font-weight: 500;
-              cursor: pointer;
-              &:hover {
-                background-color: $color_sub;
-              }
-              svg {
-                margin-right: 5px;
-              }
-            }
-          }
-        }
-      }
-      &_right {
-        display: flex;
-        flex-direction: column;
-        .project {
-          &_date,
-          &_skill,
-          &_func {
-            margin: 10px 0;
-          }
-        }
-        .des {
-          &_title {
-            @include boxTitle_mobile();
-            float: left;
-          }
-          &_content {
-            clear: both;
-            float: left;
-            // background-color: $color_lightgray;
-            padding: 8px;
+            height: 0;
+            padding-bottom: 56.26%;
+            margin-bottom: 10px;
+            overflow: hidden;
+            border: 1px solid $color_gray;
             border-radius: 5px;
-            line-height: 150%;
-            font-size: 16px;
-
-            ul li {
-              margin: 0 5px;
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
             }
           }
-        }
-        .project_date .des_content {
-          margin-left: 5px;
-        }
-        .project_skill .des_content ul {
-          display: flex;
-          flex-wrap: wrap;
-          li {
-            &::after {
-              content: " ,";
-            }
-            &:last-child {
-              &::after {
-                content: "";
+          .project_des {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            border-radius: 5px;
+            line-height: 23px;
+            background-color: $color_lightgray;
+            font-size: 14px;
+          }
+          .buttons {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            text-align: center;
+            background-color: $color_white;
+            margin: 10px 0;
+            a {
+              width: 100%;
+              .button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                border: none;
+                background-color: $color_main;
+                padding: 10px 20px;
+                border-radius: 5px;
+                color: $color_white;
+                transition: 0.2s;
+                font-family: $font_eng;
+                font-size: 14px;
+                font-weight: 500;
+                cursor: pointer;
+                &:hover {
+                  background-color: $color_sub;
+                }
+                svg {
+                  margin-right: 5px;
+                }
               }
             }
           }
         }
-        .project_func .des_content li {
-          list-style-type: circle;
-          margin-left: 30px;
-          margin-bottom: 5px;
-          line-height: 170%;
-          ul li {
-            list-style-type: disc;
+        &_right {
+          display: flex;
+          flex-direction: column;
+          .project {
+            &_date,
+            &_skill,
+            &_func {
+              margin: 10px 0;
+            }
+          }
+          .des {
+            &_title {
+              @include boxTitle_mobile();
+              float: left;
+            }
+            &_content {
+              clear: both;
+              float: left;
+              padding: 8px;
+              border-radius: 5px;
+              line-height: 150%;
+              font-size: 16px;
+
+              ul li {
+                margin: 0 5px;
+              }
+            }
+          }
+          .project_date .des_content {
+            margin-left: 5px;
+          }
+          .project_skill .des_content ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+              &::after {
+                content: " ,";
+              }
+              &:last-child {
+                &::after {
+                  content: "";
+                }
+              }
+            }
+          }
+          .project_func .des_content li {
+            list-style-type: circle;
+            margin-left: 30px;
+            margin-bottom: 5px;
+            line-height: 170%;
+            ul li {
+              list-style-type: disc;
+            }
           }
         }
       }
@@ -157,7 +160,6 @@
 
 @media all and (min-width: 1024px) {
   .projectItem {
-    @include topContainer_pc();
     padding-top: 50px;
     .project_container {
       @include container_pc();
@@ -165,7 +167,7 @@
       border: 1px dashed $color_main;
       border-radius: 10px;
       padding: 50px 80px;
-      .project_title {
+      .title {
         margin-top: 0;
         h1 {
           font-size: 36px;
@@ -176,11 +178,9 @@
           margin-bottom: 5px;
         }
       }
-      .project_content {
-        width: 100%;
-        display: flex;
-        gap: 40px;
-        margin: 0;
+      .item_box {
+        flex-direction: row;
+        gap: 20px;
         .project {
           &_left {
             flex: 3;
@@ -228,9 +228,9 @@
         }
       }
     }
-    .back_project {
-      font-size: 16px;
-      padding: 10px 20px;
-    }
+  }
+  .back_project {
+    font-size: 16px;
+    padding: 10px 20px;
   }
 }

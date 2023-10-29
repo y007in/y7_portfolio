@@ -9,16 +9,16 @@ const ProjectThumb = ({ id, image, name, team, skill }) => {
   return (
     <section className="projectThumb" onClick={goDetail}>
       <article className="project_img">
-        <img src={image} />
+        <img src={image} alt={id} />
       </article>
       <article className="project_desc">
         <ul>
-          <li className="title">
+          <li className="project_title">
             <span className="name">{name}</span>
             <span>{team}</span>
           </li>
           <li className="thumb_des">
-            <ul className="skill">{skill}</ul>
+            <ul className="skill_list">{skill}</ul>
           </li>
         </ul>
       </article>

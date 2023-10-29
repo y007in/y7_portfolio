@@ -51,30 +51,29 @@ function App() {
     setIsMenuAct(name);
   };
 
-  const handleShowButton = () => {
-    const scrollY = window.scrollY;
-    const windowHeight = window.innerHeight;
-
-    if (scrollY < windowHeight) {
-      setShowButton(false);
-      if (showNav) {
-        setShowNav();
-      }
-      setIsMenuAct("");
-    } else if (scrollY < windowHeight * 2) {
-      setShowButton(true);
-      if (!showNav) {
-        setShowNav();
-      }
-      setIsMenuAct("Skills");
-    } else if (scrollY < windowHeight * 3) {
-      setIsMenuAct("Project");
-    } else {
-      setIsMenuAct("About");
-    }
-  };
-
   useEffect(() => {
+    const handleShowButton = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      if (scrollY < windowHeight) {
+        setShowButton(false);
+        if (showNav) {
+          setShowNav();
+        }
+        setIsMenuAct("");
+      } else if (scrollY < windowHeight * 2) {
+        setShowButton(true);
+        if (!showNav) {
+          setShowNav();
+        }
+        setIsMenuAct("Skills");
+      } else if (scrollY < windowHeight * 3) {
+        setIsMenuAct("Project");
+      } else {
+        setIsMenuAct("About");
+      }
+    };
     handleShowButton();
 
     window.addEventListener("scroll", handleShowButton);

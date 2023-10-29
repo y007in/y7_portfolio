@@ -22,7 +22,7 @@
 }
 
 .intro {
-  @include topContainer_mobile();
+  @include main();
   height: 100vh;
   justify-content: center;
   .intro_container {
@@ -30,6 +30,8 @@
     justify-content: center;
     align-items: center;
     .intro_txt {
+      display: flex;
+      flex-direction: column;
       font-size: 40px;
       font-weight: bold;
       line-height: 130%;
@@ -37,7 +39,7 @@
         color: $color_darkgray;
         padding: 0 5px;
       }
-      .front_end {
+      .developer {
         font-size: 40px;
         display: inline-block;
         position: relative;
@@ -57,13 +59,16 @@
           transition: 1s all;
         }
       }
-      .intro_name span {
-        font-size: 41px;
-        padding: 0;
-        color: $color_main;
-        position: relative;
+      .box_introName {
+        display: flex;
+        .intro_name span {
+          font-size: 41px;
+          padding: 0;
+          color: $color_main;
+          position: relative;
+        }
       }
-      .isActive.front_end::after {
+      .isActive.developer::after {
         content: "";
         width: 100%;
       }
@@ -84,12 +89,11 @@
 
 @media all and (min-width: 1024px) {
   .intro {
-    @include topContainer_pc();
     .intro_container {
       @include container_pc();
       .intro_txt {
         font-size: 85px;
-        .front_end {
+        .developer {
           padding: 3px 10px 15px 10px;
           line-height: 100%;
           font-size: 90px;
@@ -98,7 +102,7 @@
             height: 50px;
           }
         }
-        .intro_name span {
+        .box_introName .intro_name span {
           font-size: 90px;
         }
       }

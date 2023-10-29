@@ -30,7 +30,7 @@
     display: flex;
 
     ul {
-      .title {
+      .project_title {
         margin-bottom: 5px;
         margin-top: 8px;
         span {
@@ -45,7 +45,7 @@
         }
       }
       .thumb_des {
-        .skill {
+        .skill_list {
           width: 100%;
           display: flex;
           flex-wrap: wrap;
@@ -80,12 +80,12 @@
     &:hover .project_img {
       border: 2px solid $color_gray;
     }
-    &:hover .project_desc ul .title span.name::after {
+    &:hover .project_desc ul .project_title span.name::after {
       width: 100%;
     }
     .project_desc {
       ul {
-        .title {
+        .project_title {
           margin-bottom: 0;
           span {
             padding: 3px 0 3px 8px;
@@ -118,7 +118,7 @@
         }
 
         .thumb_des {
-          .skill {
+          .skill_list {
             margin: 0px 0 8px 3px;
             gap: 5px;
             li {

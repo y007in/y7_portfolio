@@ -1,11 +1,12 @@
 @import "../scss/variables.scss";
 
 .projectList {
-  @include topContainer_mobile();
+  @include main();
   .projectList_container {
-    // padding-top: 20px;
     @include container_mobile();
-    .projectList_Title {
+    width: 100vw;
+
+    .title {
       display: flex;
       flex-direction: column;
       margin-bottom: 20px;
@@ -20,7 +21,6 @@
     .projects {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-      // border: 1px solid $color_main;
       gap: 20px;
     }
   }
@@ -28,13 +28,10 @@
 
 @media all and (min-width: 1024px) {
   .projectList {
-    @include topContainer_pc();
-    height: calc(100% - 500px);
-    padding: 0;
     .projectList_container {
       @include container_pc();
-      padding-top: 50px;
-      .projectList_Title {
+      padding-top: 30px;
+      .title {
         justify-content: center;
         align-items: center;
         margin-bottom: 35px;

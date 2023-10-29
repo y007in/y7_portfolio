@@ -16,56 +16,62 @@ $color_point: #00a4c8;
 $font_kor: "Noto Sans KR", sans-serif;
 $font_eng: "Encode Sans", sans-serif;
 
-//mobile
-@mixin topContainer_mobile() {
+@mixin main() {
   width: 100%;
-  // height: calc(100% - 50px);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 30px 0;
+  // border: 1px solid red;
 }
+
+//mobile
 @mixin container_mobile() {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  padding: 20px;
+  // border: 1px solid blue;
 }
 
 @mixin title_mobile() {
-  font-size: 30px;
+  font-size: 36px;
   margin-bottom: 8px;
   font-family: $font_eng;
+}
+
+@mixin title_desc_mobile() {
+  font-size: 12px;
+  color: $color_darkgray;
+  margin-left: 5px;
 }
 
 @mixin boxTitle_mobile() {
   clear: both;
   background-color: $color_gray;
   padding: 6px 12px;
-  margin-top: 10px;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 500;
 }
 
 //pc
-@mixin topContainer_pc() {
-  align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 220px);
-  padding: 100px 0;
-}
+
 @mixin container_pc() {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 0 5%;
+  max-width: 1280px;
 }
 
 @mixin title_pc() {
   font-size: 48px;
 }
 
+@mixin title_desc_pc() {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
 @mixin boxTitle_pc() {
-  padding: 6px 15px;
-  margin-top: 0;
+  padding: 8px 16px;
   font-size: 18px;
 }
 

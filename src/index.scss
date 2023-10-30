@@ -6,8 +6,11 @@
   box-sizing: border-box;
   color: $color_black;
   font-family: $font_kor;
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
 }
-li {
+* li {
   list-style: none;
 }
 a {

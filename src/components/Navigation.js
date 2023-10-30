@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
@@ -11,7 +11,7 @@ const Navigation = ({ handleScrollView }) => {
   const location = useLocation();
   const currentPath = location.pathname;
   const [showSubNav, setShowSubNav] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   const showNav = useSelector((state) => state.showNav);
   const isMenuAct = useSelector((state) => state.isMenuAct);
 
@@ -27,17 +27,6 @@ const Navigation = ({ handleScrollView }) => {
     setIsMenuAct("");
   };
 
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   const subNav = () => {
     setShowSubNav(!showSubNav);
   };
@@ -47,82 +36,49 @@ const Navigation = ({ handleScrollView }) => {
     if (currentPath === "/") MoveToTop();
   };
 
-  let content = null;
-  if (windowWidth <= 1024) {
-    content = (
-      <div className={`navigation_mobile ${showNav ? "" : "show"}`}>
-        <div className="main_nav">
-          <div className="name" onClick={handlerName}>
-            JangYooJin
-          </div>
-          {currentPath === "/" && (
+  return (
+    <nav className={`navigation ${showNav ? "" : "show"}`}>
+      <div className="main_nav">
+        <header className="name" onClick={handlerName}>
+          JangYooJin
+        </header>
+        {currentPath === "/" && (
+          <article className="subMenu">
             <div className="menuList" onClick={subNav}>
               {showSubNav ? <FaTimes /> : <FaBars />}
             </div>
-          )}
-        </div>
-        {currentPath === "/" && showSubNav && (
-          <div className="gnb" onClick={subNav}>
-            <ul onClick={handleScrollView}>
-              <li className={`menu ${isMenuAct === "Skills" ? " active" : ""}`}>
-                Skills
-              </li>
-              <li
-                className={`menu ${isMenuAct === "Project" ? " active" : ""}`}
-              >
-                Project
-              </li>
-              <li className={`menu ${isMenuAct === "About" ? " active" : ""}`}>
-                About
-              </li>
-              <li
-                className="menu"
-                onClick={() =>
-                  window.open("https://github.com/y007in", "_blank")
-                }
-              >
-                <FaGithub />
-              </li>
-            </ul>
-          </div>
+            <div className={`gnb ${showSubNav ? "" : "hide"}`} onClick={subNav}>
+              <ul onClick={handleScrollView}>
+                <li
+                  className={`menu ${isMenuAct === "Skills" ? " active" : ""}`}
+                >
+                  Skills
+                </li>
+                <li
+                  className={`menu ${isMenuAct === "Project" ? " active" : ""}`}
+                >
+                  Project
+                </li>
+                <li
+                  className={`menu ${isMenuAct === "About" ? " active" : ""}`}
+                >
+                  About
+                </li>
+                <li
+                  className="menu"
+                  onClick={() =>
+                    window.open("https://github.com/y007in", "_blank")
+                  }
+                >
+                  <FaGithub />
+                </li>
+              </ul>
+            </div>
+          </article>
         )}
       </div>
-    );
-  } else {
-    content = (
-      <div className={`navigation_pc ${showNav ? "" : "show"}`}>
-        <div className="name" onClick={handlerName}>
-          JangYooJin
-        </div>
-        {currentPath === "/" && (
-          <div className="gnb">
-            <ul onClick={handleScrollView}>
-              <li className={`menu ${isMenuAct === "Skills" ? " active" : ""}`}>
-                Skills
-              </li>
-              <li
-                className={`menu ${isMenuAct === "Project" ? " active" : ""}`}
-              >
-                Project
-              </li>
-              <li className={`menu ${isMenuAct === "About" ? " active" : ""}`}>
-                About
-              </li>
-              <li
-                className="menu"
-                onClick={() =>
-                  window.open("https://github.com/y007in", "_blank")
-                }
-              >
-                <FaGithub />
-              </li>
-            </ul>
-          </div>
-        )}
-      </div>
-    );
-  }
-  return content;
+    </nav>
+  );
 };
 
 export default Navigation;

@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
 
+import { menuItems } from "../assets/projectdata";
 import "../assets/scss/Navigation.scss";
 
 const Navigation = ({ handleScrollView }) => {
@@ -36,47 +37,46 @@ const Navigation = ({ handleScrollView }) => {
     if (currentPath === "/") MoveToTop();
   };
 
+  const handleMenuClick = (menuId) => {
+    setIsMenuAct(menuId);
+    setShowSubNav(false);
+  };
+
   return (
     <nav className={`navigation ${showNav ? "" : "show"}`}>
-      <div className="main_nav">
+      <div className="navigation_bar">
         <header className="name" onClick={handlerName}>
           JangYooJin
         </header>
         {currentPath === "/" && (
-          <article className="subMenu">
-            <div className="menuList" onClick={subNav}>
-              {showSubNav ? <FaTimes /> : <FaBars />}
-            </div>
-            <div className={`gnb ${showSubNav ? "" : "hide"}`} onClick={subNav}>
-              <ul onClick={handleScrollView}>
-                <li
-                  className={`menu ${isMenuAct === "Skills" ? " active" : ""}`}
-                >
-                  Skills
-                </li>
-                <li
-                  className={`menu ${isMenuAct === "Project" ? " active" : ""}`}
-                >
-                  Project
-                </li>
-                <li
-                  className={`menu ${isMenuAct === "About" ? " active" : ""}`}
-                >
-                  About
-                </li>
-                <li
-                  className="menu"
-                  onClick={() =>
-                    window.open("https://github.com/y007in", "_blank")
-                  }
-                >
-                  <FaGithub />
-                </li>
-              </ul>
-            </div>
-          </article>
+          <div className="menuList" onClick={subNav}>
+            {showSubNav ? <FaTimes /> : <FaBars />}
+          </div>
         )}
       </div>
+      {currentPath === "/" && (
+        <>
+          <div
+            className={`gnb ${showSubNav ? "" : "hide"}`}
+            onClick={subNav}
+          ></div>
+          <ul
+            className={`gnbList ${showSubNav ? "" : "hide"}`}
+            onClick={handleScrollView}
+          >
+            {menuItems.map((menuItem) => (
+              <li
+                key={menuItem.id}
+                className={`menu ${isMenuAct === menuItem.id ? " active" : ""}`}
+                onClick={() => handleMenuClick(menuItem.id)}
+              >
+                {menuItem.label}
+                {menuItem.id === "GitHub" && <FaGithub />}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
     </nav>
   );
 };

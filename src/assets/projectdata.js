@@ -14,6 +14,13 @@ import photoshop from "./img/photoshop.png";
 import illustrator from "./img/illustrator.png";
 import figma from "./img/figma.png";
 
+export const menuItems = [
+  { label: "Skills", id: "Skills" },
+  { label: "Project", id: "Project" },
+  { label: "About", id: "About" },
+  { label: "GitHub", id: "GitHub" },
+];
+
 export const ProjectData = [
   {
     id: 0,

@@ -18,7 +18,7 @@ export const menuItems = [
   { label: "Skills", id: "Skills" },
   { label: "Project", id: "Project" },
   { label: "About", id: "About" },
-  { label: "GitHub", id: "GitHub" },
+  { label: "", id: "GitHub" },
 ];
 
 export const ProjectData = [

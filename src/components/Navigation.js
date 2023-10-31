@@ -46,7 +46,7 @@ const Navigation = ({ scrollToSection }) => {
   return (
     <nav
       className={`navigation ${showNav ? "" : "show"} ${
-        currentPath === "/" ? "About" : ""
+        currentPath === "/" ? "about" : ""
       }`}
     >
       <div className="navigation_bar">

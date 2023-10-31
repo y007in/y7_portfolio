@@ -8,7 +8,7 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
-  .skill_des {
+  .des_mobile {
     width: 80%;
     border-radius: 5px;
     position: fixed;
@@ -43,12 +43,9 @@
 @media all and (min-width: 1024px) {
   .overlay {
     background-color: transparent;
-    .skill_des {
+    .des_mobile {
       width: 50%;
       position: absolute;
-      // top: 50%;
-      // left: 50%;
-      // transform: translate(-50%, -50%);
       background-color: $color_main;
       padding: 20px;
       .modal_skill_title {

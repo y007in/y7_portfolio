@@ -1,18 +1,19 @@
 @import "../scss/variables.scss";
 .projectItem {
   @include main();
+  padding: 40px 0 0 0;
   .project_container {
     @include container_mobile();
     .title {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
+      margin-bottom: 10px;
       h1 {
-        @include title_mobile();
+        font-size: 28px;
       }
       .team {
         font-size: 16px;
         margin: 0 5px;
-        margin-bottom: 5px;
       }
     }
     .item_box {
@@ -85,72 +86,53 @@
         &_right {
           display: flex;
           flex-direction: column;
-          .project {
-            &_date,
-            &_skill,
-            &_func {
-              margin: 10px 0;
-            }
-          }
-          .des {
-            &_title {
-              @include boxTitle_mobile();
-              float: left;
-            }
-            &_content {
-              clear: both;
-              float: left;
-              padding: 8px;
-              border-radius: 5px;
-              line-height: 150%;
-              font-size: 16px;
+          .project_section {
+            margin: 10px 0;
+            .des {
+              &_title {
+                @include boxTitle_mobile();
+                float: left;
+              }
 
-              ul li {
-                margin: 0 5px;
-              }
-            }
-          }
-          .project_date .des_content {
-            margin-left: 5px;
-          }
-          .project_skill .des_content ul {
-            display: flex;
-            flex-wrap: wrap;
-            li {
-              &::after {
-                content: " ,";
-              }
-              &:last-child {
-                &::after {
-                  content: "";
+              &_content {
+                clear: both;
+                float: left;
+                padding: 8px;
+                border-radius: 5px;
+                line-height: 150%;
+                font-size: 16px;
+                ul li {
+                  margin: 0 5px 0 0;
                 }
               }
             }
-          }
-          .project_func .des_content li {
-            list-style-type: circle;
-            margin-left: 30px;
-            margin-bottom: 5px;
-            line-height: 170%;
-            ul li {
-              list-style-type: disc;
+            &:nth-child(2) {
+              ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                  &::after {
+                    content: " ,";
+                  }
+                  &:last-child {
+                    &::after {
+                      content: "";
+                    }
+                  }
+                }
+              }
+            }
+            &:last-child {
+              ul li {
+                list-style-type: circle;
+                margin-left: 20px;
+                margin-bottom: 5px;
+                line-height: 170%;
+              }
             }
           }
         }
       }
-    }
-  }
-  .back_project {
-    border: none;
-    transition: 0.2s;
-    padding: 10px;
-    margin: 0 20px;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    &:hover {
-      background-color: $color_sub;
-      color: $color_white;
     }
   }
 }
@@ -160,12 +142,11 @@
     .project_container {
       @include container_pc();
       margin: 35px 20px;
-      border: 1px dashed $color_main;
+      border: 1px dashed $color_darkgray;
       border-radius: 10px;
       padding: 50px 80px;
       .title {
-        margin-top: 0;
-        h1 {
+        ㅋ h1 {
           font-size: 36px;
         }
         .team {
@@ -203,12 +184,8 @@
           &_right {
             flex: 2;
             .project {
-              &_date,
-              &_skill,
-              &_func {
-                margin-top: 0;
-                margin-bottom: 20px;
-              }
+              margin-top: 0;
+              margin-bottom: 20px;
             }
             .des {
               &_title {
@@ -224,9 +201,5 @@
         }
       }
     }
-  }
-  .back_project {
-    font-size: 16px;
-    padding: 10px 20px;
   }
 }

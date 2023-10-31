@@ -2,11 +2,12 @@ import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 import { menuItems } from "../assets/projectdata";
 import "../assets/scss/Navigation.scss";
 
-const Navigation = ({ handleScrollView }) => {
+const Navigation = ({ scrollToSection }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
@@ -28,11 +29,11 @@ const Navigation = ({ handleScrollView }) => {
     setIsMenuAct("");
   };
 
-  const subNav = () => {
+  const toggleSubNav = () => {
     setShowSubNav(!showSubNav);
   };
 
-  const handlerName = () => {
+  const handleBackToHome = () => {
     navigate("/");
     if (currentPath === "/") MoveToTop();
   };
@@ -43,26 +44,40 @@ const Navigation = ({ handleScrollView }) => {
   };
 
   return (
-    <nav className={`navigation ${showNav ? "" : "show"}`}>
+    <nav
+      className={`navigation ${showNav ? "" : "show"} ${
+        currentPath === "/" ? "About" : ""
+      }`}
+    >
       <div className="navigation_bar">
-        <header className="name" onClick={handlerName}>
+        <header className="name" onClick={handleBackToHome}>
           JangYooJin
         </header>
-        {currentPath === "/" && (
-          <div className="menuList" onClick={subNav}>
+        {currentPath === "/" ? (
+          <div className="menuList" onClick={toggleSubNav}>
             {showSubNav ? <FaTimes /> : <FaBars />}
           </div>
+        ) : (
+          <button
+            className="backBtn"
+            onClick={() => {
+              navigate(-1);
+            }}
+          >
+            <FaArrowLeftLong />
+            Back
+          </button>
         )}
       </div>
       {currentPath === "/" && (
         <>
           <div
             className={`gnb ${showSubNav ? "" : "hide"}`}
-            onClick={subNav}
+            onClick={toggleSubNav}
           ></div>
           <ul
             className={`gnbList ${showSubNav ? "" : "hide"}`}
-            onClick={handleScrollView}
+            onClick={scrollToSection}
           >
             {menuItems.map((menuItem) => (
               <li

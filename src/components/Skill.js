@@ -4,10 +4,13 @@ import SkillModal from "./SkillModal";
 import "../assets/scss/Skill.scss";
 
 const Skill = ({ SkillData }) => {
-  const [expandedItem, setExpandedItem] = useState(null);
+  const [expandedItem, setExpandedItem] = useState({});
 
-  const handleClick = (i) => {
-    setExpandedItem(i === expandedItem ? null : i);
+  const handleSkillClick = (i, j) => {
+    setExpandedItem((prev) => ({
+      ...prev,
+      [i]: prev[i] === j ? null : j,
+    }));
   };
 
   return (
@@ -23,24 +26,23 @@ const Skill = ({ SkillData }) => {
               {i === 0 ? "Front-end" : "Etc"}
             </div>
             <div className="skill_items">
-              {skillItem.map((item, i) => (
+              {skillItem.map((item, j) => (
                 <div
                   className="skill_item"
-                  key={i}
-                  onClick={() => handleClick(i)}
+                  key={j}
+                  onClick={() => handleSkillClick(i, j)}
                 >
                   <div className="skill_icon">
                     <img src={item.icon} alt={`${item.skill} icon`} />
                   </div>
-                  <div className="skill_des_pc">
-                    <ul>{item.des}</ul>
+                  <div className="skill_des">
+                    {expandedItem[i] === j && (
+                      <SkillModal key={j} des={item.des} skill={item.skill} />
+                    )}
+
+                    <ul className="des_pc">{item.des}</ul>
                   </div>
                   <p className="skill_name">{item.skill}</p>
-                  <div className="skill_des_mobile">
-                    {expandedItem === i && (
-                      <SkillModal des={item.des} skill={item.skill} />
-                    )}
-                  </div>
                 </div>
               ))}
             </div>

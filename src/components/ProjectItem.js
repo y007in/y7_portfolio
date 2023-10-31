@@ -1,11 +1,10 @@
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaGithub, FaLink } from "react-icons/fa";
 
 import "../assets/scss/ProjectItem.scss";
 import { ProjectData } from "../assets/projectdata";
 
 const ProjectItem = ({ projectId }) => {
-  const navigate = useNavigate();
   return (
     <div className="projectItem">
       <section className="project_container">
@@ -13,8 +12,8 @@ const ProjectItem = ({ projectId }) => {
           <h1>{ProjectData[projectId].name}</h1>
           <span className="team">{ProjectData[projectId].team}</span>
         </header>
-        <div className="item_box">
-          <section className="project_left">
+        <article className="item_box">
+          <aside className="project_left">
             <div className="project_img">
               <img
                 src={ProjectData[projectId].image}
@@ -26,7 +25,7 @@ const ProjectItem = ({ projectId }) => {
               <Link to={ProjectData[projectId].github} target="_blank">
                 <button className="button github">
                   <FaGithub fill="white" />
-                  GitHub{" "}
+                  GitHub
                 </button>
               </Link>
               <Link to={ProjectData[projectId].url} target="_blank">
@@ -36,30 +35,27 @@ const ProjectItem = ({ projectId }) => {
                 </button>
               </Link>
             </div>
-          </section>
-          <section className="project_right">
-            <div className="project_date">
+          </aside>
+          <aside className="project_right">
+            <section className="project_section">
               <div className="des_title">제작 기간</div>
               <div className="des_content">{ProjectData[projectId].date}</div>
-            </div>
-            <div className="project_skill">
+            </section>
+            <section className="project_section">
               <div className="des_title">사용 기술</div>
               <div className="des_content">
                 <ul>{ProjectData[projectId].skill}</ul>
               </div>
-            </div>
-            <div className="project_func">
+            </section>
+            <section className="project_section">
               <div className="des_title">주요 기능</div>
               <div className="des_content">
                 <ul>{ProjectData[projectId].func}</ul>
               </div>
-            </div>
-          </section>
-        </div>
+            </section>
+          </aside>
+        </article>
       </section>
-      <button className="back_project" onClick={() => navigate("/project")}>
-        목록으로 돌아가기
-      </button>
     </div>
   );
 };

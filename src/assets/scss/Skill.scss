@@ -63,10 +63,7 @@
             font-family: $font_eng;
             font-weight: 500;
           }
-          .skill_des_mobile {
-            display: block;
-          }
-          .skill_des_pc {
+          .des_pc {
             display: none;
           }
         }
@@ -104,25 +101,29 @@
           .skill_item {
             max-width: calc((100% - 10px * 5) / 6);
             position: relative;
-
             .skill_icon {
               padding: 40px;
             }
-            .skill_des_pc ul li {
-              font-size: 13px;
-              color: $color_white;
-              margin-bottom: 5px;
-              &::before {
-                content: "-";
+            .skill_des {
+              ul li {
+                font-size: 13px;
                 color: $color_white;
-                margin-right: 5px;
+                margin-bottom: 5px;
+                &::before {
+                  content: "-";
+                  color: $color_white;
+                  margin-right: 5px;
+                }
+              }
+              .overlay {
+                display: none;
               }
             }
             .skill_name {
               margin: 10px 0;
               font-size: 18px;
             }
-            &:hover .skill_des_pc {
+            &:hover .skill_des .des_pc {
               position: absolute;
               top: 0;
               left: 0;
@@ -131,9 +132,6 @@
             }
             &:hover .skill_icon {
               filter: brightness(25%);
-            }
-            .skill_des_mobile {
-              display: none;
             }
           }
         }

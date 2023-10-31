@@ -6,20 +6,24 @@ import MyInformation from "../components/MyInformation";
 import Footer from "../components/Footer";
 import { SkillData, EduAct } from "../assets/projectdata";
 
-const About = ({ scrollRef, handleScrollView }) => {
+const About = ({ scrollRef, scrollToSection }) => {
   return (
     <main className="About">
-      <Navigation handleScrollView={handleScrollView} />
+      <Navigation scrollToSection={scrollToSection} />
       <Intro />
-      <div className="about_box" ref={(el) => (scrollRef.current[0] = el)}>
-        <Skill SkillData={SkillData} />
-      </div>
-      <div className="about_box" ref={(el) => (scrollRef.current[1] = el)}>
-        <ProjectSlide />
-      </div>
-      <div className="about_box" ref={(el) => (scrollRef.current[2] = el)}>
-        <MyInformation EduAct={EduAct} />
-      </div>
+      {[
+        { component: <Skill SkillData={SkillData} /> },
+        { component: <ProjectSlide /> },
+        { component: <MyInformation EduAct={EduAct} /> },
+      ].map((item, index) => (
+        <div
+          className="about_box"
+          key={index}
+          ref={(el) => (scrollRef.current[index] = el)}
+        >
+          {item.component}
+        </div>
+      ))}
       <Footer />
     </main>
   );

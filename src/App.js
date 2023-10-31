@@ -10,9 +10,9 @@ import "./App.scss";
 
 function App() {
   const [showButton, setShowButton] = useState(false);
-
   const dispatch = useDispatch();
   const showNav = useSelector((state) => state.showNav);
+
   const setShowNav = useCallback(() => {
     dispatch({
       type: "SET_SHOW_NAV",
@@ -36,7 +36,7 @@ function App() {
 
   const scrollRef = useRef([]);
 
-  const handleScrollView = (e) => {
+  const scrollToSection = (e) => {
     const name = e.target.innerText;
     const category = {
       Skills: 0,
@@ -88,7 +88,7 @@ function App() {
         <Route
           path="/"
           element={
-            <About scrollRef={scrollRef} handleScrollView={handleScrollView} />
+            <About scrollRef={scrollRef} scrollToSection={scrollToSection} />
           }
         ></Route>
         <Route path="/project" element={<Project />}></Route>

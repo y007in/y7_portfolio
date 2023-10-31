@@ -2,6 +2,7 @@
 
 .projectList {
   @include main();
+  padding: 40px 0 0 0;
   .projectList_container {
     @include container_mobile();
     width: 100vw;

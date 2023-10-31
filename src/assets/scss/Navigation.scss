@@ -10,15 +10,17 @@
   border-bottom: 1px solid $color_gray;
   z-index: 9999;
   transition: background-color 0.5s ease;
-
   &.show {
-    border-bottom: none;
     .name,
     .gnb ul li a,
     .gnb ul li svg path {
       color: $color_main;
     }
   }
+  &.showAbout {
+    border-bottom: none;
+  }
+
   .navigation_bar {
     width: 100%;
     height: 50px;
@@ -29,10 +31,20 @@
     padding: 0 20px;
     .name {
       color: $color_main;
-      font-size: 24px;
+      font-size: 20px;
       cursor: pointer;
       font-family: "Roboto", sans-serif;
       font-weight: bold;
+      cursor: pointer;
+    }
+    .backBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      background-color: transparent;
+      border: none;
+      font-size: 14px;
       cursor: pointer;
     }
   }
@@ -66,22 +78,6 @@
       svg {
         font-size: 24px;
       }
-      &.active {
-        display: inline-block;
-        position: relative;
-        z-index: 0;
-        &::after {
-          content: "";
-          width: 30%;
-          height: 10px;
-          display: inline-block;
-          background: rgba(0, 164, 200, 0.5);
-          position: absolute;
-          bottom: 15px;
-          left: 70px;
-          z-index: -1;
-        }
-      }
     }
     &.hide {
       transform: translateX(200%);
@@ -91,12 +87,17 @@
 
 @media all and (min-width: 1024px) {
   .navigation {
+    background-color: $color_white;
     .navigation_bar {
+      max-width: 1280px;
       .name {
-        font-size: 28px;
+        font-size: 24px;
       }
       .menuList {
         display: none;
+      }
+      .backBtn {
+        font-size: 16px;
       }
     }
     .gnb {
@@ -120,7 +121,6 @@
         cursor: pointer;
         font-size: 18px;
         background-color: transparent;
-
         svg {
           font-size: 24px;
         }

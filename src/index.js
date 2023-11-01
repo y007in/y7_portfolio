@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.scss";
-import App from "./App";
+import "index.scss";
+import App from "App";
 
 import { Provider } from "react-redux";
-import store from "./redux/store";
+import store from "redux/store";
 import { BrowserRouter } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "components/ScrollToTop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

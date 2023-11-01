@@ -4,8 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
-import { menuItems } from "../assets/projectdata";
-import "../assets/scss/Navigation.scss";
+import { menuItems } from "assets/projectdata";
+import "assets/scss/Navigation.scss";
 
 const Navigation = ({ scrollToSection }) => {
   const dispatch = useDispatch();

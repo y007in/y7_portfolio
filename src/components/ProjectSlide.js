@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Slide from "./Slide";
-import "../assets/scss/ProjectSlide.scss";
+import "assets/scss/ProjectSlide.scss";
 
 const ProjectSlide = () => {
   const navigate = useNavigate();

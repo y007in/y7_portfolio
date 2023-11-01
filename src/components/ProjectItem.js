@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { FaGithub, FaLink } from "react-icons/fa";
 
 import "../assets/scss/ProjectItem.scss";
-import { ProjectData } from "../assets/projectdata";
+import { ProjectData } from "assets/projectdata";
 
 const ProjectItem = ({ projectId }) => {
   return (

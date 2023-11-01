@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { ProjectData } from "../assets/projectdata";
+import { ProjectData } from "assets/projectdata";
 
 const Slide = () => {
   const navigate = useNavigate();

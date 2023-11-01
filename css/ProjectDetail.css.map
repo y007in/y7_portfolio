@@ -1,1 +1,11 @@
-{"version":3,"sources":["../src/scss/variables.scss","ProjectDetail.css","../src/scss/ProjectDetail.scss"],"names":[],"mappings":"AAAA;EACE,iCAAA;EACA,gHAAA;EAEA,gBAAA;EACA,kBAAA;ACAF;ADEA;EACE,uBAAA;EACA,qGAAA;EAEA,mBAAA;EACA,kBAAA;ACDF;ACTA;EACE,YAAA;EACA,aAAA;ADWF","file":"ProjectDetail.css"}
+{
+  "version": 3,
+  "sources": [
+    "/src/variables.scss",
+    "ProjectDetail.css",
+    "/src/ProjectDetail.scss"
+  ],
+  "names": [],
+  "mappings": "AAAA;EACE,iCAAA;EACA,gHAAA;EAEA,gBAAA;EACA,kBAAA;ACAF;ADEA;EACE,uBAAA;EACA,qGAAA;EAEA,mBAAA;EACA,kBAAA;ACDF;ACTA;EACE,YAAA;EACA,aAAA;ADWF",
+  "file": "ProjectDetail.css"
+}

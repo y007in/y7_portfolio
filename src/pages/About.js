@@ -1,10 +1,10 @@
-import Navigation from "../components/Navigation";
-import Intro from "../components/Intro";
-import Skill from "../components/Skill";
-import ProjectSlide from "../components/ProjectSlide";
-import MyInformation from "../components/MyInformation";
-import Footer from "../components/Footer";
-import { SkillData, EduAct } from "../assets/projectdata";
+import Navigation from "components/Navigation";
+import Intro from "components/Intro";
+import Skill from "components/Skill";
+import ProjectSlide from "components/ProjectSlide";
+import MyInformation from "components/MyInformation";
+import Footer from "components/Footer";
+import { SkillData, EduAct } from "assets/projectdata";
 
 const About = ({ scrollRef, scrollToSection }) => {
   return (

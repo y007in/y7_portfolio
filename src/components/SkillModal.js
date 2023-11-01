@@ -1,5 +1,5 @@
 import { FaRegTimesCircle } from "react-icons/fa";
-import "../assets/scss/SkillModal.scss";
+import "assets/scss/SkillModal.scss";
 
 const SkillModal = ({ des, skill }) => {
   return (

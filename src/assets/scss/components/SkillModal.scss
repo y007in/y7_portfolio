@@ -1,5 +1,3 @@
-@import "assets/scss/variables.scss";
-
 .overlay {
   position: fixed;
   top: 0;
@@ -36,6 +34,7 @@
       right: 15px;
       top: 15px;
       cursor: pointer;
+      fill: $color_white;
     }
   }
 }

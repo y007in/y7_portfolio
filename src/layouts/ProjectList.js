@@ -1,5 +1,5 @@
-import ProjectThumb from "./ProjectThumb";
-import "assets/scss/ProjectList.scss";
+import { ProjectThumb } from "components";
+import "assets/scss/main.scss";
 
 const ProjectList = ({ data }) => {
   return (

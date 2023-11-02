@@ -5,7 +5,7 @@ import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 import { menuItems } from "assets/projectdata";
-import "assets/scss/Navigation.scss";
+import "assets/scss/main.scss";
 
 const Navigation = ({ scrollToSection }) => {
   const dispatch = useDispatch();
@@ -45,8 +45,8 @@ const Navigation = ({ scrollToSection }) => {
 
   return (
     <nav
-      className={`navigation ${showNav ? "" : "show"} ${
-        currentPath === "/" ? "about" : ""
+      className={`navigation ${
+        currentPath === "/" ? (showNav ? "" : "show") : ""
       }`}
     >
       <div className="navigation_bar">

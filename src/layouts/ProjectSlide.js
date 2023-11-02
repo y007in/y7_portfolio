@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaChevronCircleRight } from "react-icons/fa";
 
-import Slide from "./Slide";
-import "assets/scss/ProjectSlide.scss";
+import { Slide } from "components";
+import "assets/scss/main.scss";
 
 const ProjectSlide = () => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const ProjectSlide = () => {
                 navigate("/project");
               }}
             >
-              프로젝트 전체보기 ▶
+              프로젝트 전체보기 <FaChevronCircleRight />
             </button>
           </div>
           <p className="project_desc">

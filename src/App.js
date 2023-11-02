@@ -1,11 +1,9 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
-import About from "pages/About";
-import Project from "pages/Project";
-import ProjectDetail from "pages/ProjectDetail";
+import { About, Project, ProjectDetail } from "pages";
 import "App.scss";
 
 function App() {

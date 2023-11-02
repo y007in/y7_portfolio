@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { FaGithub, FaLink } from "react-icons/fa";
 
-import "../assets/scss/ProjectItem.scss";
 import { ProjectData } from "assets/projectdata";
+import "assets/scss/main.scss";
 
 const ProjectItem = ({ projectId }) => {
   return (
@@ -24,13 +24,13 @@ const ProjectItem = ({ projectId }) => {
             <div className="buttons">
               <Link to={ProjectData[projectId].github} target="_blank">
                 <button className="button github">
-                  <FaGithub fill="white" />
+                  <FaGithub />
                   GitHub
                 </button>
               </Link>
               <Link to={ProjectData[projectId].url} target="_blank">
                 <button className="button url">
-                  <FaLink fill="white" />
+                  <FaLink />
                   URL
                 </button>
               </Link>

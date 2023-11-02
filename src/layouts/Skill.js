@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import SkillModal from "./SkillModal";
-import "assets/scss/Skill.scss";
+import { SkillModal } from "components";
+import "assets/scss/main.scss";
 
 const Skill = ({ SkillData }) => {
   const [expandedItem, setExpandedItem] = useState({});

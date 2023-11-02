@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import "assets/scss/Intro.scss";
+import "assets/scss/main.scss";
 
 const Intro = () => {
   const [isIntroPage, setIsIntroPage] = useState(false);

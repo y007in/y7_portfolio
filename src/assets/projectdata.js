@@ -1,18 +1,19 @@
-import hugmom from "./img/hugmom.JPG";
-import todo from "./img/todo.JPG";
-import mbti from "./img/mbti.jpeg";
-import portfolio from "./img/portfolio.JPG";
-import netflix from "./img/netflix.JPG";
-
-import html5 from "./img/html5.png";
-import CSS3 from "./img/css-3.png";
-import js from "./img/js.png";
-import react from "./img/react.png";
-import redux from "./img/redux.png";
-import typescript from "./img/typescript.png";
-import photoshop from "./img/photoshop.png";
-import illustrator from "./img/illustrator.png";
-import figma from "./img/figma.png";
+import {
+  hugmom,
+  todo,
+  mbti,
+  portfolio,
+  netflix,
+  html5,
+  CSS3,
+  js,
+  react,
+  redux,
+  typescript,
+  photoshop,
+  illustrator,
+  figma,
+} from "./img/index.js";
 
 export const menuItems = [
   { label: "Skills", id: "Skills" },

@@ -2,7 +2,8 @@ import { FaGithub } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiPhone, BiCalendarAlt } from "react-icons/bi";
 import { SiVelog } from "react-icons/si";
-import "assets/scss/MyInformation.scss";
+
+import "assets/scss/main.scss";
 
 const MyInformation = ({ EduAct }) => {
   return (

@@ -1,11 +1,11 @@
 import { FaRegTimesCircle } from "react-icons/fa";
-import "assets/scss/SkillModal.scss";
+import "assets/scss/main.scss";
 
 const SkillModal = ({ des, skill }) => {
   return (
     <div className="overlay">
       <div className="des_mobile">
-        <FaRegTimesCircle fill="white" />
+        <FaRegTimesCircle />
         <span className="modal_skill_title">{skill}</span>
         <ul>{des}</ul>
       </div>

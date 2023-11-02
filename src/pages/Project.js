@@ -1,6 +1,4 @@
-import Navigation from "components/Navigation";
-import ProjectList from "components/ProjectList";
-import Footer from "components/Footer";
+import { Navigation, ProjectList, Footer } from "layouts";
 import { ProjectData } from "assets/projectdata";
 
 const Project = () => {

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
 import { About, Project, ProjectDetail } from "pages";
@@ -10,6 +10,7 @@ function App() {
   const [showButton, setShowButton] = useState(false);
   const dispatch = useDispatch();
   const showNav = useSelector((state) => state.showNav);
+  const title = useSelector((state) => state.title);
 
   const setShowNav = useCallback(() => {
     dispatch({
@@ -23,6 +24,11 @@ function App() {
     },
     [dispatch]
   );
+
+  useEffect(() => {
+    const htmlTitle = document.querySelector("title");
+    htmlTitle.innerHTML = title;
+  }, [title]);
 
   const MoveToTop = () => {
     window.scrollTo({

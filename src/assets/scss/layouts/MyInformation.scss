@@ -44,6 +44,9 @@
             justify-content: flex-start;
             svg {
               margin-right: 3px;
+              title {
+                display: none;
+              }
             }
           }
 

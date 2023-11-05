@@ -14,7 +14,7 @@ const Slide = () => {
           }}
         >
           <div className="item">
-            <img src={p.image} alt={p.id} />
+            <img src={p.image} alt={`${p.name}`} image />
           </div>
           <div className="item_des">
             <div className="item_name">

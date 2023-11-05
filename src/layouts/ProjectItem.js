@@ -17,7 +17,7 @@ const ProjectItem = ({ projectId }) => {
             <div className="project_img">
               <img
                 src={ProjectData[projectId].image}
-                alt={ProjectData[projectId].id}
+                alt={`${ProjectData[projectId].name} thumbnail`}
               />
             </div>
             <div className="project_des">{ProjectData[projectId].des}</div>

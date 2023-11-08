@@ -139,6 +139,7 @@
 
 @media all and (min-width: 1024px) {
   .projectItem {
+    padding: 40px 20px 0 20px;
     .project_container {
       @include container_pc();
       margin: 35px 20px;
@@ -146,7 +147,7 @@
       border-radius: 10px;
       padding: 50px 80px;
       .title {
-        ㅋ h1 {
+        h1 {
           font-size: 36px;
         }
         .team {

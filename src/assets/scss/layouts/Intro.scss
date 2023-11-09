@@ -23,6 +23,7 @@
   @include main();
   height: 100vh;
   justify-content: center;
+  background-color: $color_yellow;
   .intro_container {
     @include container_mobile();
     justify-content: center;
@@ -33,6 +34,8 @@
       font-size: 40px;
       font-weight: bold;
       line-height: 130%;
+      z-index: 0;
+
       span {
         color: $color_darkgray;
         padding: 0 5px;
@@ -44,6 +47,7 @@
         padding: 6px 5px 10px 5px;
         line-height: 100%;
         color: $color_main;
+
         &::after {
           content: "";
           width: 0%;

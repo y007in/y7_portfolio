@@ -24,7 +24,7 @@
 .projectSlide {
   @include main();
   height: 100vh;
-  background-color: $color_lightgray;
+  background-color: $color_green;
   .projectSlide_container {
     @include container_mobile();
     width: 100%;
@@ -42,24 +42,24 @@
           display: flex;
           align-items: center;
           gap: 5px;
-          background-color: $color_point;
+          background-color: $color_darkgray;
           color: $color_white;
           border-radius: 5px;
           border: none;
           padding: 5px 10px;
           margin: 0 0 1px 10px;
-          transition: 0.5s;
+          transition: 0.2s;
           font-size: 14px;
           cursor: pointer;
           svg {
             fill: $color_white;
           }
           &:hover {
-            background-color: $color_white;
-            color: $color_point;
-            border: 1px solid $color_point;
+            background-color: $color_point;
+            color: $color_white;
+
             svg {
-              fill: $color_point;
+              fill: $color_white;
             }
           }
         }
@@ -149,6 +149,10 @@
       .slide_container {
         .slide_wrapper {
           .slide li {
+            transition: ease 0.5s all;
+            &:hover {
+              transform: translateY(-10px);
+            }
             .item {
               width: 465px;
               height: 255px;

@@ -53,7 +53,6 @@
             gap: 10px;
             width: 100%;
             text-align: center;
-            background-color: $color_white;
             margin: 10px 0;
             a {
               width: 100%;
@@ -63,7 +62,7 @@
                 justify-content: center;
                 width: 100%;
                 border: none;
-                background-color: $color_main;
+                background-color: $color_black;
                 padding: 10px 20px;
                 border-radius: 5px;
                 color: $color_white;
@@ -73,7 +72,7 @@
                 font-weight: 500;
                 cursor: pointer;
                 &:hover {
-                  background-color: $color_sub;
+                  background-color: $color_point;
                 }
                 svg {
                   margin-right: 5px;

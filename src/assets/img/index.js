@@ -1,7 +1,7 @@
 export const hugmom = require("./images/hugmom.JPG");
 export const todo = require("./images/todo.JPG");
 export const mbti = require("./images/mbti.jpeg");
-export const portfolio = require("./images/portfolio.JPG");
+export const portfolio = require("./images/portfolio.jpeg");
 export const netflix = require("./images/netflix.JPG");
 
 export const html5 = require("./images/html5.png");

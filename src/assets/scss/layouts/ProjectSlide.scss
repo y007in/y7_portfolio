@@ -23,11 +23,10 @@
 
 .projectSlide {
   @include main();
-  height: 100vh;
+  height: 100%;
   background-color: $color_green;
   .projectSlide_container {
     @include container_mobile();
-    width: 100%;
     .title {
       display: flex;
       flex-direction: column;

@@ -1,6 +1,6 @@
 .myInfo {
   @include main();
-  height: 100vh;
+  height: 100%;
   .myInfo_container {
     @include container_mobile();
 

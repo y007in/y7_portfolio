@@ -1,6 +1,6 @@
 .skill {
   @include main();
-  height: 100vh;
+  height: 100%;
   .skill_container {
     @include container_mobile();
     .title {

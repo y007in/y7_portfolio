@@ -6,13 +6,14 @@
   justify-content: space-between;
   width: 100vw;
   border-bottom: 1px solid $color_gray;
+  transition: background-color 0.1s ease;
   z-index: 9999;
-  transition: background-color 0.5s ease;
   &.show {
     border-bottom: none;
-  }
-  &.about {
-    border-bottom: none;
+
+    .navigation_bar {
+      background-color: $color_yellow;
+    }
   }
 
   .navigation_bar {
@@ -43,6 +44,8 @@
     }
   }
   .gnb {
+    position: absolute;
+    top: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
@@ -52,8 +55,8 @@
   }
 
   .gnbList {
-    position: absolute;
-    top: 50px;
+    position: inherit;
+    top: 0;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -64,6 +67,12 @@
     background-color: $color_lightgray;
     transform: translateX(0%);
     transition: 0.5s;
+    .closeBtn {
+      display: flex;
+      justify-content: flex-end;
+      padding: 17px 20px;
+      border-bottom: 2px solid $color_gray;
+    }
     .menu {
       width: 100%;
       padding: 15px 0;
@@ -99,10 +108,14 @@
     }
     .gnbList {
       width: 35%;
+      height: 50px;
       top: 0;
       flex-direction: row;
       background-color: transparent;
       align-items: right;
+      .closeBtn {
+        display: none;
+      }
       .menu {
         width: 100px;
         border-bottom: none;

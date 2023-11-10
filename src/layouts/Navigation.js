@@ -55,7 +55,7 @@ const Navigation = ({ scrollToSection }) => {
         </header>
         {currentPath === "/" ? (
           <div className="menuList" onClick={toggleSubNav}>
-            {showSubNav ? <FaTimes /> : <FaBars />}
+            {!showSubNav && <FaBars />}
           </div>
         ) : (
           <button
@@ -79,6 +79,9 @@ const Navigation = ({ scrollToSection }) => {
             className={`gnbList ${showSubNav ? "" : "hide"}`}
             onClick={scrollToSection}
           >
+            <li className="closeBtn" onClick={toggleSubNav}>
+              <FaTimes />
+            </li>
             {menuItems.map((menuItem) => (
               <li
                 key={menuItem.id}

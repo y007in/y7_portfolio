@@ -4,7 +4,6 @@
   .projectList_container {
     @include container_mobile();
     width: 100vw;
-
     .title {
       display: flex;
       flex-direction: column;
@@ -33,7 +32,6 @@
       .title {
         justify-content: center;
         align-items: center;
-        margin-bottom: 35px;
         h1 {
           @include title_pc;
         }
@@ -42,10 +40,9 @@
         }
       }
       .projects {
-        grid-template-columns: repeat(3, 1fr);
-        border: 1px dashed $color_main;
+        grid-template-columns: repeat(2, 1fr);
         gap: 45px;
-        padding: 25px;
+        padding: 30px 80px;
         border-radius: 10px;
         margin-bottom: 30px;
       }

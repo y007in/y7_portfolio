@@ -14,13 +14,15 @@ const Slide = () => {
           }}
         >
           <div className="item">
-            <img src={p.image} alt={`${p.name} image`} />
+            <img src={p.image} alt={`${p.name}img`} />
           </div>
-          <div className="item_des">
-            <div className="item_name">
-              <div>{p.name}</div>
+          <section className="item_des">
+            <div className="item_title">
+              <span className="item_name">{p.name}</span>
+              <span>{p.team}</span>
             </div>
-          </div>
+            <div className="item_skill">{p.skill}</div>
+          </section>
         </li>
       ))}
     </>

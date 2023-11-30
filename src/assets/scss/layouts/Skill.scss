@@ -75,7 +75,6 @@
   .skill {
     .skill_container {
       @include container_pc();
-      margin-top: 20px;
       .title {
         h1 {
           @include title_pc();

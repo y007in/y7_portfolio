@@ -3,6 +3,7 @@
   padding: 40px 0 0 0;
   .project_container {
     @include container_mobile();
+    min-height: 100%;
     .title {
       display: flex;
       align-items: flex-end;
@@ -43,6 +44,7 @@
             width: 100%;
             height: auto;
             padding: 10px;
+            margin-bottom: 10px;
             border-radius: 5px;
             line-height: 23px;
             background-color: $color_lightgray;
@@ -92,7 +94,6 @@
                 @include boxTitle_mobile();
                 float: left;
               }
-
               &_content {
                 clear: both;
                 float: left;
@@ -121,12 +122,17 @@
                 }
               }
             }
-            &:last-child {
+            &:nth-child(3) {
               ul li {
                 list-style-type: circle;
                 margin-left: 20px;
                 margin-bottom: 5px;
                 line-height: 170%;
+              }
+            }
+            &:last-child {
+              p {
+                line-height: 200%;
               }
             }
           }
@@ -142,9 +148,9 @@
     .project_container {
       @include container_pc();
       margin: 35px 20px;
-      border: 1px dashed $color_darkgray;
       border-radius: 10px;
       padding: 50px 80px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       .title {
         h1 {
           font-size: 36px;

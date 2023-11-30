@@ -14,13 +14,14 @@ const ProjectItem = ({ projectId }) => {
         </header>
         <article className="item_box">
           <aside className="project_left">
+            <div className="project_des">{ProjectData[projectId].des}</div>
             <div className="project_img">
               <img
                 src={ProjectData[projectId].image}
                 alt={`${ProjectData[projectId].name} thumbnail`}
               />
             </div>
-            <div className="project_des">{ProjectData[projectId].des}</div>
+
             <div className="buttons">
               <Link to={ProjectData[projectId].github} target="_blank">
                 <button className="button github">
@@ -52,6 +53,10 @@ const ProjectItem = ({ projectId }) => {
               <div className="des_content">
                 <ul>{ProjectData[projectId].func}</ul>
               </div>
+            </section>
+            <section className="project_section">
+              <div className="des_title">느낀 점</div>
+              <div className="des_content">{ProjectData[projectId].result}</div>
             </section>
           </aside>
         </article>

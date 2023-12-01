@@ -1,5 +1,10 @@
 import {
   hugmom,
+  hugmomStructure,
+  hugmomWireFramePC,
+  hugmomWireFrameM,
+  hugmomUI,
+  hugmomwbs,
   todo,
   mbti,
   portfolio,
@@ -39,6 +44,31 @@ export const ProjectData = [
         산모들 전용 쇼핑몰 제작하게 되었습니다.
       </p>
     ),
+    project_schedule: `${hugmomwbs}`,
+    project_ui: (
+      <>
+        <li className="structure">
+          구조
+          <div>
+            <img src={hugmomStructure} alt={"hugmom structure"} />
+            <img src={hugmomUI} alt={"hugmom UI"} />
+          </div>
+        </li>
+        <li className="ui">
+          UI
+          <ul>
+            <li>
+              PC
+              <img src={hugmomWireFramePC} alt={"  hugmomWireFramePC"} />
+            </li>
+            <li>
+              MOBILE
+              <img src={hugmomWireFrameM} alt={"  hugmomWireFrameM"} />
+            </li>
+          </ul>
+        </li>
+      </>
+    ),
     github: "https://github.com/That-s-great/Hugmom",
     url: "https://hugmom-b6187.web.app/html/01-intro_logout.html",
     date: "2023.05.08 - 2023.06.30",
@@ -60,6 +90,9 @@ export const ProjectData = [
     ),
     result_summary: (
       <>
+        <li>
+          허그맘(Hugmom)은 산후조리원에 있는 산모들을 위한 전용 쇼핑몰입니다.
+        </li>
         <li>
           프로젝트를 통해 <b>체계적인 협업 진행 방식을 습득</b>할 수 있는 좋은
           기회였습니다.
@@ -87,7 +120,7 @@ export const ProjectData = [
           최소화하고 깔끔한 결과물을 도출하는 방법에 대해 배울 수 있었습니다.
           <br />
           프로젝트를 통해
-          <b>반응형 웹 디자인에 대한 적용시키는 경험</b>을 할 수 있었습니다.
+          <b> 반응형 웹 디자인에 대한 적용시키는 경험</b>을 할 수 있었습니다.
           특히, 쇼핑몰의 핵심인 상품 배열이 다양한 화면 크기에 어떻게
           최적화되어야 하는지에 대한 고민과 이를 실현하는 CSS 개발 작업을
           진행하며 실질적인 경험을 쌓을 수 있었습니다. <br />
@@ -131,7 +164,7 @@ export const ProjectData = [
         </li>
       </>
     ),
-    result_summary: (
+    dev_func: (
       <>
         <li>
           <b>React를 활용하여 Create, Read, Update, Delete 기능을 구현</b>
@@ -145,28 +178,51 @@ export const ProjectData = [
         </li>
         <li>
           상태관리에
-          <b>useReducer를 활용해 복잡해 보이는 상태로직을 효과적으로 관리</b>
+          <b>useReducer를 활용해 복잡해 보이는 상태로직을 관리</b>
           하여 각각 액션에 대한 상태변화를 효율적으로 관리할 수 있었습니다.
         </li>
         <li>
-          filter함수를 활용하여 검색창에 입력한 값과 일치하는 내용만을 불러오는
-          기능을 구현
+          <b>filter함수를 활용한 검색 기능</b> 으로검색창에 입력한 값과 일치하는
+          내용만을 불러오는 기능을 구현
+        </li>
+      </>
+    ),
+    result_summary: (
+      <>
+        <li>할일을 관리하기 위한 React 기반의 Todo List 페이지입니다. </li>
+        <li>
+          <b>상태관리와 local storage</b>를 다뤄보면서 React 기반의 개발에 대한
+          실전적인 경험을 쌓을 수 있었습니다.
+        </li>
+        <li>
+          사용자가 편리하고 직관적으로 이해하고 효과적으로 활용할 수 있도록
+          고민해 <b>사용자의 관점에서 바라보며 개발을 진행</b>하였습니다.
         </li>
       </>
     ),
     result: (
       <p className="des_result">
-        React를 활용하여 Create, Read, Update, Delete 기능을 구현하였습니다.
-        이를 통해 사용자가 할 일 목록을 효과적으로 관리할 수 있도록 했습니다.
-        새로고침이나 브라우저가 닫히더라도 데이터가 계속 남아있기를 원해 local
-        storage를 활용하여 사용자의 할 일 데이터를 브라우저에 저장하였습니다.
-        상태관리에 useReducer를 활용해 복잡해 보이는 상태로직을 효과적으로
-        관리하여 각각 액션에 대한 상태변화를 효율적으로 관리할 수 있었습니다.
-        useMemo Hook을 사용하여 todo 배열이 변경될 때마다 완료되지 않은
-        todo항목의 개수를 실시간으로 계산하여 출력함으로서 성능 최적화에
-        기여하였습니다. filter함수를 활용하여 검색창에 입력한 값과 일치하는
-        내용만을 불러오는 기능을 구현하여 사용자가 특정 내용dmf 빠르게 찾고
-        일정관리 할 수 있도록 하였습니다.
+        투두리스트를 활용한 프로젝트를 통해 React에서의 CRUD 기능을 익히는
+        과정에서 여러 가지 편리한 기능들을 추가하여 사용자 경험을 향상 하고자
+        하였습니다.{" "}
+        <b>
+          간단한 기능이더라도 사용자가 직관적으로 이해하고 효과적으로 활용할 수
+          있도록 고민하여 구현
+        </b>
+        했습니다. 프로젝트에서는 투두리스트의 주된 기능인{" "}
+        <b>Create, Read, Update, Delete를 구현</b>하여 사용자가 편리하게 할 일을
+        관리할 수 있도록 하였습니다. 상태로직을 효과적으로 관리하기 위해 React의
+        <b>
+          useReducer훅을 활용하여 상태 변화를 효율적으로 관리할 수 있었습니다.
+        </b>
+        <br />
+        뿐만 아니라, 투두리스트를 사용하는 사용자들을 고려하여 새로고침이나
+        브라우저가 닫히더라도
+        <b> 데이터가 유지되도록 Local Storage를 활용하여 데이터를 관리</b>
+        했습니다. 이를 통해 사용자들이 지속적으로 투두리스트를 활용할 수 있게끔
+        신경 쓰는 경험을 쌓았습니다. 프로젝트를 통해 투두리스트를 개발하는
+        과정에서 상태 관리와 로컬 스토리지를 다뤄보면서 React 기반의 프론트엔드
+        개발에 대한 실전적인 경험을 쌓을 수 있었습니다.
       </p>
     ),
   },
@@ -195,7 +251,8 @@ export const ProjectData = [
         <li>netlify</li>
       </>
     ),
-    func: (
+    func: <li>질문에 선택한 답변에 따라 해당 MBTI 결과페이지 불러오기</li>,
+    dev_func: (
       <>
         <li>함수를 활용한 상태변화로 선택한 답변에 따라 답변 결과를 계산</li>
         <li>
@@ -230,17 +287,20 @@ export const ProjectData = [
     team: "개인 프로젝트",
     image: `${portfolio}`,
     des: "프론트엔드 개발자로서 프로필 및 프로젝트들을 소개하기 위한 포트폴리오 페이지",
+    project_ui: "ui",
     github: "https://github.com/y007in/y7_portfolio",
     url: "https://y7portfolio.netlify.app/",
-    date: "Last Updated. 2023.11.02",
+    date: "Last Updated. 2023.12.02",
     skill: (
       <>
         <li>React</li>
         <li>SCSS</li>
         <li>Redux</li>
+        <li>netlify</li>
       </>
     ),
-    func: (
+    func: <li>간단한 자기소개, 기술 및 프로젝트 모음</li>,
+    dev_func: (
       <>
         <li>CSS Media Queries를 활용한 반응형 웹 페이지</li>
         <li>
@@ -308,6 +368,11 @@ export const ProjectData = [
       </>
     ),
     func: (
+      <>
+        <li>선택한 영화들의 정보 불러오기</li>
+      </>
+    ),
+    dev_func: (
       <>
         <li>
           외부 영화 API를 비동기방식으로 불러와 useQuery를 활용해서 서버로부터

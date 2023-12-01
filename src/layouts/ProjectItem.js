@@ -11,10 +11,10 @@ const ProjectItem = ({ projectId }) => {
         <header className="title">
           <h1>{ProjectData[projectId].name}</h1>
           <span className="team">{ProjectData[projectId].team}</span>
-        </header>
+        </header>{" "}
+        <div className="project_des">{ProjectData[projectId].des}</div>
         <article className="item_box">
           <aside className="project_left">
-            <div className="project_des">{ProjectData[projectId].des}</div>
             <div className="project_img">
               <img
                 src={ProjectData[projectId].image}
@@ -44,7 +44,7 @@ const ProjectItem = ({ projectId }) => {
             </section>
             <section className="project_section">
               <div className="des_title">사용 기술</div>
-              <div className="des_content">
+              <div className="des_content skillList">
                 <ul>{ProjectData[projectId].skill}</ul>
               </div>
             </section>
@@ -54,11 +54,41 @@ const ProjectItem = ({ projectId }) => {
                 <ul>{ProjectData[projectId].func}</ul>
               </div>
             </section>
+          </aside>
+        </article>
+        <article className="project_bottom">
+          {/* {ProjectData[projectId].project_schedule && (
+            <section className="project_section">
+              <div className="des_title">프로젝트 스케줄</div>
+              <div className="des_content">
+                {ProjectData[projectId].project_schedule}
+              </div>
+            </section>
+          )} */}
+          {ProjectData[projectId].project_ui && (
+            <section className="project_section">
+              <div className="des_title">프로젝트 구조 및 UI</div>
+              <div className="des_content">
+                <ul>{ProjectData[projectId].project_ui}</ul>
+              </div>
+            </section>
+          )}
+          {ProjectData[projectId].dev_func && (
+            <section className="project_section">
+              <div className="des_title">구현 기능</div>
+              <div className="des_content">
+                <ul>{ProjectData[projectId].dev_func}</ul>
+              </div>
+            </section>
+          )}
+          {ProjectData[projectId].result && (
             <section className="project_section">
               <div className="des_title">느낀 점</div>
-              <div className="des_content">{ProjectData[projectId].result}</div>
+              <div className="des_content">
+                <ul>{ProjectData[projectId].result}</ul>
+              </div>
             </section>
-          </aside>
+          )}
         </article>
       </section>
     </div>

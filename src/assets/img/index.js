@@ -1,4 +1,10 @@
-export const hugmom = require("./images/hugmom.JPG");
+export const hugmom = require("./images/hugmom/hugmom.JPG");
+export const hugmomStructure = require("./images/hugmom/structure.png");
+export const hugmomWireFramePC = require("./images/hugmom/wireframe(MOBILE).png");
+export const hugmomWireFrameM = require("./images/hugmom/wireframe(MOBILE).png");
+export const hugmomUI = require("./images/hugmom/UIStyle.png");
+export const hugmomwbs = require("./images/hugmom/wbs.pdf");
+
 export const todo = require("./images/todo.JPG");
 export const mbti = require("./images/mbti.jpeg");
 export const portfolio = require("./images/portfolio.jpeg");

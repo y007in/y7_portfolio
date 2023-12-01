@@ -30,6 +30,7 @@
     .title {
       display: flex;
       flex-direction: column;
+      margin-bottom: 10px;
       .title_box {
         display: flex;
         align-items: center;
@@ -78,7 +79,6 @@
         align-items: center;
         flex-wrap: nowrap;
         position: relative;
-
         &.origin {
           animation: 40s linear infinite normal none running infiniteSlide;
         }

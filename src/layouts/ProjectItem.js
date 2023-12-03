@@ -57,19 +57,25 @@ const ProjectItem = ({ projectId }) => {
           </aside>
         </article>
         <article className="project_bottom">
-          {/* {ProjectData[projectId].project_schedule && (
+          {ProjectData[projectId].project_schedule && (
             <section className="project_section">
               <div className="des_title">프로젝트 스케줄</div>
               <div className="des_content">
-                {ProjectData[projectId].project_schedule}
+                <Link
+                  className="wbs"
+                  to={ProjectData[projectId].project_schedule}
+                  target="_blank"
+                >
+                  Hugmom WBS 링크
+                </Link>
               </div>
             </section>
-          )} */}
+          )}
           {ProjectData[projectId].project_ui && (
             <section className="project_section">
               <div className="des_title">프로젝트 구조 및 UI</div>
-              <div className="des_content">
-                <ul>{ProjectData[projectId].project_ui}</ul>
+              <div className="des_content structure">
+                {ProjectData[projectId].project_ui}
               </div>
             </section>
           )}

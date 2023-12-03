@@ -64,6 +64,7 @@
       .thumb_result {
         background-color: $color_lightgray;
         padding: 10px;
+        margin-top: 10px;
         border-radius: 5px;
         font-size: 14px;
         ul {
@@ -133,7 +134,6 @@
 
         .thumb_des {
           .skill_list {
-            margin: 0px 0 8px 3px;
             gap: 5px;
             li {
               margin-bottom: 5px;
@@ -144,6 +144,9 @@
               margin-top: 0px;
             }
           }
+        }
+        .thumb_result {
+          margin-top: 0px;
         }
       }
     }

@@ -1,0 +1,18 @@
+.img_wrap {
+  display: flex;
+  img {
+    height: auto;
+    &:first-child {
+      width: 75%;
+    }
+    &:last-child {
+      width: 25%;
+    }
+  }
+}
+.ui {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}

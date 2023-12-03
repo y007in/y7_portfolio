@@ -1,13 +1,10 @@
+import HugmomStructure from "components/HugmomStructure.js";
 import {
   hugmom,
-  hugmomStructure,
-  hugmomWireFramePC,
-  hugmomWireFrameM,
-  hugmomUI,
-  hugmomwbs,
   todo,
   mbti,
   portfolio,
+  portfolioStructure,
   netflix,
   html5,
   CSS3,
@@ -44,31 +41,9 @@ export const ProjectData = [
         산모들 전용 쇼핑몰 제작하게 되었습니다.
       </p>
     ),
-    project_schedule: `${hugmomwbs}`,
-    project_ui: (
-      <>
-        <li className="structure">
-          구조
-          <div>
-            <img src={hugmomStructure} alt={"hugmom structure"} />
-            <img src={hugmomUI} alt={"hugmom UI"} />
-          </div>
-        </li>
-        <li className="ui">
-          UI
-          <ul>
-            <li>
-              PC
-              <img src={hugmomWireFramePC} alt={"  hugmomWireFramePC"} />
-            </li>
-            <li>
-              MOBILE
-              <img src={hugmomWireFrameM} alt={"  hugmomWireFrameM"} />
-            </li>
-          </ul>
-        </li>
-      </>
-    ),
+    project_schedule:
+      "https://docs.google.com/spreadsheets/d/1MtjmPCrxJHxQhnfbZxrM255c43mUKCU-Ay_SBuumT1g/edit#gid=163560579",
+    project_ui: <HugmomStructure />,
     github: "https://github.com/That-s-great/Hugmom",
     url: "https://hugmom-b6187.web.app/html/01-intro_logout.html",
     date: "2023.05.08 - 2023.06.30",
@@ -204,12 +179,12 @@ export const ProjectData = [
       <p className="des_result">
         투두리스트를 활용한 프로젝트를 통해 React에서의 CRUD 기능을 익히는
         과정에서 여러 가지 편리한 기능들을 추가하여 사용자 경험을 향상 하고자
-        하였습니다.{" "}
+        하였습니다.
         <b>
           간단한 기능이더라도 사용자가 직관적으로 이해하고 효과적으로 활용할 수
           있도록 고민하여 구현
         </b>
-        했습니다. 프로젝트에서는 투두리스트의 주된 기능인{" "}
+        했습니다. 프로젝트에서는 투두리스트의 주된 기능인
         <b>Create, Read, Update, Delete를 구현</b>하여 사용자가 편리하게 할 일을
         관리할 수 있도록 하였습니다. 상태로직을 효과적으로 관리하기 위해 React의
         <b>
@@ -251,7 +226,15 @@ export const ProjectData = [
         <li>netlify</li>
       </>
     ),
-    func: <li>질문에 선택한 답변에 따라 해당 MBTI 결과페이지 불러오기</li>,
+    func: (
+      <>
+        <li>
+          선택지 하나 선택 시 다음 질문으로 넘어가며 마지막 질문지에서 선택지
+          선택 후에 결과페이지로 이동
+        </li>
+        <li>선택된 결과에 따라 결과값 필터링</li>
+      </>
+    ),
     dev_func: (
       <>
         <li>함수를 활용한 상태변화로 선택한 답변에 따라 답변 결과를 계산</li>
@@ -267,10 +250,12 @@ export const ProjectData = [
     ),
     result_summary: (
       <>
-        <li>함수를 활용한 상태변화로 선택한 답변에 따라 답변 결과를 계산</li>
         <li>
-          생성된 MBTI 결과값과 ResultData에 저장된 MBTI가 일치하는 내용을 불러와
-          출력
+          다양한 자바스크립트 문법을 적용시켜 볼 수 있었던 프로젝트였습니다.
+        </li>
+        <li>
+          답변들을 선택하여 생성된 MBTI 결과값과 ResultData에 저장된 MBTI가
+          일치하는 내용을 불러와 해당 페이지를 출력합니다.
         </li>
       </>
     ),
@@ -287,7 +272,13 @@ export const ProjectData = [
     team: "개인 프로젝트",
     image: `${portfolio}`,
     des: "프론트엔드 개발자로서 프로필 및 프로젝트들을 소개하기 위한 포트폴리오 페이지",
-    project_ui: "ui",
+    project_ui: (
+      <img
+        className="portfolio_structure"
+        src={`${portfolioStructure}`}
+        alt={`${portfolioStructure} structure`}
+      />
+    ),
     github: "https://github.com/y007in/y7_portfolio",
     url: "https://y7portfolio.netlify.app/",
     date: "Last Updated. 2023.12.02",

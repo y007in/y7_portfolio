@@ -5,6 +5,7 @@ import {
   mbti,
   portfolio,
   portfolioStructure,
+  postme,
   netflix,
   html5,
   CSS3,
@@ -78,7 +79,7 @@ export const ProjectData = [
         </li>
         <li>
           원하는 기능들을 구현하며
-          <b>JavaScript의 작동 방식에 대한 직접적인 경험과 이해</b>를 높일 수
+          <b> JavaScript의 작동 방식에 대한 직접적인 경험과 이해</b>를 높일 수
           있었습니다.
         </li>
       </>
@@ -87,7 +88,8 @@ export const ProjectData = [
       <>
         <p className="des_result">
           4명의 프론트엔드 개발자로 구성된 팀에서 두 달 동안 프로젝트를
-          진행했습니다. 이 프로젝트를 통해 <b>체계적인 협업 진행 방식을 습득</b>
+          진행했습니다. 이 프로젝트를 통해{" "}
+          <b> 체계적인 협업 진행 방식을 습득</b>
           할 수 있는 좋은 기회였습니다. 처음으로 PM 역할을 맡아 전체적인
           프로젝트 진행을 책임지고 계획했습니다. 팀 프로젝트를 진행하면서 여러
           명의 개발자와 협업하는 경험을 통해 프로젝트의 틀과 구조를 정하는 것이
@@ -100,13 +102,12 @@ export const ProjectData = [
           최적화되어야 하는지에 대한 고민과 이를 실현하는 CSS 개발 작업을
           진행하며 실질적인 경험을 쌓을 수 있었습니다. <br />
           원하는 기능들을 구현하며
-          <b>JavaScript의 작동 방식에 대한 직접적인 경험과 이해</b>를 높일 수
+          <b> JavaScript의 작동 방식에 대한 직접적인 경험과 이해</b>를 높일 수
           있었습니다.
         </p>
       </>
     ),
   },
-
   {
     id: 1,
     name: "Todo List",
@@ -325,12 +326,12 @@ export const ProjectData = [
     ),
     result: (
       <p className="des_result">
-        이 프로젝트를 통해 <b>React의 다양한 훅과 기능들에 대한 깊게 이해</b>할
+        이 프로젝트를 통해 <b> React의 다양한 훅과 기능들에 대한 깊게 이해</b>할
         수 있던 계기가 되었습니다. 중복 코드를 최소화하기 위한 노력과 고민을
         통해 코드를 더 깔끔하게 구성할 수 있는 능력을 키웠습니다. 또한, 컴포넌트
         간의 상태 변화를 편리하게 하기 위해 Redux를 적용시키게 되었습니다. 이를
         통해
-        <b>Redux의 개념과 사용법을 익힐 수 있었습니다.</b> SCSS를 함께 활용하는
+        <b> Redux의 개념과 사용법을 익힐 수 있었습니다.</b> SCSS를 함께 활용하는
         방법을 배우면서
         <b>
           코드의 가독성과 재사용성을 높일 수 있는 SCSS의 강점을 느낄 수
@@ -343,6 +344,65 @@ export const ProjectData = [
   },
   {
     id: 4,
+    name: "Post Me",
+    team: "팀 프로젝트(기획, 디자인, 개발, 마케팅)",
+    image: `${postme}`,
+    des: (
+      <p>
+        하루의 시작, 나를 위한 행복의 틈을 만드는 '네이버 웨일'의 확장앱을
+        제작하였습니다.
+        <br />
+        네이버 웨일 대학생 서포터즈 “웨일대학”에서 다양한 직군들과 팀별로 진행한
+        확장앱 프로젝트입니다.
+      </p>
+    ),
+    project_introduction:
+      "https://drive.google.com/file/d/1ARCrkId512yYxQbNYn08t3daX0yBnuUw/view?usp=sharing",
+    github: "https://github.com/y007in/POSTME",
+    url: "https://whale4upostme.netlify.app/",
+    date: "2022.08.19 - 2022.09.16",
+    skill: (
+      <>
+        <li>React</li>
+        <li>Local Storage</li>
+        <li>netlify</li>
+      </>
+    ),
+    func: (
+      <>
+        <li>매일 하루에 하나씩 질문에 대한 답변 작성 가능</li>
+        <li>
+          10개의 편지를 기록하면 마이페이지에 우체통 생성되어 작성했었던 답변들
+          확인 가능
+        </li>
+        <li>
+          우체통의 디자인을 커스터마이징해 이미지 파일로 내려받기(수정 예정)
+        </li>
+      </>
+    ),
+    dev_func: (
+      <>
+        <li>
+          <b>React를 활용하여 제작한 확장앱입니다.</b>
+        </li>
+        <li>
+          local storage를 활용하여
+          <b>
+            저장되어 있는 질문을 불러오며 사용자가 작성한 답을 저장하여
+            불러옵니다.
+          </b>
+        </li>
+      </>
+    ),
+    result_summary: (
+      <>
+        <li>자신에 대해 알아가고 기록할 수 있는 Post me 확장앱입니다. </li>
+      </>
+    ),
+    result: <p className="des_result"></p>,
+  },
+  {
+    id: 5,
     name: "Netflix",
     team: "개인 프로젝트",
     image: `${netflix}`,

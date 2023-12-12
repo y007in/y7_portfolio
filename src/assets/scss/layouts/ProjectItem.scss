@@ -50,7 +50,6 @@
               height: 100%;
             }
           }
-
           .buttons {
             display: flex;
             gap: 10px;
@@ -89,63 +88,6 @@
           display: flex;
           flex-direction: column;
           padding-top: 20px;
-          @at-root .project_section {
-            margin-bottom: 10px;
-            .des {
-              &_title {
-                @include boxTitle_mobile();
-                float: left;
-              }
-              &_content {
-                width: 100%;
-                clear: both;
-                float: left;
-                padding: 8px;
-                border-radius: 5px;
-                line-height: 150%;
-                font-size: 16px;
-                ul li {
-                  margin: 0 5px 5px 20px;
-                  list-style-type: circle;
-                  line-height: 170%;
-                }
-                &.skillList {
-                  ul {
-                    display: flex;
-                    flex-wrap: wrap;
-                    li {
-                      list-style-type: none;
-                      margin-left: 0;
-                      &::after {
-                        content: " ,";
-                      }
-                      &:last-child {
-                        &::after {
-                          content: "";
-                        }
-                      }
-                    }
-                  }
-                }
-                &.structure {
-                  width: 100%;
-                  .portfolio_structure {
-                    width: 50%;
-                  }
-                }
-                .wbs {
-                  color: blue;
-                  text-decoration: underline;
-                }
-              }
-            }
-
-            &:last-child {
-              p {
-                line-height: 200%;
-              }
-            }
-          }
         }
       }
     }
@@ -204,16 +146,6 @@
             .project {
               margin-top: 0;
               margin-bottom: 20px;
-            }
-          }
-          @at-root .des {
-            &_title {
-              @include boxTitle_pc();
-            }
-            &_content {
-              display: inline-block;
-              padding: 5px 8px;
-              font-size: 16px;
             }
           }
         }

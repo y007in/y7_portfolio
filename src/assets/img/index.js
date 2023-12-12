@@ -10,6 +10,7 @@ export const mbti = require("./images/mbti.jpeg");
 export const portfolio = require("./images/portfolio/portfolio.jpeg");
 export const portfolioStructure = require("./images/portfolio/portfolio_structure.png");
 
+export const postme = require("./images/postme.JPG");
 export const netflix = require("./images/netflix.JPG");
 
 export const html5 = require("./images/html5.png");

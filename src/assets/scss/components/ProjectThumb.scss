@@ -26,6 +26,7 @@
     }
   }
   .project_desc {
+    width: 100;
     display: flex;
 
     ul {
@@ -62,6 +63,7 @@
         }
       }
       .thumb_result {
+        width: 100%;
         background-color: $color_lightgray;
         padding: 10px;
         margin-top: 10px;

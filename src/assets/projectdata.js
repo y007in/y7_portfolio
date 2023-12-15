@@ -141,7 +141,7 @@ export const ProjectData = [
       </>
     ),
     dev_func: (
-      <>
+      <ul>
         <li>
           React를 활용하여 Create, Read, Update, Delete 기능을 구현 하였습니다.
         </li>
@@ -157,7 +157,7 @@ export const ProjectData = [
           filter함수를 활용한 검색 기능 으로검색창에 입력한 값과 일치하는
           내용만을 불러오는 기능을 구현
         </li>
-      </>
+      </ul>
     ),
     result_summary: (
       <>
@@ -233,7 +233,7 @@ export const ProjectData = [
       </>
     ),
     dev_func: (
-      <>
+      <ul>
         <li>함수를 활용한 상태변화로 선택한 답변에 따라 답변 결과를 계산</li>
         <li>
           createSearchParams() 함수를 활용하여 해당 MBTI 결과에 기반한 URL을
@@ -243,7 +243,7 @@ export const ProjectData = [
           생성된 MBTI 결과값과 ResultData에 저장된 MBTI가 일치하는 내용을 불러와
           출력
         </li>
-      </>
+      </ul>
     ),
     result_summary: (
       <>
@@ -290,15 +290,49 @@ export const ProjectData = [
     func: <li>간단한 자기소개, 기술 및 프로젝트 모음</li>,
     dev_func: (
       <>
-        <li>CSS Media Queries를 활용한 반응형 웹 페이지</li>
-        <li>
-          BrowerRouter를 활용해 각 페이지들이 서로 다른 URL에서 렌더링되도록
-          설정
-        </li>
-        <li>
-          useRef로 원하는 페이지 이동하거나 선택했을 시 해당 페이지로 이동
-        </li>
-        <li>Redux를 활용한 컴포넌트간의 상태관리</li>
+        <ul>
+          <li>CSS Media Queries를 활용한 반응형 웹 페이지</li>
+          <li>
+            BrowerRouter를 활용해 각 페이지들이 서로 다른 URL에서 렌더링되도록
+            설정
+          </li>
+          <li>
+            useRef로 원하는 페이지 이동하거나 선택했을 시 해당 페이지로 이동
+          </li>
+          <li>Redux를 활용한 컴포넌트간의 상태관리</li>
+        </ul>
+
+        <h2 className="componentTitle">1. Main Page</h2>
+        <ul className="componentContent">
+          <li>Nav의 메뉴를 클릭할 시 해당 컴포넌트로 이동하도록 useRef 활용</li>
+          <li>
+            Skill 컴포넌트 - pc버전일 땐 마우스 hover / mobile 버전일 땐 마우스
+            클릭 시 각 skill 들에 대한 자세한 설명 나타남
+          </li>
+          <li>
+            ProjectSlide 컴포넌트 - mouseEnter 시 멈춤 / mouseLeave 시 슬라이드
+            움직임
+          </li>
+          <li>프로젝트 클릭 시 해당 ProjectDetail Page로 이동</li>
+          <li>화면 사이즈에 따라 요소들 재배치</li>
+        </ul>
+        <h2 className="componentTitle">2. Project Page</h2>
+        <p>
+          Main Page 속 ProjectSlide 컴포넌트에 있는 ‘프로젝트 전체 보기’버튼
+          클릭하면 해당 페이지로 이동
+        </p>
+        <ul className="componentContent">
+          <li>화면 사이즈에 따라 요소 재배치</li>
+          <li>map 함수를 활용한 ProjectData.js 속 해당 데이터 불러오기</li>
+        </ul>
+        <h2 className="componentTitle">3. ProjectDetail Page</h2>
+        <ul className="componentContent">
+          <li>
+            해당 프로젝트를 클릭하면 react-router-dom을 통해 해당 프로젝트의
+            페이지로 넘어가게 되며 그에 관련된 내용을 볼 수 있음
+          </li>
+          <li>map 함수를 활용한 ProjectData.js 속 해당 데이터 불러오기</li>
+        </ul>
       </>
     ),
     result_summary: (
@@ -377,13 +411,13 @@ export const ProjectData = [
       </>
     ),
     dev_func: (
-      <>
+      <ul>
         <li>React를 활용하여 제작한 확장앱입니다.</li>
         <li>
           json 파일에 저장되어 있는 질문리스트들이 local storage에 저장되어 있는
           질문을 불러오며 사용자가 작성한 답을 저장하여 불러옵니다.
         </li>
-      </>
+      </ul>
     ),
     result_summary: (
       <>
@@ -435,7 +469,7 @@ export const ProjectData = [
       </>
     ),
     dev_func: (
-      <>
+      <ul>
         <li>
           외부 영화 API를 비동기방식으로 불러와 useQuery를 활용해서 서버로부터
           데이터를 조회해 영화 API데이터를 출력
@@ -448,6 +482,11 @@ export const ProjectData = [
           Props형태로 속성(색상 변수 지정 및 이미지) 전달 가능하도록
           styled-component 활용
         </li>
+      </ul>
+    ),
+    result_summary: (
+      <>
+        <li>넷플릭스 클론코딩으로 진행 중인 프로젝트 입니다.</li>
       </>
     ),
   },

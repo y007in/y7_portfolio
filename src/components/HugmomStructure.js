@@ -9,7 +9,7 @@ import "assets/scss/main.scss";
 
 const HugmomStructure = () => {
   return (
-    <ul className="structure">
+    <ul>
       <li>
         구조
         <div className="img_wrap">

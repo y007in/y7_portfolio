@@ -75,16 +75,20 @@ const ProjectItem = ({ projectId }) => {
           {ProjectData[projectId].project_ui && (
             <ProjectSection
               title="프로젝트 구조 및 UI"
-              content={ProjectData[projectId].project_ui}
+              content={
+                <div className="structure">
+                  {ProjectData[projectId].project_ui}
+                </div>
+              }
             />
           )}
           {ProjectData[projectId].dev_func && (
             <ProjectSection
               title="구현 기능"
               content={
-                <ul className="dev_funcList">
+                <div className="dev_funcList">
                   {ProjectData[projectId].dev_func}
-                </ul>
+                </div>
               }
             />
           )}

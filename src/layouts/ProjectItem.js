@@ -12,7 +12,7 @@ const ProjectItem = ({ projectId }) => {
         <header className="title">
           <h1>{ProjectData[projectId].name}</h1>
           <span className="team">{ProjectData[projectId].team}</span>
-        </header>{" "}
+        </header>
         <div className="project_des">{ProjectData[projectId].des}</div>
         <article className="item_box">
           <aside className="project_left">

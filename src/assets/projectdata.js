@@ -50,10 +50,10 @@ export const ProjectData = [
     date: "2023.05.08 - 2023.06.30",
     skill: (
       <>
-        <li>Html5</li>
+        <li>HTML5</li>
         <li>CSS3</li>
         <li>JavaScript</li>
-        <li>firebase</li>
+        <li>Firebase</li>
       </>
     ),
     func: (
@@ -128,7 +128,7 @@ export const ProjectData = [
       <>
         <li>React</li>
         <li>Local Storage</li>
-        <li>netlify</li>
+        <li>Netlify</li>
       </>
     ),
     func: (
@@ -219,8 +219,8 @@ export const ProjectData = [
     skill: (
       <>
         <li>React</li>
-        <li>styled-components</li>
-        <li>netlify</li>
+        <li>Styled-components</li>
+        <li>Netlify</li>
       </>
     ),
     func: (
@@ -285,7 +285,7 @@ export const ProjectData = [
         <li>React</li>
         <li>SCSS</li>
         <li>Redux</li>
-        <li>netlify</li>
+        <li>Netlify</li>
       </>
     ),
     func: <li>간단한 자기소개, 기술 및 프로젝트 모음</li>,
@@ -302,7 +302,6 @@ export const ProjectData = [
           </li>
           <li>Redux를 활용한 컴포넌트간의 상태관리</li>
         </ul>
-
         <h2 className="componentTitle">1. Main Page</h2>
         <ul className="componentContent">
           <li>Nav의 메뉴를 클릭할 시 해당 컴포넌트로 이동하도록 useRef 활용</li>
@@ -397,7 +396,7 @@ export const ProjectData = [
       <>
         <li>React</li>
         <li>Local Storage</li>
-        <li>netlify</li>
+        <li>Netlify</li>
       </>
     ),
     func: (
@@ -443,50 +442,6 @@ export const ProjectData = [
         확장앱으로서의 가치를 높여 등록할 계획입니다. 이러한 경험을 통해
         지속적인 성장과 더 나은 결과물을 만들어내기 위해 노력하고 있습니다.
       </p>
-    ),
-  },
-  {
-    id: 5,
-    name: "Netflix",
-    team: "개인 프로젝트",
-    image: `${netflix}`,
-    des: "코로나시대를 거치며 OTT의 점유율이 늘어남에 따라 사용자들이 많이 접하는 사이트인 넷플릭스를 클론코딩하여 Typescript 기술과 실질적으로 사용되는 서비스를 파악할 수 있던 프로젝트",
-    github: "https://github.com/y007in/netflix_typescript",
-    url: "https://y7netflix.netlify.app/",
-    date: "2023.08.23 - 진행중",
-    skill: (
-      <>
-        <li>React</li>
-        <li>Typescript</li>
-        <li>styled-components</li>
-        <li>framer-motion</li>
-      </>
-    ),
-    func: (
-      <>
-        <li>선택한 영화들의 정보 불러오기</li>
-      </>
-    ),
-    dev_func: (
-      <ul>
-        <li>
-          외부 영화 API를 비동기방식으로 불러와 useQuery를 활용해서 서버로부터
-          데이터를 조회해 영화 API데이터를 출력
-        </li>
-        <li>
-          url의 정보와 클릭된 영화의 url이 일치할 경우 해당 영화의 모달창이
-          열리도록 설정
-        </li>
-        <li>
-          Props형태로 속성(색상 변수 지정 및 이미지) 전달 가능하도록
-          styled-component 활용
-        </li>
-      </ul>
-    ),
-    result_summary: (
-      <>
-        <li>넷플릭스 클론코딩으로 진행 중인 프로젝트 입니다.</li>
-      </>
     ),
   },
 ];

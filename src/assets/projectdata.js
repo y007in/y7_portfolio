@@ -6,7 +6,6 @@ import {
   portfolio,
   portfolioStructure,
   postme,
-  netflix,
   html5,
   CSS3,
   js,
@@ -146,7 +145,7 @@ export const ProjectData = [
           React를 활용하여 Create, Read, Update, Delete 기능을 구현 하였습니다.
         </li>
         <li>
-          local storage를 활용하여 사용자의 할 일 데이터를 브라우저에 저장
+          Local Storage를 활용하여 사용자의 할 일 데이터를 브라우저에 저장
           하였습니다.
         </li>
         <li>
@@ -154,7 +153,7 @@ export const ProjectData = [
           액션에 대한 상태변화를 효율적으로 관리할 수 있었습니다.
         </li>
         <li>
-          filter함수를 활용한 검색 기능 으로검색창에 입력한 값과 일치하는
+          filter함수를 활용한 검색 기능으로 검색 창에 입력한 값과 일치하는
           내용만을 불러오는 기능을 구현
         </li>
       </ul>
@@ -269,7 +268,7 @@ export const ProjectData = [
     name: "포트폴리오",
     team: "개인 프로젝트",
     image: `${portfolio}`,
-    des: "프론트엔드 개발자로서 프로필 및 프로젝트들을 소개하기 위한 포트폴리오 페이지",
+    des: "프론트엔드 개발자로서 프로필 및 프로젝트들을 소개하기 위한 포트폴리오 페이지입니다.",
     project_ui: (
       <img
         className="portfolio_structure"

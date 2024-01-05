@@ -40,7 +40,6 @@
 }
 
 //pc
-
 @mixin container_pc() {
   max-width: 1280px;
 }
@@ -73,7 +72,7 @@
   font-size: 35px;
   cursor: pointer;
   svg {
-    fill: $color_main;
+    fill: $color_black;
     background-color: $color_white;
     border-radius: 50px;
   }

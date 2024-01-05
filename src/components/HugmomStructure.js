@@ -9,21 +9,21 @@ import "assets/scss/main.scss";
 
 const HugmomStructure = () => {
   return (
-    <ul>
+    <ul className="hugmomStructure">
       <li>
-        구조
+        <h1 className="structureTitle">구조</h1>
         <div className="img_wrap">
           <img src={hugmomStructure} alt={"hugmom structure"} />
           <img src={hugmomUI} alt={"hugmom UI"} />
         </div>
       </li>
       <li className="ui">
-        UI
+        <h1 className="structureTitle">UI</h1>
         <div>
-          <span>[PC]</span>
-          <img src={hugmomWireFramePC} alt={"  hugmomWireFramePC"} />
-          <span>[MOBILE]</span>
-          <img src={hugmomWireFrameM} alt={"  hugmomWireFrameM"} />
+          <h2 className="structureSubTitle">[PC]</h2>
+          <img src={hugmomWireFramePC} alt={"HugMomWireFramePC"} />
+          <h2 className="structureSubTitle">[MOBILE]</h2>
+          <img src={hugmomWireFrameM} alt={"HugMomWireFrameMobile"} />
         </div>
       </li>
     </ul>

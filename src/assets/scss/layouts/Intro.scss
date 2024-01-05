@@ -45,7 +45,7 @@
         position: relative;
         padding: 6px 5px 10px 5px;
         line-height: 100%;
-        color: $color_main;
+        color: $color_black;
 
         &::after {
           content: "";
@@ -65,7 +65,7 @@
         .intro_name span {
           font-size: 30px;
           padding: 0;
-          color: $color_main;
+          color: $color_black;
           position: relative;
         }
       }

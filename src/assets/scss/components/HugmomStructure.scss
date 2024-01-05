@@ -1,18 +1,31 @@
-.img_wrap {
-  display: flex;
-  img {
-    height: auto;
-    &:first-child {
-      width: 75%;
-    }
-    &:last-child {
-      width: 25%;
+.hugmomStructure {
+  li {
+    list-style-type: disc;
+    margin-left: 15px;
+  }
+  .strucureTitle {
+    font-size: 16px;
+  }
+  .img_wrap {
+    display: flex;
+    img {
+      height: auto;
+      &:first-child {
+        width: 75%;
+      }
+      &:last-child {
+        width: 25%;
+      }
     }
   }
-}
-.ui {
-  width: 100%;
-  img {
+  .ui {
     width: 100%;
+    .structureSubTitle {
+      font-size: 14px;
+      font-weight: normal;
+    }
+    img {
+      width: 100%;
+    }
   }
 }

@@ -1,0 +1,19 @@
+.portfolioFunc {
+  .project_subTitle {
+    @include project_subTitle_mobile;
+  }
+  .component_Detail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 10px 0 0 20px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .portfolioFunc {
+    .project_subTitle {
+      @include project_subTitle_pc;
+    }
+  }
+}

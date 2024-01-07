@@ -39,6 +39,10 @@
   font-weight: 500;
 }
 
+@mixin project_subTitle_mobile {
+  font-size: 14px;
+}
+
 //pc
 @mixin container_pc() {
   max-width: 1280px;
@@ -56,6 +60,10 @@
 @mixin boxTitle_pc() {
   padding: 8px 16px;
   font-size: 18px;
+}
+
+@mixin project_subTitle_pc {
+  font-size: 16px;
 }
 
 @mixin moveToTop() {

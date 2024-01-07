@@ -4,7 +4,6 @@ import {
   todo,
   mbti,
   portfolio,
-  portfolioStructure,
   postme,
   html5,
   CSS3,
@@ -16,6 +15,7 @@ import {
   illustrator,
   figma,
 } from "./img/index.js";
+import PortfolioFunc from "components/PortfolioFunc.js";
 
 export const menuItems = [
   { label: "Skills", id: "Skills" },
@@ -269,13 +269,6 @@ export const ProjectData = [
     team: "개인 프로젝트",
     image: `${portfolio}`,
     des: "프론트엔드 개발자로서 프로필 및 프로젝트들을 소개하기 위한 포트폴리오 페이지입니다.",
-    project_ui: (
-      <img
-        className="portfolio_structure"
-        src={`${portfolioStructure}`}
-        alt={`${portfolioStructure} structure`}
-      />
-    ),
     github: "https://github.com/y007in/y7_portfolio",
     url: "https://y7portfolio.netlify.app/",
     date: "Last Updated. 2023.12.02",
@@ -288,52 +281,7 @@ export const ProjectData = [
       </>
     ),
     func: <li>간단한 자기소개, 기술 및 프로젝트 모음</li>,
-    dev_func: (
-      <>
-        <ul>
-          <li>CSS Media Queries를 활용한 반응형 웹 페이지</li>
-          <li>
-            BrowerRouter를 활용해 각 페이지들이 서로 다른 URL에서 렌더링되도록
-            설정
-          </li>
-          <li>
-            useRef로 원하는 페이지 이동하거나 선택했을 시 해당 페이지로 이동
-          </li>
-          <li>Redux를 활용한 컴포넌트간의 상태관리</li>
-        </ul>
-        <h2 className="componentTitle">1. Main Page</h2>
-        <ul className="componentContent">
-          <li>Nav의 메뉴를 클릭할 시 해당 컴포넌트로 이동하도록 useRef 활용</li>
-          <li>
-            Skill 컴포넌트 - pc버전일 땐 마우스 hover / mobile 버전일 땐 마우스
-            클릭 시 각 skill 들에 대한 자세한 설명 나타남
-          </li>
-          <li>
-            ProjectSlide 컴포넌트 - mouseEnter 시 멈춤 / mouseLeave 시 슬라이드
-            움직임
-          </li>
-          <li>프로젝트 클릭 시 해당 ProjectDetail Page로 이동</li>
-          <li>화면 사이즈에 따라 요소들 재배치</li>
-        </ul>
-        <h2 className="componentTitle">2. Project Page</h2>
-        <p>
-          Main Page 속 ProjectSlide 컴포넌트에 있는 ‘프로젝트 전체 보기’버튼
-          클릭하면 해당 페이지로 이동
-        </p>
-        <ul className="componentContent">
-          <li>화면 사이즈에 따라 요소 재배치</li>
-          <li>map 함수를 활용한 ProjectData.js 속 해당 데이터 불러오기</li>
-        </ul>
-        <h2 className="componentTitle">3. ProjectDetail Page</h2>
-        <ul className="componentContent">
-          <li>
-            해당 프로젝트를 클릭하면 react-router-dom을 통해 해당 프로젝트의
-            페이지로 넘어가게 되며 그에 관련된 내용을 볼 수 있음
-          </li>
-          <li>map 함수를 활용한 ProjectData.js 속 해당 데이터 불러오기</li>
-        </ul>
-      </>
-    ),
+    dev_func: <PortfolioFunc />,
     result_summary: (
       <>
         <li>개인 프로필과 프로젝트를 소개하기 위한 포트폴리오 페이지입니다.</li>

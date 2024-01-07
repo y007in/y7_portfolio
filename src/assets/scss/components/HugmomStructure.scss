@@ -3,8 +3,8 @@
     list-style-type: disc;
     margin-left: 15px;
   }
-  .strucureTitle {
-    font-size: 16px;
+  .project_subTitle {
+    @include project_subTitle_mobile();
   }
   .img_wrap {
     display: flex;
@@ -28,4 +28,7 @@
       width: 100%;
     }
   }
+}
+
+@media all and (min-width: 1024px) {
 }

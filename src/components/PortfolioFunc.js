@@ -23,7 +23,7 @@ const PortfolioFunc = () => {
         </li>
       </ul>
       <section className="component_Detail">
-        <article className="page1">
+        <article className="pages">
           <h1 className="project_subTitle">1. About Page</h1>
           <ul className="componentContent">
             <li>
@@ -41,7 +41,7 @@ const PortfolioFunc = () => {
             </li>
           </ul>
         </article>
-        <article className="page2">
+        <article className="pages">
           <h1 className="project_subTitle">2. Project Page</h1>
           <p>Nav에 Project 메뉴 클릭 시 해당 페이지로 이동</p>
           <p>
@@ -53,7 +53,7 @@ const PortfolioFunc = () => {
             <li>map 함수를 활용한 ProjectData.js 속 해당 데이터 불러오기</li>
           </ul>
         </article>
-        <article className="page3">
+        <article className="pages">
           <h1 className="project_subTitle">3. ProjectDetail Page</h1>
           <p>
             Project 페이지에서 프로젝트를 선택하면 해당 프로젝트 페이지로 이동

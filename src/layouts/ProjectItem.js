@@ -94,7 +94,7 @@ const ProjectItem = ({ projectId }) => {
           )}
           {ProjectData[projectId].result && (
             <ProjectSection
-              title="느낀 점"
+              title="후기"
               content={<ul>{ProjectData[projectId].result}</ul>}
             />
           )}

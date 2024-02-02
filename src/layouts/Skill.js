@@ -12,6 +12,7 @@ const Skill = ({ SkillData }) => {
       [i]: prev[i] === j ? null : j,
     }));
   };
+  console.log(expandedItem);
 
   return (
     <div className="skill">

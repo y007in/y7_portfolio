@@ -6,7 +6,7 @@ const PortfolioFunc = () => {
       <ul>
         <li>CSS Media Queries를 활용한 반응형 웹 페이지</li>
         <li>
-          BrowerRouter를 활용해 각 페이지들이 서로 다른 URL에서 렌더링되도록
+          BrowserRouter를 활용해 각 페이지들이 서로 다른 URL에서 렌더링되도록
           설정
         </li>
         <li>useRef로 원하는 위치로 이동</li>

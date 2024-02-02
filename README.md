@@ -15,7 +15,7 @@
 
 
 
-개발 : React, SCSS
+개발 : React, SCSS, Redux
 
 배포 : Netlify
 

@@ -33,20 +33,22 @@ const MyInformation = ({ EduAct }) => {
               </li>
             </ul>
             <ul className="about_personalBox">
-              <li>
-                <FaGithub
-                  onClick={() =>
-                    window.open("https://github.com/y007in", "_blank")
-                  }
-                />
+              <li
+                className="link"
+                onClick={() =>
+                  window.open("https://github.com/y007in", "_blank")
+                }
+              >
+                <FaGithub />
                 Github
               </li>
-              <li>
-                <SiVelog
-                  onClick={() =>
-                    window.open("https://velog.io/@yoojin4719", "_blank")
-                  }
-                />
+              <li
+                className="link"
+                onClick={() =>
+                  window.open("https://velog.io/@yoojin4719", "_blank")
+                }
+              >
+                <SiVelog />
                 Blog
               </li>
             </ul>

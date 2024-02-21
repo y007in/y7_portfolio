@@ -53,7 +53,7 @@ const MyInformation = ({ EduAct }) => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="info_wrap">
             {EduAct.map((eduAct, i) => (
               <div className="about_info" key={i}>
                 <div>

@@ -65,9 +65,7 @@ export const ProjectData = [
     ),
     result_summary: (
       <>
-        <li>
-          허그맘(Hugmom)은 산후조리원에 있는 산모들을 위한 전용 쇼핑몰입니다.
-        </li>
+        <li>산후조리원에 있는 산모들을 위한 전용 쇼핑몰 허그맘(Hugmom)</li>
         <li>
           프로젝트를 통해 <b>체계적인 협업 진행 방식을 습득</b>할 수 있는 좋은
           기회였습니다.
@@ -162,7 +160,7 @@ export const ProjectData = [
     ),
     result_summary: (
       <>
-        <li>할일을 관리하기 위한 React 기반의 Todo List 페이지입니다. </li>
+        <li>할일을 관리하기 위한 React 기반의 Todo List 페이지 </li>
         <li>
           <b>상태관리와 local storage</b>를 다뤄보면서 React 기반의 개발에 대한
           실전적인 경험을 쌓을 수 있었습니다.
@@ -248,7 +246,7 @@ export const ProjectData = [
     ),
     result_summary: (
       <>
-        <li>MBTI를 검사해볼 수 있는 웹페이지 입니다.</li>
+        <li>MBTI 검사 웹페이지</li>
         <li>
           다양한 자바스크립트 문법을 적용시켜 볼 수 있었던 프로젝트였습니다.
         </li>
@@ -286,7 +284,7 @@ export const ProjectData = [
     dev_func: <PortfolioFunc />,
     result_summary: (
       <>
-        <li>개인 프로필과 프로젝트를 소개하기 위한 포트폴리오 페이지입니다.</li>
+        <li>개인 프로필과 프로젝트를 소개하기 위한 포트폴리오</li>
         <li>
           <b>React의 다양한 훅과 기능들에 대한 깊게 이해</b>할 수 있던 계기가
           되었습니다.
@@ -516,11 +514,11 @@ export const EduAct = [
       date: "2019.03 - 2024.02",
       content: "국립안동대학교 소프트웨어공학과(멀티미디어공학과) 졸업",
     },
-    {
-      id: 2,
-      date: "2014.03 - 2017.02",
-      content: "신목고등학교 졸업",
-    },
+    // {
+    //   id: 2,
+    //   date: "2014.03 - 2017.02",
+    //   content: "신목고등학교 졸업",
+    // },
   ],
   [
     {

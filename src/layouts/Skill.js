@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { SkillModal } from "components";
 import "assets/scss/main.scss";
@@ -12,7 +12,20 @@ const Skill = ({ SkillData }) => {
       [i]: prev[i] === j ? null : j,
     }));
   };
-  console.log(expandedItem);
+
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (window.innerWidth < 1024) {
+  //       setExpandedItem(false);
+  //     }
+  //   };
+
+  //   window.addEventListener("resize", handleResize);
+
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   return (
     <div className="skill">
@@ -40,8 +53,7 @@ const Skill = ({ SkillData }) => {
                     {expandedItem[i] === j && (
                       <SkillModal key={j} des={item.des} skill={item.skill} />
                     )}
-
-                    <ul className="des_pc">{item.des}</ul>
+                    {/* <ul className="des_pc">{item.des}</ul> */}
                   </div>
                   <p className="skill_name">{item.skill}</p>
                 </div>

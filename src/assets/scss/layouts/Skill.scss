@@ -105,16 +105,13 @@
             .skill_des {
               ul li {
                 font-size: 13px;
-                color: $color_white;
+                color: $color_black;
                 margin-bottom: 5px;
                 &::before {
                   content: "-";
-                  color: $color_white;
+                  color: $color_black;
                   margin-right: 5px;
                 }
-              }
-              .overlay {
-                display: none;
               }
             }
             .skill_name {
@@ -127,9 +124,6 @@
               left: 0;
               display: block;
               padding: 20px;
-            }
-            &:hover .skill_icon {
-              filter: brightness(25%);
             }
           }
         }

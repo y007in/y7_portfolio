@@ -131,3 +131,20 @@
     }
   }
 }
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  .des_mobile {
+    // width: 80%;
+    // border-radius: 5px;
+    // position: fixed;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    background-color: $color_gray;
+    // padding: 20px;
+  }
+}

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import { SkillModal } from "components";
 import "assets/scss/main.scss";
@@ -12,20 +12,6 @@ const Skill = ({ SkillData }) => {
       [i]: prev[i] === j ? null : j,
     }));
   };
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     if (window.innerWidth < 1024) {
-  //       setExpandedItem(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
 
   return (
     <div className="skill">

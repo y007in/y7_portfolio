@@ -73,12 +73,13 @@
                 font-size: 14px;
                 font-weight: 500;
                 cursor: pointer;
-                &:hover {
-                  background-color: $color_point;
-                }
+
                 svg {
                   margin-right: 5px;
                   fill: $color_white;
+                }
+                &.url {
+                  background-color: $color_point;
                 }
               }
             }

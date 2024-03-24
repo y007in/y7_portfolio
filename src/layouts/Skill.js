@@ -18,7 +18,9 @@ const Skill = ({ SkillData }) => {
       <section className="skill_container">
         <header className="title">
           <h1>Skills</h1>
-          <p className="title_desc">*</p>
+          <p className="title_desc">
+            * 해당 아이콘 클릭 시 자세한 내용을 볼 수 있습니다.
+          </p>
         </header>
         {SkillData.map((skillItem, i) => (
           <section key={i} className="skillBox">

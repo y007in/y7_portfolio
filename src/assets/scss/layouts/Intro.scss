@@ -31,7 +31,7 @@
     .intro_txt {
       display: flex;
       flex-direction: column;
-      font-size: 28px;
+      font-size: 36px;
       font-weight: bold;
       line-height: 130%;
       z-index: 0;
@@ -62,7 +62,7 @@
       .box_introName {
         display: flex;
         .intro_name span {
-          font-size: 30px;
+          font-size: 36px;
           padding: 0;
           color: $color_black;
           position: relative;

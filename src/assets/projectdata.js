@@ -15,7 +15,6 @@ import {
   illustrator,
   figma,
 } from "./img/index.js";
-import PortfolioFunc from "components/PortfolioFunc.js";
 
 export const menuItems = [
   { label: "Skills", id: "Skills" },
@@ -33,7 +32,7 @@ export const ProjectData = [
     des: "프론트엔드 개발자로서 프로필 및 프로젝트들을 소개하기 위한 포트폴리오 페이지입니다.",
     github: "https://github.com/y007in/y7_portfolio",
     url: "https://y7portfolio.netlify.app/",
-    date: "Last Updated. 2023.12.02",
+    date: "Last Updated. 2024.3.24",
     skill: (
       <>
         <li>React</li>
@@ -43,7 +42,27 @@ export const ProjectData = [
       </>
     ),
     func: <li>간단한 자기소개, 기술 및 프로젝트 모음</li>,
-    dev_func: <PortfolioFunc />,
+    dev_func: (
+      <ul>
+        <li>CSS Media Queries를 활용한 반응형 웹 페이지</li>
+        <li>
+          BrowserRouter를 활용해 각 페이지들이 서로 다른 URL에서 렌더링되도록
+          설정
+        </li>
+        <li>useRef로 원하는 위치로 이동</li>
+        <li>
+          Redux를 활용한 컴포넌트간의 상태관리 (showNav : 위치에 따른 상태변화 ,
+          isMenuAct : 선택된 menu , title : &lt;title&gt; 태그 내용 )
+        </li>
+        <li>
+          projectData.js에 데이터들을 배열형태로 저장하여 필요한 곳에 불러와
+          사용
+        </li>
+        <li>
+          useEffect와 useState를 활용하여 각 페이지마다 &lt;title&gt; 변경
+        </li>
+      </ul>
+    ),
     result_summary: (
       <>
         <li>⌜FE개발자로서 프로필 및 프로젝트들을 소개하기 위한 포트폴리오⌟</li>
@@ -61,6 +80,10 @@ export const ProjectData = [
             코드의 가독성과 재사용성을 높일 수 있는 SCSS의 강점을 느낄 수
             있었습니다.
           </b>
+        </li>
+        <li>
+          UX/UI법칙을 적용시켜 웹 페이지를 보는데 불편함이 없을 수 있도록
+          하였습니다.
         </li>
       </>
     ),
@@ -80,7 +103,12 @@ export const ProjectData = [
           있었습니다.
         </b>
         SCSS를 통해 좀 더 깔끔하고 효율적인 코드를 작성하는 경험은 앞으로의
-        프로젝트에서 더 다양한 기능들을 공부하고 적용해보고자 합니다.
+        프로젝트에서 더 다양한 기능들을 공부하고 적용해보고자 합니다. 또한
+        기존의 사이트들과 비슷한 구조, 버튼의 간격, 강조 색상 등{" "}
+        <b>
+          UX/UI법칙을 적용시켜 웹 페이지를 부는데 불편함이 없을 수 있도록
+          하였습니다.
+        </b>
       </p>
     ),
   },

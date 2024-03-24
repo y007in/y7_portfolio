@@ -32,10 +32,10 @@ const Intro = () => {
             <span>입니다.</span>
           </div>
         </article>
-        <article className="intro_explain">
+        {/* <article className="intro_explain">
           사용자 인터페이스(UI)의 개발을 넘어 사용자 경험(UX)에 대한 깊은 이해를
           바탕으로 사용자들이 더 나은 경험을 할 수 있도록 지속해서 고민합니다.
-        </article>
+        </article> */}
       </section>
     </div>
   );

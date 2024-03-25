@@ -20,6 +20,24 @@
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       gap: 20px;
+      .viewMore {
+        border: 1px solid $color_gray;
+        background-color: $color_white;
+        color: $color_gray;
+        font-size: 16px;
+        padding: 5px 0;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          color: $color_darkgray;
+          &::after {
+            content: " 프로젝트 더보기";
+            font-size: 14px;
+          }
+        }
+      }
     }
   }
 }
@@ -45,6 +63,15 @@
         padding: 30px 80px;
         border-radius: 10px;
         margin-bottom: 30px;
+        .viewMore {
+          font-size: 20px;
+          &:hover {
+            &::after {
+              content: " 프로젝트 더보기";
+              font-size: 16px;
+            }
+          }
+        }
       }
     }
   }

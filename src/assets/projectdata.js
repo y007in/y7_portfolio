@@ -63,6 +63,11 @@ export const ProjectData = [
         </li>
       </ul>
     ),
+    role: (
+      <>
+        <li>기획∙디자인∙개발 100% 진행</li>
+      </>
+    ),
     result_summary: (
       <>
         <li>⌜FE개발자로서 프로필 및 프로젝트들을 소개하기 위한 포트폴리오⌟</li>
@@ -87,6 +92,7 @@ export const ProjectData = [
         </li>
       </>
     ),
+    // trouble: <p></p>,
     result: (
       <p className="des_result">
         이 프로젝트를 통해 <b> React의 다양한 훅과 기능들에 대한 깊게 이해</b>할
@@ -147,6 +153,17 @@ export const ProjectData = [
         <li>각 상품 페이지들 상세 페이지의 상품 소개 및 가격 출력</li>
         <li>Live 페이지</li>
         <li>회원가입 및 마이페이지의 유효성 검사</li>
+      </>
+    ),
+    role: (
+      <>
+        <li>PM, Team Leader</li>
+        <li>프로젝트의 전체적인 스케줄 관리 및 역할 분담</li>
+        <li>기획, 디자인, 개발에 모두 참여</li>
+        <li>
+          산후조리원 몰/졸업몰 상품 상세페이지, 라이브 메인 페이지 & 라이브 상세
+          페이지 개발 담당
+        </li>
       </>
     ),
     result_summary: (
@@ -237,6 +254,12 @@ export const ProjectData = [
           질문을 불러오며 사용자가 작성한 답을 저장하여 불러옵니다.
         </li>
       </ul>
+    ),
+    role: (
+      <>
+        <li>팀원 전체 주제 및 플로우 기획</li>
+        <li>개발 100% 진행</li>
+      </>
     ),
     result_summary: (
       <>

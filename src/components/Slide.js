@@ -5,7 +5,7 @@ const Slide = () => {
   const navigate = useNavigate();
   return (
     <>
-      {ProjectData.map((p, i) => (
+      {ProjectData.slice(0, ProjectData.length - 2).map((p, i) => (
         <li
           className="item_list"
           key={i}

@@ -31,7 +31,6 @@ const Skill = ({ SkillData }) => {
               {skillItem.map((item, j) => (
                 <div
                   className="skill_item"
-                  layoutId={item.id}
                   key={j}
                   onClick={() => handleSkillClick(i, j)}
                 >
@@ -43,7 +42,6 @@ const Skill = ({ SkillData }) => {
                     {expandedItem[i] === j && (
                       <SkillModal key={j} des={item.des} skill={item.skill} />
                     )}
-                    {/* <ul className="des_pc">{item.des}</ul> */}
                   </div>
 
                   <p className="skill_name">{item.skill}</p>

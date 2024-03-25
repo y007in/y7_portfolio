@@ -12,15 +12,18 @@ function App() {
   const showNav = useSelector((state) => state.showNav);
   const title = useSelector((state) => state.title);
 
-  const setShowNav = () => {
+  const setShowNav = useCallback(() => {
     dispatch({
       type: "SET_SHOW_NAV",
     });
-  };
+  }, [dispatch]);
 
-  const setIsMenuAct = (menuAct) => {
-    dispatch({ type: "SET_MENU_ACT", payload: menuAct });
-  };
+  const setIsMenuAct = useCallback(
+    (menuAct) => {
+      dispatch({ type: "SET_MENU_ACT", payload: menuAct });
+    },
+    [dispatch]
+  );
 
   useEffect(() => {
     const htmlTitle = document.querySelector("title");

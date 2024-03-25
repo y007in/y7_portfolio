@@ -20,11 +20,9 @@ function App() {
 
   const setIsMenuAct = (menuAct) => {
     dispatch({ type: "SET_MENU_ACT", payload: menuAct });
-    // console.log("MenuAct", menuAct);
   };
 
   useEffect(() => {
-    
     const htmlTitle = document.querySelector("title");
     htmlTitle.innerHTML = title;
   }, [title]);
@@ -54,36 +52,36 @@ function App() {
     setIsMenuAct(name);
   };
 
-  // useEffect(() => {
-  //   const handleShowButton = () => {
-  //     const scrollY = window.scrollY;
-  //     const windowHeight = window.innerHeight;
+  useEffect(() => {
+    const handleShowButton = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
 
-  //     if (scrollY < windowHeight) {
-  //       setShowButton(false);
-  //       if (showNav) {
-  //         setShowNav();
-  //       }
-  //       setIsMenuAct("");
-  //     } else if (scrollY < windowHeight * 2) {
-  //       setShowButton(true);
-  //       if (!showNav) {
-  //         setShowNav();
-  //       }
-  //       setIsMenuAct("Skills");
-  //     } else if (scrollY < windowHeight * 3) {
-  //       setIsMenuAct("Project");
-  //     } else {
-  //       setIsMenuAct("About");
-  //     }
-  //   };
-  //   handleShowButton();
+      if (scrollY < windowHeight) {
+        setShowButton(false);
+        if (showNav) {
+          setShowNav();
+        }
+        setIsMenuAct("");
+      } else if (scrollY < windowHeight * 2) {
+        setShowButton(true);
+        if (!showNav) {
+          setShowNav();
+        }
+        setIsMenuAct("Skills");
+      } else if (scrollY < windowHeight * 3) {
+        setIsMenuAct("Project");
+      } else {
+        setIsMenuAct("About");
+      }
+    };
+    handleShowButton();
 
-  //   window.addEventListener("scroll", handleShowButton);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleShowButton);
-  //   };
-  // }, [showNav, setIsMenuAct, setShowNav]);
+    window.addEventListener("scroll", handleShowButton);
+    return () => {
+      window.removeEventListener("scroll", handleShowButton);
+    };
+  }, [showNav, setIsMenuAct, setShowNav]);
 
   return (
     <div className="App">

@@ -4,6 +4,10 @@
     &_title {
       @include boxTitle_mobile();
       float: left;
+      border-radius: 0;
+      border-left: 3px solid $color_point;
+      background-color: $color_lightgray;
+      font-size: 14px;
     }
     &_content {
       width: 100%;
@@ -41,14 +45,13 @@
         }
       }
       .link {
-        color: $color_point;
-        transition: 1s;
-        &:hover {
-          text-decoration: underline;
-        }
+        color: $color_black;
+        text-decoration: underline;
         &::after {
-          content: "☞";
-          margin-left: 5px;
+          content: "↗️";
+        }
+        &:hover {
+          opacity: 0.5;
         }
       }
       .structure {
@@ -72,6 +75,7 @@
     .des {
       &_title {
         @include boxTitle_pc();
+        font-size: 16px;
       }
       &_content {
         display: inline-block;

@@ -11,6 +11,7 @@ export const portfolio = require("./images/portfolio/portfolio.jpeg");
 
 export const postme = require("./images/postme.JPG");
 export const netflix = require("./images/netflix.JPG");
+export const boardPick = require("./images/boardPick_thumb.png");
 
 export const html5 = require("./images/html5.png");
 export const CSS3 = require("./images/css-3.png");

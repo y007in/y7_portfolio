@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaGithub, FaLink } from "react-icons/fa";
 
@@ -6,6 +7,7 @@ import { ProjectData } from "assets/projectdata";
 import "assets/scss/main.scss";
 
 const ProjectItem = ({ projectId }) => {
+  const [isLoading, setIsLoading] = useState(true);
   return (
     <div className="projectItem">
       <section className="project_container">
@@ -20,6 +22,8 @@ const ProjectItem = ({ projectId }) => {
               <img
                 src={ProjectData[projectId].image}
                 alt={`${ProjectData[projectId].name} thumbnail`}
+                onLoad={() => setIsLoading(!isLoading)}
+                onError={() => alert("Image Load Error")}
               />
             </div>
             <div className="buttons">

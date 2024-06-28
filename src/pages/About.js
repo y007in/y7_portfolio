@@ -16,27 +16,31 @@ const About = ({ scrollRef, scrollToSection }) => {
   const setTitle = (newTitle) => {
     dispatch({ type: "SET_TITLE", payload: newTitle });
   };
+
   useEffect(() => {
     setTitle("YooJin's Portfolio");
   });
+
   return (
     <main className="About">
-      <Navigation scrollToSection={scrollToSection} />
-      <Intro />
-      {[
-        { component: <Skill SkillData={SkillData} /> },
-        { component: <ProjectSlide /> },
-        { component: <MyInformation EduAct={EduAct} /> },
-      ].map((item, index) => (
-        <div
-          className="about_box"
-          key={index}
-          ref={(el) => (scrollRef.current[index] = el)}
-        >
-          {item.component}
-        </div>
-      ))}
-      <Footer />
+      <>
+        <Navigation scrollToSection={scrollToSection} />
+        <Intro />
+        {[
+          { component: <Skill SkillData={SkillData} /> },
+          { component: <ProjectSlide /> },
+          { component: <MyInformation EduAct={EduAct} /> },
+        ].map((item, index) => (
+          <div
+            className="about_box"
+            key={index}
+            ref={(el) => (scrollRef.current[index] = el)}
+          >
+            {item.component}
+          </div>
+        ))}
+        <Footer />
+      </>
     </main>
   );
 };

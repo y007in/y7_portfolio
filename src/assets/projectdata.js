@@ -5,12 +5,13 @@ import {
   mbti,
   portfolio,
   postme,
+  boardPick,
   html5,
   CSS3,
   js,
   react,
   redux,
-  typescript,
+  // typescript,
   photoshop,
   illustrator,
   figma,
@@ -26,6 +27,107 @@ export const menuItems = [
 export const ProjectData = [
   {
     id: 0,
+    name: "보드픽 (BoardPick)",
+    team: "팀 프로젝트",
+    image: `${boardPick}`,
+    des: (
+      <p>
+        기존취미로 보드게임을 이용하는 라이트유저의 불편함을 해소하고 친근하게
+        다가가기 위한 보드게임 정보제공 사이트 입니다.
+        <br />
+        보드게임 정보 제공 서비스는 라이트유저가 아닌 헤비 유저들을 대상으로
+        서비스를 제공하였고 보드픽 서비스는 취미로 보드게임을 이용하는
+        라이트유저의 불편함을 해소하고 친근하게 다가가기 위해 기획되었습니다.
+      </p>
+    ),
+    github: "https://github.com/BoardPick",
+    url: "https://boardpick.netlify.app/",
+    date: "2024.04 - 2024.05",
+    skill: (
+      <>
+        <li>React</li>
+        <li>SCSS</li>
+        <li>Redux</li>
+        <li>Axios</li>
+        <li>Netlify</li>
+      </>
+    ),
+    func: (
+      <>
+        <li>보드게임 정보 제공</li>
+        <li>
+          관심있는 보드게임들을 PICK하여 보관 및 MY PICK과 유사한 보드게임들을
+          추천
+        </li>
+      </>
+    ),
+
+    role: (
+      <>
+        <li>기획 참여</li>
+        <li>보드게임 상세페이지 구현</li>
+        <li>PICK 기능 및 MY PICK 페이지 구현</li>
+      </>
+    ),
+    result_summary: (
+      <>
+        <li>⌜보드게임 정보제공 사이트⌟</li>
+        <li>
+          기획, 디자인, 백엔드 개발자와 협업을 통해 웹 페이지를 제작하는데 좋은
+          경험이 되었습니다.
+        </li>
+        <li>
+          Axios 라이브러리를 사용하여 <b>API 비동기 연결</b>을 구현하였습니다.
+        </li>
+        <li>React의 다양한 훅과 기능들을 적용시킬 수 있었습니다.</li>
+        <li>
+          컴포넌트 간에 Redux를 적용시켜 상태관리하기 편하도록 하였습니다.
+        </li>
+        <li>
+          SCSS를 함께 활용하는 방법을 배우면서 코드의 가독성과 재사용성을
+          높였습니다.
+        </li>
+      </>
+    ),
+
+    result: (
+      <>
+        <p className="des_result">
+          프로젝트를 진행하는 과정에서 제일 어려웠던 점이 무엇이냐고 물어본다면
+          서비스의 방향성을 잡는 것이었습니다. 단순히 만들고 싶다고 그냥 냅다
+          진행하는 것이 아니라 모든 서비스에는 이유와 방법이 있어야 했으며
+          제한된 시간과 자원으로 인해 단순하게 정할 수 있는게 아니였습니다.
+          특히나 저희는 보드게임 관련 서비스인데 보드게임에 대한 정보를 받아올
+          api에 대한 이슈(해외 api, 원하는 정보가 제공X)등 많아 여러번 기능들을
+          추가했다가 뺐다는 반복하게 되었습니다.
+          <br />
+          6주간 진행하면서 가장 많이 얻은 것은 기획과정과 백엔드와의 협업
+          경험이였습니다. 기획부터 백엔드까지 함께 프로젝트를 협업 해 본 경험이
+          없는데 처음으로 진행해보면서 다양한 경험을 해볼 수 있었던 것 같습니다.
+          기획 과정은 위에서 말했던 것처럼 고려해야할 사항들이 무엇이 있는지에
+          대해 다시끔 생각할 수 있도록 해주었습니다. 또한 각자 생각하는 방향이
+          다르기에 하나로 결정하는 과정에서 이런 방법도 있구나하고 생각을 넓힐
+          수 있었던 것 같습니다.
+          <br />
+          개발 과정으로는 많은 페이지들을 개발을 진행하다보니 충돌이 일어나기도
+          하고 원하는대로 작동을 안하기도 하고 매일매일 머리를 쥐뜯으며 살았던
+          것 같습니다. 특히 백엔드분들과 작업을 해본 적이 없어 api 연결이
+          처음이였는데 공식문서도 살펴보고 다른 개발자분들이 정리해놓은 자료들을
+          찾아보기도 하였습니다. 전에는 백엔드 분들과 작업은 어떻게 해야할 지
+          감도 안 잡혔는데 이번 기회에 백엔드에서는 이런 작업을 진행하고
+          프론트에 어떤 식으로 전달되는구나를 알게 되었습니다.
+        </p>
+        <a
+          className="link"
+          href="https://velog.io/@yoojin4719/%EC%8A%A4%EC%9C%84%ED%94%84-%ED%86%A0%ED%81%B0%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%9C-post"
+        >
+          스위프 참여 및 보드픽 회고 블로그 글
+        </a>
+      </>
+    ),
+  },
+  {
+    id: 1,
     name: "포트폴리오",
     team: "개인 프로젝트",
     image: `${portfolio}`,
@@ -119,7 +221,7 @@ export const ProjectData = [
     ),
   },
   {
-    id: 1,
+    id: 2,
     name: "허그맘(Hugmom)",
     team: "팀 프로젝트",
     image: `${hugmom}`,
@@ -212,7 +314,7 @@ export const ProjectData = [
   },
 
   {
-    id: 2,
+    id: 3,
     name: "Post Me",
     team: "팀 프로젝트(기획, 디자인, 개발, 마케팅)",
     image: `${postme}`,
@@ -301,7 +403,7 @@ export const ProjectData = [
     ),
   },
   {
-    id: 3,
+    id: 4,
     name: "Todo List",
     team: "개인 프로젝트",
     image: `${todo}`,
@@ -392,7 +494,7 @@ export const ProjectData = [
   },
 
   {
-    id: 4,
+    id: 5,
     name: "MBTI TEST",
     team: "개인 프로젝트",
     image: `${mbti}`,
@@ -513,16 +615,16 @@ export const SkillData = [
         </>
       ),
     },
-    {
-      id: 5,
-      skill: "TypeScript",
-      icon: `${typescript}`,
-      des: (
-        <>
-          <li>타입스크립트를 이용해서 프로젝트를 만들어본 경험이 있습니다.</li>
-        </>
-      ),
-    },
+    // {
+    //   id: 5,
+    //   skill: "TypeScript",
+    //   icon: `${typescript}`,
+    //   des: (
+    //     <>
+    //       <li>타입스크립트를 이용해서 프로젝트를 만들어본 경험이 있습니다.</li>
+    //     </>
+    //   ),
+    // },
   ],
   [
     {
@@ -586,7 +688,7 @@ export const EduAct = [
     },
     {
       id: 1,
-      date: "2024.04 - 진행중",
+      date: "2024.04 - 2024.05",
       content: "스위프 4기 프론트엔드개발 직군",
     },
   ],

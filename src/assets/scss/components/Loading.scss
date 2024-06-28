@@ -1,0 +1,13 @@
+.loadingPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.about {
+    background-color: $color_yellow;
+  }
+  p {
+    font-size: 28px;
+  }
+}

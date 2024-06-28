@@ -21,6 +21,10 @@
       grid-template-columns: repeat(1, 1fr);
       gap: 20px;
       .viewMore {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
         border: 1px solid $color_gray;
         background-color: $color_white;
         color: $color_gray;

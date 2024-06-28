@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "assets/scss/main.scss";
 
 const ProjectThumb = ({ id, image, name, team, skill, result_summary }) => {
+  const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
   const goDetail = () => {
     navigate(`/project/${id}`);
@@ -9,7 +11,12 @@ const ProjectThumb = ({ id, image, name, team, skill, result_summary }) => {
   return (
     <section className="projectThumb" onClick={goDetail}>
       <article className="project_img">
-        <img src={image} alt={`${name} thumbnail`} />
+        <img
+          src={image}
+          alt={`${name} thumbnail`}
+          onLoad={() => setIsLoading(!isLoading)}
+          onError={() => alert("Image Load Error")}
+        />
       </article>
       <article className="project_desc">
         <ul>

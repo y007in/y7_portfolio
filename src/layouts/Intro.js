@@ -4,6 +4,7 @@ import "assets/scss/main.scss";
 import avatar from "../assets/img/images/avatar.png";
 
 const Intro = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [isIntroPage, setIsIntroPage] = useState(false);
 
   const handleScroll = () => {
@@ -21,7 +22,12 @@ const Intro = () => {
       <section className="intro_container">
         <article className="intro_wrap">
           <div className="avatar">
-            <img src={avatar} alt="avatar" />
+            <img
+              src={avatar}
+              alt="avatar"
+              onLoad={() => setIsLoading(!isLoading)}
+              onError={() => alert("Image Load Error")}
+            />
           </div>
           <div className="intro_txt">
             <span>안녕하세요.</span>

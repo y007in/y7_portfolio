@@ -1,8 +1,8 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import { Navigation, ProjectItem, Footer } from "layouts";
-import { useEffect } from "react";
 
 import { ProjectData } from "assets/projectdata";
 

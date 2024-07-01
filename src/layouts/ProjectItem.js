@@ -64,36 +64,12 @@ const ProjectItem = ({ projectId }) => {
         </article>
         {/* project_bottom */}
         <article className="project_bottom">
-          {ProjectData[projectId].project_schedule && (
-            <ProjectSection
-              title="프로젝트 스케줄"
-              link={ProjectData[projectId].project_schedule}
-              content={`${ProjectData[projectId].name} WBS 링크`}
-            />
-          )}
-          {ProjectData[projectId].project_introduction && (
-            <ProjectSection
-              title="소개 자료"
-              link={ProjectData[projectId].project_introduction}
-              content={`${ProjectData[projectId].name} 자료 링크`}
-            />
-          )}
           <ProjectSection
             title={"주요 기능"}
             content={
               <ul className="funcList">{ProjectData[projectId].func}</ul>
             }
           />
-          {ProjectData[projectId].project_ui && (
-            <ProjectSection
-              title="프로젝트 구조 및 UI"
-              content={
-                <div className="structure">
-                  {ProjectData[projectId].project_ui}
-                </div>
-              }
-            />
-          )}
           {ProjectData[projectId].dev_func && (
             <ProjectSection
               title="구현 기능"
@@ -104,11 +80,13 @@ const ProjectItem = ({ projectId }) => {
               }
             />
           )}
-
-          {ProjectData[projectId].trouble && (
+          {ProjectData[projectId].related_Links && (
             <ProjectSection
-              title="Trouble Shooting"
-              content={ProjectData[projectId].trouble}
+              title="관련 자료"
+              link={ProjectData[projectId].related_Links}
+              content={
+                <ul className="link">{ProjectData[projectId].related_Links}</ul>
+              }
             />
           )}
           {ProjectData[projectId].result && (

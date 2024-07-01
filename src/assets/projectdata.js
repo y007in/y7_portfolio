@@ -1,4 +1,4 @@
-import HugmomStructure from "components/HugmomStructure.js";
+import { Link } from "react-router-dom";
 import {
   hugmom,
   todo,
@@ -89,7 +89,13 @@ export const ProjectData = [
         </li>
       </>
     ),
-
+    related_Links: (
+      <li>
+        <Link to={"https://velog.io/@yoojin4719/series/스위프"} target="_blank">
+          BoardPick 블로그 정리
+        </Link>
+      </li>
+    ),
     result: (
       <>
         <p className="des_result">
@@ -117,12 +123,6 @@ export const ProjectData = [
           감도 안 잡혔는데 이번 기회에 백엔드에서는 이런 작업을 진행하고
           프론트에 어떤 식으로 전달되는구나를 알게 되었습니다.
         </p>
-        <a
-          className="link"
-          href="https://velog.io/@yoojin4719/%EC%8A%A4%EC%9C%84%ED%94%84-%ED%86%A0%ED%81%B0%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%9C-post"
-        >
-          스위프 참여 및 보드픽 회고 블로그 글
-        </a>
       </>
     ),
   },
@@ -194,7 +194,6 @@ export const ProjectData = [
         </li>
       </>
     ),
-    // trouble: <p></p>,
     result: (
       <p className="des_result">
         이 프로젝트를 통해 <b> React의 다양한 훅과 기능들에 대한 깊게 이해</b>할
@@ -212,7 +211,7 @@ export const ProjectData = [
         </b>
         SCSS를 통해 좀 더 깔끔하고 효율적인 코드를 작성하는 경험은 앞으로의
         프로젝트에서 더 다양한 기능들을 공부하고 적용해보고자 합니다. 또한
-        기존의 사이트들과 비슷한 구조, 버튼의 간격, 강조 색상 등{" "}
+        기존의 사이트들과 비슷한 구조, 버튼의 간격, 강조 색상 등
         <b>
           UX/UI법칙을 적용시켜 웹 페이지를 부는데 불편함이 없을 수 있도록
           하였습니다.
@@ -235,9 +234,31 @@ export const ProjectData = [
         제작하였습니다.
       </p>
     ),
-    project_schedule:
-      "https://docs.google.com/spreadsheets/d/1MtjmPCrxJHxQhnfbZxrM255c43mUKCU-Ay_SBuumT1g/edit#gid=163560579",
-    project_ui: <HugmomStructure />,
+
+    related_Links: (
+      <>
+        <li>
+          <Link
+            to={
+              "https://docs.google.com/spreadsheets/d/1MtjmPCrxJHxQhnfbZxrM255c43mUKCU-Ay_SBuumT1g/edit?gid=163560579#gid=163560579"
+            }
+            target="_blank"
+          >
+            Hugmom WBS
+          </Link>
+        </li>
+        <li>
+          <Link
+            to={
+              "https://drive.google.com/file/d/1p1AiKcamdTT8X8qUKhwL-1uNV0ir4aO1/view"
+            }
+            target="_blank"
+          >
+            Hugmom 구조 및 UI
+          </Link>
+        </li>
+      </>
+    ),
     github: "https://github.com/That-s-great/Hugmom",
     url: "https://hugmom-b6187.web.app/html/01-intro_logout.html",
     date: "2023.05.08 - 2023.06.30",
@@ -327,8 +348,19 @@ export const ProjectData = [
         확장앱 프로젝트입니다.
       </p>
     ),
-    project_introduction:
-      "https://drive.google.com/file/d/1ARCrkId512yYxQbNYn08t3daX0yBnuUw/view?usp=sharing",
+    related_Links: (
+      <li>
+        <Link
+          to={
+            "https://drive.google.com/file/d/1ARCrkId512yYxQbNYn08t3daX0yBnuUw/view?usp=sharing"
+          }
+          target="_blank"
+        >
+          Post Me 발표자료
+        </Link>
+      </li>
+    ),
+
     github: "https://github.com/y007in/POSTME",
     url: "https://whale4upostme.netlify.app/",
     date: "2022.08.19 - 2022.09.16",

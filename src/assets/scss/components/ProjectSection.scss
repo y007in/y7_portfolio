@@ -44,14 +44,21 @@
           list-style-type: " ⎻  ";
         }
       }
-      .link {
+      .link li {
         color: $color_black;
         text-decoration: underline;
+        transition: ease 0.2s all;
         &::after {
           content: "↗️";
         }
         &:hover {
-          opacity: 0.5;
+          color: $color_point;
+          a {
+            color: $color_point;
+          }
+        }
+        a {
+          transition: ease 0.2s all;
         }
       }
       .structure {

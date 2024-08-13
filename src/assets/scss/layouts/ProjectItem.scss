@@ -19,16 +19,20 @@
     .project_des {
       width: 100%;
       height: auto;
-      padding: 10px;
+      padding: 15px;
       margin-bottom: 10px;
       border-radius: 5px;
       line-height: 23px;
-      background-color: $color_lightgray;
       font-size: 14px;
+      background-color: $color_lightgray;
     }
     .item_box {
+      width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+
       .project {
         &_left {
           display: flex;
@@ -36,27 +40,29 @@
           .project_img {
             position: relative;
             width: 100%;
-            height: 0;
+            height: 100%;
             padding-bottom: 56.26%;
-            margin-bottom: 10px;
             overflow: hidden;
             border: 1px solid $color_gray;
             border-radius: 5px;
-
             img {
               position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
+              // top: 0;
+              // left: 0;
+              width: inherit;
+              height: inherit;
+              object-fit: cover;
             }
           }
+        }
+        &_right {
+          display: flex;
+          flex-direction: column;
+          border-top: 1px dashed $color_gray;
           .buttons {
             display: flex;
             gap: 10px;
-            width: 100%;
             text-align: center;
-            margin: 10px 0;
             a {
               width: 100%;
               .button {
@@ -88,19 +94,93 @@
               }
             }
           }
-        }
-        &_right {
-          display: flex;
-          flex-direction: column;
-          padding-top: 20px;
+          .memList {
+            display: flex;
+            li {
+              &::after {
+                content: "∙";
+                margin: 0 3px;
+              }
+              &:last-child {
+                &::after {
+                  content: "";
+                }
+              }
+            }
+          }
+          .skillList {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+              list-style-type: none;
+              margin-right: 8px;
+              &::after {
+                content: " ,";
+              }
+              &:last-child {
+                &::after {
+                  content: "";
+                }
+              }
+            }
+          }
+          @at-root .commonList {
+            a {
+              text-decoration: underline;
+              margin: 0 5px;
+              transition: 0.5s;
+              color: $color_darkgray;
+              &::after {
+                content: "↗️";
+              }
+              &:hover {
+                color: $color_point;
+              }
+            }
+          }
         }
       }
     }
     .project_bottom {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 10px;
+      margin-top: 50px;
+      .dev {
+        color: $color_point;
+        border-bottom: 1px solid $color_point;
+      }
+      .funcList {
+        margin: 0 5px 5px 7px;
+
+        li {
+          list-style-type: decimal;
+          font-weight: bold;
+          margin-left: 10px;
+          h2 {
+            font-size: 16px;
+          }
+          ul li {
+            list-style-type: "▫︎ ";
+            margin-left: 23px;
+            font-weight: normal;
+          }
+        }
+      }
+      .link li {
+        color: $color_black;
+        text-decoration: underline;
+        transition: ease 0.2s all;
+        &::after {
+          content: "↗️";
+        }
+        &:hover {
+          color: $color_point;
+          a {
+            color: $color_point;
+          }
+        }
+        a {
+          transition: ease 0.2s all;
+        }
+      }
     }
   }
 }
@@ -110,31 +190,29 @@
     padding: 40px 20px 0 20px;
     .project_container {
       @include container_pc();
-      margin: 35px 20px;
+      margin: 15px 20px;
       border-radius: 10px;
-      padding: 50px 80px;
+      padding: 25px 40px;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       .title {
         h1 {
-          font-size: 36px;
+          font-size: 28px;
         }
         .team {
-          font-size: 20px;
+          font-size: 18px;
           margin: 0 10px;
-          margin-bottom: 5px;
         }
       }
-      .project_des {
-        font-size: 16px;
-        margin-bottom: 20px;
-        padding: 18px;
-      }
+
       .item_box {
         flex-direction: row;
         gap: 20px;
         .project {
           &_left {
-            flex: 3;
+            flex: 1;
+            .project_des {
+              font-size: 16px;
+            }
             .buttons {
               position: static;
               padding: 0;
@@ -146,8 +224,9 @@
             }
           }
           &_right {
-            flex: 2;
+            flex: 1;
             padding-top: 0px;
+            border-top: none;
             .project {
               margin-top: 0;
               margin-bottom: 20px;
@@ -156,7 +235,7 @@
         }
       }
       .project_bottom {
-        margin-top: 20px;
+        margin-top: 30px;
       }
     }
   }

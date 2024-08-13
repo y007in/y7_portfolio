@@ -1,92 +1,40 @@
 .project_section {
-  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 85px 3fr;
+  border-bottom: 1px solid $color_gray;
+  line-height: 230%;
+  padding: 5px 0;
+  &:last-child {
+    border-bottom: none;
+  }
   .des {
     &_title {
-      @include boxTitle_mobile();
-      float: left;
-      border-radius: 0;
-      border-left: 3px solid $color_point;
-      background-color: $color_lightgray;
+      display: flex;
+      align-items: flex-start;
       font-size: 14px;
+      padding: 0 5px;
+      &::after {
+        content: "|";
+        margin-left: 10px;
+        color: $color_point;
+      }
     }
     &_content {
-      width: 100%;
-      clear: both;
-      float: left;
-      padding: 8px;
+      display: flex;
       border-radius: 5px;
-      line-height: 150%;
       font-size: 14px;
-      line-height: 230%;
-      b {
-        margin-left: 5px;
-      }
-      .skillList {
-        display: flex;
-        flex-wrap: wrap;
-        li {
-          list-style-type: none;
-          margin-right: 8px;
-          &::after {
-            content: " ,";
-          }
-          &:last-child {
-            &::after {
-              content: "";
-            }
-          }
-        }
-      }
-      .funcList,
-      .dev_funcList {
-        margin: 0 5px 5px 15px;
-        li {
-          list-style-type: " ⎻  ";
-        }
-      }
-      .link li {
-        color: $color_black;
-        text-decoration: underline;
-        transition: ease 0.2s all;
-        &::after {
-          content: "↗️";
-        }
-        &:hover {
-          color: $color_point;
-          a {
-            color: $color_point;
-          }
-        }
-        a {
-          transition: ease 0.2s all;
-        }
-      }
-      .structure {
-        width: 100%;
-      }
-      .componentTitle {
-        margin-top: 10px;
-      }
-      .componentContent {
-        margin-left: 20px;
-      }
-      .portfolio_structure {
-        width: 60%;
-      }
     }
   }
 }
 
 @media all and (min-width: 1024px) {
   .project_section {
+    grid-template-columns: 100px 3fr;
     .des {
       &_title {
-        @include boxTitle_pc();
         font-size: 16px;
       }
       &_content {
-        display: inline-block;
-        padding: 5px 8px;
         font-size: 16px;
       }
     }

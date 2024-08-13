@@ -13,7 +13,7 @@ const ProjectItem = ({ projectId }) => {
       <section className="project_container">
         <header className="title">
           <h1>{ProjectData[projectId].name}</h1>
-          <span className="team">{ProjectData[projectId].team}</span>
+          <span className="team">{ProjectData[projectId].team}</span>{" "}
         </header>
         <div className="project_des">{ProjectData[projectId].des}</div>
         <article className="item_box">
@@ -25,20 +25,6 @@ const ProjectItem = ({ projectId }) => {
                 onLoad={() => setIsLoading(!isLoading)}
                 onError={() => alert("Image Load Error")}
               />
-            </div>
-            <div className="buttons">
-              <Link to={ProjectData[projectId].github} target="_blank">
-                <button className="button github">
-                  <FaGithub />
-                  GitHub
-                </button>
-              </Link>
-              <Link to={ProjectData[projectId].url} target="_blank">
-                <button className="button url">
-                  <FaLink />
-                  URL
-                </button>
-              </Link>
             </div>
           </aside>
           <aside className="project_right">
@@ -52,50 +38,75 @@ const ProjectItem = ({ projectId }) => {
                 <ul className="skillList">{ProjectData[projectId].skill}</ul>
               }
             />
-            {ProjectData[projectId].role && (
+            {
               <ProjectSection
-                title={"역할"}
+                title={"개발 인원"}
                 content={
-                  <ul className="funcList">{ProjectData[projectId].role}</ul>
+                  <ul className="memList">
+                    {ProjectData[projectId].team_member
+                      ? ProjectData[projectId].team_member
+                      : ProjectData[projectId].team}
+                  </ul>
                 }
               />
-            )}
+            }
+            <ProjectSection
+              title={"주요 기능"}
+              content={
+                <ul className="commonList">{ProjectData[projectId].func}</ul>
+              }
+            />
+
+            <ProjectSection
+              title={"관련 링크"}
+              content={
+                <div className="buttons">
+                  <Link to={ProjectData[projectId].github} target="_blank">
+                    <button className="button github">
+                      <FaGithub />
+                      GitHub
+                    </button>
+                  </Link>
+                  <Link to={ProjectData[projectId].url} target="_blank">
+                    <button className="button url">
+                      <FaLink />
+                      URL
+                    </button>
+                  </Link>
+                </div>
+              }
+            />
           </aside>
         </article>
-        {/* project_bottom */}
-        <article className="project_bottom">
-          <ProjectSection
-            title={"주요 기능"}
-            content={
-              <ul className="funcList">{ProjectData[projectId].func}</ul>
-            }
-          />
+        <aside className="project_bottom">
+          <h2 className="dev">DEV.</h2>
+          {ProjectData[projectId].role && (
+            <ProjectSection
+              title={"기여 역할"}
+              content={
+                <ul className="commonList">{ProjectData[projectId].role}</ul>
+              }
+            />
+          )}
+
           {ProjectData[projectId].dev_func && (
             <ProjectSection
               title="구현 기능"
               content={
-                <div className="dev_funcList">
-                  {ProjectData[projectId].dev_func}
-                </div>
+                <ol className="funcList">{ProjectData[projectId].dev_func}</ol>
               }
             />
           )}
-          {ProjectData[projectId].related_Links && (
-            <ProjectSection
-              title="관련 자료"
-              link={ProjectData[projectId].related_Links}
-              content={
-                <ul className="link">{ProjectData[projectId].related_Links}</ul>
-              }
-            />
-          )}
+
           {ProjectData[projectId].result && (
             <ProjectSection
-              title="후기"
-              content={<ul>{ProjectData[projectId].result}</ul>}
+              title="개발 회고"
+              content={
+                <ul className="funcList">{ProjectData[projectId].result}</ul>
+              }
             />
           )}
-        </article>
+        </aside>
       </section>
     </div>
   );

@@ -39,68 +39,77 @@
       background-color: transparent;
       border: none;
       font-size: 14px;
-      cursor: pointer;
-    }
-  }
-  .gnb {
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    &.hide {
-      display: none;
-    }
-  }
-
-  .gnbList {
-    position: inherit;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 40%;
-    height: 100%;
-    float: right;
-    background-color: $color_lightgray;
-    transform: translateX(0%);
-    transition: 0.5s;
-    .closeBtn {
-      display: flex;
-      justify-content: flex-end;
-      padding: 17px 20px;
-      border-bottom: 2px solid $color_gray;
-      cursor: pointer;
-    }
-    .menu {
-      width: 100%;
-      padding: 15px 0;
-      border-bottom: 1px solid $color_gray;
+      color: $color_darkgray;
+      transition: 0.3s;
       cursor: pointer;
       svg {
-        font-size: 24px;
+        fill: $color_darkgray;
       }
-      &.active {
-        display: inline-block;
-        position: relative;
-        z-index: 0;
-        &::after {
-          content: "";
-          width: 60px;
-          height: 10px;
-          display: inline-block;
-          background: $color_highLight;
-          position: absolute;
-          bottom: 30%;
-          left: 50%;
-          transform: translateX(-50%);
-          z-index: -1;
-        }
+      &:hover {
+        color: $color_black;
       }
     }
-    &.hide {
-      transform: translateX(200%);
+    .gnb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      &.hide {
+        display: none;
+      }
+    }
+    .gnbList {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 40%;
+      height: 100vh;
+      float: right;
+      background-color: $color_lightgray;
+      transform: translateX(0%);
+      transition: 0.5s;
+      .closeBtn {
+        display: flex;
+        justify-content: flex-end;
+        padding: 17px 20px;
+        border-bottom: 2px solid $color_gray;
+        cursor: pointer;
+      }
+      .menu {
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid $color_gray;
+        background-color: $color_lightgray;
+        cursor: pointer;
+        svg {
+          font-size: 24px;
+        }
+        &.active {
+          display: inline-block;
+          position: relative;
+          z-index: 0;
+          &::after {
+            content: "";
+            width: 60px;
+            height: 10px;
+            display: inline-block;
+            background: $color_highLight;
+            position: absolute;
+            bottom: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+          }
+        }
+      }
+      &.hide {
+        transform: translateX(200%);
+      }
     }
   }
 }
@@ -122,49 +131,49 @@
       .backBtn {
         font-size: 16px;
       }
-    }
-    .gnb {
-      display: none;
-    }
-    .gnbList {
-      width: 35%;
-      height: 50px;
-      top: 0;
-      flex-direction: row;
-      background-color: transparent;
-      align-items: right;
-      .closeBtn {
+      .gnb {
         display: none;
       }
-      .menu {
-        width: 100px;
-        border-bottom: none;
-        cursor: pointer;
-        font-size: 18px;
+      .gnbList {
+        width: 35%;
+        height: 50px;
+        top: 0;
+        flex-direction: row;
         background-color: transparent;
-        svg {
-          font-size: 24px;
+        align-items: right;
+        .closeBtn {
+          display: none;
         }
-        &.active {
-          display: inline-block;
-          position: relative;
-          z-index: 0;
-          &::after {
-            content: "";
-            width: 70%;
-            height: 10px;
+        .menu {
+          width: 100px;
+          border-bottom: none;
+          cursor: pointer;
+          font-size: 18px;
+          background-color: transparent;
+          svg {
+            font-size: 24px;
+          }
+          &.active {
             display: inline-block;
-            background: $color_highLight;
-            position: absolute;
-            bottom: 10px;
-            left: 15px;
-            transform: translateX(0);
-            z-index: -1;
+            position: relative;
+            z-index: 0;
+            &::after {
+              content: "";
+              width: 70%;
+              height: 10px;
+              display: inline-block;
+              background: $color_highLight;
+              position: absolute;
+              bottom: 10px;
+              left: 15px;
+              transform: translateX(0);
+              z-index: -1;
+            }
           }
         }
-      }
-      &.hide {
-        transform: translateX(0);
+        &.hide {
+          transform: translateX(0);
+        }
       }
     }
   }

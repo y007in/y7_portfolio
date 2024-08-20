@@ -14,7 +14,10 @@
       }
     }
     .skillBox {
+      display: flex;
+      flex-direction: column;
       width: 100%;
+      margin-bottom: 40px;
       .skillBox_title {
         @include boxTitle_mobile();
         float: left;
@@ -24,32 +27,54 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 5px;
         .skill_item {
-          width: 30%;
-          max-width: 180px;
           display: flex;
-          flex-direction: column;
+
           align-items: center;
-          transition: 0.8s;
-          cursor: pointer;
-          &:last-child {
-            margin-right: 0;
+          max-width: 100%;
+
+          flex-wrap: nowrap;
+
+          display: flex;
+          gap: 20px;
+
+          background: $color_lightgray;
+          padding: 15px;
+          font-size: 14px;
+          .skill_title {
+            font-weight: bold;
+            font-weight: 14px;
           }
+
           .skill_icon {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
-            min-width: 85px;
+            width: 10%;
+            min-width: 30px;
             height: 100%;
             padding: 20px;
             border-radius: 5px;
-            background: $color_lightgray;
+
             transition: 0.8s;
             img {
               width: 100%;
               min-width: 45px;
+            }
+          }
+          .skill_des {
+            display: flex;
+            flex-direction: column;
+            ul li {
+              font-size: 14px;
+              color: $color_black;
+              margin-bottom: 5px;
+              &::before {
+                content: "-";
+                color: $color_black;
+                margin-right: 5px;
+              }
             }
           }
           .skill_name {
@@ -57,9 +82,6 @@
             text-align: center;
             font-family: $font_eng;
             font-weight: 500;
-          }
-          .des_pc {
-            display: none;
           }
         }
       }
@@ -89,22 +111,11 @@
           flex-wrap: wrap;
           gap: 10px;
           .skill_item {
-            max-width: calc((100% - 10px * 5) / 6);
+            max-width: calc((100% - 10px * 5) / 3);
             position: relative;
+            gap: 15px;
             .skill_icon {
-              padding: 30px;
-            }
-            .skill_des {
-              ul li {
-                font-size: 13px;
-                color: $color_black;
-                margin-bottom: 5px;
-                &::before {
-                  content: "-";
-                  color: $color_black;
-                  margin-right: 5px;
-                }
-              }
+              width: 35%;
             }
             .skill_name {
               margin: 10px 0;
@@ -121,15 +132,5 @@
         }
       }
     }
-  }
-}
-
-.overlay {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 10;
-  .des_mobile {
-    background-color: $color_gray;
   }
 }

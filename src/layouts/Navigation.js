@@ -3,7 +3,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { FaGithub, FaBars, FaTimes } from "react-icons/fa";
 import { FaArrowLeftLong } from "react-icons/fa6";
-
 import { menuItems } from "assets/projectdata";
 import "assets/scss/main.scss";
 
@@ -68,47 +67,44 @@ const Navigation = ({ scrollToSection }) => {
           JangYooJin
         </header>
         {currentPath === "/" ? (
-          <div className="menuList" onClick={toggleSubNav}>
-            {!showSubNav && <FaBars />}
-          </div>
+          <>
+            <div className="menuList" onClick={toggleSubNav}>
+              {!showSubNav && <FaBars />}
+            </div>
+            <div
+              className={`gnb ${showSubNav ? "" : "hide"}`}
+              onClick={toggleSubNav}
+            ></div>
+            <ul
+              className={`gnbList ${showSubNav ? "" : "hide"}`}
+              onClick={scrollToSection}
+            >
+              <li className="closeBtn" onClick={toggleSubNav}>
+                <FaTimes />
+              </li>
+              {menuItems.map((menuItem) => (
+                <li
+                  key={menuItem.id}
+                  className={`menu ${
+                    isMenuAct === menuItem.id ? " active" : ""
+                  }`}
+                  onClick={() => handleMenuClick(menuItem.id)}
+                >
+                  {menuItem.label}
+                  {menuItem.id === "GitHub" && <FaGithub />}
+                </li>
+              ))}
+            </ul>
+          </>
         ) : (
-          <button
-            className="backBtn"
-            onClick={() => {
-              navigate(-1);
-            }}
-          >
-            <FaArrowLeftLong />
-            Back
-          </button>
+          currentPath !== "/project" && (
+            <div className="backBtn" onClick={() => navigate("/project")}>
+              <FaArrowLeftLong />
+              프로젝트 전체보기
+            </div>
+          )
         )}
       </div>
-      {currentPath === "/" && (
-        <>
-          <div
-            className={`gnb ${showSubNav ? "" : "hide"}`}
-            onClick={toggleSubNav}
-          ></div>
-          <ul
-            className={`gnbList ${showSubNav ? "" : "hide"}`}
-            onClick={scrollToSection}
-          >
-            <li className="closeBtn" onClick={toggleSubNav}>
-              <FaTimes />
-            </li>
-            {menuItems.map((menuItem) => (
-              <li
-                key={menuItem.id}
-                className={`menu ${isMenuAct === menuItem.id ? " active" : ""}`}
-                onClick={() => handleMenuClick(menuItem.id)}
-              >
-                {menuItem.label}
-                {menuItem.id === "GitHub" && <FaGithub />}
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
     </nav>
   );
 };

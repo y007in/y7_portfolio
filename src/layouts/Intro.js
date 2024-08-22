@@ -32,7 +32,7 @@ const Intro = () => {
           <div className="intro_txt">
             <span>안녕하세요.</span>
             <span className={`developer ${isIntroPage ? "isActive" : ""}`}>
-              공감하는 FE개발자
+              프론트엔드 개발자
             </span>
             <span className="box_introName">
               <div className={`intro_name ${isIntroPage ? "isActive" : ""}`}>

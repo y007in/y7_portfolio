@@ -66,7 +66,7 @@ const Navigation = ({ scrollToSection }) => {
         <header className="name" onClick={handleBackToHome}>
           JangYooJin
         </header>
-        {currentPath === "/" ? (
+        {currentPath === "/" && (
           <>
             <div className="menuList" onClick={toggleSubNav}>
               {!showSubNav && <FaBars />}
@@ -96,13 +96,6 @@ const Navigation = ({ scrollToSection }) => {
               ))}
             </ul>
           </>
-        ) : (
-          currentPath !== "/project" && (
-            <div className="backBtn" onClick={() => navigate("/project")}>
-              <FaArrowLeftLong />
-              프로젝트 전체보기
-            </div>
-          )
         )}
       </div>
     </nav>

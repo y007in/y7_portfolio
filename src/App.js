@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
-import { About, Project, ProjectDetail } from "pages";
+import { About, ProjectDetail } from "pages";
 import "App.scss";
 
 function App() {
@@ -95,7 +95,6 @@ function App() {
             <About scrollRef={scrollRef} scrollToSection={scrollToSection} />
           }
         ></Route>
-        <Route path="/project" element={<Project />}></Route>
         <Route path="/project/:id" element={<ProjectDetail />}></Route>
       </Routes>
       {showButton && (

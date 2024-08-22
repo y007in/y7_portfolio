@@ -31,24 +31,7 @@
       font-weight: bold;
       cursor: pointer;
     }
-    .backBtn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 5px;
-      background-color: transparent;
-      border: none;
-      font-size: 14px;
-      color: $color_darkgray;
-      transition: 0.3s;
-      cursor: pointer;
-      svg {
-        fill: $color_darkgray;
-      }
-      &:hover {
-        color: $color_black;
-      }
-    }
+
     .gnb {
       position: absolute;
       top: 0;

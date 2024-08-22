@@ -1,6 +1,6 @@
 .projectList {
   @include main();
-  padding: 40px 0 0 0;
+  padding: 0;
   .projectList_container {
     @include container_mobile();
     width: 100vw;
@@ -50,7 +50,6 @@
   .projectList {
     .projectList_container {
       @include container_pc();
-      padding-top: 30px;
       .title {
         justify-content: center;
         align-items: center;
@@ -64,7 +63,6 @@
       .projects {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        padding: 30px 80px;
         border-radius: 10px;
         margin-bottom: 30px;
         .viewMore {
@@ -73,6 +71,18 @@
             &::after {
               content: " 프로젝트 더보기";
               font-size: 16px;
+            }
+          }
+          &.close {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+              &::after {
+                content: "닫기";
+                font-size: 16px;
+                margin-top: 3px;
+              }
             }
           }
         }

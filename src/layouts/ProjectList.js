@@ -15,19 +15,35 @@ const ProjectList = ({ data }) => {
             .map((item) => (
               <ProjectThumb key={item.id} {...item} />
             ))}
-          {!viewMore &&
-            [...data]
-              .reverse()
-              .slice(-2)
-              .map((item) => <ProjectThumb key={item.id} {...item} />)}
+        </article>
+
+        {viewMore ? (
           <button
             button
             className={`viewMore ${viewMore ? "" : "close"}`}
             onClick={() => setViewMore(!viewMore)}
           >
-            {viewMore ? "+" : "x"}
+            + 프로젝트 더보기
           </button>
-        </article>
+        ) : (
+          <>
+            <article className="projects">
+              {[...data]
+                .reverse()
+                .slice(-2)
+                .map((item) => (
+                  <ProjectThumb key={item.id} {...item} />
+                ))}
+            </article>
+            <button
+              button
+              className={`viewMore ${viewMore ? "" : "close"}`}
+              onClick={() => setViewMore(!viewMore)}
+            >
+              X 닫기
+            </button>
+          </>
+        )}
       </section>
     </div>
   );

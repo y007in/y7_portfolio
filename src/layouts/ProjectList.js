@@ -4,7 +4,7 @@ import { ProjectThumb } from "components";
 import "assets/scss/main.scss";
 
 const ProjectList = ({ data }) => {
-  const [viewMore, setViewMore] = useState(false);
+  const [viewMore, setViewMore] = useState(true);
   return (
     <div className="projectList">
       <section className="projectList_container">

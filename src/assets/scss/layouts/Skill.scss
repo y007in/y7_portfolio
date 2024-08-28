@@ -111,9 +111,9 @@
           flex-wrap: wrap;
           gap: 10px;
           .skill_item {
-            max-width: calc((100% - 10px * 5) / 3);
+            max-width: calc((100% - 10px * 2) / 3);
             position: relative;
-            gap: 15px;
+            gap: 8px;
             .skill_icon {
               width: 35%;
             }

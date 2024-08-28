@@ -113,9 +113,11 @@
           .skill_item {
             max-width: calc((100% - 10px * 2) / 3);
             position: relative;
-            gap: 8px;
+            gap: 30px;
+            padding: 20px 30px;
             .skill_icon {
-              width: 35%;
+              width: 70px;
+              padding: 0;
             }
             .skill_name {
               margin: 10px 0;

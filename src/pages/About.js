@@ -24,7 +24,7 @@ const About = ({ scrollRef, scrollToSection }) => {
   return (
     <main className="About">
       <>
-        <Navigation scrollToSection={scrollToSection} />
+        {/* <Navigation scrollToSection={scrollToSection} /> */}
         <Intro />
         {[
           { component: <Skill SkillData={SkillData} /> },
@@ -39,7 +39,7 @@ const About = ({ scrollRef, scrollToSection }) => {
             {item.component}
           </div>
         ))}
-        <Footer />
+        {/* <Footer /> */}
       </>
     </main>
   );
